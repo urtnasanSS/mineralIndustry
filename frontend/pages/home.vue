@@ -10,6 +10,7 @@
       <div class="columns is-gapless">
         <div class="column is-9">
           <!-- <TabSide /> -->
+          <p>ss</p>
         </div>
         <div class="column is-3">
           <!-- <RelatedNews /> -->
