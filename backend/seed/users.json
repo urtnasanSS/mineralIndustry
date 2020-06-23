@@ -1,0 +1,24 @@
+[
+  {
+    "RegisterNum": "НЮ88071519",
+    "LastName": "Цэцгээ",
+    "FirstName": "Батаа",
+    "AimagCityId": "20",
+    "SoumDistrictId": "90",
+    "BagKhorooId": "1",
+    "AddressDetail": "10в-18тоот",
+    "email": "bataa@gmail.com",
+    "password": "12345678"
+  },
+  {
+    "RegisterNum": "ОЕ89041900",
+    "LastName": "Cайнжаргал",
+    "FirstName": "Цэвээнсүрэн",
+    "AimagCityId": "20",
+    "SoumDistrictId": "90",
+    "BagKhorooId": "1",
+    "AddressDetail": "10в-18тоот",
+    "email": "tseegii@gmail.com",
+    "password": "12345678"
+  }
+]

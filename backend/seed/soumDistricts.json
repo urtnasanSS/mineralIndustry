@@ -1,0 +1,2048 @@
+[
+	{
+		"id": "46",
+		"Code": "31",
+		"Name": "Баянцагаан",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "47",
+		"Code": "34",
+		"Name": "Баянцогт",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "48",
+		"Code": "37",
+		"Name": "Баянчандмань",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "49",
+		"Code": "40",
+		"Name": "Борнуур",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "50",
+		"Code": "43",
+		"Name": "Бүрэн",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "51",
+		"Code": "46",
+		"Name": "Дэлгэрхаан",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "52",
+		"Code": "49",
+		"Name": "Жаргалант",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "53",
+		"Code": "52",
+		"Name": "Заамар",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "54",
+		"Code": "55",
+		"Name": "Лүн",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "55",
+		"Code": "58",
+		"Name": "Мөнгөнморьт",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "56",
+		"Code": "61",
+		"Name": "Өндөрширээт",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "57",
+		"Code": "64",
+		"Name": "Сүмбэр",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "58",
+		"Code": "67",
+		"Name": "Сэргэлэн",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "59",
+		"Code": "70",
+		"Name": "Угтаалцайдам",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "60",
+		"Code": "73",
+		"Name": "Цээл",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "61",
+		"Code": "76",
+		"Name": "Эрдэнэ",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "62",
+		"Code": "79",
+		"Name": "Эрдэнэсант",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "63",
+		"Code": "01",
+		"Name": "Улаангом",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "64",
+		"Code": "04",
+		"Name": "Баруунтуруун",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "65",
+		"Code": "07",
+		"Name": "Бөхмөрөн",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "66",
+		"Code": "10",
+		"Name": "Давст",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "67",
+		"Code": "13",
+		"Name": "Завхан",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "68",
+		"Code": "16",
+		"Name": "Зүүнговь",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "69",
+		"Code": "19",
+		"Name": "Зүүнхангай",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "70",
+		"Code": "22",
+		"Name": "Малчин",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "71",
+		"Code": "25",
+		"Name": "Наранбулаг",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "72",
+		"Code": "28",
+		"Name": "Өлгий",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "73",
+		"Code": "31",
+		"Name": "Өмнөговь",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "74",
+		"Code": "34",
+		"Name": "Өндөрхангай",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "75",
+		"Code": "37",
+		"Name": "Сагил",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "76",
+		"Code": "40",
+		"Name": "Тариалан",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "77",
+		"Code": "43",
+		"Name": "Түргэн",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "78",
+		"Code": "46",
+		"Name": "Тэс",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "79",
+		"Code": "49",
+		"Name": "Ховд",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "80",
+		"Code": "52",
+		"Name": "Хяргас",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "81",
+		"Code": "55",
+		"Name": "Цагаанхайрхан",
+		"AimagCityId": "19"
+	},
+	{
+		"id": "82",
+		"Code": "01",
+		"Name": "Жаргалант",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "83",
+		"Code": "04",
+		"Name": "Алтай",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "84",
+		"Code": "07",
+		"Name": "Булган",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "85",
+		"Code": "10",
+		"Name": "Буянт",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "86",
+		"Code": "13",
+		"Name": "Дарви",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "87",
+		"Code": "16",
+		"Name": "Дөргөн",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "88",
+		"Code": "19",
+		"Name": "Дуут",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "89",
+		"Code": "22",
+		"Name": "Зэрэг",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "90",
+		"Code": "25",
+		"Name": "Манхан",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "91",
+		"Code": "28",
+		"Name": "Мөнххайрхан",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "92",
+		"Code": "31",
+		"Name": "Мөст",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "93",
+		"Code": "34",
+		"Name": "Мянгад",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "94",
+		"Code": "37",
+		"Name": "Үенч",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "95",
+		"Code": "40",
+		"Name": "Ховд",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "96",
+		"Code": "43",
+		"Name": "Цэцэг",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "97",
+		"Code": "46",
+		"Name": "Чандмань",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "98",
+		"Code": "49",
+		"Name": "Эрдэнэбүрэн",
+		"AimagCityId": "20"
+	},
+	{
+		"id": "99",
+		"Code": "01",
+		"Name": "Мөрөн",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "100",
+		"Code": "04",
+		"Name": "Алаг-Эрдэнэ",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "101",
+		"Code": "07",
+		"Name": "Арбулаг",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "102",
+		"Code": "10",
+		"Name": "Баянзүрх",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "103",
+		"Code": "13",
+		"Name": "Бүрэнтогтох",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "104",
+		"Code": "16",
+		"Name": "Галт",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "105",
+		"Code": "19",
+		"Name": "Жаргалант",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "106",
+		"Code": "22",
+		"Name": "Их-Уул",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "107",
+		"Code": "25",
+		"Name": "Рашаант",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "108",
+		"Code": "28",
+		"Name": "Рэнчинлхүмбэ",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "109",
+		"Code": "31",
+		"Name": "Тариалан",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "110",
+		"Code": "34",
+		"Name": "Тосонцэнгэл",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "111",
+		"Code": "37",
+		"Name": "Төмөрбулаг",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "112",
+		"Code": "40",
+		"Name": "Түнэл",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "113",
+		"Code": "43",
+		"Name": "Улаан-Уул",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "114",
+		"Code": "46",
+		"Name": "Ханх",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "115",
+		"Code": "49",
+		"Name": "Цагааннуур",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "116",
+		"Code": "52",
+		"Name": "Цагаан-Уул",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "117",
+		"Code": "55",
+		"Name": "Цагаан-Үүр",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "118",
+		"Code": "58",
+		"Name": "Цэцэрлэг",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "119",
+		"Code": "61",
+		"Name": "Чандмань-Өндөр",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "120",
+		"Code": "64",
+		"Name": "Шинэ-Идэр",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "121",
+		"Code": "67",
+		"Name": "Эрдэнэбулган",
+		"AimagCityId": "21"
+	},
+	{
+		"id": "122",
+		"Code": "01",
+		"Name": "Хэрлэн",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "123",
+		"Code": "04",
+		"Name": "Батноров",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "124",
+		"Code": "07",
+		"Name": "Батширээт",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "125",
+		"Code": "10",
+		"Name": "Баян-Адарга",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "126",
+		"Code": "13",
+		"Name": "Баянмөнх",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "127",
+		"Code": "16",
+		"Name": "Баян-Овоо",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "128",
+		"Code": "19",
+		"Name": "Баянхутаг",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "129",
+		"Code": "22",
+		"Name": "Биндэр",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "130",
+		"Code": "25",
+		"Name": "Галшар",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "131",
+		"Code": "28",
+		"Name": "Дадал",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "132",
+		"Code": "31",
+		"Name": "Дархан",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "133",
+		"Code": "34",
+		"Name": "Дэлгэрхаан",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "134",
+		"Code": "37",
+		"Name": "Жаргалтхаан",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "135",
+		"Code": "40",
+		"Name": "Мөрөн",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "136",
+		"Code": "43",
+		"Name": "Норовлин",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "137",
+		"Code": "46",
+		"Name": "Өмнөдэлгэр",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "138",
+		"Code": "49",
+		"Name": "Цэнхэрмандал",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "139",
+		"Code": "01",
+		"Name": "Дархан",
+		"AimagCityId": "8"
+	},
+	{
+		"id": "140",
+		"Code": "04",
+		"Name": "Орхон",
+		"AimagCityId": "8"
+	},
+	{
+		"id": "141",
+		"Code": "07",
+		"Name": "Хонгор",
+		"AimagCityId": "8"
+	},
+	{
+		"id": "142",
+		"Code": "10",
+		"Name": "Шарын Гол",
+		"AimagCityId": "8"
+	},
+	{
+		"id": "143",
+		"Code": "01",
+		"Name": "Баян-Өндөр",
+		"AimagCityId": "13"
+	},
+	{
+		"id": "144",
+		"Code": "04",
+		"Name": "Жаргалант",
+		"AimagCityId": "13"
+	},
+	{
+		"id": "145",
+		"Code": "01",
+		"Name": "Сүмбэр",
+		"AimagCityId": "6"
+	},
+	{
+		"id": "146",
+		"Code": "04",
+		"Name": "Баянтал",
+		"AimagCityId": "6"
+	},
+	{
+		"id": "147",
+		"Code": "07",
+		"Name": "Шивээговь",
+		"AimagCityId": "6"
+	},
+	{
+		"id": "148",
+		"Code": "01",
+		"Name": "Багануур",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "149",
+		"Code": "04",
+		"Name": "Багахангай",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "150",
+		"Code": "07",
+		"Name": "Баянгол",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "151",
+		"Code": "10",
+		"Name": "Баянзүрх",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "152",
+		"Code": "13",
+		"Name": "Налайх",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "153",
+		"Code": "16",
+		"Name": "Сонгинохайрхан",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "154",
+		"Code": "19",
+		"Name": "Сүхбаатар",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "155",
+		"Code": "22",
+		"Name": "Хан-Уул",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "156",
+		"Code": "25",
+		"Name": "Чингэлтэй",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "157",
+		"Code": "01",
+		"Name": "Эрдэнэбулган",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "158",
+		"Code": "04",
+		"Name": "Батцэнгэл",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "159",
+		"Code": "07",
+		"Name": "Булган",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "160",
+		"Code": "10",
+		"Name": "Жаргалант",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "161",
+		"Code": "13",
+		"Name": "Их Тамир",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "162",
+		"Code": "16",
+		"Name": "Өгийнуур",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "163",
+		"Code": "19",
+		"Name": "Өлзийт",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "164",
+		"Code": "22",
+		"Name": "Өндөр-Улаан",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "165",
+		"Code": "25",
+		"Name": "Тариат",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "166",
+		"Code": "31",
+		"Name": "Сайхан",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "167",
+		"Code": "34",
+		"Name": "Сэлэнгэ",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "168",
+		"Code": "37",
+		"Name": "Тэшиг",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "169",
+		"Code": "40",
+		"Name": "Хангал",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "170",
+		"Code": "43",
+		"Name": "Хишиг-Өндөр",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "171",
+		"Code": "46",
+		"Name": "Хутаг-Өндөр",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "172",
+		"Code": "01",
+		"Name": "Есөнбулаг",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "173",
+		"Code": "04",
+		"Name": "Алтай",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "174",
+		"Code": "07",
+		"Name": "Баян-Уул",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "175",
+		"Code": "10",
+		"Name": "Бигэр",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "176",
+		"Code": "13",
+		"Name": "Бугат",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "177",
+		"Code": "16",
+		"Name": "Дарив",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "178",
+		"Code": "19",
+		"Name": "Дэлгэр",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "179",
+		"Code": "22",
+		"Name": "Жаргалан",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "180",
+		"Code": "25",
+		"Name": "Тайшир",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "181",
+		"Code": "28",
+		"Name": "Тонхил",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "182",
+		"Code": "31",
+		"Name": "Төгрөг",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "183",
+		"Code": "34",
+		"Name": "Халиун",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "184",
+		"Code": "37",
+		"Name": "Хөхморьт",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "185",
+		"Code": "40",
+		"Name": "Цогт",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "186",
+		"Code": "43",
+		"Name": "Цээл",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "187",
+		"Code": "46",
+		"Name": "Чандмань",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "188",
+		"Code": "49",
+		"Name": "Шарга",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "189",
+		"Code": "52",
+		"Name": "Эрдэнэ",
+		"AimagCityId": "5"
+	},
+	{
+		"id": "190",
+		"Code": "01",
+		"Name": "Сайншанд",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "191",
+		"Code": "04",
+		"Name": "Айраг",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "192",
+		"Code": "07",
+		"Name": "Алтанширээ",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "193",
+		"Code": "10",
+		"Name": "Даланжаргалан",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "194",
+		"Code": "13",
+		"Name": "Дэлгэрэх",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "195",
+		"Code": "16",
+		"Name": "Замын-Үүд",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "196",
+		"Code": "19",
+		"Name": "Иххэт",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "209",
+		"Code": "16",
+		"Name": "Гурванзагал",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "269",
+		"Code": "37",
+		"Name": "Сант",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "286",
+		"Code": "28",
+		"Name": "Төвшрүүлэх",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "312",
+		"Code": "10",
+		"Name": "Баянговь",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "197",
+		"Code": "22",
+		"Name": "Мандах",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "198",
+		"Code": "25",
+		"Name": "Өргөн",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "199",
+		"Code": "28",
+		"Name": "Сайхандулаан",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "200",
+		"Code": "31",
+		"Name": "Улаанбадрах",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "201",
+		"Code": "34",
+		"Name": "Хатанбулаг",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "202",
+		"Code": "37",
+		"Name": "Хөвсгөл",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "203",
+		"Code": "40",
+		"Name": "Эрдэнэ",
+		"AimagCityId": "9"
+	},
+	{
+		"id": "204",
+		"Code": "01",
+		"Name": "Хэрлэн",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "205",
+		"Code": "04",
+		"Name": "Баяндун",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "206",
+		"Code": "07",
+		"Name": "Баянтүмэн",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "207",
+		"Code": "10",
+		"Name": "Баян-Уул",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "208",
+		"Code": "13",
+		"Name": "Булган",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "210",
+		"Code": "19",
+		"Name": "Дашбалбар",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "211",
+		"Code": "22",
+		"Name": "Матад",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "212",
+		"Code": "25",
+		"Name": "Сэргэлэн",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "213",
+		"Code": "28",
+		"Name": "Халхгол",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "214",
+		"Code": "31",
+		"Name": "Хөлөнбуйр",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "215",
+		"Code": "34",
+		"Name": "Цагаан-Овоо",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "216",
+		"Code": "37",
+		"Name": "Чойбалсан",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "217",
+		"Code": "40",
+		"Name": "Чулуунхороот",
+		"AimagCityId": "10"
+	},
+	{
+		"id": "218",
+		"Code": "01",
+		"Name": "Сайнцагаан",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "219",
+		"Code": "04",
+		"Name": "Адаацаг",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "220",
+		"Code": "07",
+		"Name": "Баянжаргалан",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "221",
+		"Code": "10",
+		"Name": "Говь-Угтаал",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "222",
+		"Code": "13",
+		"Name": "Гурвансайхан",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "223",
+		"Code": "16",
+		"Name": "Дэлгэрхангай",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "224",
+		"Code": "19",
+		"Name": "Дэлгэрцогт",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "225",
+		"Code": "22",
+		"Name": "Дэрэн",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "226",
+		"Code": "25",
+		"Name": "Луус",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "227",
+		"Code": "28",
+		"Name": "Өлзийт",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "228",
+		"Code": "31",
+		"Name": "Өндөршил",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "229",
+		"Code": "34",
+		"Name": "Сайхан-Овоо",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "230",
+		"Code": "37",
+		"Name": "Хулд",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "231",
+		"Code": "40",
+		"Name": "Цагаандэлгэр",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "232",
+		"Code": "43",
+		"Name": "Эрдэнэдалай",
+		"AimagCityId": "11"
+	},
+	{
+		"id": "233",
+		"Code": "01",
+		"Name": "Улиастай",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "234",
+		"Code": "04",
+		"Name": "Алдархаан",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "235",
+		"Code": "07",
+		"Name": "Асгат",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "236",
+		"Code": "10",
+		"Name": "Баянтэс",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "237",
+		"Code": "13",
+		"Name": "Баянхайрхан",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "238",
+		"Code": "16",
+		"Name": "Дөрвөлжин",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "239",
+		"Code": "19",
+		"Name": "Завханмандал",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "240",
+		"Code": "22",
+		"Name": "Идэр",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "241",
+		"Code": "25",
+		"Name": "Их-Уул",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "242",
+		"Code": "28",
+		"Name": "Нөмрөг",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "243",
+		"Code": "31",
+		"Name": "Отгон",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "244",
+		"Code": "34",
+		"Name": "Сантмаргац",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "245",
+		"Code": "37",
+		"Name": "Сонгино",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "246",
+		"Code": "40",
+		"Name": "Тосонцэнгэл",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "247",
+		"Code": "43",
+		"Name": "Түдэвтэй",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "248",
+		"Code": "46",
+		"Name": "Тэлмэн",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "249",
+		"Code": "49",
+		"Name": "Тэс",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "250",
+		"Code": "52",
+		"Name": "Ургамал",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "251",
+		"Code": "55",
+		"Name": "Цагаанхайрхан",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "252",
+		"Code": "58",
+		"Name": "Цагаанчулуут",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "253",
+		"Code": "61",
+		"Name": "Цэцэн-Уул",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "254",
+		"Code": "64",
+		"Name": "Шилүүстэй",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "255",
+		"Code": "67",
+		"Name": "Эрдэнэхайрхан",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "256",
+		"Code": "70",
+		"Name": "Яруу",
+		"AimagCityId": "12"
+	},
+	{
+		"id": "257",
+		"Code": "01",
+		"Name": "Арвайхээр",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "258",
+		"Code": "04",
+		"Name": "Баруунбаян-Улаан",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "259",
+		"Code": "07",
+		"Name": "Бат-Өлзий",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "260",
+		"Code": "10",
+		"Name": "Баянгол",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "261",
+		"Code": "13",
+		"Name": "Баян-Өндөр",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "262",
+		"Code": "16",
+		"Name": "Богд",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "263",
+		"Code": "19",
+		"Name": "Бүрд",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "264",
+		"Code": "22",
+		"Name": "Гучин-Ус",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "265",
+		"Code": "25",
+		"Name": "Есөн Зүйл",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "266",
+		"Code": "28",
+		"Name": "Зүүнбаян-Улаан",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "267",
+		"Code": "31",
+		"Name": "Нарийнтээл",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "268",
+		"Code": "34",
+		"Name": "Өлзийт",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "270",
+		"Code": "40",
+		"Name": "Тарагт",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "271",
+		"Code": "43",
+		"Name": "Төгрөг",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "272",
+		"Code": "46",
+		"Name": "Уянга",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "273",
+		"Code": "49",
+		"Name": "Хайрхандулаан",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "274",
+		"Code": "52",
+		"Name": "Хархорин",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "275",
+		"Code": "55",
+		"Name": "Хужирт",
+		"AimagCityId": "14"
+	},
+	{
+		"id": "276",
+		"Code": "01",
+		"Name": "Даланзадгад",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "277",
+		"Code": "04",
+		"Name": "Баяндалай",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "278",
+		"Code": "07",
+		"Name": "Баян-Овоо",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "279",
+		"Code": "10",
+		"Name": "Булган",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "280",
+		"Code": "13",
+		"Name": "Гурвантэс",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "281",
+		"Code": "16",
+		"Name": "Мандал-Овоо",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "282",
+		"Code": "19",
+		"Name": "Манлай",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "283",
+		"Code": "22",
+		"Name": "Ноён",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "284",
+		"Code": "25",
+		"Name": "Номгон",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "285",
+		"Code": "28",
+		"Name": "Сэврэй",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "287",
+		"Code": "31",
+		"Name": "Хайрхан",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "288",
+		"Code": "34",
+		"Name": "Хангай",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "289",
+		"Code": "37",
+		"Name": "Хашаат",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "290",
+		"Code": "40",
+		"Name": "Хотонт",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "291",
+		"Code": "43",
+		"Name": "Цахир",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "292",
+		"Code": "46",
+		"Name": "Цэнхэр",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "293",
+		"Code": "49",
+		"Name": "Цэцэрлэг",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "294",
+		"Code": "52",
+		"Name": "Чулуут",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "295",
+		"Code": "55",
+		"Name": "Эрдэнэмандал",
+		"AimagCityId": "1"
+	},
+	{
+		"id": "296",
+		"Code": "01",
+		"Name": "Өлгий",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "297",
+		"Code": "04",
+		"Name": "Алтай",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "298",
+		"Code": "07",
+		"Name": "Алтанцөгц",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "299",
+		"Code": "10",
+		"Name": "Баяннуур",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "300",
+		"Code": "13",
+		"Name": "Бугат",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "301",
+		"Code": "16",
+		"Name": "Булган",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "302",
+		"Code": "19",
+		"Name": "Буянт",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "303",
+		"Code": "22",
+		"Name": "Дэлүүн",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "304",
+		"Code": "25",
+		"Name": "Ногооннуур",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "305",
+		"Code": "28",
+		"Name": "Сагсай",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "306",
+		"Code": "31",
+		"Name": "Толбо",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "307",
+		"Code": "34",
+		"Name": "Улаанхус",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "308",
+		"Code": "37",
+		"Name": "Цэнгэл",
+		"AimagCityId": "2"
+	},
+	{
+		"id": "309",
+		"Code": "01",
+		"Name": "Баянхонгор",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "310",
+		"Code": "04",
+		"Name": "Баацагаан",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "311",
+		"Code": "07",
+		"Name": "Баянбулаг",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "313",
+		"Code": "13",
+		"Name": "Баянлиг",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "314",
+		"Code": "16",
+		"Name": "Баян-Овоо",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "315",
+		"Code": "19",
+		"Name": "Баян-Өндөр",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "316",
+		"Code": "22",
+		"Name": "Баянцагаан",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "317",
+		"Code": "25",
+		"Name": "Богд",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "318",
+		"Code": "28",
+		"Name": "Бөмбөгөр",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "319",
+		"Code": "31",
+		"Name": "Бууцагаан",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "320",
+		"Code": "34",
+		"Name": "Галуут",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "321",
+		"Code": "37",
+		"Name": "Гурванбулаг",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "322",
+		"Code": "40",
+		"Name": "Жаргалант",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "323",
+		"Code": "43",
+		"Name": "Жинст",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "324",
+		"Code": "46",
+		"Name": "Заг",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "325",
+		"Code": "49",
+		"Name": "Өлзийт",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "326",
+		"Code": "52",
+		"Name": "Хүрээмарал",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "327",
+		"Code": "55",
+		"Name": "Шинэжинст",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "328",
+		"Code": "58",
+		"Name": "Эрдэнэцогт",
+		"AimagCityId": "3"
+	},
+	{
+		"id": "329",
+		"Code": "01",
+		"Name": "Булган",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "330",
+		"Code": "04",
+		"Name": "Баян-Агт",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "331",
+		"Code": "07",
+		"Name": "Баяннуур",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "332",
+		"Code": "10",
+		"Name": "Бугат",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "333",
+		"Code": "13",
+		"Name": "Бүрэгхангай",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "334",
+		"Code": "16",
+		"Name": "Гурван Булаг",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "335",
+		"Code": "19",
+		"Name": "Дашинчилэн",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "336",
+		"Code": "22",
+		"Name": "Могод",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "337",
+		"Code": "25",
+		"Name": "Орхон",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "338",
+		"Code": "28",
+		"Name": "Рашаант",
+		"AimagCityId": "4"
+	},
+	{
+		"id": "339",
+		"Code": "00",
+		"Name": "НУБГ",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "340",
+		"Code": "99",
+		"Name": "УБЕГ",
+		"AimagCityId": "7"
+	},
+	{
+		"id": "341",
+		"Code": "52",
+		"Name": "Бор-Өндөр",
+		"AimagCityId": "22"
+	},
+	{
+		"id": "1",
+		"Code": "31",
+		"Name": "Ханбогд",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "2",
+		"Code": "34",
+		"Name": "Ханхонгор",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "3",
+		"Code": "37",
+		"Name": "Хүрмэн",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "4",
+		"Code": "40",
+		"Name": "Цогт-Овоо",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "5",
+		"Code": "43",
+		"Name": "Цогтцэций",
+		"AimagCityId": "15"
+	},
+	{
+		"id": "6",
+		"Code": "01",
+		"Name": "Баруун-Урт",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "7",
+		"Code": "04",
+		"Name": "Асгат",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "8",
+		"Code": "07",
+		"Name": "Баяндэлгэр",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "9",
+		"Code": "10",
+		"Name": "Дарьганга",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "10",
+		"Code": "13",
+		"Name": "Мөнххаан",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "11",
+		"Code": "16",
+		"Name": "Наран",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "12",
+		"Code": "19",
+		"Name": "Онгон",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "13",
+		"Code": "22",
+		"Name": "Сүхбаатар",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "14",
+		"Code": "25",
+		"Name": "Түвшинширээ",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "15",
+		"Code": "28",
+		"Name": "Түмэнцогт",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "16",
+		"Code": "31",
+		"Name": "Уулбаян",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "17",
+		"Code": "34",
+		"Name": "Халзан",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "18",
+		"Code": "37",
+		"Name": "Эрдэнэцагаан",
+		"AimagCityId": "16"
+	},
+	{
+		"id": "19",
+		"Code": "01",
+		"Name": "Сүхбаатар",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "20",
+		"Code": "04",
+		"Name": "Алтанбулаг",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "21",
+		"Code": "07",
+		"Name": "Баруунбүрэн",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "22",
+		"Code": "10",
+		"Name": "Баянгол",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "23",
+		"Code": "13",
+		"Name": "Ерөө",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "24",
+		"Code": "16",
+		"Name": "Жавхлант",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "25",
+		"Code": "19",
+		"Name": "Зүүнбүрэн",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "26",
+		"Code": "22",
+		"Name": "Мандал",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "27",
+		"Code": "25",
+		"Name": "Орхон",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "28",
+		"Code": "28",
+		"Name": "Орхонтуул",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "29",
+		"Code": "31",
+		"Name": "Сайхан",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "30",
+		"Code": "34",
+		"Name": "Сант",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "31",
+		"Code": "37",
+		"Name": "Түшиг",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "32",
+		"Code": "40",
+		"Name": "Хүдэр",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "33",
+		"Code": "43",
+		"Name": "Хушаат",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "34",
+		"Code": "46",
+		"Name": "Цагааннуур",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "35",
+		"Code": "49",
+		"Name": "Шаамар",
+		"AimagCityId": "17"
+	},
+	{
+		"id": "36",
+		"Code": "01",
+		"Name": "Зуунмод",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "37",
+		"Code": "04",
+		"Name": "Алтанбулаг",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "38",
+		"Code": "07",
+		"Name": "Аргалант",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "39",
+		"Code": "10",
+		"Name": "Архуст",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "40",
+		"Code": "13",
+		"Name": "Батсүмбэр",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "41",
+		"Code": "16",
+		"Name": "Баян",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "42",
+		"Code": "19",
+		"Name": "Баяндэлгэр",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "43",
+		"Code": "22",
+		"Name": "Баянжаргалан",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "44",
+		"Code": "25",
+		"Name": "Баян-Өнжүүл",
+		"AimagCityId": "18"
+	},
+	{
+		"id": "45",
+		"Code": "28",
+		"Name": "Баянхангай",
+		"AimagCityId": "18"
+	}
+]
