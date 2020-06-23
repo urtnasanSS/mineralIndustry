@@ -1,0 +1,2 @@
+# mineralIndustry
+mineral industry project
