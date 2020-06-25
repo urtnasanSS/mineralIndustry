@@ -90,11 +90,9 @@ module.exports = {
     let response = null
     let listQuery
     let filter = {}
-    console.log(req.query.listQuery, 'shit--------------------------------------------------')
     try {
       if (!helper.isNullOrWhitespace(req.query.listQuery)) {
         listQuery = JSON.parse(req.query.listQuery)
-        console.log(listQuery, 'console.lgo(00---------------------------------')
         if (!helper.isNullOrWhitespace(listQuery.search.author)) {
           filter.author = {}
           filter.author.$like = `%${listQuery.search.author}%`
@@ -103,7 +101,6 @@ module.exports = {
           filter.text = {}
           filter.text.$like = `%${listQuery.search.text}%`
         }
-        console.log(listQuery, 'response----------------------2 ')
         let limit = parseInt(listQuery.limit) || 10
         let offset = ((parseInt(listQuery.currentPage) || 1) - 1) * limit
         const prop = listQuery.sort.prop || 'createdAt'
@@ -117,7 +114,6 @@ module.exports = {
         })
         res.send(response)
       } else {
-        console.log('pizdaaa---------------------------------------')
         let limit = parseInt(listQuery.limit) || 10
         let offset = ((parseInt(listQuery.currentPage) || 1) - 1) * limit
         const prop = listQuery.sort.prop || 'createdAt'

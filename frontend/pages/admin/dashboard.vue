@@ -14,6 +14,7 @@
       <div class="column is-4">
         <div class="itemBackground">
           <h2>Категорийн төрөл</h2>
+          <!-- <p>{{ value }}</p> -->
           <div
             id="chartdiv"
             ref="chartdivpie"
@@ -25,7 +26,7 @@
     <div class="columns is-gapless is-marginless is-paddingless">
       <div class="column is-12">
         <div class="itemBackground">
-          <h2>Онлайн захиалга</h2>
+          <!-- <h2>Онлайн захиалга</h2> -->
           <div
             id="chartdiv"
             ref="chartdivline2"
@@ -96,18 +97,6 @@ export default {
               visits: 1882
             },
             {
-              country: 'Баннер',
-              visits: 1809
-            },
-            {
-              country: 'Слайд',
-              visits: 1322
-            },
-            {
-              country: 'Хэрэгцээт холбоос',
-              visits: 1122
-            },
-            {
               country: 'Хаягын дэлгэрэнгүй',
               visits: 1114
             },
@@ -116,19 +105,11 @@ export default {
               visits: 984
             },
             {
-              country: 'Туслах цэс',
-              visits: 711
-            },
-            {
-              country: 'Түгээмэл асуулт',
-              visits: 665
-            },
-            {
               country: 'Сэтгэгдэл',
               visits: 580
             }
           ]
-          for (let i = 0; i < 10; i++) {
+          for (let i = 0; i < 5; i++) {
             this.test[i].visits = this.value[0][i]
           }
           chart.data = this.test
@@ -171,13 +152,7 @@ export default {
     getChartPie (am4core, am4charts, am4themes_animated, am4themes_dark) {
       // Themes begin
       am4core.useTheme(am4themes_animated)
-      // Themes end
-      // Create chart instance
       const chart = am4core.create(this.$refs.chartdivpie, am4charts.PieChart)
-      // Add and configure Series
-      // const pieSeries = chart.series.push(new am4charts.PieSeries())
-      // pieSeries.dataFields.value = 'litres'
-      // pieSeries.dataFields.category = 'country'
       const pieSeries = chart.series.push(new am4charts.PieSeries())
       pieSeries.dataFields.value = 'litres'
       pieSeries.dataFields.category = 'country'
@@ -193,18 +168,11 @@ export default {
           value: 'pointer'
         }
       ]
-      // pieSeries.alignLabels = false
       pieSeries.labels.template.radius = 5
-      // pieSeries.labels.template.padding(0, 50, 10, 10)
-      // pieSeries.ticks.template.disabled = true
-      // Create a base filter effect (as if it's not there) for the hover to return to
       const shadow = pieSeries.slices.template.filters.push(
         new am4core.DropShadowFilter()
       )
       shadow.opacity = 0
-      // Create hover state
-      //  normally we have to create the hover state, in this case it already exists
-      // Slightly shift the shadow and make it more prominent on hover
       const hoverState = pieSeries.slices.template.states.getKey('hover')
       const hoverShadow = hoverState.filters.push(new am4core.DropShadowFilter())
       hoverShadow.opacity = 0.7
@@ -217,31 +185,23 @@ export default {
           this.list = JSON.parse(JSON.stringify(data))
           this.secondChart = [
             {
-              country: 'ҮТА-ын сан хөмрөгөөс',
+              country: 'Слайд',
               litres: 501.9
             },
             {
-              country: 'Үйлчилгээ',
+              country: 'Мэдээ мэдээлэл',
               litres: 165.8
             },
             {
-              country: 'Календар',
+              country: 'Хэлэлцүүлэг',
               litres: 139.9
             },
             {
-              country: 'Аудио мэдээ',
+              country: 'Зарлал',
               litres: 128.3
-            },
-            {
-              country: 'Видео мэдээ',
-              litres: 99
-            },
-            {
-              country: 'Үйл явдлын мэдээ',
-              litres: 60
             }
           ]
-          for (let i = 0; i < 6; i++) {
+          for (let i = 0; i < 4; i++) {
             this.secondChart[i].litres = this.list[0][i]
           }
           chart.data = this.secondChart

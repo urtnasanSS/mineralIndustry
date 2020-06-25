@@ -40,6 +40,18 @@
       <el-table-column align="left" :label="'Нэр'" prop="author" width="auto" sortable />
       <el-table-column
         align="left"
+        :label="'Утас'"
+        prop="text"
+        width="auto"
+      />
+      <el-table-column
+        align="left"
+        :label="'Email'"
+        prop="text"
+        width="auto"
+      />
+      <el-table-column
+        align="left"
         :label="'Сэтгэгдэл'"
         prop="text"
         width="auto"
@@ -269,6 +281,7 @@ export default {
       CommentServices.show(this.listQuery)
         .then((response) => {
           const data = response.data
+          console.log(data, 'data------------------------')
           this.list = JSON.parse(JSON.stringify(data.rows))
           this.total = data.count
           this.currentPage = this.listQuery.currentPage
