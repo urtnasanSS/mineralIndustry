@@ -105,6 +105,22 @@
                   :placeholder="lang == 'mn' ? 'Нэр' : 'Name'"
                   style="width:250px"
                 >
+                <input
+                  id="phone"
+                  v-model="comment.phone"
+                  class="input is-small"
+                  type="text"
+                  :placeholder="lang == 'mn' ? 'Утас' : 'Phone'"
+                  style="width:250px"
+                >
+                <input
+                  id="email"
+                  v-model="comment.email"
+                  class="input is-small"
+                  type="text"
+                  :placeholder="lang == 'mn' ? 'И-Мэйл' : 'Email'"
+                  style="width:250px"
+                >
               </div>
               <div class="control is-small">
                 <textarea id="comments" v-model="comment.text" class="textarea is-small" :placeholder="lang == 'mn' ? 'Сэтгэгдэл' : 'Comment'" />
@@ -114,9 +130,6 @@
           </div>
         </div>
       </div>
-      <!-- Коммент -->
-      <!-- <user-comment v-if="AllCommentFile" :comment-id="AllCommentFile" /> -->
-      <!-- <div v-if="helpCategoryId && !temp.isHideComments" style="margin:50px 20px 20px 100px !important;"> -->
       <article v-for="item in commentList" :key="item.id" class="message">
         <div class="message-body">
           <strong style="float:left">{{ item.author }}</strong>
@@ -180,6 +193,8 @@ export default {
       commentList: [],
       comment: {
         author: '',
+        phone: '',
+        email: '',
         text: '',
         isActive: true
       },
@@ -219,6 +234,12 @@ export default {
       if (this.comment.author === '' || this.comment.author.trim() === '') {
         return this.$message({ type: 'warning', message: 'Нэр оруулна уу' })
       }
+      if (this.comment.phone === '' || this.comment.phone.trim() === '') {
+        return this.$message({ type: 'warning', message: 'Утас оруулна уу' })
+      }
+      if (this.comment.email === '' || this.comment.email.trim() === '') {
+        return this.$message({ type: 'warning', message: 'И-мэйл оруулна уу' })
+      }
       if (this.comment.text === '' || this.comment.text.trim() === '') {
         return this.$message({ type: 'warning', message: 'Сэтгэгдэл оруулна уу' })
       }
@@ -257,7 +278,9 @@ export default {
     resetTemp () {
       this.comment = {
         author: null,
-        text: null
+        text: null,
+        email: null,
+        phone: null
       }
     },
     async createComment (commentContent) {
