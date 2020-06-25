@@ -14,7 +14,7 @@
       class="form-signin"
       style="width: 100%; max-width: 330px; padding: 25px;  margin: auto; background-color: white; border-radius: 10px;"
     >
-      <img src="/img/logoNoWord.png" alt width="120" height="120">
+      <img src="/img/logoUurhai.png" alt width="120" height="120">
       <h1 class="title" style="margin: 30px 0px;">
         Нэвтрэх хэсэг
       </h1>
@@ -51,7 +51,7 @@
         @click="handleClickLogin"
       >Нэвтрэх</a>
       <p class="mt-5 mb-3 text-muted">
-        © Архивын ерөнхий газар
+        © Уул уурхай, хүнд үйлдвэрийн яам
       </p>
     </form>
   </div>

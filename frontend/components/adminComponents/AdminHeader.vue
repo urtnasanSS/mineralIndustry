@@ -3,7 +3,7 @@
     <nav class="navbar is-info">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="/img/noWordLogo.png" alt="Ухаалаг шийдэл" width height="28">
+          <img src="/img/logoUurhai.png" alt="Ухаалаг шийдэл" width height="35">
           <span>Нүүр хуудас</span>
         </a>
         <div
@@ -17,22 +17,15 @@
           <span />
         </div>
       </div>
-
       <div
         id="navbarExampleTransparentExample"
         class="navbar-menu"
         :class="{ 'is-active': showNav }"
       >
         <div class="navbar-start" />
-
         <div class="navbar-end">
-          <!-- <a class="navbar-item">Портал</a> -->
-
-          <!-- <a class="navbar-item">Гарын авлага</a> -->
-
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">Бусад</a>
-
             <div class="navbar-dropdown is-right">
               <a class="navbar-item" @click="personInfo()">Хувийн мэдээлэл</a>
               <hr class="navbar-divider">
@@ -87,7 +80,6 @@ export default {
       background: #68b4f757;
       a {
         padding: 0px 34px;
-        // color: white;
         span {
           font-family: "Roboto Condensed";
           padding-left: 10px;

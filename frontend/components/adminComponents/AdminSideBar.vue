@@ -1,6 +1,5 @@
 <template>
   <aside class="left-sidebar in menu">
-    <!-- <pre>{{ adminMenus }}</pre> -->
     <div v-for="item in adminMenus" :key="item.id" style="margin-bottom:10px;">
       <p class="menu-label">
         {{ item.title }}

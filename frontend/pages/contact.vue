@@ -11,34 +11,6 @@
           <div class="column is-12" style="color: #1e73be; font-size:14px">
             <p>Хаяг: {{ temp.name }}</p>
           </div>
-          <!-- <div>
-            <div v-if="temp.phone">
-              <div class="column is-2" style="float:left">
-                Утас:
-              </div>
-              <div class="column is-9" style="float:left">
-                {{ temp.phone }}
-              </div>
-            </div>
-            <div class="column is-2" style="float:left">
-              Email:
-            </div>
-            <div class="column is-9" style="float:left">
-              {{ temp.Email }}
-            </div>
-            <div class="column is-2" style="float:left">
-              Факс:
-            </div>
-            <div class="column is-9" style="float:left">
-              {{ temp.Fax }}
-            </div>
-            <div class="column is-2" style="float:left">
-              Фэйсбүүк:
-            </div>
-            <div class="column is-9" style="float:left">
-              {{ temp.facebook }}
-            </div>
-          </div> -->
           <div class="column is-12 line">
             <i style="font-weight: bold">Архивын холбогдолтой мэдээ, мэдээлэл: </i>(976)-1800-1205 /энгийн утасны тарифаар/
           </div>

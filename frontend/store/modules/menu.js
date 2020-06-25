@@ -20,13 +20,8 @@ const getDefaultState = () => {
         shortTitle: 'Админ удирдлагын үндсэн бүртгэлүүд',
         items: [
           { id: 1, title: 'Мэдээ', to: '/content', name: 'content' },
-          { id: 2, title: 'Баннер', to: '/banner', name: 'banner' },
-          { id: 3, title: 'Слайд', to: '/slide', name: 'slide' },
-          { id: 4, title: 'Хэрэгцээт холбоос', to: '/links', name: 'links' },
-          { id: 5, title: 'Хаягын дэлгэрэнгүй', to: '/address', name: 'address' },
-          { id: 6, title: 'Түгээмэл а/х', to: '/faq', name: 'faq' },
-          { id: 7, title: 'Сэтгэгдэл', to: '/comments', name: 'comments' },
-          { id: 8, title: 'Аудио', to: '/audio', name: 'audio' }
+          { id: 2, title: 'Хаягын дэлгэрэнгүй', to: '/address', name: 'address' },
+          { id: 3, title: 'Сэтгэгдэл', to: '/comments', name: 'comments' }
         ]
       },
       {
@@ -35,14 +30,9 @@ const getDefaultState = () => {
         title: 'Админы удирдлага',
         shortTitle: 'Админ удирдлагын туслах бүртгэлүүд',
         items: [
-          { id: 1, title: 'Мэдээний төрөл', to: '/newsType', name: 'newsType' },
-          { id: 2, title: 'Цэсийн төрөл', to: '/menuType', name: 'menuType' },
-          { id: 3, title: 'Цэс', to: '/menu', name: 'menu' },
-          { id: 4, title: 'Баннерийн төрөл', to: '/bannerType', name: 'bannerType' },
-          { id: 5, title: 'Туслах цэс', to: '/helpmenu', name: 'helpmenu' },
-          { id: 6, title: 'Хэрэглэгч', to: '/user', name: 'user' },
-          { id: 7, title: 'Категори', to: '/category', name: 'category' },
-          { id: 8, title: 'Нүүр баттан', to: '/webButton', name: 'webButton' }
+          { id: 1, title: 'Цэс', to: '/menu', name: 'menu' },
+          { id: 2, title: 'Хэрэглэгч', to: '/user', name: 'user' },
+          { id: 3, title: 'Категори', to: '/category', name: 'category' }
         ]
       }
     ]

@@ -3,34 +3,23 @@
     <HeaderWithNavbar
       :sidebar-and-marqueeoffset-top="sidebarAndMarqueeoffsetTop"
     />
+    <SlideBar />
     <div ref="sidebarAndMarquee" class="container has-background-white">
-      <SlideBar />
-      <Marquee />
-
       <div class="columns is-gapless">
         <div class="column is-9">
-          <!-- <TabSide /> -->
-          <p>ss</p>
         </div>
         <div class="column is-3">
-          <!-- <RelatedNews /> -->
+          <RelatedNews />
         </div>
       </div>
-      <!-- <bigBanner /> -->
     </div>
-    <Videos />
     <div class="container has-background-white is-gapless">
-      <!-- <ServiceAndArchive /> -->
-      <!-- <Links /> -->
     </div>
-    <!-- <Contact /> -->
+    <Contact />
     <div class="container">
       <div class="columns" style="margin-top:5px; font-size: 14px;">
         <div class="column is-4">
-          www.archives.gov.mn
-        </div>
-        <div class="column is-8 is-right" style="text-align:right">
-          {{ lang == 'mn' ? 'Зохиогчийн эрх © 2019. Бүх эрхийг хуулиар хамгаалсан. УХААЛАГ ШИЙДЭЛ ХХК' : 'Copyright © 2019. All Rights Reserved. Ухаалаг шийдэл XXK' }}
+          2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.
         </div>
       </div>
     </div>
@@ -40,26 +29,14 @@
 <script>
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
 import SlideBar from '~/components/SlideBar.vue'
-import Marquee from '~/components/Marquee.vue'
-// import bigBanner from '~/components/bigBanner.vue'
-// import TabSide from '~/components/TabSide.vue'
-// import Videos from '~/components/Videos.vue'
-// import ServiceAndArchive from '~/components/ServiceAndArchive.vue'
-// import Links from '~/components/Links.vue'
-// import RelatedNews from '~/components/RelatedNews.vue'
-// import Contact from '~/components/Contact.vue'
+import RelatedNews from '~/components/RelatedNews.vue'
+import Contact from '~/components/Contact.vue'
 export default {
   components: {
     HeaderWithNavbar,
+    RelatedNews,
     SlideBar,
-    // TabSide,
-    // bigBanner,
-    // ServiceAndArchive,
-    // Videos,
-    Marquee
-    // RelatedNews,
-    // Links,
-    // Contact
+    Contact
   },
   data () {
     return {
