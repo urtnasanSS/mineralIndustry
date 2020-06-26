@@ -1,182 +1,190 @@
 <template>
-    <div>
-        <div id="right_coloum">
-					<div class="login"><img src="img/log-in.png" >
-						<h1 style="padding: 0; ">Газрын тос нэвтрэх</h1>
-					</div>
-					
-					<div id="right_coloum_news_header_1">
-						<h3 style="width: 100%;">Цаг үеийн мэдээлэл</h3>
-						<hr style="display: block;
+  <div>
+    <div id="right_coloum">
+      <div class="login">
+        <img src="img/log-in.png">
+        <h1 style="padding: 0; ">Газрын тос нэвтрэх</h1>
+      </div>
+
+      <div id="right_coloum_news_header_1">
+        <h3 style="width: 100%;">Цаг үеийн мэдээлэл</h3>
+        <hr
+          style="display: block;
 						margin-top: 0.5em;
 						margin-bottom: 0.5em;
 						margin-left: auto;
 						margin-right: auto;
 						border-style: inset;
-						border-width: 1px;">
-					</div>
+						border-width: 1px;"
+        >
+      </div>
 
-				<div id="right_coloum_news">
-					<div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						<div>
-							<img src="img/1234.png" style="float: left; width: 43%;">
-						</div>
-						<div style="width: 100%;">
-							<a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
-							<small style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-							<div id="more" >
-								<a>Дэлгэрэнгүй...</a>
-							</div>
-						</div>
-					</div>
-					<div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						<div>
-							<img src="img/1234.png" style="float: left; width: 43%;">
-						</div>
-						<div style="width: 100%;">
-							<a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
-							<small style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-							<div id="more" >
-								<a>Дэлгэрэнгүй...</a>
-							</div>
-						</div>
-					</div>
-					<div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						<div>
-							<img src="img/1234.png" style="float: left; width: 43%;">
-						</div>
-						<div style="width: 100%;">
-							<a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
-							<small style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-							<div id="more" >
-								<a>Дэлгэрэнгүй...</a>
-							</div>
-						</div>
-					</div>
+      <div id="right_coloum_news">
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <div>
+            <img src="img/1234.png" style="float: left; width: 43%;">
+          </div>
+          <div style="width: 100%;">
+            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+            <small
+              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;"
+            >2020 - 04 - 02</small>
+            <div id="more">
+              <a>Дэлгэрэнгүй...</a>
+            </div>
+          </div>
+        </div>
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <div>
+            <img src="img/1234.png" style="float: left; width: 43%;">
+          </div>
+          <div style="width: 100%;">
+            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+            <small
+              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;"
+            >2020 - 04 - 02</small>
+            <div id="more">
+              <a>Дэлгэрэнгүй...</a>
+            </div>
+          </div>
+        </div>
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <div>
+            <img src="img/1234.png" style="float: left; width: 43%;">
+          </div>
+          <div style="width: 100%;">
+            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+            <small
+              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;"
+            >2020 - 04 - 02</small>
+            <div id="more">
+              <a>Дэлгэрэнгүй...</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-				</div>
-
-				<div id="right_coloum_news_header_2">
-					<h3>Зарлал</h3>
-					<hr style="
+      <div id="right_coloum_news_header_2">
+        <h3>Зарлал</h3>
+        <hr
+          style="
 					display: block;
 					margin-top: 0.5em;
 					margin-bottom: 0.5em;
 					margin-left: auto;
 					margin-right: auto;
 					border-style: inset;
-					border-width: 1px;">
-				</div>
+					border-width: 1px;"
+        >
+      </div>
 
-				<div id="right_coloum_announcement">
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-							<div id="more_1" >
-								<a>Дэлгэрэнгүй...</a>
-							</div>
-							
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-					<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-						
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_1" >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						
-					</div>
-
-				</div>
-
-			</div>
+      <div id="right_coloum_announcement">
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+          <small
+            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+          >2020 - 04 - 02</small>
+          <div id="more_1">
+            <a>Дэлгэрэнгүй...</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 </script>
@@ -216,8 +224,7 @@ color: #ffffff;
 float: left;
 width: 30%;
 
-}  
-
+}
 
 #right_coloum_news_1 a{
 float: left;

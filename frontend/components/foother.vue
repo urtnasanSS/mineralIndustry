@@ -1,37 +1,39 @@
 <template>
-    <div>
-        <div class="foother ">
-					<div class="center">
-							<div id="foother_left">
-								<a>Холбоо барих</a>
-								<hr style="
+  <div>
+    <div class="foother ">
+      <div class="center">
+        <div id="foother_left">
+          <a>Холбоо барих</a>
+          <hr
+            style="
 								float: left;
 								width: 100%;
 								border-style: inset;
-								border-width: 1px">
-								<a2>Монгол улс, Улаанбаатар,
-									Нэгдсэн Үндэстний гудамж-5/2,
-									Засгийн газрын II байр
-									Утас: (51)-263506, (51)-260864
-									Факс: (11)-318169
-									Цахим шуудан: mpetro@mmhi.gov.mn
-									</a2>
-							</div>
-							<div id="foother_right" >
-								<img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
+								border-width: 1px"
+          >
+          <a2>
+            Монгол улс, Улаанбаатар,
+            Нэгдсэн Үндэстний гудамж-5/2,
+            Засгийн газрын II байр
+            Утас: (51)-263506, (51)-260864
+            Факс: (11)-318169
+            Цахим шуудан: mpetro@mmhi.gov.mn
+          </a2>
+        </div>
+        <div id="foother_right">
+          <img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
 
-								<a style="width: 100%; ">Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг
-									Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</a>
-							</div>
-					</div>
-					<div id="foother_2" >
-						<div class="center">
-							<a>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</a>
-						</div>
-					
-					</div>
-		</div>
+          <a style="width: 100%; ">Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг
+            Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</a>
+        </div>
+      </div>
+      <div id="foother_2">
+        <div class="center">
+          <a>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</a>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 </script>

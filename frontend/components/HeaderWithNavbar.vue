@@ -1,44 +1,51 @@
 <template>
-    <div>
-		<div class="header_area center">
+  <div>
+    <div class="header_area center">
+      <div id="header_area_1" style="width: 50%; float: left; ">
+        <img src="img/logo_mmhi.png">
+      </div>
 
-			<div id="header_area_1" style="width: 50%; float: left; ">
-				<img src="img/logo_mmhi.png">
-			</div>
+      <div id="header_area_2" style="width: 50%; float:left; text-align: right;">
+        <p
+          style=" height: auto; font-family: SegoeUI; font-size: 15px;
+				font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.33; letter-spacing: normal;color: #000000; "
+        >
+          Утас: (51)-263506, (51)-264373
+          Цахим шуудан: info@mmhi.gov.mn
+        </p>
 
-			<div id="header_area_2" style="width: 50%; float:left; text-align: right;">
-				<p style=" height: auto; font-family: SegoeUI; font-size: 15px;
-				font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.33; letter-spacing: normal;color: #000000; "> Утас: (51)-263506, (51)-264373
-					Цахим шуудан: info@mmhi.gov.mn</p>
-				
-					<form action="#" method="post" id="search_form" style="  
+        <form
+          action="#"
+          method="post"
+          id="search_form"
+          style="
 					float: right;
 					width: 361px;
 					height: auto;
 					border-radius: 12px;
 					border: solid 0.5px #707070;
-					background-color:white;" >
-						<img src="img/search (1).png" style="width: 15px; margin: 1% 2% 1% 0%" >
-					</form>
-			</div>
-	
-		</div>
-		<div class="main_menu_area" style="background-color: #1a3675 ;">
-			<div class="center">
-				<ul>
-					<div>
-						<li><a href="home">Нүүр хуудас</a></li>
-						<li><a>Мэдээ мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-						<li><a>Тусгай зөвшөөрөл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-						<li><a href="maps">Газрын зураг</a></li>
-						<li><a>Статистик мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-						<li><a>Эрх зүйн баримт бичиг<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-					</div>
-					<li style="float: right; margin: 0% 0% 0% 0%;"><a href="contactUs">Холбоо барих</a></li>
-				</ul>
-			</div>
-		</div>
+					background-color:white;"
+        >
+          <img src="img/search (1).png" style="width: 15px; margin: 1% 2% 1% 0%">
+        </form>
+      </div>
     </div>
+    <div class="main_menu_area" style="background-color: #1a3675 ;">
+      <div class="center">
+        <ul>
+          <div>
+            <li><a href="home">Нүүр хуудас</a></li>
+            <li><a>Мэдээ мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+            <li><a>Тусгай зөвшөөрөл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+            <li><a href="maps">Газрын зураг</a></li>
+            <li><a>Статистик мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+            <li><a>Эрх зүйн баримт бичиг<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+          </div>
+          <li style="float: right; margin: 0% 0% 0% 0%;"><a href="contactUs">Холбоо барих</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 </script>

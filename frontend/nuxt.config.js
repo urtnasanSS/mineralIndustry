@@ -8,8 +8,8 @@ const server = {
 }
 export default {
   mode: 'universal',
-  env: { baseUrl: env.serverUrl + ':' + env.serverPort + '/'},
-  server: server,
+  env: { baseUrl: env.serverUrl + ':' + env.serverPort + '/' },
+  server,
   /*
   ** Headers of the page
   */

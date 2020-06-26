@@ -83,7 +83,7 @@
 // import axios from 'axios'
 import moment from 'moment'
 import BannerServices from '../../services/BannerServices'
-import bannerDraw from '../../components/bannerDraw'
+// import bannerDraw from '../../components/bannerDraw'
 // import Api from '../../services/Api'
 import SmartActionButton from '@/components/custom/SmartActionButton'
 import {
@@ -95,8 +95,8 @@ import {
 export default {
   name: '',
   components: {
-    'smart-action-buttons': SmartActionButton,
-    'banner-drawer': bannerDraw
+    'smart-action-buttons': SmartActionButton
+    // 'banner-drawer': bannerDraw
   },
   layout: 'adminLayout',
   data () {

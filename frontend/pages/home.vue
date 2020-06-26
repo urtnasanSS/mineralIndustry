@@ -1,18 +1,18 @@
 <template>
   <div>
-	  	<HeaderWithNavbar/>
+    <HeaderWithNavbar />
 
-		<div id="content_area " class="center" style=" float: left; margin-top: 10px;">
-			<div id="left_coloum">
-				<leftColoumNews/>
-				<leftColoumChart/>
-				<leftColoumDiscussion/>
-			</div>
-			<rightColoum/>
-		</div>
-		<calculator/>
-		<foother/>
-  </div>	
+    <div id="content_area " class="center" style=" float: left; margin-top: 10px;">
+      <div id="left_coloum">
+        <leftColoumNews />
+        <leftColoumChart />
+        <leftColoumDiscussion />
+      </div>
+      <rightColoum />
+    </div>
+    <calculator />
+    <foother />
+  </div>
 </template>
 
 <script>
@@ -24,18 +24,17 @@ import leftColoumDiscussion from '~/components/leftColoumDiscussion.vue'
 import rightColoum from '~/components/rightColoum.vue'
 import calculator from '~/components/calculator.vue'
 
-
 export default {
-	components: {
-		HeaderWithNavbar,
-		leftColoumNews,
-		leftColoumChart,
-		leftColoumDiscussion,
-		rightColoum,
-		calculator,
-		foother
-	}
-};
+  components: {
+    HeaderWithNavbar,
+    leftColoumNews,
+    leftColoumChart,
+    leftColoumDiscussion,
+    rightColoum,
+    calculator,
+    foother
+  }
+}
 
 </script>
 
@@ -69,8 +68,6 @@ width: 65%;
 min-height:600px;
 overflow: hidden;
 }
-
-
 
 #more {
 overflow: hidden;
@@ -128,7 +125,5 @@ letter-spacing: normal;
 text-align: center;
 color: #000000;
 }
-
-
 
 </style>

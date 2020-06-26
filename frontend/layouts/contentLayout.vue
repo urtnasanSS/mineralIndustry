@@ -11,16 +11,16 @@
           <nuxt />
         </div>
         <div class="column is-3">
-          <RelatedNews />
-          <videoOne />
+          <!-- <RelatedNews /> -->
+          <!-- <videoOne /> -->
         </div>
       </div>
     </div>
-    <bigBanner />
+    <!-- <bigBanner /> -->
     <div class="container has-background-white is-gapless">
-      <Links />
+      <!-- <Links /> -->
     </div>
-    <Contact />
+    <!-- <Contact /> -->
     <div class="container">
       <div class="columns" style="margin-top:5px; font-size: 14px;">
         <div class="column is-4">
@@ -36,22 +36,22 @@
 <script>
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
 // import SlideBar from '~/components/SlideBar.vue'
-import bigBanner from '~/components/bigBanner.vue'
+// import bigBanner from '~/components/bigBanner.vue'
 // import Marquee from '~/components/Marquee.vue'
-import videoOne from '~/components/videoOne.vue'
-import Links from '~/components/Links.vue'
-import RelatedNews from '~/components/RelatedNews.vue'
-import Contact from '~/components/Contact.vue'
+// import videoOne from '~/components/videoOne.vue'
+// import Links from '~/components/Links.vue'
+// import RelatedNews from '~/components/RelatedNews.vue'
+// import Contact from '~/components/Contact.vue'
 export default {
   components: {
-    HeaderWithNavbar,
+    HeaderWithNavbar
     // SlideBar,
-    videoOne,
+    // videoOne,
     // Marquee,
-    bigBanner,
-    RelatedNews,
-    Links,
-    Contact
+    // bigBanner,
+    // RelatedNews,
+    // Links
+    // Contact
   },
   data () {
     return {

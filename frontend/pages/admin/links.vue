@@ -82,7 +82,7 @@
 <script>
 // import axios from 'axios'
 import moment from 'moment'
-import linkDraw from '../../components/linkDraw'
+// import linkDraw from '../../components/linkDraw'
 import LinksServices from '../../services/LinksServices'
 // import Api from '../../services/Api'
 import SmartActionButton from '@/components/custom/SmartActionButton'
@@ -95,8 +95,8 @@ import {
 export default {
   name: '',
   components: {
-    'smart-action-buttons': SmartActionButton,
-    'link-draw': linkDraw
+    'smart-action-buttons': SmartActionButton
+    // 'link-draw': linkDraw
   },
   layout: 'adminLayout',
   data () {

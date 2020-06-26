@@ -84,7 +84,7 @@
 // import axios from 'axios'
 import moment from 'moment'
 import audioTypeServices from '../../services/audioTypeServices'
-import audioDrawer from '../../components/audioDraw'
+// import audioDrawer from '../../components/audioDraw'
 // import Api from '../../services/Api'
 import SmartActionButton from '@/components/custom/SmartActionButton'
 import {
@@ -99,8 +99,8 @@ import {
 export default {
   name: '',
   components: {
-    'smart-action-buttons': SmartActionButton,
-    'audio-drawer': audioDrawer
+    'smart-action-buttons': SmartActionButton
+    // 'audio-drawer': audioDrawer
   },
   layout: 'adminLayout',
   data () {

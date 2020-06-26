@@ -83,7 +83,7 @@
 // import axios from 'axios'
 import moment from 'moment'
 import SlideServices from '../../services/SlideServices'
-import SlideDrawe from '../../components/slideDraw'
+// import SlideDrawe from '../../components/slideDraw'
 import SmartActionButton from '@/components/custom/SmartActionButton'
 import {
   isNull,
@@ -92,8 +92,8 @@ import {
 export default {
   name: '',
   components: {
-    'smart-action-buttons': SmartActionButton,
-    'slide-drawer': SlideDrawe
+    'smart-action-buttons': SmartActionButton
+    // 'slide-drawer': SlideDrawe
   },
   layout: 'adminLayout',
   data () {

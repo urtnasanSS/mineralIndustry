@@ -1,91 +1,97 @@
 <template>
-    <div>
-        <div id="leftColoumChart">
-					<div id="upper_line" style="margin: 1% 1% 1% 1%" >
-						<hr style="float: left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;"> 
-						<p>Хэлэлцүүлэг</p>
-					</div>
-					<div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_2"  >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						<div id="comment">
-							<img src="img/comment.png" alt="">
-							<a>2 хариулт</a>
-						</div>
-						
-					</div>
-					<div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-						<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-						<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_2"  >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						<div id="comment">
-							<img src="img/comment.png" alt="">
-							<a>2 хариулт</a>
-						</div>
-					</div>
+  <div>
+    <div id="leftColoumChart">
+      <div id="upper_line" style="margin: 1% 1% 1% 1%">
+        <hr style="float: left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;">
+        <p>Хэлэлцүүлэг</p>
+      </div>
+      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+        <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+        <small
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+        >2020 - 04 - 02</small>
+        <div id="more_2">
+          <a>Дэлгэрэнгүй...</a>
+        </div>
+        <div id="comment">
+          <img src="img/comment.png" alt="">
+          <a>2 хариулт</a>
+        </div>
+      </div>
+      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+        <small
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+        >2020 - 04 - 02</small>
+        <div id="more_2">
+          <a>Дэлгэрэнгүй...</a>
+        </div>
+        <div id="comment">
+          <img src="img/comment.png" alt="">
+          <a>2 хариулт</a>
+        </div>
+      </div>
 
-					<div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-						<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-						<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_2"  >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						<div id="comment">
-							<img src="img/comment.png" alt="">
-							<a>2 хариулт</a>
-						</div>
-						
-					</div>
-					<div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-						<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-						<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_2"  >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						<div id="comment">
-							<img src="img/comment.png" alt="">
-							<a>2 хариулт</a>
-						</div>
-						
-					</div>
-					<div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-						<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-						<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_2"  >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						<div id="comment">
-							<img src="img/comment.png" alt="">
-							<a>2 хариулт</a>
-						</div>
-						
-					</div>
-					<div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-						<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-						<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
-						<div id="more_2"  >
-							<a>Дэлгэрэнгүй...</a>
-						</div>
-						<div id="comment">
-							<img src="img/comment.png" alt="">
-							<a>2 хариулт</a>
-						</div>
-						
-					</div>
-					
-				</div>
+      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+        <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+        <small
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+        >2020 - 04 - 02</small>
+        <div id="more_2">
+          <a>Дэлгэрэнгүй...</a>
+        </div>
+        <div id="comment">
+          <img src="img/comment.png" alt="">
+          <a>2 хариулт</a>
+        </div>
+      </div>
+      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+        <small
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+        >2020 - 04 - 02</small>
+        <div id="more_2">
+          <a>Дэлгэрэнгүй...</a>
+        </div>
+        <div id="comment">
+          <img src="img/comment.png" alt="">
+          <a>2 хариулт</a>
+        </div>
+      </div>
+      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+        <small
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+        >2020 - 04 - 02</small>
+        <div id="more_2">
+          <a>Дэлгэрэнгүй...</a>
+        </div>
+        <div id="comment">
+          <img src="img/comment.png" alt="">
+          <a>2 хариулт</a>
+        </div>
+      </div>
+      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+        <small
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+						letter-spacing: normal; text-align: left; color: #000000;"
+        >2020 - 04 - 02</small>
+        <div id="more_2">
+          <a>Дэлгэрэнгүй...</a>
+        </div>
+        <div id="comment">
+          <img src="img/comment.png" alt="">
+          <a>2 хариулт</a>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 <script>
 

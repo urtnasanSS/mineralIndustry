@@ -167,7 +167,7 @@
 import moment from 'moment'
 import CommentServices from '../../services/CommentServices'
 import ContentService from '../../services/ContentServices'
-import SimilarContents from '~/components/SimilarContents'
+// import SimilarContents from '~/components/SimilarContents'
 // import UserComment from '~/components/UserComment'
 import {
   isNull
@@ -176,7 +176,7 @@ export default {
   layout: 'contentLayout',
   name: 'Content',
   components: {
-    'similar-contents': SimilarContents
+    // 'similar-contents': SimilarContents
     // 'user-comment': UserComment
   },
   data () {
