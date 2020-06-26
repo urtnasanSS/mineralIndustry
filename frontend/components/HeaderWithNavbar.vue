@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header_area center">
-      <div id="header_area_1" style="width: 50%; float: left; ">
+      <div id="header_area_1" style="width: 50%; float: left;">
         <img src="img/logo_mmhi.png">
       </div>
 
