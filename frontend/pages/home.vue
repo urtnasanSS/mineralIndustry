@@ -1,86 +1,134 @@
 <template>
   <div>
-    <HeaderWithNavbar
-      :sidebar-and-marqueeoffset-top="sidebarAndMarqueeoffsetTop"
-    />
-    <SlideBar />
-    <div ref="sidebarAndMarquee" class="container has-background-white">
-      <div class="columns is-gapless">
-        <div class="column is-9">
-        </div>
-        <div class="column is-3">
-          <RelatedNews />
-        </div>
-      </div>
-    </div>
-    <div class="container has-background-white is-gapless">
-    </div>
-    <Contact />
-    <div class="container">
-      <div class="columns" style="margin-top:5px; font-size: 14px;">
-        <div class="column is-4">
-          2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.
-        </div>
-      </div>
-    </div>
-  </div>
+	  	<HeaderWithNavbar/>
+
+		<div id="content_area " class="center" style=" float: left; margin-top: 10px;">
+			<div id="left_coloum">
+				<leftColoumNews/>
+				<leftColoumChart/>
+				<leftColoumDiscussion/>
+			</div>
+			<rightColoum/>
+		</div>
+		<calculator/>
+		<foother/>
+  </div>	
 </template>
 
 <script>
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
-import SlideBar from '~/components/SlideBar.vue'
-import RelatedNews from '~/components/RelatedNews.vue'
-import Contact from '~/components/Contact.vue'
+import foother from '~/components/foother.vue'
+import leftColoumNews from '~/components/leftColoumNews.vue'
+import leftColoumChart from '~/components/leftColoumChart.vue'
+import leftColoumDiscussion from '~/components/leftColoumDiscussion.vue'
+import rightColoum from '~/components/rightColoum.vue'
+import calculator from '~/components/calculator.vue'
+
+
 export default {
-  components: {
-    HeaderWithNavbar,
-    RelatedNews,
-    SlideBar,
-    Contact
-  },
-  data () {
-    return {
-      lang: '',
-      showModal: false,
-      sidebarAndMarqueeoffsetTop: 0
-    }
-  },
-  watch () {
-    this.lang = this.$store.state.language.language.code
-  },
-  created () {
-    this.lang = this.$store.state.language.language.code
-    if (process.browser) {
-      window.addEventListener('scroll', this.handleScroll)
-    }
-  },
-  destroyed () {},
-  methods: {
-    handleScroll () {
-      // navbar-ын өндөрийг авахын тулд хэрэглэв.
-      // const sidebarAndMarquee = this.$refs.sidebarAndMarquee
-      // const sticky = sidebarAndMarquee.offsetTop
-      // this.sidebarAndMarqueeoffsetTop = sticky
-    }
-  }
-}
+	components: {
+		HeaderWithNavbar,
+		leftColoumNews,
+		leftColoumChart,
+		leftColoumDiscussion,
+		rightColoum,
+		calculator,
+		foother
+	}
+};
+
 </script>
 
-<style lang="scss">
-.modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 0.5s ease;
+<style>
+.center{ display:block; margin-left:10% ; margin-right:10% ;padding:0%; }
+
+#upper_line p{
+margin: 1% 1% 1% 1%;
+width: auto;
+height: auto;
+font-family: SegoeUI;
+font-size: 18px;
+font-weight: bold;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.33;
+letter-spacing: normal;
+text-align: left;
+color: #000000;
+}
+.logo_mmhi {
+width: 263px;
+height: 82px;
+object-fit: contain;
 }
 
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
+#left_coloum {
+padding-right: 5%;
+float: left;
+width: 65%;
+min-height:600px;
+overflow: hidden;
 }
+
+
+
+#more {
+overflow: hidden;
+float: left;
+margin: 10px;
+width: 40%;
+height: 19px;
+border-radius: 6px;
+border: solid 0.5px #707070;
+background-color: #ffffff;
+text-align: center;
+}
+#more a{
+padding:   1% 40% 1% 25%;
+float: left;
+width: 50%;
+height: 16px;
+opacity: 0.4;
+font-family: SegoeUI;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: italic;
+line-height: 1.33;
+letter-spacing: normal;
+text-align: center;
+color: #000000;
+}
+
+#more_1 {
+overflow: hidden;
+float: left;
+margin: 10px;
+width: 40%;
+height: 19px;
+border-radius: 6px;
+border: solid 0.5px #707070;
+background-color: #ffffff;
+text-align: center;
+
+}
+#more_1 a{
+padding:   1% 40% 1% 25%;
+float: left;
+width: 50%;
+height: 16px;
+opacity: 0.4;
+font-family: SegoeUI;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: italic;
+line-height: 1.33;
+letter-spacing: normal;
+text-align: center;
+color: #000000;
+}
+
+
+
 </style>
