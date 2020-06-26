@@ -41,13 +41,13 @@
       <el-table-column
         align="left"
         :label="'Утас'"
-        prop="text"
+        prop="phone"
         width="auto"
       />
       <el-table-column
         align="left"
         :label="'Email'"
-        prop="text"
+        prop="email"
         width="auto"
       />
       <el-table-column

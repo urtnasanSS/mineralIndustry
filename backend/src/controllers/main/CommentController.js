@@ -8,9 +8,7 @@ module.exports = {
     let listQuery
     try {
       tempId = req.query.id
-      console.log(tempId, 'tempId-----------------------------------------')
       listQuery = JSON.parse(req.query.listQuery)
-      console.log(listQuery, 'response----------------------1 ')
       let limit = parseInt(listQuery.limit) || 10
       let offset = ((parseInt(listQuery.currentPage) || 1) - 1) * limit
       const prop = listQuery.sort.prop || 'createdAt'
@@ -52,7 +50,6 @@ module.exports = {
     let response = null
     let temp = null
     try {
-      console.log('Comment -> update', req.body, '--------------------ssss--------------------------')
       // req.body.updateBy = req.user.id
       temp = JSON.parse(JSON.stringify(req.body))
       temp.updatedAt = new Date()
