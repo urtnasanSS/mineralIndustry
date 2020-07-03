@@ -1,7 +1,6 @@
 <template>
   <div>
     <HeaderWithNavbar />
-
     <div id="content_area " class="center" style=" float: left; margin-top: 10px;">
       <div id="left_coloum">
         <leftColoumNews />

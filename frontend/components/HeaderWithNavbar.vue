@@ -58,8 +58,6 @@
   @media screen and (max-width: 1215px) {
     min-height: 232px;
   }
-  @media screen and (max-width: 1023px) {
-    min-height: 188px;
   }
 }
 .backgroundImage {
