@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style>
-.center{ display:block; margin-left:10% ; margin-right:10% ;padding:0%; }
+.center{ display:block; margin-left:10% ; margin-right:10%}
 
 #upper_line p{
 margin: 1% 1% 1% 1%;

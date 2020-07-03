@@ -3,22 +3,21 @@
     <HeaderWithNavbar />
     <div id="content_area" class="center">
       <div id="left_content" style="width: 40%; margin: 5% 0% 5% 0%; float: left;">
-        <a
-          style="float: left;
-          margin: 0% 0% 5% 0%;
-          width: 100%;
-          height: 31px;
-          font-family: SegoeUI;
-          font-size: 23px;
-          font-weight: bold;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 1.35;
-          letter-spacing: normal;
-          text-align: left;
-          color: #000000"
+        style="float: left;
+        margin: 0% 0% 5% 0%;
+        width: 100%;
+        height: 31px;
+        font-family: SegoeUI;
+        font-size: 23px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.35;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000"
         >
-          Холбоо барих
+        Холбоо барих
         </a>
         <a
           style="

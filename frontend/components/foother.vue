@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="foother ">
+    <div class="foother">
       <div class="center">
         <div id="foother_left">
           <a>Холбоо барих</a>
@@ -46,7 +46,7 @@ display: block;
 background-color: #f1f1f1
 }
 #foother_left{
-margin: 5% 5% 5% 5%;
+margin: 2.5% 5% 0% 5%;
 float: left;
 width: 25%;
 }
