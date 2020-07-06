@@ -62,7 +62,7 @@ export default {
       MenuServices.index()
         .then((response) => {
           const data = response.data
-          console.log(data, 'data------------------------')
+          console.log(data, 'data------------------------;')
         })
         .catch((err) => {
           err.response && err.response.data
