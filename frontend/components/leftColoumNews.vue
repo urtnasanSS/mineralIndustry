@@ -1,8 +1,11 @@
 <template>
   <div>
     <div class="left_coloum_top">
-      <!-- <img  http://localhost:8083//f48235f96fadaa78fbd96a76aa929d17.png" width="100%"> -->
-      <pre>{{ value.ContentServices }}</pre>
+      <!-- <img class="wscnph" src="img/f48235f96fadaa78fbd96a76aa929d17.png" width="100%"> -->
+      <!-- <pre slot="src" v-html="value.content">{{ value.content }}</pre> -->
+      <div>
+        <img src="value.content">
+      </div>
       <h3>
         {{ value.title }}
       </h3>
@@ -47,7 +50,7 @@ export default {
         .then((response) => {
           this.data = response.data
           this.value = this.data[0]
-          console.log(this.data, 'data------------------------121;')
+          console.log(this.value, 'data------------------------121;')
         })
         .catch((err) => {
           err.response && err.response.data
