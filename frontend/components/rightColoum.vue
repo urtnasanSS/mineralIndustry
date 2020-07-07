@@ -256,4 +256,61 @@ letter-spacing: normal;
 text-align: left;
 color: #000000;
 }
+
+#more {
+overflow: hidden;
+float: left;
+margin: 10px;
+width: 40%;
+height: 19px;
+border-radius: 6px;
+border: solid 0.5px #707070;
+background-color: #ffffff;
+text-align: center;
+}
+#more a{
+padding:   1% 40% 1% 25%;
+float: left;
+width: 50%;
+height: 16px;
+opacity: 0.4;
+font-family: SegoeUI;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: italic;
+line-height: 1.33;
+letter-spacing: normal;
+text-align: center;
+color: #000000;
+}
+
+#more_1 {
+overflow: hidden;
+float: left;
+margin: 10px;
+width: 40%;
+height: 19px;
+border-radius: 6px;
+border: solid 0.5px #707070;
+background-color: #ffffff;
+text-align: center;
+
+}
+#more_1 a{
+padding:   1% 40% 1% 25%;
+float: left;
+width: 50%;
+height: 16px;
+opacity: 0.4;
+font-family: SegoeUI;
+font-size: 12px;
+font-weight: normal;
+font-stretch: normal;
+font-style: italic;
+line-height: 1.33;
+letter-spacing: normal;
+text-align: center;
+color: #000000;
+}
 </style>

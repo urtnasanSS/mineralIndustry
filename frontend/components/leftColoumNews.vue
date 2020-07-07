@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="left_coloum_top">
-      <img src="img/f48235f96fadaa78fbd96a76aa929d17.png" width="100%">
+      <!-- <img  http://localhost:8083//f48235f96fadaa78fbd96a76aa929d17.png" width="100%"> -->
+      <pre>{{ value.ContentServices }}</pre>
       <h3>
-        “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00
-        цагт нээлтэй хуралдлаа.
+        {{ value.title }}
       </h3>
     </div>
     <div id="left_coloum_mid">
@@ -15,21 +15,52 @@
       <div class="left_coloum_mid_1" style="width: 50%; float: left; padding-right: 5%;">
         <img src="img/f48235f96fadaa78fbd96a76aa929d17.png">
         <h3 style="text-align: left;">
-          “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00
-          цагт нээлтэй хуралдлаа.
+          {{ value.title }}
         </h3>
       </div>
       <div class="left_coloum_mid_2" style="width: 50%; float: left;  padding-left: 5%;">
         <img src="img/f48235f96fadaa78fbd96a76aa929d17.png">
         <h3>
-          “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00
-          цагт нээлтэй хуралдлаа.
+          {{ value.title }}
         </h3>
       </div>
     </div>
   </div>
 </template>
 <script>
+import ContentServices from '@/services/ContentServices.js'
+
+export default {
+  data() {
+    return {
+      data: [],
+      value: {}
+    }
+  },
+  created () {
+    this.getList()
+  },
+  methods: {
+    getList () {
+      // ҮНДСЭН ЖАГСААЛТЫГ ДУУДАХ
+      ContentServices.index()
+        .then((response) => {
+          this.data = response.data
+          this.value = this.data[0]
+          console.log(this.data, 'data------------------------121;')
+        })
+        .catch((err) => {
+          err.response && err.response.data
+            ? this.$message({
+              type: 'warning',
+              message: err.response.data.error
+            })
+            : this.$message({ type: 'error', message: err })
+        })
+      this.listLoading = false
+    }
+  }
+}
 </script>
 <style>
 #left_coloum_top h3{
@@ -57,9 +88,8 @@ overflow: hidden;
 width: 100%; height: auto;
 float: left;}
 .left_coloum_mid_1 h3{
-height: 63px;
 font-family: SegoeUI;
-font-size: 16px;
+font-size: 14px;
 font-weight: bold;
 font-stretch: normal;
 font-style: normal;
@@ -76,9 +106,9 @@ width: 100%; height: auto;
 }
 
 .left_coloum_mid_2 h3{
-height: 63px;
+width: 100%; height: auto;
 font-family: SegoeUI;
-font-size: 16px;
+font-size: 14px;
 font-weight: bold;
 font-stretch: normal;
 font-style: normal;
