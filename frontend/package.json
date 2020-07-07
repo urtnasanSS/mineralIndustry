@@ -53,5 +53,5 @@
   },
   "lint-fix": {
     "lint": "eslint --fix --ext .js,.jsx, .vue"
-}
+  }
 }
