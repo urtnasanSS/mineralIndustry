@@ -12,12 +12,19 @@
 								border-width: 1px"
           >
           <a2>
-            Монгол улс, Улаанбаатар,
-            Нэгдсэн Үндэстний гудамж-5/2,
-            Засгийн газрын II байр
-            Утас: (51)-263506, (51)-260864
-            Факс: (11)-318169
-            Цахим шуудан: mpetro@mmhi.gov.mn
+            {{ value.name }}
+          </a2>
+          <br />
+          <a2>
+            Утас: {{ value.phone }}
+          </a2>
+          <br />
+          <a2>
+            Email: {{ value.Email }}
+          </a2>
+          <br />
+          <a2>
+            Fax: {{ value.Fax }}
           </a2>
         </div>
         <div id="foother_right">
@@ -36,6 +43,39 @@
   </div>
 </template>
 <script>
+import AddressServices from '@/services/AddressServices.js'
+
+export default {
+  data() {
+    return {
+      data: [],
+      value: {}
+    }
+  },
+  created () {
+    this.getList()
+  },
+  methods: {
+    getList () {
+      // ҮНДСЭН ЖАГСААЛТЫГ ДУУДАХ
+      AddressServices.index()
+        .then((response) => {
+          this.data = response.data
+          this.value = this.data[0]
+          console.log(this.data, 'data------------------------112;')
+        })
+        .catch((err) => {
+          err.response && err.response.data
+            ? this.$message({
+              type: 'warning',
+              message: err.response.data.error
+            })
+            : this.$message({ type: 'error', message: err })
+        })
+      this.listLoading = false
+    }
+  }
+}
 </script>
 <style>
 .foother{
