@@ -1,45 +1,34 @@
 <template>
   <div>
-    <div class="header_area center">
-      <div id="header_area_1" style="width: 50%; float: left;">
-        <img src="img/logo_mmhi.png">
-      </div>
+    <div>
+      <div class="header_area center">
+        <div id="header_area_1" style="width: 50%; float: left;">
+          <img src="img/logo_mmhi.png">
+        </div>
 
-      <div id="header_area_2" style="width: 50%; float:left; text-align: right;">
-        <p class="contact">
-          Утас: (51)-263506, (51)-264373
-          Цахим шуудан: info@mmhi.gov.mn
-        </p>
-
-        <form
-          action="#"
-          method="post"
-          id="search_form"
-          style="
-          margin-top: 4%;
-					float: right;
-					width: 361px;
-					height: auto;
-					border-radius: 12px;
-					border: solid 0.5px #707070;
-					background-color:white;"
-        >
-          <img src="img/search (1).png" style="width: 15px; margin: 1% 2% 1% 0%">
-        </form>
+        <div id="header_area_2" style="width: 50%; float:left; text-align: right;">
+          <p class="contact">
+            Утас: (51)-263506, (51)-264373
+            Цахим шуудан: info@mmhi.gov.mn
+          </p>
+          <div style="width: 60%; float:right; margin: 2%" class="field">
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" placeholder="Хайлтын хэсэг">
+              <span class="icon is-small is-right">
+                <i class="fas fa-search fa-xs"></i>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="main_menu_area" style="background-color: #1a3675 ;">
       <div class="center">
         <ul>
-          <div>
-            <li><a href="home">Нүүр хуудас</a></li>
-            <li><a>Мэдээ мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-            <li><a>Тусгай зөвшөөрөл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-            <li><a href="maps">Газрын зураг</a></li>
-            <li><a>Статистик мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-            <li><a>Эрх зүйн баримт бичиг<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
-          </div>
-          <li style="float: right; margin: 0% 0% 0% 0%;"><a href="contact">Холбоо барих</a></li>
+          <!-- <div v-for="item in value[]" :key="item.id">
+            <li><a href="home">{{ item.name }}</a></li>
+          </div> -->
+          <li style="float: right; margin: 0% 0% 0% 0%;"><a href="page3">Холбоо барих</a></li>
         </ul>
       </div>
     </div>
@@ -48,12 +37,17 @@
 
 <script>
 import MenuServices from '@/services/MenuServices'
+import SearchService from '@/services/SearchService'
 export default {
   data() {
-
+    return {
+      value: [],
+      value1: []
+    }
   },
   created () {
     this.getList()
+    this.valuelist()
   },
   methods: {
     getList () {
@@ -62,7 +56,27 @@ export default {
       MenuServices.index()
         .then((response) => {
           const data = response.data
-          console.log(data, 'data------------------------;')
+          this.value = data
+          console.log(data, 'data------------------------MenuServices;')
+        })
+        .catch((err) => {
+          err.response && err.response.data
+            ? this.$message({
+              type: 'warning',
+              message: err.response.data.error
+            })
+            : this.$message({ type: 'error', message: err })
+        })
+      this.listLoading = false
+    },
+    valuelist () {
+      // ҮНДСЭН ЖАГСААЛТЫГ ДУУДАХ
+      console.log(this.data, 'data------------------------SearchService;')
+      SearchService.index()
+        .then((response) => {
+          this.data = response.data
+          this.value1 = this.data[0]
+          console.log(this.data, 'data------------------------SearchService;')
         })
         .catch((err) => {
           err.response && err.response.data

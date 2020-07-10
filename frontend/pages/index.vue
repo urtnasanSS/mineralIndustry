@@ -3,7 +3,7 @@
     <div>
       <!-- <logo /> -->
       <h1 class="title">
-        TEST project
+        Уул уурхай хүнд үйлдвэрийн яам
       </h1>
       <div class="links">
         <a
@@ -13,6 +13,14 @@
           class="button--green"
         >
           Documentation
+        </a>
+        <a
+          href="http://localhost:3300/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button--green"
+        >
+          HOME
         </a>
         <a
           href="https://github.com/nuxt/nuxt.js"

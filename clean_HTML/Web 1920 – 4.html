@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+        <style>
+            .center{display:block; margin-left:10% ; margin-right:10% ;padding:0%; }
+            .logo_mmhi {
+				width: 263px;
+				height: 82px;
+				object-fit: contain;
+			            }
+				.main_menu_area{width: 100%; ; background:#1a3675; min-height:50px; overflow: hidden; }
+				.main_menu_area ul{margin:0; padding:0; list-style:none; overflow: hidden;}
+				.main_menu_area ul li{float:left; position:relative; overflow: hidden;}
+				.main_menu_area ul li a{
+					color:#FFF; 
+					overflow: hidden;
+					display:block; 
+					font-family: SegoeUI; 
+					font-size: 16px; 
+					font-weight: bold; 
+					font-stretch: normal; 
+					font-style: normal;
+					text-decoration: none;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left; padding:18px 18.7px}
+                    #calculator{
+					margin: 2% 2% 2% 2%;
+				float: left;
+				width: 320px;
+				height: auto;
+				border-radius: 12px;
+				border: solid 1px #707070;
+				}
+
+				#calculator a1{
+					margin: 5% 0% 5% 5%;
+					float: left;
+					overflow: hidden;
+					width: 209px;
+					height: auto;
+					font-family: SegoeUI;
+					font-size: 19px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.37;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+
+                    .footer{
+					float: left;
+					width: 100%;
+					height: 275px;
+					display: block;
+					background-color: #f1f1f1
+                    }
+                    #footer_left{
+                        margin: 5% 5% 5% 5%;
+                        float: left;
+                        width: 25%;
+                    }
+                    #footer_left a{
+                        float: left;
+                        width: 100%;
+                        height: 24px;
+                        font-family: SegoeUI;
+                        font-size: 18px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #000000;
+                    }
+                    #footer_left a2{
+                        width: 261px;
+                        height: 160px;
+                        font-family: SegoeUI;
+                        font-size: 15px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #000000;
+                    }
+                    #footer_right {
+                        margin: 5% 5% 3% 5%;
+                        width: 50%;
+                        float: left;
+                    }
+                    #footer_right a{
+                        margin-top: 2%;
+                        float: left;
+                        width: 508px;
+                        height: 40px;
+                        font-family: SegoeUI;
+                        font-size: 15px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #000000;
+                    }
+                    #footer_2 {
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                        height: 57px;
+                        background-color: #1a3675;
+                    }
+                    #footer_2 a{
+                        float: left;
+                        margin: 1% 0% 2% 4%;
+                        width: 100%;
+                        height: auto;
+                        font-family: SegoeUI;
+                        font-size: 15px;
+                        font-weight: bold;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.33;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #ffffff;
+                    }
+                    .text{
+                        width: 1293px;
+                        height: 665px;
+                        font-family: SegoeUI;
+                        font-size: 14px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: italic;
+                        line-height: 1.36;
+                        letter-spacing: normal;
+                        text-align: left;
+                        color: #000000;
+                    }
+                    .title{
+                        font-weight: bold;
+                        font-style: normal;
+                    }
+
+        </style>
+	</head>
+		<body>
+            <div class="header_area center">
+
+                <div id="header_area_1" style="width: 50%; float: left; ">
+                    <img src="img/logo_mmhi.png">
+                </div>
+
+                <div id="header_area_2" style="width: 50%; float:left; text-align: right;">
+                    <p style=" height: auto; font-family: SegoeUI; font-size: 15px;
+                    font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.33; letter-spacing: normal;color: #000000; "> Утас: (51)-263506, (51)-264373
+                        Цахим шуудан: info@mmhi.gov.mn</p>
+                    
+                        <form action="#" method="post" id="search_form" style="  
+                        float: right;
+                        width: 361px;
+                        height: auto;
+                        border-radius: 12px;
+                        border: solid 0.5px #707070;
+                        background-color: white;" >
+                        <img src="img/search (1).png" style="width: 15px; margin: 1% 2% 1% 0%" >
+                        </form>
+                </div>
+        
+            </div>
+    
+            <div class="main_menu_area" style="background-color: #1a3675 ;">
+                <div class="center">
+                    <ul>
+                        <li><a href="index.html">Нүүр хуудас</a></li>
+                        <li><a>Мэдээ мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+                        <li><a>Тусгай зөвшөөрөл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+                        <li><a href="index.html">Газрын зураг</a></li>
+                        <li><a>Статистик мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+                        <li><a>Эрх зүйн баримт бичиг<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+                        <li  style="float: right; margin: 0% 0% 0% 0%;"><a href="index.html">Холбоо барих</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content_area" class="center">
+                <div id="calculator_area"  style="width: auto; height: auto; margin-top: 3%;">
+                    <div class="center">
+                        <div id="calculator">
+                            <a1>ХАЙЛТ /байршил КМ/</a1>	
+                            <hr style="width: 98%;">
+                
+                            <div id="calculator_1">	
+                                <div style="width: 100%; height: 40px;">
+                                    <a style="  
+                                    float: left;
+                                    margin: 2% 2% 2% 2% ;
+                                    width: 66px;
+                                    height: 20px;
+                                    opacity: 0.44;
+                                    font-family: SegoeUI;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.33;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    color: #000000;">Эхлэх цэг</a>
+                                    <hr style="
+                                    float: left; 
+                                    margin: 0; 
+                                    width: 175px;
+                                    height: 29px;
+                                    border-radius: 9px;
+                                    border: solid 0.3px #707070;
+                                    background-color: #ffffff;
+                                    ">
+                                    <img src="img/pin.png" style="float: left; 
+                                    margin: 2% 2% 2% 4%;
+                                    width: 10.8px;
+                                    height: 15.3px;
+                                    object-fit: contain;">
+                                </div>
+                                <div style="width: 100%; height: 50px;">
+                                    <a style="  
+                                    float: left;
+                                    margin: 2% 2% 2% 2% ;
+                                    width: 66px;
+                                    height: 20px;
+                                    opacity: 0.44;
+                                    font-family: SegoeUI;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.33;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    color: #000000;">Дуусах цэг</a>
+                                    <hr style="
+                                    float: left; 
+                                    margin: 0; 
+                                    width: 175px;
+                                    height: 29px;
+                                    border-radius: 9px;
+                                    border: solid 0.3px #707070;
+                                    background-color: #ffffff;
+                                    ">
+                                    <img src="img/pin.png" style="float: left; 
+                                    margin: 2% 2% 2% 4%;
+                                    width: 10.8px;
+                                    height: 15.3px;
+                                    object-fit: contain;">
+                                </div>
+                                <button type="button" style="float: left;
+                                    margin: 0% 3% 0% 30%;
+                                    width: 87px;
+                                    height: 29px;
+                                    border-radius: 9px;
+                                    background-color: #55d46a;">
+                                    <a style="  
+                                    width: 29px;
+                                    height: 17px;
+                                    font-family: SegoeUI;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.31;
+                                    letter-spacing: normal;
+                                    text-align: center;
+                                    color: #ffffff;">Хайх</a>
+                                </button>
+                                    <button type="button" style="float: left;
+                                        width: 87px;
+                                        height: 29px;
+                                        border-radius: 9px;
+                                        background-color: #e96565;"><a style="  width: 57px;
+                                        height: 17px;
+                                        font-family: SegoeUI;
+                                        font-size: 13px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.31;
+                                        letter-spacing: normal;
+                                        text-align: center;
+                                        color: #ffffff;">Цэвэрлэх</a>
+                                    </button>
+                            </div>
+                
+                            <div id="calculator_2">
+                                <hr style="width: 98%; margin: 5% 0% 4% 0% ; float: left;">
+                                <h1 style=" margin:0% 0% 3% 3%;
+                                float: left;
+                                width: 259px;
+                                height: 26px;
+                                font-family: SegoeUI;
+                                font-size: 19px;
+                                font-weight: bold;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.37;
+                                letter-spacing: normal;
+                                text-align: left;
+                                color: #000000;">ХАЙЛТ /Тусгай зөвшөөрөл/</h1>
+                
+                                <a style=" 
+                                margin:0% 0% 3% 3%;
+                                width: 100%;
+                                height: 20px;
+                                font-family: SegoeUI;
+                                font-size: 15px;
+                                font-weight: 600;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.33;
+                                letter-spacing: normal;
+                                text-align: left;
+                                color: #000000;">Байгууллага:</a>
+                                <div style="  margin: 3% 0% 0% 3% ;
+                                    float: left;
+                                    width: 286px;
+                                    height: 29px;
+                                    border-radius: 9px;
+                                    border: solid 0.3px #707070;
+                                    background-color: #ffffff;">
+                                        <a style="float: left;
+                                    margin: 2% 0% 0% 3%;
+                                    width: 68px;
+                                    height: 20px;
+                                    opacity: 0.4;
+                                    font-family: SegoeUI;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.33;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                        color: #000000;">Петровис</a>
+                                    <img src="img/down-arrow.png" style=" margin: 3% 3% 0% 0%;
+                                    width: 11.9px;
+                                    height: 7px;
+                                    object-fit: contain;
+                                    float: right;">
+                    
+                                </div>
+                            </div>	
+                            <div id="calculator_3">
+                                <a style=" 
+                                float: left;
+                                margin:3% 0% 3% 3%;
+                                width: 100%;
+                                height: 20px;
+                                font-family: SegoeUI;
+                                font-size: 15px;
+                                font-weight: 600;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.33;
+                                letter-spacing: normal;
+                                text-align: left;
+                                color: #000000;">Түгээх станцын төрөл:</a>
+                                <div style="  margin: 3% 0% 0% 3%;
+                                    float: left;
+                                    width: 286px;
+                                    height: 101px;
+                                    border-radius: 9px;
+                                    border: solid 0.3px #707070;
+                                    background-color: #ffffff;">
+                                    <input type="checkbox" style="margin:3% 3% 3% 3%;">
+                                    <a style="width: 80%;
+                                    height: 20px;
+                                    opacity: 0.4;
+                                    font-family: SegoeUI;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.33;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    color: #000000;">Шатахуун түгээх станц</a> <br>
+                                    <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 110px;
+                                    height: 20px;
+                                    opacity: 0.4;
+                                    font-family: SegoeUI;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.33;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    color: #000000;">Газ түгээх станц</a>
+                                </div>
+                            </div>
+                            <div id="calculator_4">
+                                <a style=" 
+                                float: left;
+                                margin:3% 0% 0% 3%;
+                                width: 100%;
+                                height: 20px;
+                                font-family: SegoeUI;
+                                font-size: 15px;
+                                font-weight: 600;
+                                font-stretch: normal;
+                                font-style: normal;
+                                line-height: 1.33;
+                                letter-spacing: normal;
+                                text-align: left;
+                                color: #000000;">Шатахууны төрөл:</a>
+                
+                                <div style="  margin: 3% 0% 0% 3%;
+                                    float: left;
+                                    width: 286px;
+                                    height: 101px;
+                                    border-radius: 9px;
+                                    border: solid 0.3px #707070;
+                                    background-color: #ffffff;">
+                                    <div style="width: 100%;">
+                                        <div style="width: 50%; float: left;">
+                                            <input type="checkbox" style="margin:3% 3% 3% 3%;"><a style="width: 80%;
+                                            height: 20px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">А80</a> <br>
+                                            <input type="checkbox" style="margin:3% 3% 3% 3%;"><a style="width: 50%;
+                                            height: 20px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">АИ92</a><br>
+                                            <input type="checkbox" style="margin:3% 3% 3% 3%;"><a style="width: 50%;
+                                            height: 20px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">Дизел түлш</a><br>
+                                        </div>
+                                        <div style="width: 50%; float: left;">
+                                            <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 50%;
+                                            height: 20px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">АИ95</a><br>
+                                            <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 50%;
+                                            height: 20px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">АИ98</a><br>
+                                            <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 50%;
+                                            height: 20px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">Авто газ</a><br>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <div style=" float: right; 
+                                        margin: 3% 7% 3% 3%;
+                                        width: 46px;
+                                        height: 29px;
+                                        border-radius: 9px;
+                                        background-color: #008cff;">
+                                        <img src="img/refresh.png" style=" margin: 10% 30% 10% 30%">
+                                </div>
+                                <div style="float: left;">
+                                    <a style=" 
+                                    float: left;
+                                    margin:3% 0% 3% 3%;
+                                    width: 100%;
+                                    height: 20px;
+                                    font-family: SegoeUI;
+                                    font-size: 15px;
+                                    font-weight: 600;
+                                    font-stretch: normal;
+                                    font-style: normal;
+                                    line-height: 1.33;
+                                    letter-spacing: normal;
+                                    text-align: left;
+                                    color: #000000;">Тооцоолуур:</a>
+                                </div>
+                                <div id="calculator_5">
+                                    <div style="width: 100%; height: auto; float: left;">
+                                        <a style="  
+                                        float: left;
+                                        margin: 2% 2% 2% 10% ;
+                                        width: 66px;
+                                        height: 20px;
+                                        opacity: 0.44;
+                                        font-family: SegoeUI;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.33;
+                                        letter-spacing: normal;
+                                        text-align: left;
+                                        color: #000000;">Урт/км</a>
+                                        <div style="
+                                            float: left; 
+                                            margin: 0; 
+                                            width: 175px;
+                                            height: 29px;
+                                            border-radius: 9px;
+                                            border: solid 0.3px #707070;
+                                            background-color: #ffffff;">
+                                            <a style=" float: left;
+                                            margin: 2% 0% 3% 5%;
+                                            width: 42px;
+                                            height: 20px;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">135км</a>
+                                                                    
+                                        </div>
+                                    </div>
+                                    <div style="width: 100%; height: auto; float: left;">
+                                        <a style="  
+                                        float: left;
+                                        margin: 2% 2% 2% 10% ;
+                                        width: 66px;
+                                        height: 20px;
+                                        opacity: 0.44;
+                                        font-family: SegoeUI;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.33;
+                                        letter-spacing: normal;
+                                        text-align: left;
+                                        color: #000000;">100км/л</a>
+                                        <div style="
+                                            float: left; 
+                                            margin: 0; 
+                                            width: 175px;
+                                            height: 29px;
+                                            border-radius: 9px;
+                                            border: solid 0.3px #707070;
+                                            background-color: #ffffff;">
+                                            <a style=" float: left;
+                                            margin: 2% 0% 3% 5%;
+                                            width: 42px;
+                                            height: 20px;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">10литр</a>
+                                        </div>
+                                    </div>
+                                        
+                                    <div style="float: right;
+                                        margin: 2% 12.5% 2% 0%;
+                                        width: 175px;
+                                        height: 29px;
+                                        border-radius: 9px;
+                                        background-color: #008cff;">
+                                        <a style="  
+                                        float: left;
+                                        margin: 2% 5% 2% 30%;
+                                        width: 77px;
+                                        height: 20px;
+                                        font-family: SegoeUI;
+                                        font-size: 15px;
+                                        font-weight: 600;
+                                        font-stretch: normal;
+                                        font-style: normal;
+                                        line-height: 1.33;
+                                        letter-spacing: normal;
+                                        text-align: left;
+                                        color: #ffffff;">Тооцоолох</a>
+                                    </div>
+                
+                                    <div style="width: 90%; float: left; margin: 3% 3% 3% 3%;">
+                                        <div> <a style="  
+                                            margin: 0% 10% 0% 5%;
+                                            float: left;
+                                            width: 79px;
+                                            height: 40px;
+                                            opacity: 0.4;
+                                            font-family: SegoeUI;
+                                            font-size: 15px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">Шатахуун зарцуулалт</a>
+                                        </div>
+                                        <div style=" float: left;">
+                                            <a style="  width: 107px;
+                                            height: 36px;
+                                            font-family: SegoeUI;
+                                            font-size: 27px;
+                                            font-weight: 600;
+                                            font-stretch: normal;
+                                            font-style: normal;
+                                            line-height: 1.33;
+                                            letter-spacing: normal;
+                                            text-align: left;
+                                            color: #000000;">10,5литр</a>
+                                        </div>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                
+                        </div>
+            
+                        <img src="img/Image 1.png" style="width: 60%; float: left; overflow: hidden;">
+                    </div>
+                
+                </div>
+            </div>
+            <div class="footer ">
+                <div class="center">
+					<div id="footer_left">
+						<a>Холбоо барих</a>
+						<hr style="
+						float: left;
+						width: 100%;
+						border-style: inset;
+						border-width: 1px">
+						<a2>Монгол улс, Улаанбаатар,
+							Нэгдсэн Үндэстний гудамж-5/2,
+							Засгийн газрын II байр
+							Утас: (51)-263506, (51)-260864
+							Факс: (11)-318169
+							Цахим шуудан: mpetro@mmhi.gov.mn
+							</a2>
+					</div>
+					<div id="footer_right" >
+						<img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
+		
+						<a style="width: 100%;">Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг
+							Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</a>
+					</div>
+                </div>
+                <div id="footer_2" >
+                    <div class="center">
+                        <a>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</a>
+                    </div>
+                
+            	</div>
+        	</div>
+            
+            </div>
+        </body>
+</html>

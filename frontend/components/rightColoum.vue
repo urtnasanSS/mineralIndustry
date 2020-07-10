@@ -1,9 +1,8 @@
 <template>
   <div>
     <div id="right_coloum">
-      <div class="login">
-        <img src="img/log-in.png">
-        <h1 style="padding: 0; ">Газрын тос нэвтрэх</h1>
+      <div>
+        <button id="login" onclick="window.location.href='http://localhost:3300/login'" style="width: 80%; background-color: #486dbf;" class="button login is-info fas fa-sign-in-alt "><h1>Газрын тос нэвтрэх</h1></button>
       </div>
 
       <div id="right_coloum_news_header_1">
@@ -152,36 +151,6 @@
             <a>Дэлгэрэнгүй...</a>
           </div>
         </div>
-        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-          <small
-            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-          >2020 - 04 - 02</small>
-          <div id="more_1">
-            <a>Дэлгэрэнгүй...</a>
-          </div>
-        </div>
-        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-          <small
-            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-          >2020 - 04 - 02</small>
-          <div id="more_1">
-            <a>Дэлгэрэнгүй...</a>
-          </div>
-        </div>
-        <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-          <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-          <small
-            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-          >2020 - 04 - 02</small>
-          <div id="more_1">
-            <a>Дэлгэрэнгүй...</a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -189,23 +158,16 @@
 <script>
 </script>
 <style>
-.login{
+
+#login{
 overflow: hidden;
 width: 80%;
 height: auto;
 border-radius: 10px;
 background-color: #486dbf;
 }
-.login img{
-float: right;
-width: auto;
-height: 27.9px;
-object-fit: contain;
-margin: 3% 3% 3% 3%;
-float: left;
-}
-.login h1{
-margin:3% 0% 0% 3%;
+#login h1{
+margin:0% 0% 0% 3% ;
 width: auto;
 height: auto;
 font-family: SegoeUI;
@@ -216,14 +178,13 @@ font-style: normal;
 line-height: 1.33;
 letter-spacing: normal;
 text-align: left;
-color: green;
 float: left;
 color: #ffffff;
 }
+
 #right_coloum {
 float: left;
 width: 30%;
-
 }
 
 #right_coloum_news_1 a{

@@ -12,7 +12,7 @@
           Хуудас олдсонгүй
           <!-- <br />That's a trouble? -->
         </p>
-        <button type="button" @click="$nuxt.$router.replace({path: '/'})">
+        <button type="button" @click="$nuxt.$router.replace({path: '/home'})">
           Эхлэл хуудасруу очих
         </button>
       </div>

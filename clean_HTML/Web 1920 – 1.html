@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=divice-width, initial-scale=1.0">
+			<title>Document</title>
+			<style>
+				.center{ display:block; margin-left:10% ; margin-right:10% ;padding:0%; }
+
+				#upper_line p{
+					width: auto;
+				height: auto;
+				font-family: SegoeUI;
+				font-size: 18px;
+				font-weight: bold;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.33;
+				letter-spacing: normal;
+				text-align: left;
+				color: #000000;
+				}
+				.logo_mmhi {
+				width: 263px;
+				height: 82px;
+				object-fit: contain;
+				}
+				.main_menu_area{width: 100%; ; background:#1a3675; min-height:50px; overflow: hidden; }
+				.main_menu_area ul{margin:0; padding:0; list-style:none; overflow: hidden;}
+				.main_menu_area ul li{float:left; position:relative; overflow: hidden;}
+				.main_menu_area ul li a{
+					color:#FFF; 
+					overflow: hidden;
+					display:block; 
+					font-family: SegoeUI; 
+					font-size: 18px; 
+					font-weight: bold; 
+					font-stretch: normal; 
+					font-style: normal;
+					text-decoration: none;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left; padding:18px 18.7px}
+
+				#left_coloum {
+					padding-right: 5%;
+					float: left;
+					width: 65%;
+					min-height:600px;
+					overflow: hidden;
+				}
+				#left_coloum_top h3{
+					width: 1040px;
+					height: 48px;
+					font-family: SegoeUI;
+					font-size: 18px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+				#left_coloum_top img{
+					width: 100%; height: auto;
+					float: left;
+				}
+				#left_coloum_mid {
+					/* overflow to handle inner floating block */
+					overflow: hidden;
+				}
+				.left_coloum_mid_1 img{
+					width: 100%; height: auto;
+					float: left;}
+				.left_coloum_mid_1 h3{
+					height: 63px;
+					font-family: SegoeUI;
+					font-size: 16px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.31;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+					float: left;
+				}
+
+				.left_coloum_mid_2 img{
+					float: right;   
+					width: 100%; height: auto;
+				}
+
+				.left_coloum_mid_2 h3{
+					height: 63px;
+					font-family: SegoeUI;
+					font-size: 16px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.31;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+					float: right;
+				}
+
+				#left_coloum_bottom {
+					/* overflow to handle inner floating block */
+					overflow: hidden;
+				}
+				.left_coloum_bottom_1 img{
+					width: 100%; height: auto;
+					float: left;}
+				.left_coloum_bottom_1 h3{
+					height: 63px;
+					font-family: SegoeUI;
+					font-size: 16px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.31;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+					float: left;
+				}
+
+				.left_coloum_bottom_2 img{
+					float: right;   
+					width: 100%; height: auto;
+				}
+
+				.left_coloum_bottom_2 h3{
+					height: 63px;
+					font-family: SegoeUI;
+					font-size: 16px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.31;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+					float: right;
+				}
+
+
+				#right_coloum {
+					float: left;
+					width: 30%;
+					
+				}  
+				.login{
+					overflow: hidden;
+						width: 80%;
+						height: 54px;
+						border-radius: 10px;
+						background-color: #486dbf;
+				}
+				.login img{
+						width: 38px;
+						height: 27.9px;
+						object-fit: contain;
+						margin-top: 13px;
+						margin-left: 40px;
+						float: left;
+				}
+				.login h1{
+				margin:0% 0% 5% 7%;
+				width: 168px;
+				height: 100%;
+				font-family: SegoeUI;
+				font-size: 18px;
+				font-weight: bold;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 1.33;
+				letter-spacing: normal;
+				text-align: left;
+				color: green;
+				float: left;
+				color: #ffffff;
+				}
+
+				#right_coloum_news_1 a{
+					float: left;
+					margin-left: 3%;
+					width: 50%;
+					height: auto;
+					font-family: SegoeUI;
+					font-size: 12px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+
+				#right_coloum_announcement_1 a{
+					float: left;
+					width: 366px;
+					height: 40px;
+					font-family: SegoeUI;
+					font-size: 15px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+				#left_coloum_discussion_1 a{
+						float: left;
+						width: 100%;
+						height: auto;
+						font-family: SegoeUI;
+						font-size: 16px;
+						font-weight: bold;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.31;
+						letter-spacing: normal;
+						text-align: left;
+						color: #000000;
+				}
+
+				#more {
+					overflow: hidden;
+					float: left;
+					margin: 10px;
+					width: 40%;
+					height: 19px;
+					border-radius: 6px;
+					border: solid 0.5px #707070;
+					background-color: #ffffff;
+					text-align: center;
+				}
+				#more a{
+					padding:   1% 40% 1% 25%;
+					float: left;
+					width: 50%;
+					height: 16px;
+					opacity: 0.4;
+					font-family: SegoeUI;
+					font-size: 12px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: italic;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: center;
+					color: #000000;
+				}
+
+				#more_1 {
+					overflow: hidden;
+					float: left;
+					margin: 10px;
+					width: 40%;
+					height: 19px;
+					border-radius: 6px;
+					border: solid 0.5px #707070;
+					background-color: #ffffff;
+					text-align: center;
+
+				}
+				#more_1 a{
+					padding:   1% 40% 1% 25%;
+					float: left;
+					width: 50%;
+					height: 16px;
+					opacity: 0.4;
+					font-family: SegoeUI;
+					font-size: 12px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: italic;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: center;
+					color: #000000;
+				}
+
+
+				#more_2 {
+					overflow: hidden;
+					float: left;
+					margin: 10px;
+					width: 15%;
+					height: 19px;
+					border-radius: 6px;
+					border: solid 0.5px #707070;
+					background-color: #ffffff;
+					text-align: center;
+
+				}
+				#more_2 a{
+					
+					padding:   1% 40% 1% 25%;
+					float: left;
+					width: 50%;
+					height: 16px;
+					opacity: 0.4;
+					font-family: SegoeUI;
+					font-size: 12px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: italic;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: center;
+					color: #000000;
+				}
+
+				#comment {
+
+					overflow: hidden;
+					float: right;
+					margin: 10px;
+					width: 13%;
+					height: 20px;
+					border-radius: 6px;
+					background-color: #e55f5f;
+				}
+				#comment img{
+					float: left;
+					margin: 4% 0% 4% 4%;
+					width: 13.6px;
+					height: 12.5px;
+					object-fit: contain;
+				}
+				#comment a{
+					width: 57px;
+					height: 16px;
+					margin:3% 0% 5% 10%;
+					font-family: SegoeUI;
+					font-size: 12px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: italic;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #ffffff;
+				}
+				#calculator{
+					margin: 2% 2% 2% 2%;
+				float: left;
+				width: 320px;
+				height: auto;
+				border-radius: 12px;
+				border: solid 1px #707070;
+				}
+
+				#calculator a1{
+					margin: 5% 0% 5% 5%;
+					float: left;
+					overflow: hidden;
+					width: 209px;
+					height: auto;
+					font-family: SegoeUI;
+					font-size: 19px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.37;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+
+				.footer{
+					float: left;
+					width: 100%;
+					height: 275px;
+					display: block;
+					background-color: #f1f1f1
+				}
+				#footer_left{
+					margin: 5% 5% 5% 5%;
+					float: left;
+					width: 25%;
+				}
+				#footer_left a{
+					float: left;
+					width: 100%;
+					height: 24px;
+					font-family: SegoeUI;
+					font-size: 18px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+				#footer_left a2{
+					width: 261px;
+					height: 160px;
+					font-family: SegoeUI;
+					font-size: 15px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+				#footer_right {
+					margin: 5% 5% 3% 5%;
+					width: 50%;
+					float: left;
+				}
+				#footer_right a{
+					margin-top: 2%;
+					float: left;
+					width: 508px;
+					height: 40px;
+					font-family: SegoeUI;
+					font-size: 15px;
+					font-weight: normal;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #000000;
+				}
+				#footer_2 {
+					position: relative;
+					float: left;
+					width: 100%;
+					height: 57px;
+					background-color: #1a3675;
+				}
+				#footer_2 a{
+					float: left;
+					margin: 1% 0% 2% 4%;
+					width: 100%;
+					height: auto;
+					font-family: SegoeUI;
+					font-size: 15px;
+					font-weight: bold;
+					font-stretch: normal;
+					font-style: normal;
+					line-height: 1.33;
+					letter-spacing: normal;
+					text-align: left;
+					color: #ffffff;
+				}
+			</style>
+		</head>
+		<body>
+			<div class="header_area center">
+
+				<div id="header_area_1" style="width: 50%; float: left; ">
+					<img src="img/logo_mmhi.png">
+				</div>
+
+				<div id="header_area_2" style="width: 50%; float:left; text-align: right;">
+					<p style=" height: 20px; font-family: SegoeUI; font-size: 15px;
+					font-weight: bold; font-stretch: normal; font-style: normal; line-height: 1.33; letter-spacing: normal;color: #000000; "> Утас: (51)-263506, (51)-264373
+						Цахим шуудан: info@mmhi.gov.mn</p>
+					
+						<form action="#" method="post" id="search_form" style="  
+						float: right;
+						width: 361px;
+						height: auto;
+						border-radius: 12px;
+						border: solid 0.5px #707070;
+						background-color: var(--white);" >
+							<img src="img/search (1).png" style="width: 15px; margin: 1% 2% 1% 0%" >
+						</form>
+				</div>
+		
+			</div>
+		
+			<div class="main_menu_area" style="background-color: #1a3675 ;">
+				<div class="center">
+					<ul>
+						<li><a href="index.html">Нүүр хуудас</a></li>
+						<li><a>Мэдээ мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+						<li><a>Тусгай зөвшөөрөл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+						<li><a href="index.html">Газрын зураг</a></li>
+						<li><a>Статистик мэдээлэл<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+						<li><a>Эрх зүйн баримт бичиг<img src="img/down-arrow1.png" style="padding: 0 0 0 5px;"></a></li>
+						<li style="float: right; margin: 0% 0% 0% 0%;"><a href="index.html">Холбоо барих</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="content_area " class="center" style=" float: left; margin-top: 10px;">
+				<div id="left_coloum">
+					<div class="left_coloum_top">
+						<img src="img/f48235f96fadaa78fbd96a76aa929d17.png" width="100%">
+						<h3>“Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 
+							цагт нээлтэй хуралдлаа. </h3>
+					</div>
+					<div id="left_coloum_mid">
+
+						<div id="upper_line" style="width: 100%;">
+							<hr style=" float:left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;">
+							<p>Мэдээ мэдээлэл </p>
+						</div>
+						<div class="left_coloum_mid_1" style="width: 45%; float: left; padding-right: 5%;">
+							<img src="img/f48235f96fadaa78fbd96a76aa929d17.png">
+							<h3 style="text-align: left;">“Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 
+								цагт нээлтэй хуралдлаа. </h3>
+						</div>
+						<div class="left_coloum_mid_2" style="width: 45%; float: left;  padding-left: 5%;">
+							<img src="img/f48235f96fadaa78fbd96a76aa929d17.png">
+							<h3>“Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 
+								цагт нээлтэй хуралдлаа. </h3>
+						</div>
+					</div>
+
+					<div id="left_coloum_bottom">
+						
+						<div class="left_coloum_bottom_1" style="width: 45%; float: left;  padding-right: 5%;">
+						
+							<div id="upper_line" style="width: 100%;">
+								<hr style="float: left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;"> 
+								<p>Импортын тайлан мэдээ (сараар)</p>
+							</div>
+							<img src="img/82871210_295077954849334_7491977257053847552_n.png">
+							<h3>“Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 
+								цагт нээлтэй хуралдлаа. </h3>
+						</div>
+
+						<div class="left_coloum_bottom_2" style="width: 45%; float: left;  padding-left: 5%;">
+							<div id="upper_line" style="padding: 0%">
+								<hr style="float: left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;">
+								<p>Импортын тайлан мэдээ (сараар)</p>
+							</div>
+							<img src="img/102721430_4514897271869735_6642461463531225088_n	.png">
+							<h3>“Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 
+								цагт нээлтэй хуралдлаа. </h3>
+						</div>
+					</div>
+
+					<div id="left_coloum_discussion">
+						<div id="upper_line" style="padding: 0%" >
+							<hr style="float: left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;"> 
+							<p>Хэлэлцүүлэг</p>
+						</div>
+						<div id="left_coloum_discussion_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_2"  >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							<div id="comment">
+								<img src="img/comment.png" alt="">
+								<a>2 хариулт</a>
+							</div>
+							
+						</div>
+						<div id="left_coloum_discussion_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+							<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+							<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_2"  >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							<div id="comment">
+								<img src="img/comment.png" alt="">
+								<a>2 хариулт</a>
+							</div>
+						</div>
+
+						<div id="left_coloum_discussion_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_2"  >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							<div id="comment">
+								<img src="img/comment.png" alt="">
+								<a>2 хариулт</a>
+							</div>
+							
+						</div>
+						<div id="left_coloum_discussion_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+							<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+							<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_2"  >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							<div id="comment">
+								<img src="img/comment.png" alt="">
+								<a>2 хариулт</a>
+							</div>
+							
+						</div>
+						<div id="left_coloum_discussion_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+							<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+							<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_2"  >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							<div id="comment">
+								<img src="img/comment.png" alt="">
+								<a>2 хариулт</a>
+							</div>
+							
+						</div>
+						<div id="left_coloum_discussion_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
+							<a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
+							<small style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_2"  >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							<div id="comment">
+								<img src="img/comment.png" alt="">
+								<a>2 хариулт</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+
+				<div id="right_coloum">
+						<div class="login"><img src="img/log-in.png" >
+							<h1 style="padding: 15px; overflow: hidden;">Газрын тос нэвтрэх</h1>
+						</div>
+						
+						<div id="right_coloum_news_header_1">
+							<h3 style="width: 100%;">Цаг үеийн мэдээлэл</h3>
+							<hr style="display: block;
+							margin-top: 0.5em;
+							margin-bottom: 0.5em;
+							margin-left: auto;
+							margin-right: auto;
+							border-style: inset;
+							border-width: 1px;">
+						</div>
+
+					<div id="right_coloum_news">
+						<div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							<div>
+								<img src="img/1234.png" style="float: left; width: 43%;">
+							</div>
+							<div style="width: 100%;">
+								<a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+								<small style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+								letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+								<div id="more" >
+									<a>Дэлгэрэнгүй...</a>
+								</div>
+							</div>
+						</div>
+						<div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							<div>
+								<img src="img/1234.png" style="float: left; width: 43%;">
+							</div>
+							<div style="width: 100%;">
+								<a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+								<small style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+								letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+								<div id="more" >
+									<a>Дэлгэрэнгүй...</a>
+								</div>
+							</div>
+						</div>
+						<div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							<div>
+								<img src="img/1234.png" style="float: left; width: 43%;">
+							</div>
+							<div style="width: 100%;">
+								<a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+								<small style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+								letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+								<div id="more" >
+									<a>Дэлгэрэнгүй...</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div id="right_coloum_news_header_2">
+						<h3>Зарлал</h3>
+						<hr style="display: block;
+						margin-top: 0.5em;
+						margin-bottom: 0.5em;
+						margin-left: auto;
+						margin-right: auto;
+						border-style: inset;
+						border-width: 1px;">
+					</div>
+
+					<div id="right_coloum_announcement">
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+								<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+								<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+								letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+								<div id="more_1" >
+									<a>Дэлгэрэнгүй...</a>
+								</div>
+								
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+						<div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+							
+							<a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
+							<small style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;">2020 - 04 - 02</small>
+							<div id="more_1" >
+								<a>Дэлгэрэнгүй...</a>
+							</div>
+							
+						</div>
+
+					</div>
+
+				</div>
+				
+
+			</div>
+
+			<div id="calculator_area"  style="width: auto; height: auto;">
+					<div class="center">
+						<div id="calculator">
+							<a1>ХАЙЛТ /байршил КМ/</a1>	
+							<hr style="width: 98%;">
+				
+							<div id="calculator_1">	
+								<div style="width: 100%; height: 40px;">
+									<a style="  
+									float: left;
+									margin: 2% 2% 2% 2% ;
+									width: 66px;
+									height: 20px;
+									opacity: 0.44;
+									font-family: SegoeUI;
+									font-size: 15px;
+									font-weight: 600;
+									font-stretch: normal;
+									font-style: normal;
+									line-height: 1.33;
+									letter-spacing: normal;
+									text-align: left;
+									color: #000000;">Эхлэх цэг</a>
+									<hr style="
+									float: left; 
+									margin: 0; 
+									width: 175px;
+									height: 29px;
+									border-radius: 9px;
+									border: solid 0.3px #707070;
+									background-color: #ffffff;
+									">
+									<img src="img/pin.png" style="float: left; 
+									margin: 2% 2% 2% 4%;
+									width: 10.8px;
+									height: 15.3px;
+									object-fit: contain;">
+								</div>
+								<div style="width: 100%; height: 50px;">
+									<a style="  
+									float: left;
+									margin: 2% 2% 2% 2% ;
+									width: 66px;
+									height: 20px;
+									opacity: 0.44;
+									font-family: SegoeUI;
+									font-size: 15px;
+									font-weight: 600;
+									font-stretch: normal;
+									font-style: normal;
+									line-height: 1.33;
+									letter-spacing: normal;
+									text-align: left;
+									color: #000000;">Дуусах цэг</a>
+									<hr style="
+									float: left; 
+									margin: 0; 
+									width: 175px;
+									height: 29px;
+									border-radius: 9px;
+									border: solid 0.3px #707070;
+									background-color: #ffffff;
+									">
+									<img src="img/pin.png" style="float: left; 
+									margin: 2% 2% 2% 4%;
+									width: 10.8px;
+									height: 15.3px;
+									object-fit: contain;">
+								</div>
+								<button type="button" style="float: left;
+									margin: 0% 3% 0% 30%;
+									width: 87px;
+									height: 29px;
+									border-radius: 9px;
+									background-color: #55d46a;">
+									<a style="  
+											width: 29px;
+											height: 17px;
+											font-family: SegoeUI;
+											font-size: 13px;
+											font-weight: 600;
+											font-stretch: normal;
+											font-style: normal;
+											line-height: 1.31;
+											letter-spacing: normal;
+											text-align: center;
+											color: #ffffff;">Хайх</a>
+								</button>
+								<button type="button" style="
+									float: left;
+									width: 87px;
+									height: 29px;
+									border-radius: 9px;
+									background-color: #e96565;"><a style="  width: 57px;
+									height: 17px;
+									font-family: SegoeUI;
+									font-size: 13px;
+									font-weight: 600;
+									font-stretch: normal;
+									font-style: normal;
+									line-height: 1.31;
+									letter-spacing: normal;
+									text-align: center;
+									color: #ffffff;">Цэвэрлэх</a>
+								</button>
+							</div>
+				
+							<div id="calculator_2">
+								<hr style="width: 98%; margin: 5% 0% 4% 0% ; float: left;">
+								<h1 style=" margin:0% 0% 3% 3%;
+								float: left;
+								width: 259px;
+								height: 26px;
+								font-family: SegoeUI;
+								font-size: 19px;
+								font-weight: bold;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: 1.37;
+								letter-spacing: normal;
+								text-align: left;
+								color: #000000;">ХАЙЛТ /Тусгай зөвшөөрөл/</h1>
+				
+								<a style=" 
+								margin:0% 0% 3% 3%;
+								width: 100%;
+								height: 20px;
+								font-family: SegoeUI;
+								font-size: 15px;
+								font-weight: 600;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: 1.33;
+								letter-spacing: normal;
+								text-align: left;
+								color: #000000;">Байгууллага:</a>
+								<div style="  margin: 3% 0% 0% 3% ;
+									float: left;
+									width: 286px;
+									height: 29px;
+									border-radius: 9px;
+									border: solid 0.3px #707070;
+									background-color: #ffffff;">
+										<a style="float: left;
+									margin: 2% 0% 0% 3%;
+									width: 68px;
+									height: 20px;
+									opacity: 0.4;
+									font-family: SegoeUI;
+									font-size: 15px;
+									font-weight: 600;
+									font-stretch: normal;
+									font-style: normal;
+									line-height: 1.33;
+									letter-spacing: normal;
+									text-align: left;
+										color: #000000;">Петровис</a>
+									<img src="img/down-arrow.png" style=" margin: 3% 3% 0% 0%;
+								width: 11.9px;
+								height: 7px;
+								object-fit: contain;
+										float: right;">
+					
+								</div>
+							</div>	
+							<div id="calculator_3">
+								<a style=" 
+								float: left;
+								margin:3% 0% 3% 3%;
+								width: 100%;
+								height: 20px;
+								font-family: SegoeUI;
+								font-size: 15px;
+								font-weight: 600;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: 1.33;
+								letter-spacing: normal;
+								text-align: left;
+								color: #000000;">Түгээх станцын төрөл:</a>
+								<div style="  margin: 3% 0% 0% 3%;
+									float: left;
+									width: 286px;
+									height: 101px;
+									border-radius: 9px;
+									border: solid 0.3px #707070;
+									background-color: #ffffff;">
+									<input type="checkbox" style="margin:3% 3% 3% 3%;">
+									<a style="width: 80%;
+									height: 20px;
+									opacity: 0.4;
+									font-family: SegoeUI;
+									font-size: 15px;
+									font-weight: 600;
+									font-stretch: normal;
+									font-style: normal;
+									line-height: 1.33;
+									letter-spacing: normal;
+									text-align: left;
+									color: #000000;">Шатахуун түгээх станц</a> <br>
+									<input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 110px;
+									height: 20px;
+									opacity: 0.4;
+									font-family: SegoeUI;
+									font-size: 15px;
+									font-weight: 600;
+									font-stretch: normal;
+									font-style: normal;
+									line-height: 1.33;
+									letter-spacing: normal;
+									text-align: left;
+									color: #000000;">Газ түгээх станц</a>
+								</div>
+							</div>
+							<div id="calculator_4">
+								<a style=" 
+								float: left;
+								margin:3% 0% 0% 3%;
+								width: 100%;
+								height: 20px;
+								font-family: SegoeUI;
+								font-size: 15px;
+								font-weight: 600;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: 1.33;
+								letter-spacing: normal;
+								text-align: left;
+								color: #000000;">Шатахууны төрөл:</a>
+				
+								<div style="  margin: 3% 0% 0% 3%;
+									float: left;
+									width: 286px;
+									height: 101px;
+									border-radius: 9px;
+									border: solid 0.3px #707070;
+									background-color: #ffffff;">
+													<div style="width: 100%;">
+														<div style="width: 50%; float: left;">
+														<input type="checkbox" style="margin:3% 3% 3% 3%;"><a style="width: 80%;
+														height: 20px;
+														opacity: 0.4;
+														font-family: SegoeUI;
+														font-size: 15px;
+														font-weight: 600;
+														font-stretch: normal;
+														font-style: normal;
+														line-height: 1.33;
+														letter-spacing: normal;
+														text-align: left;
+														color: #000000;">А80</a> <br>
+														<input type="checkbox" style="margin:3% 3% 3% 3%;"><a style="width: 50%;
+														height: 20px;
+														opacity: 0.4;
+														font-family: SegoeUI;
+														font-size: 15px;
+														font-weight: 600;
+														font-stretch: normal;
+														font-style: normal;
+														line-height: 1.33;
+														letter-spacing: normal;
+														text-align: left;
+														color: #000000;">АИ92</a><br>
+														<input type="checkbox" style="margin:3% 3% 3% 3%;"><a style="width: 50%;
+														height: 20px;
+														opacity: 0.4;
+														font-family: SegoeUI;
+														font-size: 15px;
+														font-weight: 600;
+														font-stretch: normal;
+														font-style: normal;
+														line-height: 1.33;
+														letter-spacing: normal;
+														text-align: left;
+														color: #000000;">Дизел түлш</a><br>
+														</div>
+														<div style="width: 50%; float: left;">
+														<input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 50%;
+														height: 20px;
+														opacity: 0.4;
+														font-family: SegoeUI;
+														font-size: 15px;
+														font-weight: 600;
+														font-stretch: normal;
+														font-style: normal;
+														line-height: 1.33;
+														letter-spacing: normal;
+														text-align: left;
+														color: #000000;">АИ95</a><br>
+														<input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 50%;
+														height: 20px;
+														opacity: 0.4;
+														font-family: SegoeUI;
+														font-size: 15px;
+														font-weight: 600;
+														font-stretch: normal;
+														font-style: normal;
+														line-height: 1.33;
+														letter-spacing: normal;
+														text-align: left;
+														color: #000000;">АИ98</a><br>
+														<input type="checkbox" style="margin:3% 3% 3% 3% ;"><a style="width: 50%;
+														height: 20px;
+														opacity: 0.4;
+														font-family: SegoeUI;
+														font-size: 15px;
+														font-weight: 600;
+														font-stretch: normal;
+														font-style: normal;
+														line-height: 1.33;
+														letter-spacing: normal;
+														text-align: left;
+														color: #000000;">Авто газ</a><br>
+														</div>
+													</div>
+								</div>
+				
+								<div style=" float: right; 
+								margin: 3% 7% 3% 3%;
+								width: 46px;
+								height: 29px;
+								border-radius: 9px;
+								background-color: #008cff;">
+									<img src="img/refresh.png" style=" margin: 10% 30% 10% 30%">
+								</div>
+								<div style="float: left;">
+									<a style=" 
+								float: left;
+								margin:3% 0% 3% 3%;
+								width: 100%;
+								height: 20px;
+								font-family: SegoeUI;
+								font-size: 15px;
+								font-weight: 600;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: 1.33;
+								letter-spacing: normal;
+								text-align: left;
+								color: #000000;">Тооцоолуур:</a>
+							</div>
+							<div id="calculator_5">
+								<div style="width: 100%; height: auto; float: left;">
+													<a style="  
+													float: left;
+													margin: 2% 2% 2% 10% ;
+													width: 66px;
+													height: 20px;
+													opacity: 0.44;
+													font-family: SegoeUI;
+													font-size: 15px;
+													font-weight: 600;
+													font-stretch: normal;
+													font-style: normal;
+													line-height: 1.33;
+													letter-spacing: normal;
+													text-align: left;
+													color: #000000;">Урт/км</a>
+													<div style="
+													float: left; 
+													margin: 0; 
+													width: 175px;
+													height: 29px;
+													border-radius: 9px;
+													border: solid 0.3px #707070;
+													background-color: #ffffff;
+													"><a style=" float: left;
+													margin: 2% 0% 3% 5%;
+													width: 42px;
+													height: 20px;
+													font-family: SegoeUI;
+													font-size: 15px;
+													font-weight: 600;
+													font-stretch: normal;
+													font-style: normal;
+													line-height: 1.33;
+													letter-spacing: normal;
+													text-align: left;
+													color: #000000;">135км</a>
+																				
+													</div>
+									</div>
+									<div style="width: 100%; height: auto; float: left;">
+										<a style="  
+										float: left;
+										margin: 2% 2% 2% 10% ;
+										width: 66px;
+										height: 20px;
+										opacity: 0.44;
+										font-family: SegoeUI;
+										font-size: 15px;
+										font-weight: 600;
+										font-stretch: normal;
+										font-style: normal;
+										line-height: 1.33;
+										letter-spacing: normal;
+										text-align: left;
+										color: #000000;">100км/л</a>
+										<div style="
+										float: left; 
+										margin: 0; 
+										width: 175px;
+										height: 29px;
+										border-radius: 9px;
+										border: solid 0.3px #707070;
+										background-color: #ffffff;
+										"><a style=" float: left;
+										margin: 2% 0% 3% 5%;
+										width: 42px;
+										height: 20px;
+										font-family: SegoeUI;
+										font-size: 15px;
+										font-weight: 600;
+										font-stretch: normal;
+										font-style: normal;
+										line-height: 1.33;
+										letter-spacing: normal;
+										text-align: left;
+										color: #000000;">10литр</a>
+																	
+										</div>
+									</div>
+									
+									<div style="float: right;
+									margin: 2% 12.5% 2% 0%;
+									width: 175px;
+									height: 29px;
+									border-radius: 9px;
+									background-color: #008cff;">
+										<a style="  
+										float: left;
+										margin: 2% 5% 2% 30%;
+										width: 77px;
+										height: 20px;
+										font-family: SegoeUI;
+										font-size: 15px;
+										font-weight: 600;
+										font-stretch: normal;
+										font-style: normal;
+										line-height: 1.33;
+										letter-spacing: normal;
+										text-align: left;
+										color: #ffffff;">Тооцоолох</a>
+									</div>
+				
+									<div style="width: 90%; float: left; margin: 3% 3% 3% 3%;">
+										<div> <a style="  
+										margin: 0% 10% 0% 5%;
+											float: left;
+											width: 79px;
+											height: 40px;
+											opacity: 0.4;
+											font-family: SegoeUI;
+											font-size: 15px;
+											font-weight: 600;
+											font-stretch: normal;
+											font-style: normal;
+											line-height: 1.33;
+											letter-spacing: normal;
+											text-align: left;
+											color: #000000;">Шатахуун зарцуулалт</a>
+										</div>
+										<div style=" float: left;">
+											<a style="  width: 107px;
+											height: 36px;
+											font-family: SegoeUI;
+											font-size: 27px;
+											font-weight: 600;
+											font-stretch: normal;
+											font-style: normal;
+											line-height: 1.33;
+											letter-spacing: normal;
+											text-align: left;
+											color: #000000;">10,5литр</a>
+										</div>
+									</div>
+				
+							</div>
+							</div>
+				
+						</div>
+				
+						<img src="img/Image 1.png" style="width: 60%; float: left; overflow: hidden;">
+					</div>
+			
+			
+					<div class="footer ">
+								<div class="center">
+								<div id="footer_left">
+									<a>Холбоо барих</a>
+									<hr style="
+									float: left;
+									width: 100%;
+									border-style: inset;
+									border-width: 1px">
+									<a2>Монгол улс, Улаанбаатар,
+										Нэгдсэн Үндэстний гудамж-5/2,
+										Засгийн газрын II байр
+										Утас: (51)-263506, (51)-260864
+										Факс: (11)-318169
+										Цахим шуудан: mpetro@mmhi.gov.mn
+										</a2>
+								</div>
+								<div id="footer_right" >
+									<img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
+
+									<a style="width: 100%;">Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг
+										Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</a>
+								</div>
+								</div>
+								<div id="footer_2" >
+									<div class="center">
+										<a>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</a>
+									</div>
+								
+							</div>
+					</div> 
+  		</div>
+		</body>
+</html>
