@@ -3,7 +3,7 @@
     <div id="calculator_area" style="width: auto; height: auto;">
       <div class="center">
         <div id="calculator">
-          <a1>ХАЙЛТ /байршил КМ/</a1>
+          <p>ХАЙЛТ /байршил КМ/</p>
           <hr style="width: 98%;">
 
           <div id="calculator_1">
@@ -582,7 +582,7 @@ border-radius: 12px;
 border: solid 1px #707070;
 }
 
-#calculator a1{
+#calculator p{
 margin: 5% 0% 5% 5%;
 float: left;
 overflow: hidden;

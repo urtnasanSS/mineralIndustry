@@ -5,7 +5,7 @@
     <div id="content_area" class="center" style="margin-top: 3%;">
       <div id="left_coloum">
         <div class="left_coloum_top">
-          <a2
+          <p
             style="  float: left;
                     margin-bottom:1px;
                     float: left;
@@ -22,7 +22,7 @@
                     color: #000000 !important;"
           >
             “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 цагт нээлтэй хуралдлаа.
-          </a2>
+          </p>
           <small
             style=" float:left; width: 100%; margin:0% 0% 2% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
                         letter-spacing: normal; text-align: left; color: #000000;"

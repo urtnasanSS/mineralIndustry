@@ -11,21 +11,21 @@
 								border-style: inset;
 								border-width: 1px"
           >
-          <a2>
+          <p>
             {{ value.name }}
-          </a2>
+          </p>
           <br />
-          <a2>
+          <p>
             Утас: {{ value.phone }}
-          </a2>
+          </p>
           <br />
-          <a2>
+          <p>
             Email: {{ value.Email }}
-          </a2>
+          </p>
           <br />
-          <a2>
+          <p>
             Fax: {{ value.Fax }}
-          </a2>
+          </p>
         </div>
         <div id="foother_right">
           <img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
@@ -103,7 +103,7 @@ letter-spacing: normal;
 text-align: left;
 color: #000000;
 }
-#foother_left a2{
+#foother_left p{
 width: 261px;
 height: 160px;
 font-family: SegoeUI;
