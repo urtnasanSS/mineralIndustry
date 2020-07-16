@@ -6,7 +6,6 @@ var self = module.exports = {
     let response = null
     try {
       if (!helper.isNullOrWhitespace(req.query.listQuery)) {
-        console.log('----=======------------', req.query.listQuery)
         let listQuery = JSON.parse(req.query.listQuery)
         var filter = {}
         filter.isActive = true
@@ -47,7 +46,7 @@ var self = module.exports = {
         let limit = parseInt(listQuery.limit) || 10
         const prop = listQuery.sort.prop || 'createdAt'
         let order = listQuery.sort.order || 'ascending'
-        order = order === 'ascending' ? 'ASC' : 'DESC'
+        order = order === 'ascending' ? 'DESC' : 'ASC'
         response = await Menu.findAndCountAll({
           where: filter,
           order: [[prop, order]],
@@ -70,7 +69,7 @@ var self = module.exports = {
         response = await Menu.findAll({
           // attributes: ['id', 'register', 'surname', 'givenName'],
           where: { isActive: true, isDelete: false },
-          order: [['createdAt', 'DESC']]
+          order: [['createdAt', 'ASC']]
         })
         res.send(response)
       }

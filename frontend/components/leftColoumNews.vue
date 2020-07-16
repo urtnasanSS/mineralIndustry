@@ -2,11 +2,9 @@
   <div>
     <div>
       <div id="left_coloum_top" v-for="(value, index) in list" :key="value">
-        <div>
-          <div v-if="index === 0">
-            <h3>{{ value.title }} </h3>
-            <img :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
-          </div>
+        <div v-if="index === 0">
+          <h3>{{ value.title }} </h3>
+          <img :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
         </div>
       </div>
       <div id="left_coloum_mid">
@@ -45,14 +43,14 @@ export default {
       firstValueImage: [],
       baseUrl: process.env.baseUrl,
       listQuery: {
-        limit: 4,
+        limit: 3,
         currentPage: 1,
         sort: {
-          prop: 'count',
+          prop: 'publishDate',
           order: 'descending'
         },
         search: {
-          categoryIds: [1, 2, 3]
+          categoryIds: [4]
         }
       }
     }

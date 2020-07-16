@@ -25,9 +25,9 @@
     <div class="main_menu_area" style="background-color: #1a3675 ;">
       <div class="center">
         <ul>
-          <!-- <div v-for="item in value[]" :key="item.id">
+          <div v-for="item in value" :key="item.id">
             <li><a href="home">{{ item.name }}</a></li>
-          </div> -->
+          </div>
           <li style="float: right; margin: 0% 0% 0% 0%;"><a href="page3">Холбоо барих</a></li>
         </ul>
       </div>
@@ -57,7 +57,6 @@ export default {
         .then((response) => {
           const data = response.data
           this.value = data
-          console.log(data, 'data------------------------MenuServices;')
         })
         .catch((err) => {
           err.response && err.response.data
@@ -71,12 +70,10 @@ export default {
     },
     valuelist () {
       // ҮНДСЭН ЖАГСААЛТЫГ ДУУДАХ
-      console.log(this.data, 'data------------------------SearchService;')
       SearchService.index()
         .then((response) => {
           this.data = response.data
           this.value1 = this.data[0]
-          console.log(this.data, 'data------------------------SearchService;')
         })
         .catch((err) => {
           err.response && err.response.data

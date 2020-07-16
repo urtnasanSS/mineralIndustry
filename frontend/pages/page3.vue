@@ -4,7 +4,7 @@
     <div id="content_area" class="center">
       <div id="left_content" style="width: 40%; margin: 5% 0% 5% 0%; float: left;">
         <a>
-        Холбоо барих
+          Холбоо барих
         </a>
         <a
           style="
