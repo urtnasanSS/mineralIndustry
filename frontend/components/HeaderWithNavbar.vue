@@ -25,10 +25,19 @@
     <div class="main_menu_area" style="background-color: #1a3675 ;">
       <div class="center">
         <ul>
-          <div v-for="item in value" :key="item.id">
-            <li><a href="home">{{ item.name }}</a></li>
+          <div v-for="(item, index) in value" :key="item.id">
+            <div v-if="index == value.length - 1">
+              <li style="float: right; margin: 0% 0% 0% 0%"><a href="home">{{ item.name }}</a></li>
+            </div>
+            <div v-else>
+              <li><a href="home">{{ item.name }}</a></li>
+            </div>
           </div>
-          <li style="float: right; margin: 0% 0% 0% 0%;"><a href="page3">Холбоо барих</a></li>
+          <!-- <div v-for="(item, index) in value" :key="item.id">
+            <div v-if="index == item.length - 1">
+              <li style="float: right; margin: 0% 0% 0% 0%;"><a>Холбоо</a></li>
+            </div>
+          </div> -->
         </ul>
       </div>
     </div>
