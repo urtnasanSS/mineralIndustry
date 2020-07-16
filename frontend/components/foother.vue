@@ -29,7 +29,6 @@
         </div>
         <div id="foother_right">
           <img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
-
           <a style="width: 100%; ">Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг
             Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</a>
         </div>

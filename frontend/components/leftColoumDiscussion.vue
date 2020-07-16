@@ -6,95 +6,66 @@
         <p>Хэлэлцүүлэг</p>
       </div>
       <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-        <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-        >2020 - 04 - 02</small>
-        <div id="more_2">
-          <a>Дэлгэрэнгүй...</a>
-        </div>
-        <div id="comment">
-          <img src="img/comment.png" alt="">
-          <a>2 хариулт</a>
-        </div>
-      </div>
-      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-        <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-        >2020 - 04 - 02</small>
-        <div id="more_2">
-          <a>Дэлгэрэнгүй...</a>
-        </div>
-        <div id="comment">
-          <img src="img/comment.png" alt="">
-          <a>2 хариулт</a>
-        </div>
-      </div>
-
-      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <a>Тусгай зөвшөөрөл олгох сонгон шалгаруулалтын журамд оруулах нэмэлт өөрчлөлтийн төсөл</a>
-        <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-        >2020 - 04 - 02</small>
-        <div id="more_2">
-          <a>Дэлгэрэнгүй...</a>
-        </div>
-        <div id="comment">
-          <img src="img/comment.png" alt="">
-          <a>2 хариулт</a>
-        </div>
-      </div>
-      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-        <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-        >2020 - 04 - 02</small>
-        <div id="more_2">
-          <a>Дэлгэрэнгүй...</a>
-        </div>
-        <div id="comment">
-          <img src="img/comment.png" alt="">
-          <a>2 хариулт</a>
-        </div>
-      </div>
-      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-        <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-        >2020 - 04 - 02</small>
-        <div id="more_2">
-          <a>Дэлгэрэнгүй...</a>
-        </div>
-        <div id="comment">
-          <img src="img/comment.png" alt="">
-          <a>2 хариулт</a>
-        </div>
-      </div>
-      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <a>Ашигт малтмалыг баяжуулах, боловсруулах үйлдвэрийн аюулгүй ажиллагааны нэгдсэн дүрмийн төсөлд санал авч байна</a>
-        <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-						letter-spacing: normal; text-align: left; color: #000000;"
-        >2020 - 04 - 02</small>
-        <div id="more_2">
-          <a>Дэлгэрэнгүй...</a>
-        </div>
-        <div id="comment">
-          <img src="img/comment.png" alt="">
-          <a>2 хариулт</a>
+        <div v-for="item in list" :key="item.id">
+          <a>{{ item.title }}</a>
+          <small
+            style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+              letter-spacing: normal; text-align: left; color: #000000;"
+          >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+          <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
+            <nuxt-link tag="span" :to="'/content/' + item.id">Дэлгэрэнгүй...</nuxt-link>
+          </button>
+          <div id="comment">
+            <img src="img/comment.png" alt="">
+            <a>{{ 2 }} хариулт</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import moment from 'moment'
+import ContentServices from '~/services/ContentServices'
+export default {
+  components: {
+  },
+  data () {
+    return {
+      list: [],
+      files: [],
+      comments: [],
+      baseUrl: process.env.baseUrl,
+      listQuery: {
+        limit: 5,
+        currentPage: 1,
+        sort: {
+          prop: 'publishDate',
+          order: 'descending'
+        },
+        search: {
+          categoryIds: [2]
+        }
+      }
+    }
+  },
+  mounted () {
+    this.getData()
+  },
+  methods: {
+    moment,
+    getData () {
+      ContentServices.index(this.listQuery).then((response) => {
+        this.list = response.data.rows
+        console.log(this.list, '------------------------list------------')
+      }).catch((err) => {
+        this.list = []
+        err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
+      })
+    }
+  }
 
+}
 </script>
 <style>
 #leftColoumChart_1 a{
