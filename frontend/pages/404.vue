@@ -7,7 +7,6 @@
       <div class="bubble" />
       <div class="bubble" />
       <div class="main">
-      <div class="workedg">
         <h1>404</h1>
         <p style="margin-bottom:20px;">
           Хуудас олдсонгүй
