@@ -18,24 +18,6 @@
           style="overflow: hidden; width:100%;"
         />
       </div>
-      <div id="left_coloum_mid">
-        <div id="upper_line" style="width: 100%;">
-          <hr style=" float:left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;">
-          <p>Мэдээ мэдээлэл </p>
-        </div>
-        <div id="left_coloum_mid_1" v-for="(value, index) in list" :key="value">
-          <div v-if="index === 1">
-            <img v-if="index === 1" :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
-            <h3>{{ value.title }} </h3>
-          </div>
-        </div>
-        <div id="left_coloum_mid_2" v-for="(value, index) in list" :key="value">
-          <div v-if="index === 2">
-            <img :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
-            <h3>{{ value.title }} </h3>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
