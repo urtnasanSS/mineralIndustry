@@ -4,6 +4,7 @@
     <div id="content_area " class="center" style=" float: left; margin-top: 10px;">
       <div id="left_coloum">
         <leftColoumNews />
+        <leftColoumNewsS />
         <leftColoumChart />
         <leftColoumDiscussion />
       </div>
@@ -18,6 +19,7 @@
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
 import foother from '~/components/foother.vue'
 import leftColoumNews from '~/components/leftColoumNews.vue'
+import leftColoumNewsS from '~/components/leftColoumNewsS.vue'
 import leftColoumChart from '~/components/leftColoumChart.vue'
 import leftColoumDiscussion from '~/components/leftColoumDiscussion.vue'
 import rightColoum from '~/components/rightColoum.vue'
@@ -31,7 +33,8 @@ export default {
     leftColoumDiscussion,
     rightColoum,
     calculator,
-    foother
+    foother,
+    leftColoumNewsS
   }
 }
 

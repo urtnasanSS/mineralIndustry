@@ -122,57 +122,6 @@ width: 100%;
 height: auto;
 float: left;
 }
-#left_coloum_mid {
-overflow: hidden;
-width: 100%;
-}
-#left_coloum_mid_1{
-width: 50%;
-float: left;
-padding-right: 5%
-}
-#left_coloum_mid_1 img{
-width: 100%;
-height: auto;
-float: left;
-}
-
-#left_coloum_mid_1 h3{
-font-family: SegoeUI;
-font-size: 14px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.31;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-float: left;
-}
-#left_coloum_mid_2{
-width: 50%;
-float: left;
-padding-right: 5%
-}
-#left_coloum_mid_2 img{
-float: right;
-width: 100%;
-height: auto;
-}
-
-#left_coloum_mid_2 h3{
-width: 100%; height: auto;
-font-family: SegoeUI;
-font-size: 14px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.31;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-float: right;
-}
 #upper_line p{
 margin: 1% 1% 1% 1%;
 width: auto;
