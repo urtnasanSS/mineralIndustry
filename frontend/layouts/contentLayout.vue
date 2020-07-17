@@ -4,8 +4,6 @@
       :sidebar-and-marqueeoffset-top="sidebarAndMarqueeoffsetTop"
     />
     <div ref="sidebarAndMarquee" class="container has-background-white" style="margin-top:30px;">
-      <!-- <Marquee /> -->
-      <!-- <TabAndList /> -->
       <div class="columns is-gapless">
         <div class="column is-10">
           <nuxt />
@@ -33,15 +31,6 @@ export default {
       baseUrl: process.env,
       sidebarAndMarqueeoffsetTop: 0
     }
-  },
-  watch () {
-    this.lang = this.$store.state.language.language.code
-  },
-  mounted () {
-    this.lang = this.$store.state.language.language.code
-  },
-  created () {
-    this.lang = this.$store.state.language.language.code
   },
   methods: {
   }

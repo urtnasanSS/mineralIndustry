@@ -2,40 +2,31 @@
   <div>
     <div class="foother">
       <div class="center">
-        <div id="foother_left">
-          <a>Холбоо барих</a>
-          <hr
-            style="
-								float: left;
-								width: 100%;
-								border-style: inset;
-								border-width: 1px"
-          >
-          <p>
-            {{ value.name }}
-          </p>
-          <br />
-          <p>
-            Утас: {{ value.phone }}
-          </p>
-          <br />
-          <p>
-            Email: {{ value.Email }}
-          </p>
-          <br />
-          <p>
-            Fax: {{ value.Fax }}
-          </p>
-        </div>
-        <div id="foother_right">
-          <img src="img/logo_mmhi.png" style="  width: 263px; height: auto; object-fit: contain; float: left;">
-          <a style="width: 100%; ">Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг
-            Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</a>
+        <div class="foother_title">
+          <div class="foother_left">
+            <a>Холбоо барих</a>
+            <hr
+              style="
+                  float: left;
+                  width: 100%;
+                  border-style: inset;
+                  border-width: 1px;
+                  margin: 0.3rem 0 1.5rem 0;"
+            >
+            <p>{{ value.name }}</p>
+            <p>Утас: {{ value.phone }}</p>
+            <p>Email: {{ value.Email }}</p>
+            <p>Fax: {{ value.Fax }}</p>
+          </div>
+          <div class="foother_right">
+            <img src="img/logo_mmhi.png" style="width: 263px; height: 82px; object-fit: contain; float: left;">
+            <p>Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг <br />Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</p>
+          </div>
         </div>
       </div>
-      <div id="foother_2">
+      <div class="foother_2">
         <div class="center">
-          <a>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</a>
+          <p>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</p>
         </div>
       </div>
     </div>
@@ -76,86 +67,95 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss" scoped>
 .foother{
-float: left;
-width: 100%;
-height: 275px;
-display: block;
-background-color: #f1f1f1
-}
-#foother_left{
-margin: 2.5% 5% 0% 5%;
-float: left;
-width: 25%;
-}
-#foother_left a{
-float: left;
-width: 100%;
-height: 24px;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-}
-#foother_left p{
-width: 261px;
-height: 160px;
-font-family: SegoeUI;
-font-size: 15px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-}
-#foother_right {
-margin: 5% 5% 3% 5%;
-width: 50%;
-float: left;
-}
-#foother_right a{
-margin-top: 2%;
-float: left;
-width: 508px;
-height: 40px;
-font-family: SegoeUI;
-font-size: 15px;
-font-weight: normal;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-}
-#foother_2 {
-position: relative;
-float: left;
-width: 100%;
-height: 57px;
-background-color: #1a3675;
-}
-#foother_2 a{
-float: left;
-margin: 1% 0% 2% 4%;
-width: 100%;
-height: auto;
-font-family: SegoeUI;
-font-size: 15px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #ffffff;
+  float: left;
+  width: 100%;
+  height: 275px;
+  display: block;
+  background-color: #f1f1f1;
+  .center {
+    display:block;
+    margin-left:10%;
+    margin-right:10%;
+    padding:0%;
+    .foother_title {
+      height: 263px;
+      .foother_left{
+        margin: 2.5% 0 0 0;
+        float: left;
+        width: 25%;
+        a {
+          float: left;
+          width: 100%;
+          height: 24px;
+          font-family: SegoeUI;
+          font-size: 18px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.33;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000000;
+        }
+        p {
+          width: 261px;
+          font-family: SegoeUI;
+          font-size: 15px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.33;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000000;
+        }
+      }
+      .foother_right {
+        margin: 4.5% 5% 3% 1.5%;
+        width: 50%;
+        float: left;
+        p {
+          margin-top: 2%;
+          float: left;
+          width: 508px;
+          height: 40px;
+          font-family: SegoeUI;
+          font-size: 15px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.33;
+          letter-spacing: normal;
+          text-align: left;
+          color: #000000;
+        }
+      }
+    }
+  }
+  .foother_2 {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 57px;
+    background-color: #1a3675;
+    .center {
+      p {
+        float: left;
+        margin: 2% 0 2% 0;
+        width: 100%;
+        font-family: SegoeUI;
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: left;
+        color: white;
+      }
+    }
+  }
 }
 </style>

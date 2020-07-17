@@ -150,6 +150,24 @@
               allowfullscreen=""
             />
           </el-form-item>
+          <p style="margin-bottom: -1.5rem;">Албан хаагчийн мэдээлэл</p>
+          <hr>
+          <el-form-item :label="'Ажилтаны нэр'" prop="uName">
+            <label v-if="dialogStatus == 'view'">{{ temp.uName }}</label>
+            <el-input v-else v-model="temp.uName" size="mini" />
+          </el-form-item>
+          <el-form-item :label="'Албан тушаал'" prop="uPosition">
+            <label v-if="dialogStatus == 'view'">{{ temp.uPosition }}</label>
+            <el-input v-else v-model="temp.uPosition" size="mini" />
+          </el-form-item>
+          <el-form-item :label="'Ажилтаны утас'" prop="uPhone">
+            <label v-if="dialogStatus == 'view'">{{ temp.uPhone }}</label>
+            <el-input v-else v-model="temp.uPhone" size="mini" />
+          </el-form-item>
+          <el-form-item :label="'Ажилтаны өрөөний дугаар'" prop="uWork">
+            <label v-if="dialogStatus == 'view'">{{ temp.uWork }}</label>
+            <el-input v-else v-model="temp.uWork" size="mini" />
+          </el-form-item>
         </el-form>
       </div>
       <div class="drawer__footer">
@@ -241,7 +259,11 @@ export default {
         Fax: '',
         Email: '',
         iframe: '',
-        isActive: true
+        isActive: true,
+        uName: '',
+        uPhone: '',
+        uPosition: '',
+        uwork: ''
       },
       textMap: {
         update: 'Засварлах',
@@ -310,6 +332,38 @@ export default {
             required: true,
             message: 'Утга шаардана.',
             title: 'Email',
+            trigger: 'blur'
+          }
+        ],
+        uName: [
+          {
+            required: true,
+            message: 'Утга шаардана.',
+            title: 'uName',
+            trigger: 'blur'
+          }
+        ],
+        uPosition: [
+          {
+            required: true,
+            message: 'Утга шаардана.',
+            title: 'uPosition',
+            trigger: 'blur'
+          }
+        ],
+        uPhone: [
+          {
+            required: true,
+            message: 'Утга шаардана.',
+            title: 'uPhone',
+            trigger: 'blur'
+          }
+        ],
+        uWork: [
+          {
+            required: true,
+            message: 'Утга шаардана.',
+            title: 'uWork',
             trigger: 'blur'
           }
         ]
@@ -556,6 +610,10 @@ export default {
         phone: '',
         nameEn: '',
         iframe: '',
+        uName: '',
+        uPosition: '',
+        uWork: '',
+        uPhone: '',
         isActive: true
       }
     },
@@ -564,7 +622,6 @@ export default {
       if (isNull(this.temp.id) && this.dialogStatus === 'create') {
         this.createData()
       } else {
-        // console.log('updateeeeee')
         this.updateData()
       }
     },
@@ -605,6 +662,7 @@ export default {
       if (this.validateDataForm()) {
         this.fullscreenLoading = true
         removeAtts(this.temp)
+        console.log(this.temp, '------------------this//--------')
         AddressServices.put(this.temp)
           .then((response) => {
             for (const v of this.list) {

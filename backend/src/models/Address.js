@@ -38,6 +38,22 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         allowNull: false
       },
+      uName: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
+      uPosition: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
+      uPhone: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
+      uWork: {
+        type: DataTypes.TEXT,
+        allowNull: false
+      },
       deletedAt: DataTypes.DATE
     },
     { charset: 'utf8', collate: 'utf8_unicode_ci' }

@@ -60,12 +60,12 @@ export default {
   },
   methods: {
     getList () {
-      console.log('data------------------------')
       // ҮНДСЭН ЖАГСААЛТЫГ ДУУДАХ
       MenuServices.index()
         .then((response) => {
           const data = response.data
           this.value = data
+          console.log(this.value, 'data------------------------')
         })
         .catch((err) => {
           err.response && err.response.data
