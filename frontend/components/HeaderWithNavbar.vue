@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hero-body">
     <div>
       <div class="header_area center">
         <div id="header_area_1" style="width: 50%; float: left;">
@@ -8,8 +8,8 @@
 
         <div id="header_area_2" style="width: 50%; float:left; text-align: right;">
           <p class="contact">
-            Утас: (51)-263506, (51)-264373
-            Цахим шуудан: info@mmhi.gov.mn
+            Утас: {{ itema.phone }},
+            Цахим шуудан: {{ itema.Email }}
           </p>
           <div style="width: 60%; float:right; margin: 2%" class="field">
             <div class="control has-icons-left has-icons-right">
@@ -22,41 +22,35 @@
         </div>
       </div>
     </div>
-    <div class="main_menu_area" style="background-color: #1a3675 ;">
-      <div class="center">
-        <ul>
-          <div v-for="(item, index) in value" :key="item.id">
-            <div v-if="index == value.length - 1">
-              <li style="float: right; margin: 0% 0% 0% 0%"><a href="home">{{ item.name }}</a></li>
-            </div>
-            <div v-else>
-              <li><a href="home">{{ item.name }}</a></li>
-            </div>
-          </div>
-          <!-- <div v-for="(item, index) in value" :key="item.id">
-            <div v-if="index == item.length - 1">
-              <li style="float: right; margin: 0% 0% 0% 0%;"><a>Холбоо</a></li>
-            </div>
-          </div> -->
-        </ul>
+    <div class="main_menu_area">
+      <div>
+        <Navbar />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Navbar from '../components/Navbar.vue'
 import MenuServices from '@/services/MenuServices'
+import AddressServices from '@/services/AddressServices.js'
 import SearchService from '@/services/SearchService'
 export default {
+  components: {
+    Navbar
+  },
   data() {
     return {
       value: [],
-      value1: []
+      value1: [],
+      data: [],
+      itema: {}
     }
   },
   created () {
     this.getList()
     this.valuelist()
+    this.getData()
   },
   methods: {
     getList () {
@@ -65,7 +59,6 @@ export default {
         .then((response) => {
           const data = response.data
           this.value = data
-          console.log(this.value, 'data------------------------')
         })
         .catch((err) => {
           err.response && err.response.data
@@ -93,33 +86,33 @@ export default {
             : this.$message({ type: 'error', message: err })
         })
       this.listLoading = false
+    },
+    getData () {
+      AddressServices.index().then((response) => {
+        this.data = response.data
+        this.itema = this.data[0]
+      })
+        .catch((err) => {
+          err.response && err.response.data
+            ? this.$message({
+              type: 'warning',
+              message: err.response.data.error
+            })
+            : this.$message({ type: 'error', message: err })
+        })
     }
   }
 }
 </script>
 <style lang="scss" scoped>
-.header_area{
-  margin-top: 1%
+.hero-body {
+  padding: 3rem 0;
+  .header_area{
+    margin-top: 1%
+  }
+}
+.main_menu_area{float: left; width: 100%;  min-height:50px}
 
-}
-.center{ display:block; margin-left:10% ; margin-right:10% ;padding:0%}
-.main_menu_area{width: 100%; ; background:#1a3675; min-height:50px; overflow: hidden}
-.main_menu_area ul{margin:0; padding:0; list-style:none; overflow: hidden}
-.main_menu_area ul li{float:left; position:relative; overflow: hidden}
-.main_menu_area ul li a{
-  color:#FFF;
-  overflow: hidden;
-  display:block;
-  font-family: SegoeUI;
-  font-size: 16px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  text-decoration: none;
-  line-height: 1.33;
-  letter-spacing: normal;
-  text-align: left; padding:18px 18.7px
-}
 .contact {
   height: auto;
   font-family: SegoeUI;

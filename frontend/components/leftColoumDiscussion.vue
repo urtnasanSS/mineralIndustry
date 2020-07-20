@@ -17,7 +17,7 @@
           </button>
           <div id="comment">
             <img src="img/comment.png" alt="">
-            <a>{{ 2 }} хариулт</a>
+            <a>{{ item.commentIds.length }} хариулт</a>
           </div>
         </div>
       </div>
