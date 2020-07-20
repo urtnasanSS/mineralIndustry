@@ -1,6 +1,6 @@
 <template>
   <div ref="content" v-loading="loading" class="newsOuter">
-    <breadcrumb :contentTitle="lang == 'mn' ? temp.title : temp.titleEn" />
+    <!-- <breadcrumb :contentTitle="lang == 'mn' ? temp.title : temp.titleEn" /> -->
     <span class="printButton" @click="handleClickPrint()"><img src="/img/printer.png" title="Хэвлэх" class="printerImage"></span>
     <!-- <pre>{{ temp }}</pre> -->
     <h4 class="title  headerTitle">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div v-if="audios && audios.length > 0" style="padding:10px 0px;">
+    <!-- <div v-if="audios && audios.length > 0" style="padding:10px 0px;">
       <div class="picturedetail">
         <p class="subtitle is-5 picture-about" style="float: left; position: absolute;">
           Файлын нэр: {{ audios[0].name }}
@@ -46,8 +46,8 @@
           <source :src="baseUrl + audios[0].storageName" type="audio/mpeg">
         </audio>
       </div>
-    </div>
-    <div v-if="see && see.length > 0" style="padding:10px 0px;">
+    </div> -->
+    <!-- <div v-if="see && see.length > 0" style="padding:10px 0px;">
       <div style="height:100%;">
         <iframe width="100% " height="500" style="height:500px;" :src="'http://www.youtube.com/embed/' + see" />
       </div>
@@ -60,7 +60,7 @@
           Таны хөтөч энэхүү бичлэгийг тоглуулах боломжгүй байна.
         </video>
       </div>
-    </div>
+    </div> -->
     <div v-if="lang == 'mn'">
       <!-- eslint-disable-next-line vue/no-v-html -->
       <p v-html="temp.content" class="contents" />
@@ -83,7 +83,6 @@
         </div>
       </div>
     </div>
-    <similar-contents v-if="helpCategoryId" :category-id="helpCategoryId" />
     <!-- Сэтгэгдэл -->
     <div v-if="!temp.isHideComments" style="margin:50px 20px 20px 100px !important;">
       <div style="margin:49px 20px 20px 20px !important;">
@@ -167,8 +166,6 @@
 import moment from 'moment'
 import CommentServices from '../../services/CommentServices'
 import ContentService from '../../services/ContentServices'
-// import SimilarContents from '~/components/SimilarContents'
-// import UserComment from '~/components/UserComment'
 import {
   isNull
 } from '@/utils/Helper'
@@ -176,8 +173,6 @@ export default {
   layout: 'contentLayout',
   name: 'Content',
   components: {
-    // 'similar-contents': SimilarContents
-    // 'user-comment': UserComment
   },
   data () {
     return {

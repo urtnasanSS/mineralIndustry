@@ -83,29 +83,9 @@ module.exports = {
     // let files
     let response
     try {
-      // console.log('Address -> post', req.body)
       temp = JSON.parse(JSON.stringify(req.body))
       temp.isDelete = false
-      // temp.createdBy = req.user.id
-      // files = req.body.files
-      // var existuser = await User.findOne({
-      //   where: {id: req.user.id}
-      // })
-      console.log('Address -> post 2 -------------', temp)
       newAddress = await Address.create(temp)
-      // for (const obj of files) {
-      //   const attachment = {}
-      //   attachment.createdBy = req.user.id
-      //   attachment.AddressId = newAddress.id
-      //   attachment.type = 'Address'
-      //   attachment.fileName = obj.name
-      //   attachment.storageName = obj.response.response.filename
-      //   attachment.path = obj.url
-      //   attachment.size = obj.response.size
-      //   attachment.isActive = true
-      //   attachment.isDelete = false
-      //   await AllFile.create(attachment)
-      // console.log('------------==========attachment=========----------------', attachment)
       // }
       response = await Address.findOne({
         where: { id: newAddress.id }
@@ -124,7 +104,7 @@ module.exports = {
     try {
       temp = JSON.parse(JSON.stringify(req.body))
       await Address.update(
-        { updatedAt: new Date(), name: temp.name, nameEn: temp.nameEn, iframe: temp.iframe, phone: temp.phone, Fax: temp.Fax, facebook: temp.facebook, Email: temp.Email },
+        { updatedAt: new Date(), name: temp.name, nameEn: temp.nameEn, iframe: temp.iframe, phone: temp.phone, Fax: temp.Fax, facebook: temp.facebook, Email: temp.Email, uName: temp.uName, uPosition: temp.uPosition, uWork: temp.uWork, uPhone: temp.uPhone },
         { where: { id: temp.id } }
       )
       response = await Address.findOne({
