@@ -26,6 +26,7 @@ module.exports = {
     }
   },
   async post (req, res) {
+    console.log('irleeee----------------------------------------------------')
     let temp // Comment
     let newComment
     // let files
@@ -34,6 +35,7 @@ module.exports = {
       temp = JSON.parse(JSON.stringify(req.body))
       temp.isDelete = false
       temp.isActive = true
+      console.log(temp, '----------------------------irweeeeeeeeeeeeeeeee')
       newComment = await Comment.create(temp)
       response = await Comment.findOne({
         where: { id: newComment.id },

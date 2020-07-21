@@ -21,7 +21,7 @@
       <div id="right_coloum_news">
         <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
           <div>
-            <img src="img/1234.png" style="float: left; width: 43%;">
+            <img src="/img/1234.png" style="float: left; width: 43%;">
           </div>
           <div style="width: 100%;">
             <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
@@ -36,7 +36,7 @@
         </div>
         <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
           <div>
-            <img src="img/1234.png" style="float: left; width: 43%;">
+            <img src="/img/1234.png" style="float: left; width: 43%;">
           </div>
           <div style="width: 100%;">
             <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
@@ -51,7 +51,7 @@
         </div>
         <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
           <div>
-            <img src="img/1234.png" style="float: left; width: 43%;">
+            <img src="/img/1234.png" style="float: left; width: 43%;">
           </div>
           <div style="width: 100%;">
             <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>

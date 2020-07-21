@@ -8,15 +8,15 @@
         </a><br>
         <div class="field">
           <div class="control">
-            <textarea class="textarea" placeholder="" rows="7"></textarea>
+            <textarea id="comments" class="textarea" v-model="comment.text" placeholder="" rows="7"></textarea>
           </div>
         </div>
         <a>Утасны дугаар</a>
-        <input class="input" type="tel" placeholder="">
+        <input class="input" v-model="comment.phone" type="tel" placeholder="">
         <a>Цахим хаяг</a>
-        <input class="input" type="email" placeholder="">
+        <input class="input" v-model="comment.email" type="email" placeholder="">
         <div class="buttons">
-          <button class="button">Илгээх</button>
+          <button class="button" @click="handleCreateComment">Илгээх</button>
         </div>
       </div>
       <div id="right_content" style="width: 22%; float: left; margin: 10% 0% 10% 5%">
@@ -40,6 +40,7 @@
 <script>
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
 import foother from '~/components/foother.vue'
+import CommentServices from '@/services/CommentServices'
 import AddressServices from '@/services/AddressServices.js'
 
 export default {
@@ -51,7 +52,14 @@ export default {
   data() {
     return {
       data: [],
-      value: {}
+      value: {},
+      CommentId: 1,
+      CommentName: 'Холбоо барих',
+      comment: {
+        phone: '',
+        email: '',
+        text: ''
+      }
     }
   },
   created () {
@@ -72,6 +80,81 @@ export default {
             })
             : this.$message({ type: 'error', message: err })
         })
+    },
+    handleCreateComment () {
+      if (this.comment.text === '' || this.comment.text.trim() === '') {
+        return this.$message({ type: 'warning', message: 'Сэтгэгдэл оруулна уу' })
+      }
+      if (this.comment.phone === '' || this.comment.phone.trim() === '') {
+        return this.$message({ type: 'warning', message: 'Утас оруулна уу' })
+      }
+      if (this.comment.email === '' || this.comment.email.trim() === '') {
+        return this.$message({ type: 'warning', message: 'И-мэйл оруулна уу' })
+      }
+      this.replaceWords()
+    },
+    async replaceWords (event) {
+      const commentAuthor = this.CommentName
+      const commentContent = document.getElementById('comments')
+      const badWords = ['хуц', 'пизда', 'fuck', 'sex', 'pizdaa', 'pizda', 'piazda', 'piatka', 'piahluu', 'pishda', 'pijda', 'sda', 'sdakaa', 'zda', 'aash', 'shaa', 'sha', 'lalar', 'boov', 'lagaa', 'teneg', 'lalaraa', 'lalraa', 'llr', 'haraal idsen', 'лалар', 'ynhan', 'huts', 'ideesei', 'haraal', 'golog', 'sadist', 'садист', 'лага', 'лагаанууд', 'laga', 'laganuud', 'ллр', 'лларууд', 'ллрийн', 'лалр', 'fuckhole', 'nujuur huh', 'нөжөөр хах', 'nojoor hah', 'нохой долоог', 'nohoi doloog', 'pooface', 'shitface', 'муухай царай', 'muuhai tsarai', 'begtruuleh', 'megduuleh', 'dumbfuck', 'мэгдүүлэх', 'бэгтрүүлэх', 'mash muu', 'муу', 'bad', 'shitty', 'bureg', 'medrel', 'manguu', 'муутай', 'бүрэг', 'мангуу', 'dumb ass', 'coliot', 'soliot', 'солиот', 'bampot', 'лүд', 'lud', 'шаацан', 'шаадаг', 'шавар', 'poop', 'dookie', 'шаалдаа', 'dummy', 'freaking', 'homodumbshit', 'fuckwit', 'fuckwad', 'fuckup', 'fucktart', 'fucknutt', 'fucknut', 'fucking', 'fuckface', 'fuckersucker', 'fuckbrain', 'fuckboy', 'fuckbag', 'fuckass', 'там', 'tam', 'heck', 'hell', 'drunk', 'shitfaced', 'согтуу', 'sogtuu', 'sanhuugiin demjleg awna', 'sanhuugiin demjleg uzuulne', 'санхүүгийн дэмжлэг авна', 'санхүүгийн дэмжлэг үзүүлнэ', 'завхай', 'шалиг', 'садар самуун', 'садар', 'шуналтай', 'шунаг', 'lickerish', 'sheesen', 'шээсэн', 'urinate', 'piss', 'shawar', 'садар', 'zail', 'fuckoff', 'zanbal', 'cumslut', 'skank', 'занбал', 'банзал', 'явдалтай охин', 'huuhen', 'ywdaltai', 'unelegch', 'үнэлэгч', 'яанхан', 'slut', 'cumdumpster', 'pissed off', 'skeet', 'jizz', 'fickmilk', 'dickjuice', 'cum', 'үрийн шингэн', 'uriin shingen', 'umhii nuh', 'tuuchi', 'туучий', 'buttfucker', 'ogzog', 'хонго', 'hongo', 'buttocks', 'asscracker', 'asses', 'shitbrains', 'assface', 'muudle', 'үймээн', 'будлиан', 'самуурал', 'мансуурах', 'замбараагүй', 'шаврын хаалт', 'uimeen', 'budlian', 'samuun', 'mansuurah', 'zambaraagui', 'ass', 'shitbagger', 'shitbag', 'puto', 'shitas', 'маанаг', 'тэгэг бөгс', 'dumbass', 'whoreface', 'whorebag', 'shithole', 'shitdick', 'shitcunt', 'twatlips', 'suckass', 'thundercunt', 'teneg bogs', 'assmuncher', 'cumbubble', 'tosoor gooj', 'hello fuck', 'хөнөөх', 'хядах', 'bogs', 'бөгс', 'хуцваа', 'assassinate', 'алах', 'шээс', 'ялгадас', 'шээх', 'баах', 'shitting', 'avilgal', 'ariun tsever', 'jorlon', 'жорлон', 'shithouse', 'amnii ewgui uner', 'bad breath', 'shitbreath', 'hunuuh', 'hydah', 'alah', 'чичирхийлэгч', 'чичрэх', 'fucker', 'бэлгийн тоглоом', 'oodgui asshtai', 'uudgui aashtai', 'awirtai', 'avirtai', 'muuhai abirtai', 'baliar zantai', 'баас', 'ylgadas', 'shees', 'bitchy', 'tsusaar teegel', 'tomsog', 'төмсөг', 'bollox', 'tumsug', 'bollocks', 'tuuchii', 'шаа', 'haalda', 'shaadag', 'shaatsan', 'cunnilingus', 'wankjob', 'үхээнц', 'handjob', 'humping', 'munging', 'fucks', 'fuckin', 'pussylicking', 'wank', 'сексийн гаж үйлдэл', 'skullfuck', 'tittyfuck', 'feltch', 'fellatio', 'decksucking', 'sexual act', 'dickslap', 'sex-iin gaj uildel', 'tard', 'novsh', 'nowsh', 'jerk', 'mothafucka', 'новш', 'shithead', 'asshole', 'psda', 'сда', 'bizda', 'sogogtoi', 'физда', 'бизда', 'псда', 'pda', 'согогтой', 'fucked', 'dildo', 'chicherhiilegch', 'chichreh', 'fuckbutt', 'hoe', 'sharuud', 'gayass', 'assclown', 'fuckhead', 'shitspitter', 'bugs', 'arse', 'chicherhilegch', 'өгзөг', 'хонго', 'clumsy', 'болхи', 'бойд', 'шаах', 'араас', 'бөгсрүү', 'долоогч', 'долоох', 'doloogch', 'dolooh', 'bolhi', 'boid', 'assfuck', 'asslicker', 'bugsruu', 'shaah', 'butelgui', ' бүтэлгүй', 'lameass', 'lickspittle', 'бялдууч', 'зусарч', 'bylduuch', 'zusarch', 'ass-jabber', 'чалчаа', 'хов жив', 'хов', 'жив', 'үглээ', 'утаггүй', 'донгосох', 'chalchaa', 'hov jiv', 'how', 'jiv', 'chotgor', 'darn', 'damn', 'goshdarnit', 'goddamnit', 'чөтгөр', 'goshdarn', 'goddamn', 'utaggui', 'dongocoh', 'dongosoh', 'douche', 'дамсаг', 'алавч', 'damsag', 'damcag', 'alawch', 'douchebag', 'bullshit', 'dongos', 'dongosoon', 'dongocoon', 'female dog', 'punta', 'эм нохой', 'донгоссон', 'донгос', 'жингир', 'гичий', 'jingir', 'givhii', 'goovh', 'ал', 'умай', 'хилүү', 'хэлүү', 'al', 'heluu', 'kotch', 'kooch', 'kunt', 'minge', 'kootch', 'umai', 'coochy', 'coochie', 'clit', 'vagina', 'vagin', 'twats', 'twat', 'snatch', 'pussy', 'pussies', 'punanny', 'poontang', 'poonany', 'poonani', 'poon', 'shodoi', 'шодой', 'боов', 'cock', 'hovchirch', 'boner', 'хөвчрөх', 'edor', 'shaaaa', 'мангар', 'усан тэнэг', 'эргүү', 'fuckstick', 'dicks', 'dickhole', 'assmonkey', 'asslick', 'asscock', 'asshead', 'cockhead', 'cocknose', 'эрлийз', 'erliiz', 'гичы', 'гичий', 'гичи', 'jinger', 'haraalid', 'halagdsan', 'ulugchin', 'duinge', 'shaar', 'tit', 'moom', 'muum', 'huhnii', 'анус', 'anus', 'meem', 'gomo', 'хүйстэн', 'bitchis', 'jungaa', 'hujaa', 'hytad', 'жунгаа', 'хужаа', 'хятад', 'china', 'hund surtal', 'суртал', 'gay', 'lesbian', 'илжиг', 'лагаа', 'tenegteh', 'тэнэгтэх', 'iljig', 'тэнэглэх', 'маанаг гахай', 'uhne', 'alna', 'sda.', 'hulgaich', 'salbadai', 'uxseniix', 'mal', 'shaana', 'пзда', 'jatsga', 'medrel', 't1', 'шоронд', 'zusaldagch', 'shaahaa', 'nusak', 'nusakuud', 'bizdaar', 'moomtei', 'boovt', 'erguu', 'hutsaad', 'luivarchid', 'baasaa', 'новшоос', 'shulam', 'terrorist', 'haldlaga', 'tsuglaya', 'eserguutseye', 'eserguutse', 'alnaa', 'hidna', 'hyadna', 'zevseg', 'buu', 'hutga', 'mandtugai', 'мандтугай', 'лаларын', 'хөгийн', 'халдлага', 'жагсая', 'хутга', 'буу', 'шаалгах', 'alniihan', 'yankan', 'sdaakuud', 'alnuudaa', 'malaa', 'шаах', 'хуц', 'guts', 'huts']
+      const censoredAuthor = this.censoreAuthor(commentAuthor, badWords)
+      const censored = this.censoreText(commentContent.value, badWords)
+      commentContent.author = censoredAuthor
+      commentContent.value = censored
+      await this.createComment(commentContent)
+    },
+    censoreAuthor (string, filters) {
+      const regex = new RegExp(filters.join('|'), 'gi')
+      return string.replace(regex, function (match) {
+        let stars = ''
+        for (let i = 0; i < match.length; i++) {
+          stars += '*'
+        }
+        return stars
+      })
+    },
+    censoreText (string, filters) {
+      const regex = new RegExp(filters.join('|'), 'gi')
+      return string.replace(regex, function (match) {
+        let stars = ''
+        for (let i = 0; i < match.length; i++) {
+          stars += '*'
+        }
+        return stars
+      })
+    },
+    async createComment (commentContent) {
+      this.comment.contentId = this.CommentId
+      this.comment.author = commentContent.author
+      this.comment.text = commentContent.value
+      await CommentServices.post(this.comment)
+        .then((response) => {
+          this.resetTemp()
+          this.$notify({
+            title: 'Амжилттай хадгалагдлаа',
+            message: 'Хадгалах',
+            type: 'success',
+            duration: 2000
+          })
+        })
+        .catch((error) => {
+          this.$message({
+            type: 'warning',
+            message: 'Алдаа гарлаа'
+          })
+          return this.$message({
+            type: 'warning',
+            message: error.response.data.error
+          })
+        })
+    },
+    resetTemp () {
+      this.comment = {
+        author: null,
+        text: null,
+        email: null,
+        phone: null
+      }
     }
   }
 }
