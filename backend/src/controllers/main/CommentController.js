@@ -26,7 +26,6 @@ module.exports = {
     }
   },
   async post (req, res) {
-    console.log('irleeee----------------------------------------------------')
     let temp // Comment
     let newComment
     // let files
