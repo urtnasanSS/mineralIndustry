@@ -11,6 +11,20 @@
       <i class="fas fa-clock" style="margin-left:10px;" />
       {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
     </p>
+    <div>
+      <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
+        <span class="icon">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span>Жиргэх</span>
+      </button>
+      <button class="button is-primary" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px">
+        <span class="icon">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span>Нийтлэх</span>
+      </button>
+    </div>
     <div class="detailImage">
       <div class="column is-12">
         <div class="card-image">
@@ -31,36 +45,6 @@
         </div>
       </div>
     </div>
-    <!-- <div v-if="audios && audios.length > 0" style="padding:10px 0px;">
-      <div class="picturedetail">
-        <p class="subtitle is-5 picture-about" style="float: left; position: absolute;">
-          Файлын нэр: {{ audios[0].name }}
-        </p>
-        <p class="subtitle is-5 picture-about" style="float: right">
-          Файлын хэмжээ: {{ getFileSize(audios[0]) }}
-        </p>
-      </div>
-      <div class="audio">
-        <audio controls class="audioPlayer">
-          <source :src="baseUrl + audios[0].storageName" type="audio/ogg">
-          <source :src="baseUrl + audios[0].storageName" type="audio/mpeg">
-        </audio>
-      </div>
-    </div> -->
-    <!-- <div v-if="see && see.length > 0" style="padding:10px 0px;">
-      <div style="height:100%;">
-        <iframe width="100% " height="500" style="height:500px;" :src="'http://www.youtube.com/embed/' + see" />
-      </div>
-    </div>
-    <div v-if="videos && videos.length > 0" style="height:100%;">
-      <div class="videodetail" width="100%" style="height:500px;" controls>
-        <video style="height:500px;" controls>
-          <source :src="videoBaseUrl + videos[0].storageName" fileType="video/mp4">
-          <source :src="videoBaseUrl + videos[0].storageName" fileType="video/ogg">
-          Таны хөтөч энэхүү бичлэгийг тоглуулах боломжгүй байна.
-        </video>
-      </div>
-    </div> -->
     <div v-if="lang == 'mn'">
       <!-- eslint-disable-next-line vue/no-v-html -->
       <p v-html="temp.content" class="contents" />

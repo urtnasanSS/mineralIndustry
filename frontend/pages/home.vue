@@ -9,6 +9,7 @@
         <leftColoumDiscussion />
       </div>
       <rightColoum />
+      <rightColoumAnnoun />
     </div>
     <calculator />
     <foother />
@@ -23,6 +24,7 @@ import leftColoumNewsS from '~/components/leftColoumNewsS.vue'
 import leftColoumChart from '~/components/leftColoumChart.vue'
 import leftColoumDiscussion from '~/components/leftColoumDiscussion.vue'
 import rightColoum from '~/components/rightColoum.vue'
+import rightColoumAnnoun from '~/components/rightColoumAnnoun.vue'
 import calculator from '~/components/calculator.vue'
 
 export default {
@@ -34,7 +36,8 @@ export default {
     rightColoum,
     calculator,
     foother,
-    leftColoumNewsS
+    leftColoumNewsS,
+    rightColoumAnnoun
   }
 }
 

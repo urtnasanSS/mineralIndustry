@@ -2,7 +2,7 @@
   <div>
     <div id="right_coloum">
       <div>
-        <button id="login" onclick="window.location.href='http://localhost:3300/login'" style="width: 80%; background-color: #486dbf;" class="button login is-info fas fa-sign-in-alt "><h1>Газрын тос нэвтрэх</h1></button>
+        <button id="login" onclick="window.location.href='http://localhost:3300/login'" style="width: 100%; background-color: #486dbf;" class="button login is-info fas fa-sign-in-alt "><h1>Газрын тос нэвтрэх</h1></button>
       </div>
 
       <div id="right_coloum_news_header_1">
@@ -17,51 +17,20 @@
 						border-width: 1px;"
         >
       </div>
-
-      <div id="right_coloum_news">
-        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+      <div id="right_coloum_news" v-for="item in list" :key="item.id">
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px;">
           <div>
-            <img src="img/1234.png" style="float: left; width: 43%;">
+            <img :src="baseUrl + item.files[0].storageName" style="float: left; width: 47%; height: 175px">
           </div>
-          <div style="width: 100%;">
-            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+          <div style="width: 100%;" :key="item.title">
+            <a>{{ item.title }}</a>
             <small
               style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
 							letter-spacing: normal; text-align: left; color: #000000;"
-            >2020 - 04 - 02</small>
-            <div id="more">
-              <a>Дэлгэрэнгүй...</a>
-            </div>
-          </div>
-        </div>
-        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-          <div>
-            <img src="img/1234.png" style="float: left; width: 43%;">
-          </div>
-          <div style="width: 100%;">
-            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
-            <small
-              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;"
-            >2020 - 04 - 02</small>
-            <div id="more">
-              <a>Дэлгэрэнгүй...</a>
-            </div>
-          </div>
-        </div>
-        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-          <div>
-            <img src="img/1234.png" style="float: left; width: 43%;">
-          </div>
-          <div style="width: 100%;">
-            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
-            <small
-              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;"
-            >2020 - 04 - 02</small>
-            <div id="more">
-              <a>Дэлгэрэнгүй...</a>
-            </div>
+            >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+            <button class="button is-rounded is-small" style="margin: 10px 0 0 10px; margin-top: 100px">
+              <nuxt-link tag="span" :to="'/content/' + item.id">Дэлгэрэнгүй...</nuxt-link>
+            </button>
           </div>
         </div>
       </div>
@@ -69,11 +38,55 @@
   </div>
 </template>
 <script>
+import moment from 'moment'
+import ContentServices from '~/services/ContentServices'
+export default {
+  components: {
+  },
+  data () {
+    return {
+      list: [],
+      baseUrl: process.env.baseUrl,
+      listQuery: {
+        limit: 3,
+        currentPage: 1,
+        sort: {
+          prop: 'publishDate',
+          order: 'descending'
+        },
+        search: {
+          categoryIds: [3]
+        }
+      }
+    }
+  },
+  mounted () {
+    this.getData()
+  },
+  methods: {
+    moment,
+    getData () {
+      ContentServices.index(this.listQuery).then((response) => {
+        this.list = response.data.rows
+        console.log(this.list, '------------------------list------------')
+      }).catch((err) => {
+        this.list = []
+        err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
+      })
+    },
+    getPostBody (item) {
+      const title = this.stripTags(item.title)
+      return title.length >= 30 ? title.substring(0, 30) + '...' : title
+    }
+  }
+}
 </script>
 <style>
 
 #login{
 overflow: hidden;
+margin-top: 2%;
+margin-bottom: 2%;
 width: 80%;
 height: auto;
 border-radius: 10px;

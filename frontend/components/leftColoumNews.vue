@@ -122,18 +122,5 @@ width: 100%;
 height: auto;
 float: left;
 }
-#upper_line p{
-margin: 1% 1% 1% 1%;
-width: auto;
-height: auto;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-}
+
 </style>
