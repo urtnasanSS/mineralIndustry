@@ -4,11 +4,11 @@
       :sidebar-and-marqueeoffset-top="sidebarAndMarqueeoffsetTop"
     />
     <div ref="sidebarAndMarquee" class="container has-background-white" style="margin-top:30px;">
-      <div class="columns is-gapless">
-        <div class="column is-10">
+      <div class="columns" style="margin-bottom: 0;">
+        <div class="column is-11">
           <nuxt />
         </div>
-        <div class="column is-2">
+        <div class="column is-1">
         </div>
       </div>
     </div>

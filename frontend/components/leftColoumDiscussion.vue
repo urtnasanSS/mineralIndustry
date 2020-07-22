@@ -6,8 +6,8 @@
         <p>Хэлэлцүүлэг</p>
       </div>
       <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <div v-for="item in list" :key="item.id">
-          <a>{{ item.title }}</a>
+        <div v-for="item in list" :key="item.id" class="items">
+          <a class="textTitle">{{ item.title }}</a>
           <small
             style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
               letter-spacing: normal; text-align: left; color: #000000;"
@@ -17,7 +17,7 @@
           </button>
           <div id="comment">
             <img src="img/comment.png" alt="">
-            <a>{{ 2 }} хариулт</a>
+            <a>{{ item.commentIds.length }} хариулт</a>
           </div>
         </div>
       </div>
@@ -68,6 +68,15 @@ export default {
 }
 </script>
 <style>
+.items {
+  padding: 15px 0 15px 0;
+}
+.textTitle {
+  max-width: 1095px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 #leftColoumChart_1 a{
 float: left;
 width: 100%;

@@ -17,10 +17,41 @@
 						border-width: 1px;"
         >
       </div>
-      <div id="right_coloum_news" v-for="item in list" :key="item.id">
-        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px;">
+
+      <div id="right_coloum_news">
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
           <div>
-            <img :src="baseUrl + item.files[0].storageName" style="float: left; width: 47%; height: 175px">
+            <img src="/img/1234.png" style="float: left; width: 43%;">
+          </div>
+          <div style="width: 100%;">
+            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+            <small
+              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;"
+            >2020 - 04 - 02</small>
+            <div id="more">
+              <a>Дэлгэрэнгүй...</a>
+            </div>
+          </div>
+        </div>
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <div>
+            <img src="/img/1234.png" style="float: left; width: 43%;">
+          </div>
+          <div style="width: 100%;">
+            <a>Эрдэнэс-Тавантолгой ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00</a>
+            <small
+              style=" float:left; width: 50%; margin: 3% 0% 0% 3%;  height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+							letter-spacing: normal; text-align: left; color: #000000;"
+            >2020 - 04 - 02</small>
+            <div id="more">
+              <a>Дэлгэрэнгүй...</a>
+            </div>
+          </div>
+        </div>
+        <div id="right_coloum_news_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
+          <div>
+            <img src="/img/1234.png" style="float: left; width: 43%;">
           </div>
           <div style="width: 100%;" :key="item.title">
             <a>{{ item.title }}</a>

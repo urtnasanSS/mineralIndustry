@@ -37,7 +37,7 @@
 								"
               >
               <img
-                src="img/pin.png"
+                src="/img/pin.png"
                 style="float: left;
 								margin: 2% 2% 2% 4%;
 								width: 10.8px;
@@ -565,7 +565,7 @@
           </div>
         </div>
 
-        <img src="img/Image 1.png" style="width: 60%; float: left; overflow: hidden; margin: 2% 2% 2% 2%">
+        <img src="/img/Image 1.png" style="width: 60%; float: left; overflow: hidden; margin: 2% 2% 2% 2%">
       </div>
     </div>
   </div>

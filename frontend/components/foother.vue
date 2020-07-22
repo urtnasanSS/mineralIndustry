@@ -19,8 +19,8 @@
             <p>Fax: {{ value.Fax }}</p>
           </div>
           <div class="foother_right">
-            <img src="img/logo_mmhi.png" style="width: 263px; height: 82px; object-fit: contain; float: left;">
-            <p>Иргэд, байгууллагаас захидал, өргөдөл хүлээн авах ажилтан Ш.Уранчимэг <br />Утас 263506, 318169 /факс/, өрөөний дугаар 201 тоот</p>
+            <img src="/img/logo_mmhi.png" style="width: 263px; height: 82px; object-fit: contain; float: left;">
+            <p>{{ value.uPosition }} {{ value.uName }} <br />Утас {{ value.uPhone }} /факс/, өрөөний дугаар {{ value.uWork }}</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,6 @@ export default {
         .then((response) => {
           this.data = response.data
           this.value = this.data[0]
-          console.log(this.data, 'data------------------------112;')
         })
         .catch((err) => {
           err.response && err.response.data
@@ -119,7 +118,7 @@ export default {
         p {
           margin-top: 2%;
           float: left;
-          width: 508px;
+          width: 100%;
           height: 40px;
           font-family: SegoeUI;
           font-size: 15px;
