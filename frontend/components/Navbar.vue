@@ -25,12 +25,12 @@
         <span aria-hidden="true" />
       </a>
     </div>
-    <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
+    <div id="navbarBasicExample" class="container" :class="{ 'is-active': showNav }">
       <div class="navbar-start">
         <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
           <div v-if="portalMenus.length > index+1" class="menus2">
             <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
+              <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
               <div class="navbar-dropdown">
                 <template v-for="i in item.children">
                   <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
@@ -196,15 +196,10 @@ export default {
 <style lang="scss" scoped>
 .mainMenu {
   background-color: #1a3675;
-  // padding-right: 10px;
-  // border:solid 1px red !important;
   .navbar-brand {
     margin: 0px;
-    // display: none !important;
   }
-  .navbar-menu {
-    margin-left:10%;
-    margin-right:10%;
+  .container {
     .navbar-start {
       margin: 0px;
       .menus {
@@ -221,11 +216,12 @@ export default {
             text-align: left;
             color: white;
             @media screen and (max-width: 1407px) {
-              font-size: 18px;
+              padding: 10px 15px;
+              font-size: 16px;
             }
             @media screen and (max-width: 1215px) {
-              // padding: 0px 5px;
-              font-size: 18px;
+              padding: 10px 10.4px;
+              font-size: 14px;
             }
             &:hover {
               height: 100%;
@@ -250,13 +246,12 @@ export default {
                 color: #1a3675;
               }
               @media screen and (max-width: 1407px) {
-                padding: 3px 15px;
-                font-size: 18px;
+                padding: 10px 15px;
+                font-size: 16px;
               }
               @media screen and (max-width: 1215px) {
-                // padding: 0px 5px;
-                padding: 2px 10.4px;
-                font-size: 18px;
+                padding: 10px 10.4px;
+                font-size: 14px;
               }
             }
             .navbar-dropdown {
@@ -296,11 +291,12 @@ export default {
             text-align: left;
             color: white;
             @media screen and (max-width: 1407px) {
-              font-size: 18px;
+              padding:10px 15px;
+              font-size: 16px;
             }
             @media screen and (max-width: 1215px) {
-              // padding: 0px 5px;
-              font-size: 18px;
+              padding: 10px 10.4px;
+              font-size: 14px;
             }
             &:hover {
               height: 100%;
@@ -325,12 +321,12 @@ export default {
                 text-align: left;
                 color: white;
                 @media screen and (max-width: 1407px) {
-                  font-size: 18px;
+                  padding: 10px 15px;
+                  font-size: 16px;
                 }
                 @media screen and (max-width: 1215px) {
-                  // padding: 0px 5px;
-                  padding: 2px 10.4px;
-                  font-size: 18px;
+                  padding: 10px 10.4px;
+                  font-size: 14px;
                 }
               }
               .navbar-dropdown {

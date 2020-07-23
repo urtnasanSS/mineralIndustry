@@ -1,29 +1,31 @@
 <template>
-  <div class="hero-body">
-    <div class="header_area center">
-      <div id="header_area_1" style="width: 50%; float: left;">
-        <img class="logo" src="/img/logo_mmhi.png" @click="$nuxt.$router.replace({ path: '/home/' })">
-      </div>
-      <div id="header_area_2" style="width: 50%; float:left; text-align: right;">
-        <p class="contact">
-          Утас: {{ itema.phone }},
-          Цахим шуудан: {{ itema.Email }}
-        </p>
-        <div class="field">
-          <div class="control has-icons-left has-icons-right">
-            <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
-            <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; float:right; height:35px; width:6%;">
-              <i class="fa fa-search" :style="`color: white; margin: 13px 0px 0px 4px;`" />
+  <div>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <div style="width: 50%; float: left;">
+            <img class="logo" src="/img/logo_mmhi.png" @click="$nuxt.$router.replace({ path: '/home/' })">
+          </div>
+          <div style="width: 50%; float:left; text-align: right;">
+            <p class="contact">
+              Утас: {{ itema.phone }},
+              Цахим шуудан: {{ itema.Email }}
+            </p>
+            <div class="field">
+              <div class="control has-icons-left has-icons-right">
+                <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
+                <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; float:right; height:35px; width:6%;">
+                  <i class="fa fa-search" :style="`color: white; margin: 13px 0px 0px 4px;`" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="main_menu_area">
+          <Navbar />
+        </div>
       </div>
-    </div>
-    <div class="main_menu_area">
-      <div>
-        <Navbar />
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -110,13 +112,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.hero {
+  min-height: 250px;
+  @media screen and (max-width: 1407px) {
+    min-height: 249px;
+  }
+  @media screen and (max-width: 1215px) {
+    min-height: 232px;
+  }
+  @media screen and (max-width: 1023px) {
+    min-height: 188px;
+  }
+}
 .hero-body {
   padding: 3rem 0;
-  .header_area{
-    margin-top: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
   .field {
     width: 49%;
     float:right;
