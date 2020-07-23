@@ -4,10 +4,12 @@
     <div id="content_area " class="center" style=" float: left; margin-top: 10px;">
       <div id="left_coloum">
         <leftColoumNews />
+        <leftColoumNewsS />
         <leftColoumChart />
         <leftColoumDiscussion />
       </div>
       <rightColoum />
+      <rightColoumAnnoun />
     </div>
     <calculator />
     <foother />
@@ -18,9 +20,11 @@
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
 import foother from '~/components/foother.vue'
 import leftColoumNews from '~/components/leftColoumNews.vue'
+import leftColoumNewsS from '~/components/leftColoumNewsS.vue'
 import leftColoumChart from '~/components/leftColoumChart.vue'
 import leftColoumDiscussion from '~/components/leftColoumDiscussion.vue'
 import rightColoum from '~/components/rightColoum.vue'
+import rightColoumAnnoun from '~/components/rightColoumAnnoun.vue'
 import calculator from '~/components/calculator.vue'
 
 export default {
@@ -31,7 +35,9 @@ export default {
     leftColoumDiscussion,
     rightColoum,
     calculator,
-    foother
+    foother,
+    leftColoumNewsS,
+    rightColoumAnnoun
   }
 }
 

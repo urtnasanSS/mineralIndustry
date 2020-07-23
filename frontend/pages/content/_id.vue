@@ -14,6 +14,20 @@
       <i class="fas fa-clock" style="margin-left:10px;" />
       {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
     </p>
+    <div>
+      <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
+        <span class="icon">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span>Жиргэх</span>
+      </button>
+      <button class="button is-primary" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px">
+        <span class="icon">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span>Нийтлэх</span>
+      </button>
+    </div>
     <div class="detailImage">
       <div class="column is-12">
         <div class="card-image">
@@ -34,7 +48,14 @@
         </div>
       </div>
     </div>
-    <p v-html="temp.content" class="contents" />
+    <div v-if="lang == 'mn'">
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <p v-html="temp.content" class="contents" />
+    </div>
+    <div v-else>
+      <!-- eslint-disable-next-line vue/no-v-html -->
+      <p v-html="temp.contentEn" class="contents" />
+    </div>
     <div v-if="files && files.length > 1" class="images">
       <h2 class="title is-6" style="margin-bottom: 0.5rem;">
         {{ lang == 'mn' ? 'Зургууд:' : 'Pictures:' }}
