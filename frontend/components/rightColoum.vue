@@ -27,7 +27,7 @@
             style=" float:left; width: 100%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
               letter-spacing: normal; text-align: left; color: #000000;"
           >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-          <button class="button is-rounded is-small" style="margin: 10px 0 0 0px">
+          <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:100%">
             <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
           </button>
         </div>

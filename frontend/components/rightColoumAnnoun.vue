@@ -1,5 +1,5 @@
 <template>
-  <div id="right_coloum_zar">
+  <div class="right_coloum_zar">
     <div id="right_coloum_news_header_2">
       <h3 class="headerTitle">Зарлал</h3>
       <hr
@@ -13,19 +13,16 @@
         border-width: 1px;"
       >
     </div>
-
-    <div id="right_coloum_announcement">
-      <div id="right_coloum_announcement_1" style="float:left; margin-bottom: 16px; max-width: 100%;">
-        <div v-for="item in list" :key="item.id">
-          <a>{{ item.title }}</a>
-          <small
-            style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-            letter-spacing: normal; text-align: left; color: #000000;"
-          >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-          <button class="button is-rounded is-small" style="margin: 10px 0 0 100px">
-            <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
-          </button>
-        </div>
+    <div class="right_coloum_announcement">
+      <div v-for="item in list" :key="item.id" class="Anouns">
+        <a>{{ item.title }}</a>
+        <small
+          style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+          letter-spacing: normal; text-align: left; color: #000000;"
+        >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+        <button class="button is-rounded is-small" style="margin: 10px 0 0 100px">
+          <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
+        </button>
       </div>
     </div>
   </div>
@@ -70,7 +67,36 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss" scoped>
+.right_coloum_zar {
+  float: left;
+  margin-top: 21px;
+  max-width: 100%;
+  .right_coloum_announcement {
+  a {
+    float: left;
+    max-width: 100%;
+    height: auto;
+    font-family: SegoeUI;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .Anouns {
+    margin: 5px 0
+  }
+  }
+}
 .headerTitle {
   height: 24px;
   font-family: SegoeUI;
@@ -82,10 +108,6 @@ export default {
   letter-spacing: normal;
   text-align: left;
   color: #000000;
-}
-#right_coloum_zar {
-  float: left;
-  margin-top: 21px;
 }
 .more {
   float: left;
@@ -111,18 +133,6 @@ export default {
   text-align: center;
   color: #000000
 }
-#right_coloum_announcement_1 a{
-float: left;
-width: 366px;
-height: auto;
-font-family: SegoeUI;
-font-size: 15px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
+#right_coloum_announcement a{
 }
 </style>

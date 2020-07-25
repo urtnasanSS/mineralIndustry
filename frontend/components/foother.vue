@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="foother">
-      <div class="center">
-        <div class="foother_title">
-          <div class="foother_left">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4 foother_left">
             <a>Холбоо барих</a>
             <hr
               style="
@@ -18,14 +18,14 @@
             <p>Email: {{ value.Email }}</p>
             <p>Fax: {{ value.Fax }}</p>
           </div>
-          <div class="foother_right">
+          <div class="column is-4 foother_right">
             <img src="/img/logo_mmhi.png" style="width: 263px; height: 82px; object-fit: contain; float: left;">
             <p>{{ value.uPosition }} {{ value.uName }} <br />Утас {{ value.uPhone }} /факс/, өрөөний дугаар {{ value.uWork }}</p>
           </div>
         </div>
       </div>
       <div class="foother_2">
-        <div class="center">
+        <div class="container">
           <p>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</p>
         </div>
       </div>
@@ -73,17 +73,16 @@ export default {
   height: 275px;
   display: block;
   background-color: #f1f1f1;
-  .center {
+  .container {
     display:block;
     margin-left:10%;
     margin-right:10%;
     padding:0%;
-    .foother_title {
+    .columns {
       height: 263px;
       .foother_left{
         margin: 2.5% 0 0 0;
         float: left;
-        width: 25%;
         a {
           float: left;
           width: 100%;
@@ -113,7 +112,6 @@ export default {
       }
       .foother_right {
         margin: 4.5% 5% 3% 1.5%;
-        width: 50%;
         float: left;
         p {
           margin-top: 2%;
@@ -139,7 +137,7 @@ export default {
     width: 100%;
     height: 57px;
     background-color: #1a3675;
-    .center {
+    .container {
       p {
         float: left;
         margin: 2% 0 2% 0;
