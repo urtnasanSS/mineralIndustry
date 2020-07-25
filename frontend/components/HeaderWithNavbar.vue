@@ -1,31 +1,31 @@
 <template>
-  <div>
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container">
-          <div style="width: 50%; float: left;">
-            <img class="logo" src="/img/logo_mmhi.png" @click="$nuxt.$router.replace({ path: '/home/' })">
-          </div>
-          <div style="width: 50%; float:left; text-align: right;">
-            <p class="contact">
-              Утас: {{ itema.phone }},
-              Цахим шуудан: {{ itema.Email }}
-            </p>
-            <div class="field">
-              <div class="control has-icons-left has-icons-right">
-                <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
-                <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; float:right; height:35px; width:6%;">
-                  <i class="fa fa-search" :style="`color: white; margin: 13px 0px 0px 4px;`" />
-                </div>
+  <div class="header">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-6 responsiveLogo">
+          <img class="logo" src="/img/logo_mmhi.png" @click="$nuxt.$router.replace({ path: '/home/' })">
+        </div>
+        <div class="column is-5 is-offset-1 responsiveSearch">
+          <p class="contact">
+            Утас: {{ itema.phone }},
+            Цахим шуудан: {{ itema.Email }}
+          </p>
+          <div class="field">
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
+              <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; float:right; height:35px; width:6%;">
+                <i class="fa fa-search" :style="`color: white; margin: 13px 0px 0px 4px;`" />
               </div>
             </div>
           </div>
         </div>
-        <div class="main_menu_area">
-          <Navbar />
-        </div>
       </div>
-    </section>
+    </div>
+    <div class="columns">
+      <div class="main_menu_area">
+        <Navbar />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -112,37 +112,66 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.hero {
-  min-height: 250px;
-  @media screen and (max-width: 1407px) {
-    min-height: 249px;
+.header {
+  display: block;
+  padding-top: 2%;
+  width: 100%;
+  background-color: #f1f1f1;
+  .responsiveLogo {
+    .logo {
+      @media screen and (max-width: 1023px) {
+        margin-left: 34px;
+      }
+    }
   }
-  @media screen and (max-width: 1215px) {
-    min-height: 232px;
-  }
-  @media screen and (max-width: 1023px) {
-    min-height: 188px;
+  .responsiveSearch {
+    @media screen and (max-width: 1407px) {
+      padding-top: 1%;
+    }
+    @media screen and (max-width: 1215px) {
+      padding-top: 1%;
+    }
+    .contact {
+      width: 100%;
+      padding: 10px 0;
+      direction: rtl;
+      float: right;
+      height: auto;
+      font-family: SegoeUI;
+      font-size: 15px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: #000000;
+      @media screen and (max-width: 1407px) {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 1215px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 1023px) {
+        font-size: 12px;
+        margin-right: 30px;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 }
-.hero-body {
-  padding: 3rem 0;
-  .field {
-    width: 49%;
-    float:right;
-    margin: 2% 0
+.field {
+  width: 86%;
+  float: right;
+  @media screen and (max-width: 1023px) {
+    margin-right: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    display: none;
+    height: 0;
   }
 }
 .main_menu_area{float: left; width: 100%;  min-height:50px}
 
-.contact {
-  height: auto;
-  font-family: SegoeUI;
-  font-size: 15px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  color: #000000
-}
 </style>

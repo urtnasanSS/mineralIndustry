@@ -193,7 +193,7 @@
                   <img width="100%" :src="dialogImageUrl" alt>
                 </el-dialog>
               </el-form-item>
-              <el-form-item :label="'Аудио'" prop="haveAudio" style="margin:50px 0px;">
+              <!-- <el-form-item :label="'Аудио'" prop="haveAudio" style="margin:50px 0px;">
                 <el-upload
                   v-if="dialogStatus !== 'view'"
                   class="upload-demo"
@@ -207,7 +207,6 @@
                   :on-exceed="handleExceedAudio"
                   :file-list="temp.files.filter(c=> c.isDelete === false && c.fileType.includes('audio'))"
                 >
-                  <!-- <div slot="tip" class="el-upload__tip">jpg/png files with a size less than 500kb</div> -->
                   <article slot="tip" class="message is-info is-small " style="margin-top:10px;">
                     <div class="message-body " style="padding:5px 5px 5px 10px;">
                       Зөвхөн <strong>mp3, ogg, wav </strong>өргөтгөлтэй аудио хуулна.
@@ -223,7 +222,6 @@
                 </audio>
               </el-form-item>
               <el-form-item :label="'Видео'" prop="haveUploadVideo">
-                <!-- <label v-if="dialogStatus == 'view'">{{ temp.haveUploadVideo }}</label> -->
                 <el-switch
                   v-if="dialogStatus !== 'view'"
                   v-model="temp.haveUploadVideo"
@@ -257,7 +255,6 @@
                     :on-exceed="handleExceedAudio"
                     :file-list="temp.files.filter(c=> c.isDelete === false && c.fileType.includes('video'))"
                   >
-                    <!-- <div slot="tip" class="el-upload__tip">jpg/png files with a size less than 500kb</div> -->
                     <article slot="tip" class="message is-info is-small " style="margin-top:10px;">
                       <div class="message-body " style="padding:5px 5px 5px 10px;">
                         Зөвхөн <strong>mp4, webm, ogg </strong>өргөтгөлтэй видео хуулна.
@@ -275,7 +272,7 @@
                     </video>
                   </div>
                 </div>
-              </el-form-item>
+              </el-form-item> -->
             </el-form>
           </div>
         </div>

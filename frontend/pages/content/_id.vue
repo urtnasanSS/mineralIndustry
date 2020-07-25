@@ -1,5 +1,5 @@
 <template>
-  <div ref="content" v-loading="loading" class="newsOuter">
+  <div ref="content" v-loading="loading" class="newsOuter container">
     <h4 class="title  headerTitle">
       {{ lang == 'mn' ? temp.title : temp.titleEn }}
       <button class="printButton button is-danger" @click="handleClickPrint()">
@@ -49,11 +49,9 @@
       </div>
     </div>
     <div v-if="lang == 'mn'">
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <p v-html="temp.content" class="contents" />
     </div>
     <div v-else>
-      <!-- eslint-disable-next-line vue/no-v-html -->
       <p v-html="temp.contentEn" class="contents" />
     </div>
     <div v-if="files && files.length > 1" class="images">
@@ -194,8 +192,6 @@ export default {
       helpCategoryId: null,
       AllCommentFile: []
     }
-  },
-  watch () {
   },
   mounted () {
     if (this.$route.params.id) {

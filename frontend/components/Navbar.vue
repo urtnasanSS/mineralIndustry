@@ -1,16 +1,9 @@
 <template>
-  <nav
-    id="navbar"
-    ref="navbar"
-    class="navbar is-link mainMenu"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav id="navbar" ref="navbar" class="navbar is-link mainMenu" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item is-hidden-desktop" href="#">
         <img src="/img/logoNoWord.png" height="29">
       </a>
-
       <a
         role="button"
         class="navbar-burger burger"
@@ -25,34 +18,41 @@
         <span aria-hidden="true" />
       </a>
     </div>
-    <div id="navbarBasicExample" class="container" :class="{ 'is-active': showNav }">
-      <div class="navbar-start">
-        <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
-          <div v-if="portalMenus.length > index+1" class="menus2">
-            <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
-              <div class="navbar-dropdown">
-                <template v-for="i in item.children">
-                  <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                </template>
-              </div>
+    <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
+      <div class="container">
+        <div class="navbar-start">
+          <div class="menus">
+            <div class="menus2">
+              <a class="navbar-item" @click="$nuxt.$router.replace({ path: '/home/' })">Нүүр хуудас</a>
             </div>
-            <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
+          </div>
+          <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
+            <div v-if="portalMenus.length > index+1" class="menus2">
+              <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
+                <div class="navbar-dropdown">
+                  <template v-for="i in item.children">
+                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
+                  </template>
+                </div>
+              </div>
+              <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="navbar-end">
-        <div v-for="( item, index ) in portalMenus" :key="index.id" class="menusEnd">
-          <div v-if="portalMenus.length <= index+1" class="menusEnd2">
-            <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
-              <div class="navbar-dropdown">
-                <template v-for="i in item.children">
-                  <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                </template>
+        <div class="navbar-end">
+          <div v-for="( item, index ) in portalMenus" :key="index.id" class="menusEnd">
+            <div v-if="portalMenus.length <= index+1" class="menusEnd2">
+              <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
+                <div class="navbar-dropdown">
+                  <template v-for="i in item.children">
+                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
+                  </template>
+                </div>
               </div>
+              <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
             </div>
-            <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
           </div>
         </div>
       </div>
@@ -199,52 +199,24 @@ export default {
   .navbar-brand {
     margin: 0px;
   }
-  .container {
-    .navbar-start {
-      margin: 0px;
-      .menus {
-        .menus2 {
-          height: 100%;
-          a {
-            font-family: SegoeUI;
-            line-height: 1.8;
-            font-size: 18px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
-            text-align: left;
-            color: white;
-            @media screen and (max-width: 1407px) {
-              padding: 10px 15px;
-              font-size: 16px;
-            }
-            @media screen and (max-width: 1215px) {
-              padding: 10px 10.4px;
-              font-size: 14px;
-            }
-            &:hover {
-              height: 100%;
-              background-color: white;
-              color: #1a3675;
-            }
-          }
-          .navbar-item {
-            .navbar-link {
+  .navbar-menu {
+    .container {
+      .navbar-start {
+        margin: 0px;
+        float: left;
+        .menus {
+          .menus2 {
+            height: 100%;
+            a {
               font-family: SegoeUI;
+              line-height: 1.8;
               font-size: 18px;
               font-weight: bold;
               font-stretch: normal;
               font-style: normal;
-              line-height: 1.8;
               letter-spacing: normal;
               text-align: left;
               color: white;
-              &:hover {
-                height: 100%;
-                background-color: white;
-                color: #1a3675;
-              }
               @media screen and (max-width: 1407px) {
                 padding: 10px 15px;
                 font-size: 16px;
@@ -253,73 +225,28 @@ export default {
                 padding: 10px 10.4px;
                 font-size: 14px;
               }
-            }
-            .navbar-dropdown {
-              font-family: SegoeUI;
-              font-size: 15px;
-              font-weight: bold;
-              line-height: 1.8;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1.33;
-              letter-spacing: normal;
-              text-align: left;
-              color: white;
-            }
-            a:last-child {
-              border-right: none !important;
-            }
-            .navbar-item:last-child a {
-              border-left: none !important;
-            }
-          }
-        }
-      }
-    }
-    .navbar-end {
-      .menusEnd {
-        .menusEnd2 {
-          height: 100%;
-          a {
-            font-family: SegoeUI;
-            line-height: 1.8;
-            font-size: 18px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            letter-spacing: normal;
-            text-align: left;
-            color: white;
-            @media screen and (max-width: 1407px) {
-              padding:10px 15px;
-              font-size: 16px;
-            }
-            @media screen and (max-width: 1215px) {
-              padding: 10px 10.4px;
-              font-size: 14px;
-            }
-            &:hover {
-              height: 100%;
-              background-color: white;
-              color: #1a3675;
-            }
-          }
-            .navbar-item {
               &:hover {
                 height: 100%;
                 background-color: white;
                 color: #1a3675;
               }
+            }
+            .navbar-item {
               .navbar-link {
                 font-family: SegoeUI;
                 font-size: 18px;
                 font-weight: bold;
                 font-stretch: normal;
-                line-height: 1.8;
                 font-style: normal;
+                line-height: 1.8;
                 letter-spacing: normal;
                 text-align: left;
                 color: white;
+                &:hover {
+                  height: 100%;
+                  background-color: white;
+                  color: #1a3675;
+                }
                 @media screen and (max-width: 1407px) {
                   padding: 10px 15px;
                   font-size: 16px;
@@ -333,9 +260,10 @@ export default {
                 font-family: SegoeUI;
                 font-size: 15px;
                 font-weight: bold;
+                line-height: 1.8;
                 font-stretch: normal;
                 font-style: normal;
-                line-height: 1.8;
+                line-height: 1.33;
                 letter-spacing: normal;
                 text-align: left;
                 color: white;
@@ -348,6 +276,81 @@ export default {
               }
             }
           }
+        }
+      }
+      .navbar-end {
+        .menusEnd {
+          .menusEnd2 {
+            height: 100%;
+            a {
+              font-family: SegoeUI;
+              line-height: 1.8;
+              font-size: 18px;
+              font-weight: bold;
+              font-stretch: normal;
+              font-style: normal;
+              letter-spacing: normal;
+              text-align: left;
+              color: white;
+              @media screen and (max-width: 1407px) {
+                padding:10px 15px;
+                font-size: 16px;
+              }
+              @media screen and (max-width: 1215px) {
+                padding: 10px 10.4px;
+                font-size: 14px;
+              }
+              &:hover {
+                height: 100%;
+                background-color: white;
+                color: #1a3675;
+              }
+            }
+              .navbar-item {
+                &:hover {
+                  height: 100%;
+                  background-color: white;
+                  color: #1a3675;
+                }
+                .navbar-link {
+                  font-family: SegoeUI;
+                  font-size: 18px;
+                  font-weight: bold;
+                  font-stretch: normal;
+                  line-height: 1.8;
+                  font-style: normal;
+                  letter-spacing: normal;
+                  text-align: left;
+                  color: white;
+                  @media screen and (max-width: 1407px) {
+                    padding: 10px 15px;
+                    font-size: 16px;
+                  }
+                  @media screen and (max-width: 1215px) {
+                    padding: 10px 10.4px;
+                    font-size: 14px;
+                  }
+                }
+                .navbar-dropdown {
+                  font-family: SegoeUI;
+                  font-size: 15px;
+                  font-weight: bold;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.8;
+                  letter-spacing: normal;
+                  text-align: left;
+                  color: white;
+                }
+                a:last-child {
+                  border-right: none !important;
+                }
+                .navbar-item:last-child a {
+                  border-left: none !important;
+                }
+              }
+            }
+        }
       }
     }
   }

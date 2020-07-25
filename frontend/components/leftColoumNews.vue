@@ -1,23 +1,21 @@
 <template>
   <div>
-    <div>
-      <div id="left_coloum_top" v-for="(value, index) in list" :key="value">
-        <div v-if="index === 0">
-          <h3>{{ value.title }} </h3>
-          <img :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
-        </div>
+    <div id="left_coloum_top" v-for="(value, index) in list" :key="value">
+      <div v-if="index === 0">
+        <h3>{{ value.title }} </h3>
+        <img :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
       </div>
-      <div class="column is-12" style="height:335px;">
-        <Slider
-          v-if="slides.length > 0"
-          :images="slides"
-          :interval-duration="slideDuration"
-          :height="'335px'"
-          :width="'1000px'"
-          class="sliderClass"
-          style="overflow: hidden; width:100%;"
-        />
-      </div>
+    </div>
+    <div class="column is-12" style="height:335px;">
+      <Slider
+        v-if="slides.length > 0"
+        :images="slides"
+        :interval-duration="slideDuration"
+        :height="'335px'"
+        :width="'1000px'"
+        class="sliderClass"
+        style="overflow: hidden; width:100%;"
+      />
     </div>
   </div>
 </template>

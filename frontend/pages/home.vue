@@ -1,25 +1,30 @@
 <template>
   <div>
     <HeaderWithNavbar />
-    <div id="content_area " class="container">
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
-          <leftColoumNews />
-          <leftColoumNewsS />
-          <leftColoumChart />
-          <leftColoumDiscussion />
-        </div>
-        <div class="tile">
-          <div class="tile is-vertical is-1"></div>
-          <div class="tile is-vertical is-11">
-            <rightColoum />
-            <rightColoumAnnoun />
+    <div class="hero leftTabs">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-8">
+              <leftColoumNews />
+              <leftColoumNewsS />
+              <leftColoumChart />
+              <leftColoumDiscussion />
+            </div>
+            <div class="column is-4">
+              <rightColoum />
+              <rightColoumAnnoun />
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <calculator />
+    <div class="hero secondTabs">
+      <div class="hero-body">
+        <div class="container">
+          <calculator />
+        </div>
+      </div>
     </div>
     <foother />
   </div>
@@ -52,25 +57,15 @@ export default {
 
 </script>
 
-<style>
-
-#upper_line p{
-margin: 1% 1% 1% 1%;
-width: auto;
-height: auto;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
+<style lang="scss" scoped>
+.leftTabs {
+  @media screen and (max-width: 768px) {
+    float: left;
+  }
 }
-.logo_mmhi {
-width: 263px;
-height: 82px;
-object-fit: contain;
+.secondTabs {
+  @media screen and (max-width: 768px) {
+    float: left;
+  }
 }
 </style>
