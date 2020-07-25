@@ -11,7 +11,6 @@
             <span>Татаж авах</span>
           </button>
         </h4>
-        <p>a</p>
         <p class="subtitle ">
           <i class="fas fa-eye" /> {{ temp.count }}
           <i class="fas fa-clock" style="margin-left:10px;" />
