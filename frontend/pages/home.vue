@@ -1,17 +1,26 @@
 <template>
   <div>
     <HeaderWithNavbar />
-    <div id="content_area " class="center" style=" float: left; margin-top: 10px;">
-      <div id="left_coloum">
-        <leftColoumNews />
-        <leftColoumNewsS />
-        <leftColoumChart />
-        <leftColoumDiscussion />
+    <div id="content_area " class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <leftColoumNews />
+          <leftColoumNewsS />
+          <leftColoumChart />
+          <leftColoumDiscussion />
+        </div>
+        <div class="tile">
+          <div class="tile is-vertical is-1"></div>
+          <div class="tile is-vertical is-11">
+            <rightColoum />
+            <rightColoumAnnoun />
+          </div>
+        </div>
       </div>
-      <rightColoum />
-      <rightColoumAnnoun />
     </div>
-    <calculator />
+    <div class="container">
+      <calculator />
+    </div>
     <foother />
   </div>
 </template>
@@ -44,7 +53,6 @@ export default {
 </script>
 
 <style>
-.center{ display:block; margin-left:10% ; margin-right:10%}
 
 #upper_line p{
 margin: 1% 1% 1% 1%;
@@ -64,13 +72,5 @@ color: #000000;
 width: 263px;
 height: 82px;
 object-fit: contain;
-}
-
-#left_coloum {
-padding-right: 5%;
-float: left;
-width: 65%;
-min-height:600px;
-overflow: hidden;
 }
 </style>

@@ -1,10 +1,13 @@
 <template>
   <div ref="content" v-loading="loading" class="newsOuter">
-    <!-- <breadcrumb :contentTitle="lang == 'mn' ? temp.title : temp.titleEn" /> -->
-    <span class="printButton" @click="handleClickPrint()"><img src="/img/printer.png" title="Хэвлэх" class="printerImage"></span>
-    <!-- <pre>{{ temp }}</pre> -->
     <h4 class="title  headerTitle">
       {{ lang == 'mn' ? temp.title : temp.titleEn }}
+      <button class="printButton button is-danger" @click="handleClickPrint()">
+        <span class="icon">
+          <i class="fa fa-floppy-o"></i>
+        </span>
+        <span>Татаж авах</span>
+      </button>
     </h4>
     <p class="subtitle ">
       <i class="fas fa-eye" /> {{ temp.count }}
@@ -177,7 +180,6 @@ export default {
     }
   },
   watch () {
-    this.lang = this.$store.state.language.language.code
   },
   mounted () {
     if (this.$route.params.id) {
@@ -326,7 +328,7 @@ export default {
       return Math.round(bytes / 1024 ** i, 2) + ' ' + sizes[i]
     },
     handleClickPrint () {
-      let prtContent = '<h3>Архивын ерөнхий газар</h3>'
+      let prtContent = '<h3>Уул уурхай</h3>'
       prtContent += this.$refs.content.innerHTML
       const WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0')
       WinPrint.document.write(prtContent)
@@ -369,9 +371,8 @@ export default {
     }
   }
   .printButton{
-    right: 10px;
-    position: absolute;
-    padding-right: 5px;
+    position: relative;
+    margin: -12px 0 0 25px;
     .fa-print {
       cursor: pointer;
     }

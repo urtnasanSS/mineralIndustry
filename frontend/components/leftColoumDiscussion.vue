@@ -12,8 +12,8 @@
             style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
               letter-spacing: normal; text-align: left; color: #000000;"
           >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-          <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
-            <nuxt-link tag="span" :to="'/content/' + item.id">Дэлгэрэнгүй...</nuxt-link>
+           <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
+            <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
           </button>
           <div id="comment">
             <img src="img/comment.png" alt="">
@@ -69,7 +69,7 @@ export default {
 </script>
 <style>
 .items {
-  padding: 15px 0 15px 0;
+  padding: 0px 0 7px 0;
 }
 .textTitle {
   max-width: 1095px;
@@ -90,6 +90,30 @@ line-height: 1.31;
 letter-spacing: normal;
 text-align: left;
 color: #000000;
+}
+.more {
+  float: left;
+  margin: 10px 10px 10px 0;
+  height: 19px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.text {
+  padding: 3% 4% 1% 14%;
+  float: left;
+  width: 50%;
+  height: 16px;
+  opacity: 0.4;
+  font-family: SegoeUI;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000
 }
 #more_2 {
 overflow: hidden;

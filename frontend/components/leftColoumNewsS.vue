@@ -26,7 +26,7 @@ export default {
         limit: 2,
         currentPage: 1,
         sort: {
-          prop: 'publishDate',
+          prop: 'count',
           order: 'descending'
         },
         search: {
@@ -43,7 +43,6 @@ export default {
     getData () {
       ContentServices.index(this.listQuery).then((response) => {
         this.list = response.data.rows
-        console.log(this.list, '------------------------2------------')
       }).catch((err) => {
         this.list = []
         err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
