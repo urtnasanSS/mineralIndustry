@@ -1,9 +1,8 @@
 <template>
   <div>
     <HeaderWithNavbar />
-
     <div id="content_area " class="center" style=" float: left; margin-top: 10px;">
-      <div id="Header" style="width: 100%; height: 50px; margin:5% 5% 5% 5% ; ">
+      <div id="Header" style="width: 100%; height: 50px; margin:5% 5% 5% 5%;">
         <a1
           style="width: 372px;
           height: 31px;
@@ -26,7 +25,12 @@
           background-color: #ff5e5e;
           float:left;"
         >
-          <img src="img/save.png" style="float: left; margin: 5% 5% 5% 20%;">
+          <button class="printButton button is-danger" @click="handleClickPrint()">
+            <span class="icon">
+              <i class="fa fa-floppy-o"></i>
+            </span>
+            <span>Татаж авах</span>
+          </button>
           <a
             style="
             margin: 5% 5% 5% 5%;
@@ -99,6 +103,16 @@ export default {
   components: {
     HeaderWithNavbar,
     foother
+  },
+  methods: {
+    handleClickPrint () {
+      let prtContent = '<h3>Уул уурхай</h3>'
+      prtContent += this.$refs.content.innerHTML
+      const WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0')
+      WinPrint.document.write(prtContent)
+      WinPrint.document.close()
+      WinPrint.print()
+    }
   }
 }
 

@@ -36,7 +36,7 @@ export default {
       files: [],
       slides: [],
       firstValue: [],
-      slideDuration: 4000,
+      slideDuration: 400000,
       firstValueImage: [],
       baseUrl: process.env.baseUrl,
       listQuery: {

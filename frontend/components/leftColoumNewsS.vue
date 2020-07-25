@@ -78,11 +78,15 @@ float: left;
 padding-right: 3%
 }
 #left_coloum_mid_1 img{
+border-radius: 12px;
 width: 100%;
-height: 260px;
+height: 200px;
 float: left;
 }
-
+#left_coloum_mid_1 img:hover
+{
+-webkit-box-shadow: 0 0 10px grey;
+}
 #left_coloum_mid_1 h3{
 font-family: SegoeUI;
 font-size: 14px;
@@ -94,6 +98,7 @@ letter-spacing: normal;
 text-align: left;
 color: #000000;
 float: left;
+margin-top: 15px;
 }
 
 #upper_line p{

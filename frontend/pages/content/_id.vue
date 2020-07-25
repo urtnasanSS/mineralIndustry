@@ -1,134 +1,145 @@
 <template>
   <div ref="content" v-loading="loading" class="newsOuter">
-    <h4 class="title  headerTitle">
-      {{ lang == 'mn' ? temp.title : temp.titleEn }}
-      <button class="printButton button is-danger" @click="handleClickPrint()">
-        <span class="icon">
-          <i class="fa fa-floppy-o"></i>
-        </span>
-        <span>Татаж авах</span>
-      </button>
-    </h4>
-    <p class="subtitle ">
-      <i class="fas fa-eye" /> {{ temp.count }}
-      <i class="fas fa-clock" style="margin-left:10px;" />
-      {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
-    </p>
-    <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
-      <span style="margin-left:8%">Нийтлэх</span>
-    </button>
-    <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
-      <span class="icon">
-        <i class="fab fa-twitter"></i>
-      </span>
-      <span>Жиргэх</span>
-    </button>
-    <div id="right_coloum" style="float: right; width: 50%">
-      <rightColoum />
-    </div>
-    <div class="detailImage">
-      <div class="column is-12">
-        <div class="card-image">
-          <figure class="image is-5by3 customImage">
-            <div v-if="files && files.length > 0" style="height:400px; width:auto; margin: 0% float:right">
-              <el-image
-                :fit="'contain'"
-                :src="baseUrl + files[0].storageName"
-                class="image1"
-                lazy
-              >
-              </el-image>
+    <el-row>
+      <el-col :span="24">
+        <h4 class="title  headerTitle">
+          {{ lang == 'mn' ? temp.title : temp.titleEn }}
+          <button class="printButton button is-danger" @click="handleClickPrint()">
+            <span class="icon">
+              <i class="fa fa-floppy-o"></i>
+            </span>
+            <span>Татаж авах</span>
+          </button>
+        </h4>
+        <p class="subtitle ">
+          <i class="fas fa-eye" /> {{ temp.count }}
+          <i class="fas fa-clock" style="margin-left:10px;" />
+          {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
+        </p>
+      </el-col>
+    </el-row>
+    <el-row class="columns">
+      <el-col class="column is-9">
+        <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
+          <span style="margin-left:8%">Нийтлэх</span>
+        </button>
+        <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+          <span>Жиргэх</span>
+        </button>
+        <div class="detailImage">
+          <div class="column is-12">
+            <div class="card-image">
+              <figure class="image is-5by3 customImage">
+                <div v-if="files && files.length > 0" style="height:400px; width:600px; margin: 0% float:left">
+                  <el-image
+                    :fit="'contain'"
+                    :src="baseUrl + files[0].storageName"
+                    class="image1"
+                    lazy
+                  >
+                  </el-image>
+                </div>
+              </figure>
             </div>
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div v-if="lang == 'mn'">
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <p v-html="temp.content" class="contents" />
-    </div>
-    <div v-else>
-      <!-- eslint-disable-next-line vue/no-v-html -->
-      <p v-html="temp.contentEn" class="contents" />
-    </div>
-
-    <!-- Сэтгэгдэл -->
-    <div v-if="!temp.isHideComments" style="margin:50px 20px 20px 100px !important;">
-      <div style="margin:49px 20px 20px 20px !important;">
-        <el-divider content-position="left">
-          {{ lang == 'mn' ? 'Сэтгэгдэл:' : 'Comments:' }}
-        </el-divider>
-        <div class="columns" style="margin-top:10px;">
-          <div class="column is-1" style="display:flex; justify-content:center;">
-            <i class="el-icon-user" style="font-size:24px;" />
           </div>
-          <div class="column">
-            <div class="field">
-              <div class="control" style="margin-bottom:10px;">
-                <input
-                  id="author"
-                  v-model="comment.author"
-                  class="input is-small"
-                  type="text"
-                  :placeholder="lang == 'mn' ? 'Нэр' : 'Name'"
-                  style="width:250px"
-                >
-                <input
-                  id="phone"
-                  v-model="comment.phone"
-                  class="input is-small"
-                  type="text"
-                  :placeholder="lang == 'mn' ? 'Утас' : 'Phone'"
-                  style="width:250px"
-                >
-                <input
-                  id="email"
-                  v-model="comment.email"
-                  class="input is-small"
-                  type="text"
-                  :placeholder="lang == 'mn' ? 'И-Мэйл' : 'Email'"
-                  style="width:250px"
-                >
+        </div>
+        <div v-if="lang == 'mn'">
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <p v-html="temp.content" class="contents" />
+        </div>
+        <div v-else>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <p v-html="temp.contentEn" class="contents" />
+        </div>
+        <!-- Сэтгэгдэл -->
+        <div v-if="!temp.isHideComments" style="width: auto; margin:50px 20px 20px 100px !important;">
+          <div style="margin:49px 20px 20px 20px !important;">
+            <el-divider content-position="left">
+              {{ lang == 'mn' ? 'Сэтгэгдэл:' : 'Comments:' }}
+            </el-divider>
+            <div class="columns" style="margin-top:10px;">
+              <div class="column is-1" style="display:flex; justify-content:center;">
+                <i class="el-icon-user" style="font-size:24px;" />
               </div>
-              <div class="control is-small">
-                <textarea id="comments" v-model="comment.text" class="textarea is-small" :placeholder="lang == 'mn' ? 'Сэтгэгдэл' : 'Comment'" />
+              <div class="column">
+                <div class="field">
+                  <div class="control" style="margin-bottom:10px;">
+                    <input
+                      id="author"
+                      v-model="comment.author"
+                      class="input is-small"
+                      type="text"
+                      :placeholder="lang == 'mn' ? 'Нэр' : 'Name'"
+                      style="width:250px"
+                    >
+                    <input
+                      id="phone"
+                      v-model="comment.phone"
+                      class="input is-small"
+                      type="text"
+                      :placeholder="lang == 'mn' ? 'Утас' : 'Phone'"
+                      style="width:250px"
+                    >
+                    <input
+                      id="email"
+                      v-model="comment.email"
+                      class="input is-small"
+                      type="text"
+                      :placeholder="lang == 'mn' ? 'И-Мэйл' : 'Email'"
+                      style="width:250px"
+                    >
+                  </div>
+                  <div class="control is-small">
+                    <textarea id="comments" v-model="comment.text" class="textarea is-small" :placeholder="lang == 'mn' ? 'Сэтгэгдэл' : 'Comment'" />
+                  </div>
+                </div>
+                <a class="button is-info is-small is-right" @click="handleCreateComment">{{ lang == 'mn' ? 'Нийтлэх' : 'Submit' }}</a>
               </div>
             </div>
-            <a class="button is-info is-small is-right" @click="handleCreateComment">{{ lang == 'mn' ? 'Нийтлэх' : 'Submit' }}</a>
           </div>
-        </div>
-      </div>
-      <article v-for="item in commentList" :key="item.id" class="message">
-        <div class="message-body">
-          <strong style="float:left">{{ item.author }}</strong>
-          <p class="subtitle">
-            <i class="fas fa-clock" style="margin-left:20px;" />
-            {{ moment(item.createdAt).format("YYYY-MM-DD") }}
-          </p>
-          <p>
-            {{ item.text }}
-          </p>
-        </div>
-      </article>
-      <div class="columns paginationNumber">
-        <div class="column is-6">
-          <div style="text-align:left;">
-            <div class="block">
-              <el-pagination
-                background
-                :page-sizes="[6, 12, 18, 24]"
-                :page-size="listQuery.limit"
-                layout="total, sizes, prev, pager, next, jumper"
-                :total="total"
-                :current-page.sync="listQuery.currentPage"
-                @size-change="handleSizeChange"
-                @current-change="handleCurrentChange"
-              />
+          <article v-for="item in commentList" :key="item.id" class="message">
+            <div class="message-body">
+              <strong style="float:left">{{ item.author }}</strong>
+              <p class="subtitle">
+                <i class="fas fa-clock" style="margin-left:20px;" />
+                {{ moment(item.createdAt).format("YYYY-MM-DD") }}
+              </p>
+              <p>
+                {{ item.text }}
+              </p>
+            </div>
+          </article>
+          <div class="columns paginationNumber">
+            <div class="column is-6">
+              <div style="text-align:left;">
+                <div class="block">
+                  <el-pagination
+                    background
+                    :page-sizes="[6, 12, 18, 24]"
+                    :page-size="listQuery.limit"
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="total"
+                    :current-page.sync="listQuery.currentPage"
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </el-col>
+      <el-col class="column is-1"></el-col>
+      <el-col class="column is-3 ">
+        <div style="float: right; width: 100%">
+          <rightColoum />
+          <rightColoumAnnuon />
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 <script>
@@ -136,6 +147,7 @@ import moment from 'moment'
 import CommentServices from '../../services/CommentServices'
 import ContentService from '../../services/ContentServices'
 import rightColoum from '../../components/rightColoum'
+import rightColoumAnnuon from '../../components/rightColoumAnnoun'
 import {
   isNull
 } from '@/utils/Helper'
@@ -143,7 +155,8 @@ export default {
   layout: 'contentLayout',
   name: 'Content',
   components: {
-    rightColoum
+    rightColoum,
+    rightColoumAnnuon
   },
   data () {
     return {
@@ -409,11 +422,11 @@ export default {
 		}
 	}
 	.detailImage {
+    display: grid;
+    grid-template-columns: 80% 20%;
     .image1 {
       height: 400px;
       width: 1020px;
-      overflow-x: hidden;
-      overflow-y: hidden;
     }
 	}
 	.headerTitle {
@@ -458,8 +471,8 @@ export default {
 		}
 	}
   #right_coloum {
-float: right;
-width: 100%;
+width: 50%;
+
 }
   // .videodetail {
 	// 	.videodetail-about {
