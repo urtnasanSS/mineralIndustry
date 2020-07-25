@@ -32,9 +32,11 @@
             <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
               <div class="navbar-dropdown">
-                <template v-for="i in item.children">
-                  <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                </template>
+                <nuxt-link to="/frontend/pages/page2.vue">
+                  <template v-for="i in item.children">
+                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
+                  </template>
+                </nuxt-link>
               </div>
             </div>
             <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
@@ -47,9 +49,11 @@
             <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
               <div class="navbar-dropdown">
-                <template v-for="i in item.children">
-                  <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                </template>
+                <nuxt-link to="/frontend/pages/page2.vue">
+                  <template v-for="i in item.children">
+                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
+                  </template>
+                </nuxt-link>
               </div>
             </div>
             <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
