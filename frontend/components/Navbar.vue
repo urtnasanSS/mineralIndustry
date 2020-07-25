@@ -18,20 +18,6 @@
         <span aria-hidden="true" />
       </a>
     </div>
-<<<<<<< HEAD
-    <div id="navbarBasicExample" class="container" :class="{ 'is-active': showNav }">
-      <div class="navbar-start">
-        <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
-          <div v-if="portalMenus.length > index+1" class="menus2">
-            <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
-              <div class="navbar-dropdown">
-                <nuxt-link to="/frontend/pages/page2.vue">
-                  <template v-for="i in item.children">
-                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                  </template>
-                </nuxt-link>
-=======
     <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
       <div class="container">
         <div class="navbar-start">
@@ -49,26 +35,11 @@
                     <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
                   </template>
                 </div>
->>>>>>> 9b99bc82534f4bb91fa0b85761ac645bbb9d20b8
               </div>
               <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-      <div class="navbar-end">
-        <div v-for="( item, index ) in portalMenus" :key="index.id" class="menusEnd">
-          <div v-if="portalMenus.length <= index+1" class="menusEnd2">
-            <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
-              <div class="navbar-dropdown">
-                <nuxt-link to="/frontend/pages/page2.vue">
-                  <template v-for="i in item.children">
-                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                  </template>
-                </nuxt-link>
-=======
         <div class="navbar-end">
           <div v-for="( item, index ) in portalMenus" :key="index.id" class="menusEnd">
             <div v-if="portalMenus.length <= index+1" class="menusEnd2">
@@ -79,7 +50,6 @@
                     <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
                   </template>
                 </div>
->>>>>>> 9b99bc82534f4bb91fa0b85761ac645bbb9d20b8
               </div>
               <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
             </div>

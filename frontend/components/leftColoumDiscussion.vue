@@ -1,26 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <div id="leftColoumChart">
-      <div id="upper_line" style="margin: 1% 1% 1% 1%">
-        <hr style="float: left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;">
-        <p>Хэлэлцүүлэг</p>
-      </div>
-      <div id="leftColoumChart_1" style="float:left; margin-bottom: 16px; width: 100%; height: auto;">
-        <div v-for="item in list" :key="item.id" class="items">
-          <a class="textTitle">{{ item.title }}</a>
-          <small
-            style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-              letter-spacing: normal; text-align: left; color: #000000;"
-          >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-          <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
-            <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
-          </button>
-          <div id="comment">
-            <img src="img/comment.png" alt="">
-            <a>{{ item.commentIds.length }} хариулт</a>
-          </div>
-=======
   <div class="leftColoumChart">
     <div class="upperLine">
       <hr>
@@ -39,7 +17,6 @@
         <div class="comment">
           <img src="/img/comment.png" alt="">
           <a>{{ item.commentIds.length }} хариулт</a>
->>>>>>> 9b99bc82534f4bb91fa0b85761ac645bbb9d20b8
         </div>
       </div>
     </div>

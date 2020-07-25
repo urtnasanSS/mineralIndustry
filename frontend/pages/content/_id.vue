@@ -41,71 +41,9 @@
                     lazy
                   >
                   </el-image>
-  <div ref="content" v-loading="loading" class="newsOuter container">
-    <h4 class="title  headerTitle">
-      {{ lang == 'mn' ? temp.title : temp.titleEn }}
-      <button class="printButton button is-danger" @click="handleClickPrint()">
-        <span class="icon">
-          <i class="fa fa-floppy-o"></i>
-        </span>
-        <span>Татаж авах</span>
-      </button>
-    </h4>
-    <p class="subtitle ">
-      <i class="fas fa-eye" /> {{ temp.count }}
-      <i class="fas fa-clock" style="margin-left:10px;" />
-      {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
-    </p>
-    <div>
-      <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
-        <span class="icon">
-          <i class="fab fa-twitter"></i>
-        </span>
-        <span>Жиргэх</span>
-      </button>
-      <button class="button is-primary" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px">
-        <span class="icon">
-          <i class="fab fa-twitter"></i>
-        </span>
-        <span>Нийтлэх</span>
-      </button>
-    </div>
-    <div class="detailImage">
-      <div class="column is-12">
-        <div class="card-image">
-          <figure class="image is-4by3 customImage">
-            <div v-if="files && files.length > 0" style="height:400px; width:100%">
-              <el-image
-                :fit="'contain'"
-                :src="baseUrl + files[0].storageName"
-                class="image1"
-                lazy
-              >
-                <div slot="error" class="image-slot">
-                  <i class="el-icon-picture-outline" />
                 </div>
               </figure>
             </div>
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div v-if="lang == 'mn'">
-      <p v-html="temp.content" class="contents" />
-    </div>
-    <div v-else>
-      <p v-html="temp.contentEn" class="contents" />
-    </div>
-    <div v-if="files && files.length > 1" class="images">
-      <h2 class="title is-6" style="margin-bottom: 0.5rem;">
-        {{ lang == 'mn' ? 'Зургууд:' : 'Pictures:' }}
-      </h2>
-      <div class="columns">
-        <div v-for="item in files" :key="item.id" class="column">
-          <div class="card-image">
-            <figure class="image is-4by3" style="padding:0px; text-align: center;">
-              <el-image style="width:100px; height:100px" :src="baseUrl + item.storageName" fit="contain" :preview-src-list="[baseUrl + item.storageName]" />
-            </figure>
           </div>
         </div>
         <div v-if="lang == 'mn'">
@@ -253,6 +191,8 @@ export default {
       helpCategoryId: null,
       AllCommentFile: []
     }
+  },
+  watch () {
   },
   mounted () {
     if (this.$route.params.id) {
