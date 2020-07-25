@@ -29,7 +29,7 @@
       <div class="navbar-start">
         <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
           <div v-if="portalMenus.length > index+1" class="menus2">
-            <div v-if="item.children && item.children.length>0" :key="item.page2" class="navbar-item has-dropdown is-hoverable">
+            <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
               <div class="navbar-dropdown">
                 <template v-for="i in item.children">
@@ -62,7 +62,6 @@
 <script>
 import { mapGetters } from 'vuex'
 import ContentServices from '~/services/ContentServices'
-import page2 from '~/pages/page2'
 export default {
   name: 'Navbar',
   props: {
@@ -91,7 +90,6 @@ export default {
     }
   },
   computed: {
-    page2,
     ...mapGetters(['portalMenus'])
   },
   created () {
@@ -147,7 +145,7 @@ export default {
           const data = response.data
           // console.log(data, 'adsadssda')
           if (data.rows.length > 0) {
-            this.$nuxt.$router.replace({ path: '/page2/' + data.rows[0].id })
+            this.$nuxt.$router.replace({ path: '/content/' + data.rows[0].id })
           } else {
             this.$nuxt.$router.replace({ path: '/404.vue' })
           }
@@ -172,7 +170,7 @@ export default {
         .then((response) => {
           const data = response.data
           if (data.rows.length > 0) {
-            this.$nuxt.$router.replace({ path: '/en/page2/' + data.rows[0].id })
+            this.$nuxt.$router.replace({ path: '/en/content/' + data.rows[0].id })
           } else {
             this.$nuxt.$router.replace({ path: '/404.vue' })
           }
