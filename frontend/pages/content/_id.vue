@@ -134,7 +134,7 @@
       </el-col>
       <el-col class="column is-1"></el-col>
       <el-col class="column is-4 ">
-        <div style="float: right; width: 100%">
+        <div style="float: right; width: 100%;">
           <rightColoum />
           <rightColoumAnnuon />
         </div>

@@ -21,7 +21,7 @@
         <div class="column is-6" style="height:113px; float:left;">
           <img :src="baseUrl + item.files[0].storageName" style="width: 80%; height:100%; border-radius: 5px">
         </div>
-        <div class="column is-6" style="margin-left:-10%;">
+        <div class="column is-7.5" style="margin-left:-10%;">
           <a class="textLine">{{ item.title }}</a>
           <small
             style="float:left; width: 100%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
