@@ -29,10 +29,10 @@
           <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
             <div v-if="portalMenus.length > index+1" class="menus2">
               <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
+                <a class="navbar-item">{{ item.label }}</a>
                 <div class="navbar-dropdown">
                   <template v-for="i in item.children">
-                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
+                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenuHeader(page2)" />
                   </template>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default {
   destroyed () {},
   methods: {
     handleClickMenuHeader (item) {
-      this.$nuxt.$router.replace({ path: '/menuStructure', query: { menuId: item } })
+      this.$nuxt.$router.replace({ path: '/page2', query: { menuId: item } })
     },
     handleClickMenu (item) {
       this.lang = this.$store.state.language.language.code
@@ -145,7 +145,7 @@ export default {
           const data = response.data
           // console.log(data, 'adsadssda')
           if (data.rows.length > 0) {
-            this.$nuxt.$router.replace({ path: '/content/' + data.rows[0].id })
+            this.$nuxt.$router.replace({ path: '/page2/' + data.rows[0].page2 })
           } else {
             this.$nuxt.$router.replace({ path: '/404.vue' })
           }

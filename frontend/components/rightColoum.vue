@@ -18,13 +18,13 @@
         >
       </div>
       <div class="columns" v-for="item in list" :key="item.id">
-        <div class="column is-6" style="height:103px; float:left">
-          <img :src="baseUrl + item.files[0].storageName" style="float: left; width: 80%; height:100%; border-radius: 5px">
+        <div class="column is-6" style="height:113px; float:left;">
+          <img :src="baseUrl + item.files[0].storageName" style="width: 80%; height:100%; border-radius: 5px">
         </div>
-        <div class="column is-6">
+        <div class="column is-6" style="margin-left:-10%;">
           <a class="textLine">{{ item.title }}</a>
           <small
-            style=" float:left; width: 100%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+            style="float:left; width: 100%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
               letter-spacing: normal; text-align: left; color: #000000;"
           >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
           <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:100%">

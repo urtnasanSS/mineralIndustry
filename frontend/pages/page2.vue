@@ -19,63 +19,20 @@
         >
           Бүрдүүлэх материалын жагсаалт
         </a1>
-        <div
-          style="  width: 163px;
-          height: 27px;
-          background-color: #ff5e5e;
-          float:left;"
-        >
+        <div>
           <button class="printButton button is-danger" @click="handleClickPrint()">
             <span class="icon">
               <i class="fa fa-floppy-o"></i>
             </span>
             <span>Татаж авах</span>
           </button>
-          <a
-            style="
-            margin: 5% 5% 5% 5%;
-            float: left;
-            width: 64px;
-            height: 16px;
-            font-family: SegoeUI;
-            font-size: 12px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1.33;
-            letter-spacing: normal;
-            text-align: left;
-            color: white;"
-          >татаж авах</a>
         </div>
       </div>
       <div id="body" style="float: left; margin-bottom: 5%;">
-        <a class="title">1.  Импортлох тусгай зөвшөөрөл хүсэгч нь дараах бичиг баримтуудыг бүрдүүлж ирүүлнэ. </a><br><br>
-
-        <a class="text">Үүнд:<br><br>
-
-          - Аж ахуйн үйл ажиллагааны тусгай зөвшөөрлийн тухай хуулийн 11 дүгээр зүйлийн 11.1.1, 11.1.2-т заасан тусгай зөвшөөрөл хүссэн хүсэлт, тусгай зөвшөөрөл хүсэгчийн улсын бүртгэлийн гэрчилгээ,<br>
-          - Холбогдох мэргэжлийн холбооны гишүүн хуулийн этгээд болохыг нотлох баримт,<br>
-          - Газрын тосны бүтээгдэхүүний нийлүүлэгчтэй байгуулсан гэрээ, гарал үүслийн гэрчилгээ /орчуулгын хамт/, <br>
-          - Өөрийн эзэмшлийн агуулахын үл хөдлөх эд хөрөнгийн гэрчилгээ,<br>
-          - Бөөний худалдаа эрхлэх тусгай зөвшөөрөл,<br>
-          - Газрын тосны асуудал эрхэлсэн төрийн захиргааны байгууллагаас олгосон агуулахын бүртгэлийн гэрчилгээ,<br>
-          - Газрын тосны асуудал эрхэлсэн төрийн захиргааны байгууллагаас тухайн агуулахад гаргасан техник, технологийн дүгнэлт,<br>
-          - Хуулийн этгээдийн дүрэм /хамгийн сүүлийн байдлаар улсын бүртгэлийн байгууллагаар баталгаажуулсан байна/,<br>
-          - Завсрын бүтээгдэхүүн /БТКУС-ын 27.10.12 90, 27.10.19 90, 27.10.20 90 г.м/ импортлох тохиолдолд газрын тосны бүтээгдэхүүний үйлдвэрлэл эрхлэх тусгай зөвшөөрөл, <br>
-          - Бусад бичиг баримт /хуульд заасан үндэслэлээр/.<br><br></a>
-
-        <a class="title">2. Бөөний худалдаа эрхлэх тусгай зөвшөөрөл хүсэгч нь дараах бичиг баримтуудыг бүрдүүлж ирүүлнэ.></a> <br><br>
-        <a class="text">Үүнд:<br><br>
-
-          Аж ахуйн үйл ажиллагааны тусгай зөвшөөрлийн тухай хуулийн 11 дүгээр зүйлийн 11.1.1, 11.1.2-т заасан тусгай зөвшөөрөл хүссэн хүсэлт, тусгай зөвшөөрөл хүсэгчийн улсын бүртгэлийн гэрчилгээ,<br>
-          Улсын тэмдэгтийн хураамж төлсөн баримт,<br>
-          Агуулахын үл хөдлөх эд хөрөнгийн гэрчилгээ, эсхүл хүчин төгөлдөр түрээсийн гэрээ,<br>
-          Газрын тосны асуудал эрхэлсэн төрийн захиргааны байгууллагаас олгосон агуулахын бүртгэлийн гэрчилгээ,<br>
-          Газрын тосны асуудал эрхэлсэн төрийн захиргааны байгууллагаас тухайн агуулахад гаргасан техник, технологийн дүгнэлт,<br>
-          Холбогдох мэргэжлийн холбооны гишүүн хуулийн этгээд болохыг нотлох баримт,<br>
-          Хуулийн этгээдийн дүрэм /хамгийн сүүлийн байдлаар улсын бүртгэлийн байгууллагаар баталгаажуулсан байна/,<br>
-          Бусад бичиг баримт /хуульд заасан үндэслэлээр/.<br><br></a>
+        <h4 class="title  headerTitle">
+          {{ lang == 'mn' ? temp.title : temp.titleEn }}
+        </h4>
+        <a class="title"></a> <br><br>
 
         <a class="title">3. Жижиглэнгийн худалдаа эрхлэх тусгай зөвшөөрөл хүсэгч нь дараах бичиг баримтуудыг бүрдүүлж ирүүлнэ.</a><br><br>
         <a class="text"> Үүнд:<br><br>
@@ -97,12 +54,27 @@
 
 <script>
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
+import ContentService from '~/services/ContentServices.js'
 import foother from '~/components/foother.vue'
-
 export default {
   components: {
     HeaderWithNavbar,
     foother
+  },
+  data () {
+    return {
+      temp: {}
+    }
+  },
+  mounted () {
+    if (this.$route.params) {
+      this.lang = this.$store.state.language.language.code
+      this.getContent(this.$route.params)
+      this.contentCount(this.$route.params)
+    } else {
+      this.$nuxt.$router.replace({ path: '/404' })
+      // console.log('NotWorking')
+    }
   },
   methods: {
     handleClickPrint () {
@@ -112,6 +84,33 @@ export default {
       WinPrint.document.write(prtContent)
       WinPrint.document.close()
       WinPrint.print()
+    },
+    getContent (id) {
+      try {
+        this.loading = true
+        ContentService.getContentById(id).then((response) => {
+          this.temp = response.data
+          if (this.temp.contentCategoryIds && this.temp.contentCategoryIds.length > 0) {
+            this.helpCategoryId = this.temp.contentCategoryIds[0].categoryId
+          }
+          if (this.temp.files && this.temp.files.length > 0) {
+            this.files = this.temp.files.filter(c => c.fileType.includes('image'))
+            this.videos = this.temp.files.filter(c => c.fileType.includes('video'))
+            this.audios = this.temp.files.filter(c => c.fileType.includes('audio'))
+          }
+          this.loading = false
+        })
+      } catch (err) {
+        this.loading = false
+        err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
+      }
+    },
+    async contentCount (id) {
+      try {
+        await ContentService.incrementCount(id)
+      } catch (err) {
+        err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
+      }
     }
   }
 }
