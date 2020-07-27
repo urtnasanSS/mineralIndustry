@@ -18,13 +18,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'keywords', name: 'keywords', content: 'Албан хэрэг хөтлөлт , Архивын баримт, Баримт бичгийн цахим хувь' }
+      { hid: 'keywords', name: 'keywords', content: 'Уул уурхай, хүнд үйлдвэрийн яам , Уул уурхай, хүнд үйлдвэрийн яамны мэдээлэл' }
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon1.ico'
+        href: '/icon.ico'
       },
       {
         rel: 'stylesheet',

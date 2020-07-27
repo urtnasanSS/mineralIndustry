@@ -2,7 +2,7 @@
   <div>
     <div id="left_coloum_top" v-for="(value, index) in list" :key="value">
       <div v-if="index === 0">
-        <h3>{{ value.title }} </h3>
+        <!-- <h3>{{ value.title }} </h3> -->
         <img :src="baseUrl + value.files[0].storageName" style="width:auto;height:auto;" alt="Placeholder image">
       </div>
     </div>
@@ -15,6 +15,7 @@
         :width="'1000px'"
         class="sliderClass"
         style="overflow: hidden; width:100%;"
+        @handleClickTitle="handleClickTitle"
       />
     </div>
   </div>
@@ -34,7 +35,7 @@ export default {
       files: [],
       slides: [],
       firstValue: [],
-      slideDuration: 400000,
+      slideDuration: 4000,
       firstValueImage: [],
       baseUrl: process.env.baseUrl,
       listQuery: {
@@ -71,10 +72,14 @@ export default {
         err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
       })
     },
+    handleClickTitle (id) {
+      if (id) {
+        this.$nuxt.$router.replace({ path: '/content/' + id })
+      }
+    },
     getFileUrl (item) {
       if (item.files && item.files) {
         const files = item.files.filter(i => i.fileType.includes('image'))
-        // console.log(files[0], ' ---')
         if (files[0]) {
           return this.baseUrl + files[0].storageName
         } else {

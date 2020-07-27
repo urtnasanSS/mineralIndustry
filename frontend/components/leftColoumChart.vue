@@ -7,28 +7,21 @@
           <p>Импортын тайлан мэдээ (сараар)</p>
         </div>
         <div id="cart" style="width : 100%; height: auto;">
+          <p style="float:right; font-weight: bold; font-family: SegoeUI; color: #000000;     margin: 0 0 -24px 0">Сараар</p>
           <CommitChart />
         </div>
-        <h3>
-          “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00
-          цагт нээлтэй хуралдлаа.
-        </h3>
       </div>
 
       <div class="leftColoumChart_2" style="width: 50%; float: left;  padding-left: 5%;">
         <div id="upper_line">
           <hr style="float: left; width: 4px; height: 18px; margin: 1% 1% 1% 1%; padding: 0; background-color: #1a3675;">
-          <p>Импортын тайлан мэдээ (сараар)</p>
+          <p>Хамгийн их /ШТС/-тэй 10 компани</p>
         </div>
         <div id="cart" style="width : 100%; height: auto;">
           <div>
             <PieChart />
           </div>
         </div>
-        <h3>
-          “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00
-          цагт нээлтэй хуралдлаа.
-        </h3>
       </div>
     </div>
   </div>

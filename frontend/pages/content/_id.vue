@@ -48,11 +48,11 @@
         </div>
         <div v-if="lang == 'mn'">
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <p v-html="temp.content" class="contents" />
+          <p v-html="temp.content"></p>
         </div>
         <div v-else>
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <p v-html="temp.contentEn" class="contents" />
+          <p v-html="temp.contentEn"></p>
         </div>
         <!-- Сэтгэгдэл -->
         <div v-if="!temp.isHideComments" style="width: auto; margin:50px 20px 20px 100px !important;">
@@ -132,8 +132,7 @@
           </div>
         </div>
       </el-col>
-      <el-col class="column is-1"></el-col>
-      <el-col class="column is-3 ">
+      <el-col class="column is-4 ">
         <div style="float: right; width: 100%">
           <rightColoum />
           <rightColoumAnnuon />
@@ -191,8 +190,6 @@ export default {
       helpCategoryId: null,
       AllCommentFile: []
     }
-  },
-  watch () {
   },
   mounted () {
     if (this.$route.params.id) {

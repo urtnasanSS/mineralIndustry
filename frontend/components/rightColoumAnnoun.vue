@@ -16,11 +16,8 @@
     <div class="right_coloum_announcement">
       <div v-for="item in list" :key="item.id" class="Anouns">
         <a>{{ item.title }}</a>
-        <small
-          style=" float:left; width: 40%; margin:5px 0 0 0; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-          letter-spacing: normal; text-align: left; color: #000000;"
-        >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-        <button class="button is-rounded is-small" style="margin: 10px 0 0 100px">
+        <small>{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+        <button class="button is-rounded is-small">
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
       </div>
@@ -73,28 +70,65 @@ export default {
   margin-top: 21px;
   max-width: 100%;
   .right_coloum_announcement {
-  a {
-    float: left;
-    max-width: 100%;
-    height: auto;
-    font-family: SegoeUI;
-    font-size: 15px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.33;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000000;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2; /* number of lines to show */
-    -webkit-box-orient: vertical;
-  }
-  .Anouns {
-    margin: 5px 0
-  }
+    a {
+      float: left;
+      max-width: 100%;
+      height: auto;
+      font-family: SegoeUI;
+      font-size: 15px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    .Anouns {
+      margin: 5px 0;
+      a {
+        width: 100%;
+      }
+      .button {
+        margin: 10px 0 0 100px;
+        @media screen and (max-width: 1407px) {
+          margin: 10px 0 0 70px;
+        }
+        @media screen and (max-width: 1214px) {
+          margin: 10px 0 0 30px;
+        }
+        @media screen and (max-width: 856px) {
+          margin: 10px 0 0 22px;
+        }
+        @media screen and (max-width: 816px) {
+          margin: 10px 0 0 15px;
+        }
+        @media screen and (max-width: 768px) {
+          margin: 10px 0 0 241px
+        }
+      }
+      small {
+        float:left;
+        width: 40%;
+        margin:5px 0 0 0;
+        height: auto;
+        opacity: 0.4;
+        font-family: SegoeUI;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: italic;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+      }
+    }
   }
 }
 .headerTitle {

@@ -98,7 +98,6 @@ export default {
           color: #000000;
         }
         p {
-          width: 261px;
           font-family: SegoeUI;
           font-size: 15px;
           font-weight: normal;
@@ -116,7 +115,6 @@ export default {
         p {
           margin-top: 2%;
           float: left;
-          width: 100%;
           height: 40px;
           font-family: SegoeUI;
           font-size: 15px;
