@@ -7,7 +7,6 @@
           <p>Импортын тайлан мэдээ (сараар)</p>
         </div>
         <div id="cart" style="width : 100%; height: auto;">
-          <p style="float:right; font-weight: bold; font-family: SegoeUI; color: #000000;     margin: 0 0 -24px 0">Сараар</p>
           <CommitChart />
         </div>
       </div>

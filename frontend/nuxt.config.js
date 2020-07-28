@@ -34,7 +34,9 @@ export default {
     ],
     script: [
       { src: '/tinymce4.7.5/tinymce.min.js', type: 'text/javascript' },
-      { src: 'https://kit.fontawesome.com/9e7d4f433d.js', type: 'text/javascript', charset: 'utf-8', crossorigin: 'anonymous' }
+      { src: 'https://kit.fontawesome.com/9e7d4f433d.js', type: 'text/javascript', charset: 'utf-8', crossorigin: 'anonymous' },
+      { src: 'http://maps.google.com/maps/api/js?key=AIzaSyB5HisJtyDouxKwsqJ0BwSMSy9Fpi7sr20&libraries=drawing,geometry,places&language=mn', async: true, defer: true, type: 'text/javascript' },
+      { src: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', async: true, defer: true, type: 'text/javascript' }
     ]
   },
   router: {

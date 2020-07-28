@@ -20,15 +20,15 @@
     </el-row>
     <el-row class="columns">
       <el-col class="column is-9">
-        <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
+        <!-- <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
           <span style="margin-left:8%">Нийтлэх</span>
-        </button>
-        <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
+        </button> -->
+        <!-- <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
           <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
           <span>Жиргэх</span>
-        </button>
+        </button> -->
         <div class="detailImage">
           <div class="column is-12">
             <div class="card-image">

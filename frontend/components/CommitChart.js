@@ -15,7 +15,6 @@ export default {
   },
   async created () {
     this.data = (await axios({ method: 'get', url: 'https://mpetro.smartsolution.mn:8085/report/import/productByMonth?year=2020' })).data.rows
-    console.log(this.data, '----------------------daraaaa')
     for (let index = 0; index < this.data.length; index++) {
       this.names[index] = this.data[index].month
     }
@@ -28,10 +27,9 @@ export default {
   },
   methods: {
     test(labels, value) {
-      console.log(this.value, '----lables')
       const datasets = [{
         label: 'chart',
-        backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#971B00', '#ebfc03', '#0f03fc', '#fc0328', '#fc1403', '#03fcce', '#036bfc'],
+        backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#971B00', '#ebfc03', '#0f03fc', '#fc0328', '#fc1403', '#03fcce', '#036bfc', '#eb03fc', '#fc035a', '#0c0d0d', '#d0f5c6'],
         data: []
       }]
       datasets[0].data = value

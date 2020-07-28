@@ -23,7 +23,7 @@ export default {
     }
     this.labels = this.names
     this.value = this.counts
-    this.test(this.labels, this.value, this.color)
+    this.test(this.labels, this.value)
   },
   methods: {
     test(labels, value) {

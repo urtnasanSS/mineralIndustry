@@ -1,602 +1,262 @@
 <template>
-  <div>
-    <div id="calculator_area" style="width: auto; height: auto;">
-      <div class="center">
-        <div id="calculator">
-          <p>ХАЙЛТ /байршил КМ/</p>
-          <hr style="width: 98%;">
-
-          <div id="calculator_1">
-            <div style="width: 100%; height: 40px;">
-              <a
-                style="
-								float: left;
-								margin: 2% 2% 2% 2% ;
-								width: 66px;
-								height: 20px;
-								opacity: 0.44;
-								font-family: SegoeUI;
-								font-size: 15px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.33;
-								letter-spacing: normal;
-								text-align: left;
-								color: #000000;"
-              >Эхлэх цэг</a>
-              <hr
-                style="
-								float: left;
-								margin: 0;
-								width: 175px;
-								height: 29px;
-								border-radius: 9px;
-								border: solid 0.3px #707070;
-								background-color: #ffffff;
-								"
-              >
-              <img
-                src="/img/pin.png"
-                style="float: left;
-								margin: 2% 2% 2% 4%;
-								width: 10.8px;
-								height: 15.3px;
-								object-fit: contain;"
-              >
-            </div>
-            <div style="width: 100%; height: 50px;">
-              <a
-                style="
-								float: left;
-								margin: 2% 2% 2% 2% ;
-								width: 66px;
-								height: 20px;
-								opacity: 0.44;
-								font-family: SegoeUI;
-								font-size: 15px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.33;
-								letter-spacing: normal;
-								text-align: left;
-								color: #000000;"
-              >Дуусах цэг</a>
-              <hr
-                style="
-								float: left;
-								margin: 0;
-								width: 175px;
-								height: 29px;
-								border-radius: 9px;
-								border: solid 0.3px #707070;
-								background-color: #ffffff;
-								"
-              >
-              <img
-                src="img/pin.png"
-                style="float: left;
-								margin: 2% 2% 2% 4%;
-								width: 10.8px;
-								height: 15.3px;
-								object-fit: contain;"
-              >
-            </div>
-            <button
-              type="button"
-              style="float: left;
-									margin: 0% 3% 0% 30%;
-									width: 87px;
-									height: 29px;
-									border-radius: 9px;
-									background-color: #55d46a;"
-            >
-              <a
-                style="
-									width: 29px;
-									height: 17px;
-									font-family: SegoeUI;
-									font-size: 13px;
-									font-weight: 600;
-									font-stretch: normal;
-									font-style: normal;
-									line-height: 1.31;
-									letter-spacing: normal;
-									text-align: center;
-									color: #ffffff;"
-              >Хайх</a>
-            </button>
-            <button
-              type="button"
-              style="
-								float: left;
-								width: 87px;
-								height: 29px;
-								border-radius: 9px;
-								background-color: #e96565;"
-            >
-              <a
-                style="  width: 57px;
-								height: 17px;
-								font-family: SegoeUI;
-								font-size: 13px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.31;
-								letter-spacing: normal;
-								text-align: center;
-								color: #ffffff;"
-              >Цэвэрлэх</a>
-            </button>
-          </div>
-          <div id="calculator_2">
-            <hr style="width: 98%; margin: 5% 0% 4% 0% ; float: left;">
-            <h1
-              style=" margin:0% 0% 3% 3%;
-							float: left;
-							width: 259px;
-							height: 26px;
-							font-family: SegoeUI;
-							font-size: 19px;
-							font-weight: bold;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.37;
-							letter-spacing: normal;
-							text-align: left;
-							color: #000000;"
-            >
+  <div class="columns" style="height:500px">
+    <div class="column is-3">
+      <div class="map-main-container">
+        <div class="search">
+          <article class="panel is-primary">
+            <p class="panel-heading">
               ХАЙЛТ /Тусгай зөвшөөрөл/
-            </h1>
-
-            <a
-              style="
-							margin:0% 0% 3% 3%;
-							width: 100%;
-							height: 20px;
-							font-family: SegoeUI;
-							font-size: 15px;
-							font-weight: 600;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.33;
-							letter-spacing: normal;
-							text-align: left;
-							color: #000000;"
-            >Байгууллага:</a>
-            <div
-              style="  margin: 3% 0% 0% 3% ;
-								float: left;
-								width: 286px;
-								height: 29px;
-								border-radius: 9px;
-								border: solid 0.3px #707070;
-								background-color: #ffffff;"
-            >
-              <a
-                style="float: left;
-								margin: 2% 0% 0% 3%;
-								width: 68px;
-								height: 20px;
-								opacity: 0.4;
-								font-family: SegoeUI;
-								font-size: 15px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.33;
-								letter-spacing: normal;
-								text-align: left;
-								color: #000000;"
-              >Петровис</a>
-              <img
-                src="img/down-arrow.png"
-                style=" margin: 3% 3% 0% 0%;
-								width: 11.9px;
-								height: 7px;
-								object-fit: contain;
-								float: right;"
-              >
-            </div>
-          </div>
-          <div id="calculator_3">
-            <a
-              style="
-							float: left;
-							margin:3% 0% 3% 3%;
-							width: 100%;
-							height: 20px;
-							font-family: SegoeUI;
-							font-size: 15px;
-							font-weight: 600;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.33;
-							letter-spacing: normal;
-							text-align: left;
-							color: #000000;"
-            >Түгээх станцын төрөл:</a>
-            <div
-              style="  margin: 3% 0% 0% 3%;
-								float: left;
-								width: 286px;
-								height: 101px;
-								border-radius: 9px;
-								border: solid 0.3px #707070;
-								background-color: #ffffff;"
-            >
-              <input type="checkbox" style="margin:3% 3% 3% 3%;">
-              <a
-                style="width: 80%;
-								height: 20px;
-								opacity: 0.4;
-								font-family: SegoeUI;
-								font-size: 15px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.33;
-								letter-spacing: normal;
-								text-align: left;
-								color: #000000;"
-              >Шатахуун түгээх станц</a> <br>
-              <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a
-                style="width: 110px;
-								height: 20px;
-								opacity: 0.4;
-								font-family: SegoeUI;
-								font-size: 15px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.33;
-								letter-spacing: normal;
-								text-align: left;
-								color: #000000;"
-              >Газ түгээх станц</a>
-            </div>
-          </div>
-          <div id="calculator_4">
-            <a
-              style="
-							float: left;
-							margin:3% 0% 0% 3%;
-							width: 100%;
-							height: 20px;
-							font-family: SegoeUI;
-							font-size: 15px;
-							font-weight: 600;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.33;
-							letter-spacing: normal;
-							text-align: left;
-							color: #000000;"
-            >Шатахууны төрөл:</a>
-
-            <div
-              style="  margin: 3% 0% 0% 3%;
-								float: left;
-								width: 286px;
-								height: 101px;
-								border-radius: 9px;
-								border: solid 0.3px #707070;
-								background-color: #ffffff;"
-            >
-              <div style="width: 100%;">
-                <div style="width: 50%; float: left;">
-                  <input type="checkbox" style="margin:3% 3% 3% 3%;"><a
-                    style="width: 80%;
-											height: 20px;
-											opacity: 0.4;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >А80</a> <br>
-                  <input type="checkbox" style="margin:3% 3% 3% 3%;"><a
-                    style="width: 50%;
-											height: 20px;
-											opacity: 0.4;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >АИ92</a><br>
-                  <input type="checkbox" style="margin:3% 3% 3% 3%;"><a
-                    style="width: 50%;
-											height: 20px;
-											opacity: 0.4;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >Дизел түлш</a><br>
-                </div>
-                <div style="width: 50%; float: left;">
-                  <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a
-                    style="width: 50%;
-											height: 20px;
-											opacity: 0.4;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >АИ95</a><br>
-                  <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a
-                    style="width: 50%;
-											height: 20px;
-											opacity: 0.4;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >АИ98</a><br>
-                  <input type="checkbox" style="margin:3% 3% 3% 3% ;"><a
-                    style="width: 50%;
-											height: 20px;
-											opacity: 0.4;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >Авто газ</a><br>
-                </div>
-              </div>
-            </div>
-
-            <div
-              style=" float: right;
-								margin: 3% 7% 3% 3%;
-								width: 46px;
-								height: 29px;
-								border-radius: 9px;
-								background-color: #008cff;"
-            >
-              <img src="img/refresh.png" style=" margin: 10% 30% 10% 30%">
-            </div>
-            <div style="float: left;">
-              <a
-                style="
-								float: left;
-								margin:3% 0% 3% 3%;
-								width: 100%;
-								height: 20px;
-								font-family: SegoeUI;
-								font-size: 15px;
-								font-weight: 600;
-								font-stretch: normal;
-								font-style: normal;
-								line-height: 1.33;
-								letter-spacing: normal;
-								text-align: left;
-								color: #000000;"
-              >Тооцоолуур:</a>
-            </div>
-            <div id="calculator_5">
-              <div style="width: 100%; height: auto; float: left;">
-                <a
-                  style="
-										float: left;
-										margin: 2% 2% 2% 10% ;
-										width: 66px;
-										height: 20px;
-										opacity: 0.44;
-										font-family: SegoeUI;
-										font-size: 15px;
-										font-weight: 600;
-										font-stretch: normal;
-										font-style: normal;
-										line-height: 1.33;
-										letter-spacing: normal;
-										text-align: left;
-										color: #000000;"
-                >Урт/км</a>
-                <div
-                  style="
-											float: left;
-											margin: 0;
-											width: 175px;
-											height: 29px;
-											border-radius: 9px;
-											border: solid 0.3px #707070;
-											background-color: #ffffff;
-											"
+            </p>
+            <el-form :model="searchTemp" ref="form" label-width="120px" :label-position="'top'" style="margin-top:10px;">
+              <el-form-item label="Байгууллага:" prop="">
+                <el-select
+                  clearable
+                  size="mini"
+                  filterable
+                  v-model="searchTemp.organizationId"
+                  value-key="_id"
+                  @change="handleChangeOrganization"
                 >
-                  <a
-                    style=" float: left;
-											margin: 2% 0% 3% 5%;
-											width: 42px;
-											height: 20px;
-											font-family: SegoeUI;
-											font-size: 15px;
-											font-weight: 600;
-											font-stretch: normal;
-											font-style: normal;
-											line-height: 1.33;
-											letter-spacing: normal;
-											text-align: left;
-											color: #000000;"
-                  >135км</a>
-                </div>
-              </div>
-              <div style="width: 100%; height: auto; float: left;">
-                <a
-                  style="
-									float: left;
-									margin: 2% 2% 2% 10% ;
-									width: 66px;
-									height: 20px;
-									opacity: 0.44;
-									font-family: SegoeUI;
-									font-size: 15px;
-									font-weight: 600;
-									font-stretch: normal;
-									font-style: normal;
-									line-height: 1.33;
-									letter-spacing: normal;
-									text-align: left;
-									color: #000000;"
-                >100км/л</a>
-                <div
-                  style="
-										float: left;
-										margin: 0;
-										width: 175px;
-										height: 29px;
-										border-radius: 9px;
-										border: solid 0.3px #707070;
-										background-color: #ffffff;
-										"
-                >
-                  <a
-                    style=" float: left;
-										margin: 2% 0% 3% 5%;
-										width: 42px;
-										height: 20px;
-										font-family: SegoeUI;
-										font-size: 15px;
-										font-weight: 600;
-										font-stretch: normal;
-										font-style: normal;
-										line-height: 1.33;
-										letter-spacing: normal;
-										text-align: left;
-										color: #000000;"
-                  >10литр</a>
-                </div>
-              </div>
-
-              <div
-                style="float: right;
-									margin: 2% 12.5% 2% 0%;
-									width: 175px;
-									height: 29px;
-									border-radius: 9px;
-									background-color: #008cff;"
-              >
-                <a
-                  style="
-									float: left;
-									margin: 2% 5% 2% 30%;
-									width: 77px;
-									height: 20px;
-									font-family: SegoeUI;
-									font-size: 15px;
-									font-weight: 600;
-									font-stretch: normal;
-									font-style: normal;
-									line-height: 1.33;
-									letter-spacing: normal;
-									text-align: left;
-									color: #ffffff;"
-                >Тооцоолох</a>
-              </div>
-
-              <div style="width: 90%; float: left; margin: 3% 3% 3% 3%;">
-                <div>
-                  <a
-                    style="
-										margin: 0% 10% 0% 5%;
-										float: left;
-										width: 79px;
-										height: 40px;
-										opacity: 0.4;
-										font-family: SegoeUI;
-										font-size: 15px;
-										font-weight: 600;
-										font-stretch: normal;
-										font-style: normal;
-										line-height: 1.33;
-										letter-spacing: normal;
-										text-align: left;
-										color: #000000;"
-                  >Шатахуун зарцуулалт</a>
-                </div>
-                <div style=" float: left;">
-                  <a
-                    style="  width: 107px;
-										height: 36px;
-										font-family: SegoeUI;
-										font-size: 27px;
-										font-weight: 600;
-										font-stretch: normal;
-										font-style: normal;
-										line-height: 1.33;
-										letter-spacing: normal;
-										text-align: left;
-										color: #000000;"
-                  >10,5литр</a>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <el-option v-for="listItem in listOrganization" :key="listItem._id" :label="listItem.name" :value="listItem"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer" style="display:flex; justify-content:flex-end; margin-top:10px;">
+              <el-tooltip effect="light" :content="$t('smartActionButtons.refresh')" key="refresh">
+                <el-button type="warning" size="mini">Цэвэрлэх</el-button>
+              </el-tooltip>
+            </span>
+          </article>
         </div>
-
-        <img src="/img/Image 1.png" style="width: 60%; float: left; overflow: hidden; margin: 2% 2% 2% 2%">
       </div>
+    </div>
+    <div class="column is-9">
+      <div id="map" ref="map" style="width:100%; height:100%;"></div>
     </div>
   </div>
 </template>
 <script>
-</script>
-<style>
-#calculator{
-margin: 2% 2% 2% 2%;
-float: left;
-width: 320px;
-height: auto;
-border-radius: 12px;
-border: solid 1px #707070;
-}
+import MpetroService from '@/services/MpetroService'
 
-#calculator p{
-margin: 5% 0% 5% 5%;
-float: left;
-overflow: hidden;
-width: 209px;
-height: auto;
-font-family: SegoeUI;
-font-size: 19px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.37;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
+export default {
+  name: 'Map',
+  data () {
+    return {
+      centerLat: 46.856739169432466,
+      centerLong: 103.09617393124995,
+      map: null,
+      // aimagCityList: [],
+      searchTemp: {
+        aimagCityId: null,
+        soumDistrictId: null,
+        organizationId: null,
+        productType: '',
+        checkedType: []
+      },
+      tempOrganization: {
+        unitCount: 0
+      },
+      listOrganization: [],
+      markers: [],
+      markerClusterList: []
+    }
+  },
+  beforeMount () {
+    this.refData()
+    this.getPointers()
+  },
+  /* eslint-disable */
+  mounted() {
+    this.$nextTick(async function () {
+      await this.initMap()
+    //   await this.initDirections()
+    })
+  },
+  methods: {
+		async changeAimagCity (aimagCityId) {
+      if (!isNull(aimagCityId)) {
+      }
+    },
+    async refData() {
+      console.log('----------this.listOrganization------------')
+      this.listOrganization = (await MpetroService.organizationList())
+      console.log('----------this.listOrganization------------', this.listOrganization)
+    },
+    async initMap() {
+      this.map = new google.maps.Map(this.$refs.map, {
+        zoom: 5,
+        center: new google.maps.LatLng(this.centerLat, this.centerLong),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true,
+        zoomControl: true,
+        draggable: true,
+        styles: [
+          {
+            'featureType': 'administrative',
+            'elementType': 'labels.text.fill',
+            'stylers': [
+              {
+                'color': '#444444'
+              }
+            ]
+          },
+          {
+            'featureType': 'landscape',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'color': '#f2f2f2'
+              }
+            ]
+          },
+          {
+            'featureType': 'poi',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'road',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'saturation': -100
+              },
+              {
+                'lightness': 45
+              }
+            ]
+          },
+          {
+            'featureType': 'road.highway',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'visibility': 'simplified'
+              }
+            ]
+          },
+          {
+            'featureType': 'road.arterial',
+            'elementType': 'labels.icon',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'transit',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'visibility': 'off'
+              }
+            ]
+          },
+          {
+            'featureType': 'water',
+            'elementType': 'all',
+            'stylers': [
+              {
+                'color': '#46bcec'
+              },
+              {
+                'visibility': 'on'
+              }
+            ]
+          }
+        ]
+      })
+			console.log('------initMap-------', this.listOrganization)
+    },
+    async getPointers() {
+      const data = (await MpetroService.getPoints(this.searchTemp)).data
+      await this.setPointers(data)
+    },
+    setPointers(data) {
+      var point = null
+      var self = this
+      var infowindow = new google.maps.InfoWindow()
+      var infowindow_poly = new google.maps.InfoWindow()
+      var tmpMarker = null
+      var clusterMarkers = []
+			console.log('------setPointers-------', data)
+      for (const unit of data) {
+        if (unit && unit.address) {
+          // x - long
+          // y - lat
+          point = null
+          point = new google.maps.LatLng(unit.lat, unit.long)
+          tmpMarker  = new google.maps.Marker({
+            position: point,
+            map: this.map,
+            draggable: true,
+            animation: google.maps.Animation.DROP
+          })
+          // Clusters
+          clusterMarkers.push(tmpMarker)
+          google.maps.event.addListener(tmpMarker, 'click', function(event) {
+            var content = ''
+            content = 
+              '<div id="iw-container">' +
+                '<div class="iw-title">' + unit.organizationId.name + '</div>' + 
+                '<div class="iw-title-sub">' + unit.name + '</div>' + 
+                '<div class="iw-content">' + unit.address +
+                '</div>' +
+              '</div>'
+            infowindow.setContent(content)
+            infowindow.open(self.map, this)
+          }.bind( tmpMarker ))
+          this.markers.push({type: 'ШТС', organizationId: unit.organizationId, unitId: unit._id, marker: tmpMarker})
+        }
+      }
+      // Clusters
+      const tmpCluster = new MarkerClusterer(this.map, clusterMarkers, {
+        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+      })
+      this.markerClusterList.push({type: 'ШТС', cluster: tmpCluster})
+      this.tempOrganization.unitCount = data.length
+    },
+    async handleChangeOrganization() {
+      const data = (await MpetroService.getPoints(this.searchTemp)).data
+      await this.setPointers(data)
+    },
+  }
+}
+</script>
+<style lang="scss" scoped>
+.map-main-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .expandButton {
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    cursor: pointer;
+    background-color: var(--bg-side-color);
+  }
+  .search {
+    position: relative;
+    width: 300px;
+    height: 100%;
+    // margin: var(--primary-padding);
+    box-sizing: border-box;
+    -webkit-transition: width 900ms ease;
+    transition: width 900ms ease;
+  }
+  .map {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin: var(--primary-padding);
+  }
 }
 
 </style>

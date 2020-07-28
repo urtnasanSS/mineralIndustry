@@ -2,7 +2,7 @@
   <header class="topbar">
     <nav class="navbar is-info">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
+        <a class="navbar-item" href="/home">
           <img src="/img/logoUurhai.png" alt="Ухаалаг шийдэл" width height="35">
           <span>Нүүр хуудас</span>
         </a>

@@ -1,244 +1,37 @@
 <template>
   <div>
     <HeaderWithNavbar />
-
-    <div id="content_area" class="center" style="margin-top: 3%;">
-      <div id="left_coloum">
-        <div class="left_coloum_top">
-          <p
-            style="  float: left;
-                    margin-bottom:1px;
-                    float: left;
-                    width: 100%;
-                    height: auto;
-                    font-family: SegoeUI;
-                    font-size: 18px;
-                    font-weight: bold;
-                    font-stretch: normal;
-                    font-style: normal;
-                    line-height: 1.33;
-                    letter-spacing: normal;
-                    text-align: left;
-                    color: #000000 !important;"
-          >
-            “Эрдэнэс-Тавантолгой” ХК-ийн Хувьцаа эзэмшигчдийн ээлжит хурал 2020 оны 04 дүгээр сарын 24-ний өдрийн 09:00 цагт нээлтэй хуралдлаа.
-          </p>
-          <small
-            style=" float:left; width: 100%; margin:0% 0% 2% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-                        letter-spacing: normal; text-align: left; color: #000000;"
-          >2020 - 04 - 02</small>
-          <div id="social_botten" style="width: auto; height: auto; float: left;">
-            <div
-              id="FB"
-              style="
-                            margin: 0px  5px 5px 0px;
-                            float: left;
-                            width: 110px;
-                            height: 19px;
-                            border-radius: 6px;
-                            background-color: #0066ff;"
-            >
-              <a
-                style=" margin: 1% 7% 0% 0% ;
-                            float: right;
-                            width: 77px;
-                            height: 16px;
-                            font-family: SegoeUI;
-                            font-size: 12px;
-                            font-weight: 600;
-                            font-stretch: normal;
-                            font-style: normal;
-                            line-height: 1.33;
-                            letter-spacing: normal;
-                            text-align: left;
-                            color: white;"
-              >Нийтэд түгээх</a>
-              <img
-                src="img/share.png"
-                style=" margin:3% 1% 3% 5% ;
-                            float: left;
-                            width: 11.5px;
-                            height: 12.5px;
-                            object-fit: contain;"
-              >
-            </div>
-            <div
-              id="twitter"
-              style="
-                width: 100%;
-                float: left;
-                width: 110px;
-                height: 19px;
-                border-radius: 6px;
-                background-color: #00b1ff;"
-            >
-              <a
-                style=" margin: 1% 7% 0% 0% ;
-                        float: right;
-                        width: 77px;
-                        height: 16px;
-                        font-family: SegoeUI;
-                        font-size: 12px;
-                        font-weight: 600;
-                        font-stretch: normal;
-                        font-style: normal;
-                        line-height: 1.33;
-                        letter-spacing: normal;
-                        text-align: left;
-                        color: white;"
-              >Жиргэх</a>
-              <img
-                src="img/twitter.png"
-                style=" margin:3% 1% 3% 5% ;
-                        float: left;
-                        width: 11.5px;
-                        height: 12.5px;
-                        object-fit: contain;"
-              >
-            </div>
-          </div>
-          <img src="img/f48235f96fadaa78fbd96a76aa929d17.png" width="100%">
-          <a
-            style="  width: 1037px;
-                    height: 645px;
-                    font-family: SegoeUI;
-                    font-size: 20px;
-                    font-weight: normal;
-                    font-stretch: normal;
-                    font-style: normal;
-                    line-height: 1.35;
-                    letter-spacing: normal;
-                    text-align: left;
-                    color: #707070 !important;"
-          >“Засгийн газрын ээлжит бус хуралдааны газрын тосны бүтээгдэхүүний хангамж, цаашид хэрэгжүүлэх арга хэмжээ болон нүүрсний экспорттой холбоотой шийдвэр гаргажээ. Энэ талаар УУХҮ-ийн сайд Д.Сумъяабазар мэдээлэл хийлээ. <br><br>
-
-            “Дэлхийн зах зээл дээр газрын тосны үнэ буурсантай холбогдуулан УУХҮЯ-аас шатахуун түгээх станцуудад шаардлага хүргүүлсэн бөгөөд шатахууны үнэ литр тутамд 50-100 төгрөгөөр буурсан байна. Цаашид, дөрөвдүгээр сарын 15-ны өдөр хүртэл шатахууны үнэ литр тутамд 200 төгрөгөөр буурах боломжтой.<br><br>
-
-            Үнийн өсөлт, бууралтын хувьд манай улсад сарын хоцрогдолтой орж ирдэг. Цаашид шатахуун агуулах саваа бүрэн ашиглах ёстой.  Зах зээлийн үнэ ханш доод түвшинд хүрсэн энэ үед төр, хувийн хэвшил бодлогоо нэгтгээд боломжтой хэмжээгээр нөөцлөх ёстой чиглэл барьж байгаа” гэж сайд мэдээлэв.<br><br>
-
-            Дэлхийн зах зээл дээр газрын тосны үнэ 65 орчим ам.долларт хэлбэлзэж байсан бол одоогоор 28-22  ам.доллар болж буурсан нь  шатахууны хувьд хамгийн доод үнэд тооцогдож байна. Тэгвэл газрын тосны бүтээгдэхүүний үнэ 26 ам.доллар болжээ. COVID 19 вирусын улмаас Монгол Улсад нэг болон хоёрдугаар сард шатахууны эрэлт бага байсан учраас нөөцөлж чадсан юм. Одоогоор дотоодын зах зээлд АИ-92 шатахууны 30, дизель түлшний 33 хоногийн нөөцтэй байгаа нь нийтдээ энгийн үетэй харьцуулахад 10 хоногийн илүү нөөцтэй байгаа.Мөн салбарын сайд “У.Хүрэлсүхийн Засгийн газрын үед шатахууны үнэ өсөөгүй, үнийг тогтвортой байлгахад маш их анхаарч ажилласан”-ыг мэдээлэлдээ онцлон хэллээ. <br><br>
-
-            Харин БНХАУ руу гаргах нүүрсний экспортын тухайд ЗТХЯ болон УУХҮЯ хамтран Гашуун сухайт боомт, тээврийн зам бусад обьектын ариутгал халдваргүйжүүлэлт, аюулгүй байдлын стандарттай газар дээр очин танилцаж, холбогдох шийдвэрүүдийг гаргахаар болоод байна. </a><br><br>
-          <hr>
-          <a
-            style="
-                  float:left;
-                  width: 100%;
-                  height: 24px;
-                  font-family: SegoeUI;
-                  font-size: 18px;
-                  font-weight: bold;
-                  font-stretch: normal;
-                  font-style: normal;
-                  line-height: 1.33;
-                  letter-spacing: normal;
-                  text-align: left;
-                  color: #000000;"
-          >Сэтгэгдэл үлдээх</a>
-          <a
-            style=" float: left;
-                    width: 100%;
-                    height: 24px;
-                    opacity: 0.4;
-                    font-family: SegoeUI;
-                    font-size: 18px;
-                    font-weight: 600;
-                    font-stretch: normal;
-                    font-style: normal;
-                    line-height: 1.33;
-                    letter-spacing: normal;
-                    text-align: left;
-                    color: #000000;"
-          >1 сэтгэгдэл</a>
-
-          <div style="width:100%; float: left;">
-            <div>
-              <div style="width: 10%; float: left">
-                <img src="img/81818035_193642742004066_5623691273845080064_n-141229-1345390759.png" style="float: left; display: block">
-              </div>
-              <div
-                id="comment"
-                style="
-                        margin: 0% 5% 0% 5%;
-                        float: left;
-                        width:80%;
-                        height: 57px;
-                        opacity: 0.6;
-                        border: solid 0.3px #707070;
-                        background-color: white;"
-              ></div>
-            </div>
-
-            <div
-              style="
-                    margin: 1% 9% 0% 0% ;
-                    float: right;
-                    width: 105px;
-                    height: 26px;
-                    background-color: #1499ff;"
-            >
-              <a
-                style="
-                      margin: 0% 0% 0% 30% ;
-                      width: 54px;
-                      height: 24px;
-                      font-family: SegoeUI;
-                      font-size: 18px;
-                      font-weight: 600;
-                      font-stretch: normal;
-                      font-style: normal;
-                      line-height: 1.33;
-                      letter-spacing: normal;
-                      text-align: center;
-                      color: white;"
-              >илгээх</a>
-            </div>
-          </div>
-
-          <div style="width: 10%; float: left;">
-            <img
-              src="img/81818035_193642742004066_5623691273845080064_n-141229-1345390759.png"
-              style="
-							float: left; display: block;"
-            >
-          </div>
-          <div style="width: 80%; height: auto; float: left;">
-            <small
-              style=" float:left; width: auto; height: auto; margin:0% 1% 0% 0%;  opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-							letter-spacing: normal; text-align: left; color: #000000;"
-            >2020 - 04 - 02</small>
-            <small
-              style="
-							width: 80%;
-							height: 16px;
-							opacity: 0.64;
-							font-family: SegoeUI;
-							font-size: 12px;
-							font-weight: bold;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.33;
-							letter-spacing: normal;
-							color: #000000;"
-            >bbulgantamir19@gmail.com       99122760</small><br>
-            <a
-              style=" width: 898px;
-							height: 81px;
-							font-family: SegoeUI;
-							font-weight: normal;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.35;
-							letter-spacing: normal;
-							text-align: left;
-							color: #707070;"
-            >Харин БНХАУ руу гаргах нүүрсний экспортын тухайд ЗТХЯ болон УУХҮЯ хамтран Гашуун сухайт
-              боомт, тээврийн зам бусад обьектын ариутгал халдваргүйжүүлэлт, аюулгүй байдлын стандарттай
-              газар дээр очин танилцаж, холбогдох шийдвэрүүдийг гаргахаар болоод байна.</a>
+    <div id="content_area" class="center">
+      <div id="left_content" style="width: 40%; margin: 5% 0% 5% 0%; float: left;">
+        <p class="title">Холбоо барих</p>
+        <a> Сэтгэгдэл бичих
+        </a><br>
+        <div class="field">
+          <div class="control">
+            <textarea id="comments" class="textarea" v-model="comment.text" placeholder="" rows="7"></textarea>
           </div>
         </div>
+        <a>Утасны дугаар</a>
+        <input class="input" v-model="comment.phone" type="tel" placeholder="">
+        <a>Цахим хаяг</a>
+        <input class="input" v-model="comment.email" type="email" placeholder="">
+        <div class="buttons">
+          <button class="button" @click="handleCreateComment">Илгээх</button>
+        </div>
       </div>
-      <rightColoum />
+      <div id="right_content" style="width: 22%; float: left; margin: 10% 0% 10% 5%">
+        <p>{{ value.name }}</p>
+        <p>Утас: {{ value.phone }}</p>
+        <p>Факс: {{ value.Fax }}</p>
+        <p>Цахим шуудан: {{ value.Email }}</p>
+        <div style="margin-top: 30px">
+          <p>
+            {{ value.uPosition }} {{ value.uName }}
+            Утас: {{ value.uPhone }}, өрөөний
+            дугаар {{ value.uWork }}
+          </p>
+        </div>
+      </div>
     </div>
     <foother />
   </div>
@@ -247,44 +40,208 @@
 <script>
 import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
 import foother from '~/components/foother.vue'
-import rightColoum from '~/components/rightColoum.vue'
+import CommentServices from '@/services/CommentServices'
+import AddressServices from '@/services/AddressServices.js'
 
 export default {
   components: {
     HeaderWithNavbar,
-    rightColoum,
     foother
   },
+
+  data() {
+    return {
+      data: [],
+      value: {},
+      CommentId: 1,
+      CommentName: 'Холбоо барих',
+      comment: {
+        phone: '',
+        email: '',
+        text: ''
+      }
+    }
+  },
   created () {
+    this.getList()
+  },
+  methods: {
+    getList () {
+      AddressServices.index()
+        .then((response) => {
+          this.data = response.data
+          this.value = this.data[0]
+        })
+        .catch((err) => {
+          err.response && err.response.data
+            ? this.$message({
+              type: 'warning',
+              message: err.response.data.error
+            })
+            : this.$message({ type: 'error', message: err })
+        })
+    },
+    handleCreateComment () {
+      if (this.comment.text === '' || this.comment.text.trim() === '') {
+        return this.$message({ type: 'warning', message: 'Сэтгэгдэл оруулна уу' })
+      }
+      if (this.comment.phone === '' || this.comment.phone.trim() === '') {
+        return this.$message({ type: 'warning', message: 'Утас оруулна уу' })
+      }
+      if (this.comment.email === '' || this.comment.email.trim() === '') {
+        return this.$message({ type: 'warning', message: 'И-мэйл оруулна уу' })
+      }
+      this.replaceWords()
+    },
+    async replaceWords (event) {
+      const commentAuthor = this.CommentName
+      const commentContent = document.getElementById('comments')
+      const badWords = ['хуц', 'пизда', 'fuck', 'sex', 'pizdaa', 'pizda', 'piazda', 'piatka', 'piahluu', 'pishda', 'pijda', 'sda', 'sdakaa', 'zda', 'aash', 'shaa', 'sha', 'lalar', 'boov', 'lagaa', 'teneg', 'lalaraa', 'lalraa', 'llr', 'haraal idsen', 'лалар', 'ynhan', 'huts', 'ideesei', 'haraal', 'golog', 'sadist', 'садист', 'лага', 'лагаанууд', 'laga', 'laganuud', 'ллр', 'лларууд', 'ллрийн', 'лалр', 'fuckhole', 'nujuur huh', 'нөжөөр хах', 'nojoor hah', 'нохой долоог', 'nohoi doloog', 'pooface', 'shitface', 'муухай царай', 'muuhai tsarai', 'begtruuleh', 'megduuleh', 'dumbfuck', 'мэгдүүлэх', 'бэгтрүүлэх', 'mash muu', 'муу', 'bad', 'shitty', 'bureg', 'medrel', 'manguu', 'муутай', 'бүрэг', 'мангуу', 'dumb ass', 'coliot', 'soliot', 'солиот', 'bampot', 'лүд', 'lud', 'шаацан', 'шаадаг', 'шавар', 'poop', 'dookie', 'шаалдаа', 'dummy', 'freaking', 'homodumbshit', 'fuckwit', 'fuckwad', 'fuckup', 'fucktart', 'fucknutt', 'fucknut', 'fucking', 'fuckface', 'fuckersucker', 'fuckbrain', 'fuckboy', 'fuckbag', 'fuckass', 'там', 'tam', 'heck', 'hell', 'drunk', 'shitfaced', 'согтуу', 'sogtuu', 'sanhuugiin demjleg awna', 'sanhuugiin demjleg uzuulne', 'санхүүгийн дэмжлэг авна', 'санхүүгийн дэмжлэг үзүүлнэ', 'завхай', 'шалиг', 'садар самуун', 'садар', 'шуналтай', 'шунаг', 'lickerish', 'sheesen', 'шээсэн', 'urinate', 'piss', 'shawar', 'садар', 'zail', 'fuckoff', 'zanbal', 'cumslut', 'skank', 'занбал', 'банзал', 'явдалтай охин', 'huuhen', 'ywdaltai', 'unelegch', 'үнэлэгч', 'яанхан', 'slut', 'cumdumpster', 'pissed off', 'skeet', 'jizz', 'fickmilk', 'dickjuice', 'cum', 'үрийн шингэн', 'uriin shingen', 'umhii nuh', 'tuuchi', 'туучий', 'buttfucker', 'ogzog', 'хонго', 'hongo', 'buttocks', 'asscracker', 'asses', 'shitbrains', 'assface', 'muudle', 'үймээн', 'будлиан', 'самуурал', 'мансуурах', 'замбараагүй', 'шаврын хаалт', 'uimeen', 'budlian', 'samuun', 'mansuurah', 'zambaraagui', 'ass', 'shitbagger', 'shitbag', 'puto', 'shitas', 'маанаг', 'тэгэг бөгс', 'dumbass', 'whoreface', 'whorebag', 'shithole', 'shitdick', 'shitcunt', 'twatlips', 'suckass', 'thundercunt', 'teneg bogs', 'assmuncher', 'cumbubble', 'tosoor gooj', 'hello fuck', 'хөнөөх', 'хядах', 'bogs', 'бөгс', 'хуцваа', 'assassinate', 'алах', 'шээс', 'ялгадас', 'шээх', 'баах', 'shitting', 'avilgal', 'ariun tsever', 'jorlon', 'жорлон', 'shithouse', 'amnii ewgui uner', 'bad breath', 'shitbreath', 'hunuuh', 'hydah', 'alah', 'чичирхийлэгч', 'чичрэх', 'fucker', 'бэлгийн тоглоом', 'oodgui asshtai', 'uudgui aashtai', 'awirtai', 'avirtai', 'muuhai abirtai', 'baliar zantai', 'баас', 'ylgadas', 'shees', 'bitchy', 'tsusaar teegel', 'tomsog', 'төмсөг', 'bollox', 'tumsug', 'bollocks', 'tuuchii', 'шаа', 'haalda', 'shaadag', 'shaatsan', 'cunnilingus', 'wankjob', 'үхээнц', 'handjob', 'humping', 'munging', 'fucks', 'fuckin', 'pussylicking', 'wank', 'сексийн гаж үйлдэл', 'skullfuck', 'tittyfuck', 'feltch', 'fellatio', 'decksucking', 'sexual act', 'dickslap', 'sex-iin gaj uildel', 'tard', 'novsh', 'nowsh', 'jerk', 'mothafucka', 'новш', 'shithead', 'asshole', 'psda', 'сда', 'bizda', 'sogogtoi', 'физда', 'бизда', 'псда', 'pda', 'согогтой', 'fucked', 'dildo', 'chicherhiilegch', 'chichreh', 'fuckbutt', 'hoe', 'sharuud', 'gayass', 'assclown', 'fuckhead', 'shitspitter', 'bugs', 'arse', 'chicherhilegch', 'өгзөг', 'хонго', 'clumsy', 'болхи', 'бойд', 'шаах', 'араас', 'бөгсрүү', 'долоогч', 'долоох', 'doloogch', 'dolooh', 'bolhi', 'boid', 'assfuck', 'asslicker', 'bugsruu', 'shaah', 'butelgui', ' бүтэлгүй', 'lameass', 'lickspittle', 'бялдууч', 'зусарч', 'bylduuch', 'zusarch', 'ass-jabber', 'чалчаа', 'хов жив', 'хов', 'жив', 'үглээ', 'утаггүй', 'донгосох', 'chalchaa', 'hov jiv', 'how', 'jiv', 'chotgor', 'darn', 'damn', 'goshdarnit', 'goddamnit', 'чөтгөр', 'goshdarn', 'goddamn', 'utaggui', 'dongocoh', 'dongosoh', 'douche', 'дамсаг', 'алавч', 'damsag', 'damcag', 'alawch', 'douchebag', 'bullshit', 'dongos', 'dongosoon', 'dongocoon', 'female dog', 'punta', 'эм нохой', 'донгоссон', 'донгос', 'жингир', 'гичий', 'jingir', 'givhii', 'goovh', 'ал', 'умай', 'хилүү', 'хэлүү', 'al', 'heluu', 'kotch', 'kooch', 'kunt', 'minge', 'kootch', 'umai', 'coochy', 'coochie', 'clit', 'vagina', 'vagin', 'twats', 'twat', 'snatch', 'pussy', 'pussies', 'punanny', 'poontang', 'poonany', 'poonani', 'poon', 'shodoi', 'шодой', 'боов', 'cock', 'hovchirch', 'boner', 'хөвчрөх', 'edor', 'shaaaa', 'мангар', 'усан тэнэг', 'эргүү', 'fuckstick', 'dicks', 'dickhole', 'assmonkey', 'asslick', 'asscock', 'asshead', 'cockhead', 'cocknose', 'эрлийз', 'erliiz', 'гичы', 'гичий', 'гичи', 'jinger', 'haraalid', 'halagdsan', 'ulugchin', 'duinge', 'shaar', 'tit', 'moom', 'muum', 'huhnii', 'анус', 'anus', 'meem', 'gomo', 'хүйстэн', 'bitchis', 'jungaa', 'hujaa', 'hytad', 'жунгаа', 'хужаа', 'хятад', 'china', 'hund surtal', 'суртал', 'gay', 'lesbian', 'илжиг', 'лагаа', 'tenegteh', 'тэнэгтэх', 'iljig', 'тэнэглэх', 'маанаг гахай', 'uhne', 'alna', 'sda.', 'hulgaich', 'salbadai', 'uxseniix', 'mal', 'shaana', 'пзда', 'jatsga', 'medrel', 't1', 'шоронд', 'zusaldagch', 'shaahaa', 'nusak', 'nusakuud', 'bizdaar', 'moomtei', 'boovt', 'erguu', 'hutsaad', 'luivarchid', 'baasaa', 'новшоос', 'shulam', 'terrorist', 'haldlaga', 'tsuglaya', 'eserguutseye', 'eserguutse', 'alnaa', 'hidna', 'hyadna', 'zevseg', 'buu', 'hutga', 'mandtugai', 'мандтугай', 'лаларын', 'хөгийн', 'халдлага', 'жагсая', 'хутга', 'буу', 'шаалгах', 'alniihan', 'yankan', 'sdaakuud', 'alnuudaa', 'malaa', 'шаах', 'хуц', 'guts', 'huts']
+      const censoredAuthor = this.censoreAuthor(commentAuthor, badWords)
+      const censored = this.censoreText(commentContent.value, badWords)
+      commentContent.author = censoredAuthor
+      commentContent.value = censored
+      await this.createComment(commentContent)
+    },
+    censoreAuthor (string, filters) {
+      const regex = new RegExp(filters.join('|'), 'gi')
+      return string.replace(regex, function (match) {
+        let stars = ''
+        for (let i = 0; i < match.length; i++) {
+          stars += '*'
+        }
+        return stars
+      })
+    },
+    censoreText (string, filters) {
+      const regex = new RegExp(filters.join('|'), 'gi')
+      return string.replace(regex, function (match) {
+        let stars = ''
+        for (let i = 0; i < match.length; i++) {
+          stars += '*'
+        }
+        return stars
+      })
+    },
+    async createComment (commentContent) {
+      this.comment.contentId = this.CommentId
+      this.comment.author = commentContent.author
+      this.comment.text = commentContent.value
+      await CommentServices.post(this.comment)
+        .then((response) => {
+          this.resetTemp()
+          this.$notify({
+            title: 'Амжилттай хадгалагдлаа',
+            message: 'Хадгалах',
+            type: 'success',
+            duration: 2000
+          })
+        })
+        .catch((error) => {
+          this.$message({
+            type: 'warning',
+            message: 'Алдаа гарлаа'
+          })
+          return this.$message({
+            type: 'warning',
+            message: error.response.data.error
+          })
+        })
+    },
+    resetTemp () {
+      this.comment = {
+        author: null,
+        text: null,
+        email: null,
+        phone: null
+      }
+    }
   }
 }
 </script>
 
-<style>
-.center{display:block; margin-left:10% ; margin-right:10% ;padding:0%; }
-#left_coloum {
-padding-right: 5%;
-float: left;
-width: 65%;
-min-height:600px;
-overflow: hidden;
+<style lang="scss" scoped>
+.center {
+  display:block;
+  margin-left:10%;
+  margin-right:10%;
+  padding:0%;
+  a {
+    width: 117px;
+    opacity: 0.49;
+    font-family: SegoeUI;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  p {
+    font-family: SegoeUI;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  .title {
+    width: 159px;
+    height: 31px;
+    margin-bottom: 7px;
+    font-family: SegoeUI;
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+  }
+  .textarea {
+    margin: 5px 0 2px 0;
+  }
+  .input {
+    margin: 5px 0 2px 0;
+  }
+  .buttons {
+    .button {
+      margin: 10px 0 0 0;
+      width: 168px;
+      height: 38px;
+      border-radius: 9px;
+      background-color: #1a3675;
+      color: white;
+    }
+  }
 }
-#left_coloum_top h3{
-width: 1040px;
-height: 48px;
+.logo_mmhi {
+width: 263px;
+height: 82px;
+object-fit: contain;
+}
+
+.text {
+width: 1293px;
+height: 665px;
 font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
+font-size: 14px;
+font-weight: normal;
 font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
+font-style: italic;
+line-height: 1.36;
 letter-spacing: normal;
 text-align: left;
 color: #000000;
 }
-#left_coloum_top img{
-width: 100%; height: auto;
-float: left;
+.title {
+  font-weight: bold;
+  font-style: normal;
 }
-
 </style>
