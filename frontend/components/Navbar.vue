@@ -26,8 +26,8 @@
               <a class="navbar-item" @click="$nuxt.$router.replace({ path: '/home/' })">Нүүр хуудас</a>
             </div>
           </div>
-          <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
-            <div v-if="portalMenus.length > index+1" class="menus2">
+          <div v-for="item in portalMenus" :key="item.id" class="menus">
+            <div class="menus2">
               <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
                 <div class="navbar-dropdown">
@@ -41,17 +41,9 @@
           </div>
         </div>
         <div class="navbar-end">
-          <div v-for="( item, index ) in portalMenus" :key="index.id" class="menusEnd">
-            <div v-if="portalMenus.length <= index+1" class="menusEnd2">
-              <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
-                <div class="navbar-dropdown">
-                  <template v-for="i in item.children">
-                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenu($event)" />
-                  </template>
-                </div>
-              </div>
-              <a v-else :key="item.id" class="navbar-item" @click="handleClickMenu(item)">{{ item.label }}</a>
+          <div class="menusEnd">
+            <div class="menusEnd2">
+              <a class="navbar-item" @click="$nuxt.$router.replace({ path: '/contact/' })">Холбоо барих</a>
             </div>
           </div>
         </div>
@@ -216,11 +208,11 @@ export default {
               text-align: left;
               color: white;
               @media screen and (max-width: 1407px) {
-                padding: 10px 15px;
-                font-size: 16px;
+                padding: 10px 14px;
+                font-size: 15px;
               }
               @media screen and (max-width: 1215px) {
-                padding: 10px 10.4px;
+                padding: 10px 5px;
                 font-size: 14px;
               }
               &:hover {
@@ -291,11 +283,11 @@ export default {
               text-align: left;
               color: white;
               @media screen and (max-width: 1407px) {
-                padding:10px 15px;
-                font-size: 16px;
+                padding: 10px 14px;
+                font-size: 15px;
               }
               @media screen and (max-width: 1215px) {
-                padding: 10px 10.4px;
+                padding: 10px 1px;
                 font-size: 14px;
               }
               &:hover {
