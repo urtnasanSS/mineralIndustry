@@ -181,6 +181,8 @@ export default {
       AllCommentFile: []
     }
   },
+  watch () {
+  },
   mounted () {
     if (this.$route.params.id) {
       this.lang = this.$store.state.language.language.code

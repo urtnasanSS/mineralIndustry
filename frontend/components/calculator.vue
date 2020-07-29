@@ -1,5 +1,5 @@
 <template>
-  <div class="columns" style="height:500px">
+  <div class="columns" style="height:auto">
     <div class="column is-3">
       <div class="map-main-container">
         <div class="search">
@@ -71,6 +71,21 @@
               </el-form-item>
             </el-form>
           </article>
+          <fieldset style="padding:15px; margin-top:20px;">
+            <legend>Шатахууны төрөл:</legend>
+            <el-checkbox-group v-model="searchTemp.checkedType" @change="handleChangeRadioProductType" style="display: flex; flex-direction: column; align-items: end; flex-direction: column;">
+              <el-checkbox label="A80"></el-checkbox>
+              <el-checkbox label="AI92"></el-checkbox>
+              <el-checkbox label="AI95"></el-checkbox>
+              <el-checkbox label="AI98"></el-checkbox>
+              <el-checkbox label="DT"></el-checkbox>
+            </el-checkbox-group>
+          </fieldset>
+          <span slot="footer" class="dialog-footer" style="display:flex; justify-content:flex-end; margin-top:10px;">
+            <el-tooltip effect="light" :content="$t('smartActionButtons.refresh')" key="refresh">
+              <el-button type="warning" size="mini" @click="handleRefresh">Цэвэрлэх</el-button>
+            </el-tooltip>
+          </span>
         </div>
       </div>
     </div>
@@ -110,10 +125,10 @@ export default {
       layers: [],
       distanceFromRules: {
         fromModel: [
-          { required: true, message: this.$t('rule.required'), trigger: 'blur' }
+          { required: true, message: 'утга шаардана', trigger: 'blur' }
         ],
         toModel: [
-          { required: true, message: this.$t('rule.required'), trigger: 'blur' }
+          { required: true, message: 'утга шаардана', trigger: 'blur' }
         ]
       },
       listOrganization: [],
@@ -247,7 +262,7 @@ export default {
 			console.log('------setPointers-------', data)
       for (const unit of data) {
         if (unit && unit.address) {
-          // let icon_path = require(`../../assets/charging-station-30.png`)
+          let icon_path = require(`../static/img/charging-station-30.png`)
           if ((unit.organizationId.image !== null)) {
             switch(unit.organizationId.image) {
               case '5b2e18789995ff5880c5cd79':
@@ -272,7 +287,7 @@ export default {
           point = new google.maps.LatLng(unit.lat, unit.long)
           tmpMarker  = new google.maps.Marker({
             icon: {
-              // url: icon_path,
+              url: icon_path,
               scaledSize: new google.maps.Size(20, 18),
               origin: new google.maps.Point(0, 0),
               anchor: new google.maps.Point(0, 32)
@@ -558,11 +573,18 @@ export default {
         this.map.setZoom(7)
         // // Data дуудалт
         this.dialogName = name.includes('Улаанбаатар') ? name : name + ' аймаг'
-        this.dialogData = (await MapService.aimag(aimagCode)).data
-        console.log('--aimag--dialogData------', this.dialogData)
+        // this.dialogData = (await MapService.aimag(aimagCode)).data
+        // console.log('--aimag--dialogData------', this.dialogData)
         this.dialogVisibleAimag = true
       } else if (aimagOrsoum === 'soum') {
       }
+    },
+    async handleChangeRadioProductType() {
+      const data = (await MpetroService.getPoints(this.searchTemp)).data
+      this.resetDistanceForm()
+      this.clearMarkersAll()
+      this.removeMarkerClusterAll()
+      await this.setPointers(data)
     },
   }
 }
