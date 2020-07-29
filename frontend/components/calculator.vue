@@ -3,6 +3,53 @@
     <div class="column is-3">
       <div class="map-main-container">
         <div class="search">
+          <div class="container">
+            <div class="Searchtitle">
+              <p>ХАЙЛТ /байршил КМ/</p>
+            </div>
+            <el-form
+              :rules="distanceFromRules"
+              ref="formDistance"
+              :model="distanceForm"
+              label-position="top"
+              label-width="150px"
+              class="rangeInput"
+            >
+              <el-form-item prop="fromModel">
+                <input
+                  v-model="distanceForm.fromModel"
+                  id="from-input"
+                  class="controls"
+                  type="text"
+                  placeholder="Эхлэх цэг"
+                  style="z-index:9999;"
+                >
+              </el-form-item>
+              <el-form-item prop="toModel">
+                <input
+                  v-model="distanceForm.toModel"
+                  id="to-input"
+                  class="controls"
+                  type="text"
+                  placeholder="Дуусах цэг"
+                  style="z-index:9999;"
+                >
+              </el-form-item>
+              <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; flex-direction: row;">
+                <el-tooltip effect="light" :content="'Км-ын байршил тавих'" key="search-place">
+                  <el-button type="info" size="mini" icon="el-icon-place" circle @click="handleSetDistancePoint"></el-button>
+                </el-tooltip>
+                <el-button type="primary" size="mini" @click="handleSearchDistance">Хайх</el-button>
+                <el-button type="warning" size="mini" @click="handleRefreshDistance">Цэвэрлэх</el-button>
+              </div>
+            </el-form>
+            <fieldset style="margin-top:10px;">
+              <legend>Тооцоолуур:</legend>
+              <div>
+                Урт/км: <input type="text" readonly v-model="distanceForm.distance" style="font-weight:bold; text-align:center; margin-left:20px;">
+              </div>
+            </fieldset>
+          </div>
           <article class="panel is-primary">
             <p class="panel-heading">
               ХАЙЛТ /Тусгай зөвшөөрөл/
@@ -17,15 +64,10 @@
                   value-key="_id"
                   @change="handleChangeOrganization"
                 >
-                  <el-option v-for="listItem in listOrganization" :key="listItem._id" :label="listItem.name" :value="listItem"></el-option>
+                  <el-option v-for="listItem in listOrganization" :key="listItem._id" :label="listItem.name" :value="listItem">{{ listItem.name }}</el-option>
                 </el-select>
               </el-form-item>
             </el-form>
-            <span slot="footer" class="dialog-footer" style="display:flex; justify-content:flex-end; margin-top:10px;">
-              <el-tooltip effect="light" :content="$t('smartActionButtons.refresh')" key="refresh">
-                <el-button type="warning" size="mini">Цэвэрлэх</el-button>
-              </el-tooltip>
-            </span>
           </article>
         </div>
       </div>
@@ -56,6 +98,22 @@ export default {
       tempOrganization: {
         unitCount: 0
       },
+      distanceForm: {
+        fromModel: '',
+        toModel: '',
+        fromPosition: { lat: 0, lng: 0 },
+        toPosition: { lat: 0, lng: 0 },
+        distance: 0 // km
+      },
+      layers: [],
+      distanceFromRules: {
+        fromModel: [
+          { required: true, message: this.$t('rule.required'), trigger: 'blur' }
+        ],
+        toModel: [
+          { required: true, message: this.$t('rule.required'), trigger: 'blur' }
+        ]
+      },
       listOrganization: [],
       markers: [],
       markerClusterList: []
@@ -69,7 +127,7 @@ export default {
   mounted() {
     this.$nextTick(async function () {
       await this.initMap()
-    //   await this.initDirections()
+      await this.initDirections()
     })
   },
   methods: {
@@ -79,7 +137,7 @@ export default {
     },
     async refData() {
       console.log('----------this.listOrganization------------')
-      this.listOrganization = (await MpetroService.organizationList())
+      this.listOrganization = (await MpetroService.organizationList()).data
       console.log('----------this.listOrganization------------', this.listOrganization)
     },
     async initMap() {
@@ -187,11 +245,36 @@ export default {
 			console.log('------setPointers-------', data)
       for (const unit of data) {
         if (unit && unit.address) {
+          // let icon_path = require(`../../assets/charging-station-30.png`)
+          if ((unit.organizationId.image !== null)) {
+            switch(unit.organizationId.image) {
+              case '5b2e18789995ff5880c5cd79':
+              case '5de8c2ae0081a351dc0cf227': {
+                // icon_path = require(`../../assets/org_icons/` + unit.organizationId.image + `.jpg`)
+                break
+              }
+              case '5de9bab31842af31702e267b':
+              case '5de9bc0a2f6ca425e0ce39a2':
+              case '5de9d7ef83411027e0db06f0':
+              case '5de9d98b83411027e0db06f4': {
+                // icon_path = require(`../../assets/org_icons/` + unit.organizationId.image + `.png`)
+                break
+              }
+              default:
+                break
+            }
+          }
           // x - long
           // y - lat
           point = null
           point = new google.maps.LatLng(unit.lat, unit.long)
           tmpMarker  = new google.maps.Marker({
+            icon: {
+              // url: icon_path,
+              scaledSize: new google.maps.Size(20, 18),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(0, 32)
+            },
             position: point,
             map: this.map,
             draggable: true,
@@ -223,7 +306,261 @@ export default {
     },
     async handleChangeOrganization() {
       const data = (await MpetroService.getPoints(this.searchTemp)).data
+      this.resetDistanceForm()
+      this.clearMarkersAll()
+      this.removeMarkerClusterAll()
       await this.setPointers(data)
+    },
+    resetDistanceForm() {
+      this.distanceForm = {
+        fromModel: '',
+        toModel: '',
+        fromPosition: { lat: 0, lng: 0 },
+        toPosition: { lat: 0, lng: 0 },
+        distance: 0 // km
+      }
+      this.isDistanceSearch = false
+    },
+    clearMarkersAll() {
+      for (var i = 0; i < this.markers.length; i++ ) {
+        this.markers[i].marker.setMap(null)
+      }
+      this.markers = []
+    },
+    removeMarkerClusterAll() {
+      for (var i = 0; i < this.markerClusterList.length; i++ ) {
+        this.markerClusterList[i].cluster.clearMarkers()
+      }
+      this.markerClusterList = []
+    },
+    clearMarkers() {
+      for (var i = 0; i < this.markers.length; i++ ) {
+        this.markers[i].setMap(null)
+      }
+      this.markers = []
+    },
+    clearMarkers(type, idName, idValue) {
+      for (var i = 0; i < this.markers.length; i++ ) {
+        if (this.markers[i].type === type && this.markers[i][idName] === idValue) {
+          this.markers[i].marker.setMap(null)
+          this.markers.splice(i, 1)
+          i--
+        }
+      }
+    },
+    async handleRefresh() {
+      this.resetAll()
+      // const data = (await MapService.getPoints()).data
+      // await this.setPointers(data)
+      this.setLayer()
+    },
+    resetAll() {
+      this.resetSearchTemp()
+      this.clearMarkersAll()
+      this.removeMarkerClusterAll()
+      this.resetDistanceForm()
+      this.clearDirection()
+      this.removeOverlayAll()
+      // Аймаг Diaolog хаах
+      this.handleCloseDialog()
+    },
+    handleSetDistancePoint () {
+      this.distanceForm.fromModel = 'Улаанбаатар, Монгол Улс'
+      this.distanceForm.fromPosition = new google.maps.LatLng(47.88639879999999, 106.9057439)
+      this.distanceForm.toModel = 'Арвайхээр, Монгол Улс'
+      this.distanceForm.toPosition = new google.maps.LatLng(46.272878, 102.7790303)
+      this.isDistanceSearch = true
+      this.resetMarkerCluster()
+      this.searchDistance()
+    },
+    resetMarkerCluster() {
+      this.clearMarkersAll()
+      this.removeMarkerClusterAll()
+      this.resetSearchTemp()
+    },
+    resetSearchTemp() {
+      this.searchTemp = {
+        aimagCityId: null,
+        soumDistrictId: null,
+        organizationId: null,
+        productType: '',
+        checkedType: []
+      }
+    },
+    searchDistance () {
+      // const computeDistanceBetween = google.maps.geometry.spherical.computeDistanceBetween
+      // this.distanceForm.distance = (computeDistanceBetween(this.distanceForm.fromPosition, this.distanceForm.toPosition)/1000).toFixed(2)
+      const self = this
+      var directionsService = new google.maps.DirectionsService
+      directionsService.route({
+        origin: this.distanceForm.fromPosition,
+        destination: this.distanceForm.toPosition,
+        travelMode: google.maps.DirectionsTravelMode.DRIVING
+      }, async function(response, status) {
+        if (status === 'OK') {
+          await self.setDirection(response)
+        } else {
+          window.alert('Google Maps DirectionsService request failed due to ' + status)
+        }
+      })
+      var service = new google.maps.DistanceMatrixService()
+      service.getDistanceMatrix({
+        origins: [this.distanceForm.fromPosition, this.distanceForm.fromModel],
+        destinations: [this.distanceForm.toPosition, this.distanceForm.toModel],
+        travelMode: google.maps.TravelMode.DRIVING,
+        unitSystem: google.maps.UnitSystem.METRIC
+      }, async function(response, status) {
+        if (status === 'OK') {
+          if (response && response.rows.length > 0) {
+            if (response.rows[0].elements.length > 0) {
+              self.distanceForm.distance = response.rows[0].elements[0].distance.text
+            }
+          }
+        } else {
+          window.alert('Google Maps DistanceMatrixService request failed due to ' + status)
+        }
+      })
+    },
+    handleSearchDistance() {
+      this.$refs.formDistance.validate((valid, fields) => {
+        if (valid) {
+          this.isDistanceSearch = true
+          this.resetMarkerCluster()
+          this.searchDistance()
+        }
+      })
+    },
+    handleRefreshDistance() {
+      this.resetAll()
+    },
+    async actionsMap(inputType) {
+      var self = this
+      let input
+      if (inputType === 'from') {
+        input = document.getElementById('from-input')
+      } else if (inputType === 'to') {
+        input = document.getElementById('to-input')
+      }
+      var searchBox = new google.maps.places.SearchBox(input)
+      google.maps.event.addListener(searchBox, 'places_changed', function() {
+        searchBox.set('map', null)
+        var places = searchBox.getPlaces()
+        var i, place
+        for (i = 0; place = places[i]; i++) {
+          (function(place) {
+            self.updateLatLong(inputType, place, place.geometry.location.lat(), place.geometry.location.lng())
+          }(place))
+        }
+        searchBox.set('map', self.map)
+      })
+    },
+    async initDirections() {
+      await this.actionsMap('from')
+      await this.actionsMap('to')
+    },
+    updateLatLong(inputType, place, lat, lng) {
+      this.clearMarkersAll()
+      this.removeMarkerClusterAll()
+      if (inputType === 'from') {
+        this.distanceForm.fromModel = place.formatted_address
+        this.distanceForm.fromPosition = new google.maps.LatLng(lat, lng) // { lat, lng }
+      } else if (inputType === 'to') {
+        this.distanceForm.toModel = place.formatted_address
+        this.distanceForm.toPosition = new google.maps.LatLng(lat, lng) // { lat, lng }
+      }
+    },
+    async setDirection(response) {
+      const routes = response.routes
+      const directionsDisplays = []
+      await this.clearDirection()
+      for (var i = 0; i < routes.length; i++) {
+        this.directionsRenderer = new google.maps.DirectionsRenderer({
+          map: this.map,
+          directions: response,
+          routeIndex: i,
+          draggable : true
+        })
+        directionsDisplays.push(this.directionsRenderer)
+
+        // Listen for the directions_changed event for each route
+        const self = this
+        google.maps.event.addListener(this.directionsRenderer, 'directions_changed', (function(directionsDisplay, i) {
+          return function() {
+            const directions = directionsDisplay.getDirections()
+            const new_start = directions.routes[0].legs[0].start_location
+            const new_end = directions.routes[0].legs[0].end_location
+            if ((new_start.toString() !== self.distanceForm.fromPosition.toString()) || (new_end.toString() !== self.distanceForm.toPosition.toString())) {
+              // Remove every route from map
+              for (var j = 0; j < directionsDisplays.length; j++) {
+                directionsDisplays[j].setMap(null)
+              }
+              // Redraw routes with new start/end coordinates
+              self.distanceForm.fromModel = directions.routes[0].legs[0].start_address
+              self.distanceForm.fromPosition = new_start
+              self.distanceForm.toModel = directions.routes[0].legs[0].end_address
+              self.distanceForm.toPosition = new_end
+              self.searchDistance()
+            }
+          }
+        })(this.directionsRenderer, i)) // End listener
+      }
+    },
+    clearDirection() {
+      if (this.directionsRenderer) {
+        this.directionsRenderer.setMap(null)
+        this.directionsRenderer = null
+      }
+    },
+    removeOverlayAll() {
+      for (var i = 0; i < this.layers.length; i++ ) {
+        this.layers[i].layer.setMap(null)
+      }
+      this.layers = []
+    },
+    handleCloseDialog() {
+      this.dialogVisibleAimag = false
+      this.removeOverlayAll()
+      this.resetMap()
+      this.setLayer()
+    },
+    resetMap() {
+      this.map.setZoom(5)
+      this.map.setCenter(new google.maps.LatLng(this.centerLat, this.centerLong))
+    },
+    async setLayer() {
+      this.kmzPath = 'https://backend-erp.ulaanbaatar.mn:443/kmz/Aimag_bnd.kmz'
+      // this.kmzPath = 'https://file.io/jUaVokQU' // aimag
+      // await this.addOverlayAimag()
+      this.checkAimagLayer = true
+    },
+    /** Аймгийн kmz харуулна */
+    addOverlayAimag(name = 'aimag') {
+      // KMZ file
+      this.kmzLayer = new google.maps.KmlLayer(this.kmzPath, { suppressInfoWindows: true, map: this.map, preserveViewport: true })
+      var self = this
+      this.layers.push({name: name, layer: this.kmzLayer})
+      google.maps.event.addListener(this.kmzLayer, 'click', async function(event) { // Аймаг дээр дарах үйлдэл
+        await self.removeOverlayAll()
+        await self.clickOnOverlay(name, event.featureData.name, event.featureData.description.slice(-4).trim(), event.latLng)
+      })
+    },
+    async clickOnOverlay(aimagOrsoum, name, aimagCode, latlong) {
+      if (aimagOrsoum === 'aimag') {
+        console.log('----clickOnOverlay---Аймаг---', aimagOrsoum, name, aimagCode, latlong)
+
+        await this.addOverlaySoum('https://backend-erp.ulaanbaatar.mn:443/kmz/' + aimagCode + '.kmz')
+
+        this.isDialogAimag = true
+        this.checkAimagLayer = false
+        this.map.setCenter(latlong)
+        this.map.setZoom(7)
+        // // Data дуудалт
+        this.dialogName = name.includes('Улаанбаатар') ? name : name + ' аймаг'
+        this.dialogData = (await MapService.aimag(aimagCode)).data
+        console.log('--aimag--dialogData------', this.dialogData)
+        this.dialogVisibleAimag = true
+      } else if (aimagOrsoum === 'soum') {
+      }
     },
   }
 }
@@ -234,14 +571,6 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  .expandButton {
-    z-index: 1000;
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    cursor: pointer;
-    background-color: var(--bg-side-color);
-  }
   .search {
     position: relative;
     width: 300px;
@@ -250,6 +579,40 @@ export default {
     box-sizing: border-box;
     -webkit-transition: width 900ms ease;
     transition: width 900ms ease;
+    .container {
+      .Searchtitle {
+        border-bottom: 1px solid black;
+        padding: 1%;
+        margin:1% 1% 1% 0;
+        p {
+          font-size: 14px;
+          line-height: var(--text-default-line-height);
+          color: var(--text-primary-color);
+          font-weight: bold;
+        }
+      }
+      .rangeInput {
+        padding: 10px;
+        display: block;
+        .controls {
+          -webkit-appearance: none;
+          background-color: var(--bg-content-color);
+          background-image: none;
+          border-radius: 5px;
+          border: 1px solid black;
+          box-sizing: border-box;
+          color: var(--text-primary-color);
+          display: inline-block;
+          font-size: inherit;
+          height: 28px;
+          line-height: 40px;
+          outline: 0;
+          padding: 0 15px;
+          transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+          width: 100%;
+        }
+      }
+    }
   }
   .map {
     flex: 1;

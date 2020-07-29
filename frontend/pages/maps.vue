@@ -1,7 +1,11 @@
 <template>
   <div>
     <HeaderWithNavbar />
-    <calculator />
+    <div class="hero-body">
+      <div class="container">
+        <calculator />
+      </div>
+    </div>
     <foother />
   </div>
 </template>
