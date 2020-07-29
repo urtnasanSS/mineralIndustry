@@ -24,6 +24,7 @@
                   placeholder="Эхлэх цэг"
                   style="z-index:9999;"
                 >
+                <i class="el-icon-location" style="color: red;"></i>
               </el-form-item>
               <el-form-item prop="toModel">
                 <input
@@ -34,6 +35,7 @@
                   placeholder="Дуусах цэг"
                   style="z-index:9999;"
                 >
+                <i class="el-icon-location" style="color: #0054fd;"></i>
               </el-form-item>
               <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; flex-direction: row;">
                 <el-tooltip effect="light" :content="'Км-ын байршил тавих'" key="search-place">
@@ -43,15 +45,15 @@
                 <el-button type="warning" size="mini" @click="handleRefreshDistance">Цэвэрлэх</el-button>
               </div>
             </el-form>
-            <fieldset style="margin-top:10px;">
-              <legend>Тооцоолуур:</legend>
-              <div>
-                Урт/км: <input type="text" readonly v-model="distanceForm.distance" style="font-weight:bold; text-align:center; margin-left:20px;">
+            <fieldset class="fieldset">
+              <legend style="font-size: 14px; margin: 2%">Тооцоолуур:</legend>
+              <div style="text-align: center; margin-bottom: 5%; font-size: 12px">
+                Урт/км: <input type="text" readonly v-model="distanceForm.distance" style="font-weight:bold; text-align:center; margin:2% 2% 2% 2%; ">
               </div>
             </fieldset>
           </div>
           <article class="panel is-primary">
-            <p class="panel-heading">
+            <p>
               ХАЙЛТ /Тусгай зөвшөөрөл/
             </p>
             <el-form :model="searchTemp" ref="form" label-width="120px" :label-position="'top'" style="margin-top:10px;">
@@ -284,10 +286,10 @@ export default {
           clusterMarkers.push(tmpMarker)
           google.maps.event.addListener(tmpMarker, 'click', function(event) {
             var content = ''
-            content = 
+            content =
               '<div id="iw-container">' +
-                '<div class="iw-title">' + unit.organizationId.name + '</div>' + 
-                '<div class="iw-title-sub">' + unit.name + '</div>' + 
+                '<div class="iw-title">' + unit.organizationId.name + '</div>' +
+                '<div class="iw-title-sub">' + unit.name + '</div>' +
                 '<div class="iw-content">' + unit.address +
                 '</div>' +
               '</div>'
@@ -571,23 +573,25 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
+  border: solid 1px #707070;
+  border-radius: 12px;;
   .search {
     position: relative;
     width: 300px;
     height: 100%;
+    padding: 5%;
     // margin: var(--primary-padding);
     box-sizing: border-box;
     -webkit-transition: width 900ms ease;
     transition: width 900ms ease;
     .container {
       .Searchtitle {
-        border-bottom: 1px solid black;
-        padding: 1%;
+        border-bottom: 1px solid black;;
         margin:1% 1% 1% 0;
         p {
-          font-size: 14px;
+          font-size: 15px;
           line-height: var(--text-default-line-height);
-          color: var(--text-primary-color);
+          color: var(--black);
           font-weight: bold;
         }
       }
@@ -600,6 +604,7 @@ export default {
           background-image: none;
           border-radius: 5px;
           border: 1px solid black;
+          opacity: 0.55;
           box-sizing: border-box;
           color: var(--text-primary-color);
           display: inline-block;
@@ -609,7 +614,7 @@ export default {
           outline: 0;
           padding: 0 15px;
           transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-          width: 100%;
+          width: 90%;
         }
       }
     }
@@ -620,6 +625,14 @@ export default {
     height: 100%;
     margin: var(--primary-padding);
   }
+}
+.fieldset {
+  margin-top:10px;
+  border: solid 1px #707070;
+}
+.legend {
+  border: solid 1px #707070;
+
 }
 
 </style>

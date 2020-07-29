@@ -17,22 +17,17 @@
         </div>
       </el-row>
       <div class="columns" v-for="item in list" :key="item.id">
-        <el-col class="detail">
-          <div>
-            <img :src="baseUrl + item.files[0].storageName" style="width: 30%; height:100%; border-radius: 5px" alt="Placeholder image">
-          </div>
-          <div>
-            <a class="textLine">{{ item.title }}</a>
-            <!-- {{ moment(item.publishDate).format("YYYY-MM-DD") }} -->
-            <!-- <small
-              style="float:left; width: 100%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-                letter-spacing: normal; text-align: left; color: #000000;"
-            >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small> -->
-            <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:100%">
-              <nuxt-link class="more" tag="span" :to="'/page4/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
-            </button>
-          </div>
-        </el-col>
+        <div class="column is-half is detail">
+          <img :src="baseUrl + item.files[0].storageName" style="width: 30%; height:100%; border-radius: 5px" alt="Placeholder image">
+          <a>{{ item.title }}</a>
+          <small
+            style="float:right; width: 50%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+              letter-spacing: normal; color: #000000;"
+          >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+          <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:50%">
+            <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -50,7 +45,6 @@ export default {
       list: [],
       baseUrl: process.env.baseUrl,
       listQuery: {
-        limit: 5,
         currentPage: 1,
         sort: {
           prop: 'publishDate',
@@ -110,21 +104,6 @@ letter-spacing: normal;
 text-align: left;
 color: #000000;
 }
-.textLine {
-  font-family: SegoeUI;
-  font-size: 12px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  text-align: left;
-  color: #000000;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  -webkit-box-orient: vertical;
-}
 .more {
   float: left;
   margin: 10px 10px 10px 0;
@@ -141,11 +120,25 @@ color: #000000;
   height: 150px;
   width: 50px;
   float: left;
+  margin-right: 5%;
 }
 .detail a {
-  margin: auto;
-  margin-left: 20%;
-  width: 20%;
   float: right;
+  font-family: SegoeUI;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  margin: auto;
+  width: 20%;
+  float: left;
 }
 </style>
