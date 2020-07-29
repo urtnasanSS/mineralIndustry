@@ -131,6 +131,16 @@ export default {
       background-color: none !important;
       span {
         text-transform: none !important;
+        background-color: unset !important;
+        font-family: SegoeUI;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.8;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: left;
       }
     }
     span {

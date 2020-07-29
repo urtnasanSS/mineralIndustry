@@ -55,7 +55,6 @@ export default {
     getData () {
       ContentServices.index(this.listQuery).then((response) => {
         this.list = response.data.rows
-        console.log(this.list, '------------------------list------------')
       }).catch((err) => {
         this.list = []
         err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })

@@ -19,16 +19,21 @@
       </el-col>
     </el-row>
     <el-row class="columns">
+<<<<<<< HEAD
       <el-col class="column is-8">
         <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
+=======
+      <el-col class="column is-9">
+        <!-- <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
+>>>>>>> 06420898c65115d69f3841fd15d038f58e12eb49
           <span style="margin-left:8%">Нийтлэх</span>
-        </button>
-        <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
+        </button> -->
+        <!-- <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
           <span class="icon">
             <i class="fab fa-twitter"></i>
           </span>
           <span>Жиргэх</span>
-        </button>
+        </button> -->
         <div class="detailImage">
           <div class="column is-13">
             <div class="card-image">
@@ -48,11 +53,11 @@
         </div>
         <div v-if="lang == 'mn'">
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <p v-html="temp.content" class="contents" />
+          <p v-html="temp.content"></p>
         </div>
         <div v-else>
           <!-- eslint-disable-next-line vue/no-v-html -->
-          <p v-html="temp.contentEn" class="contents" />
+          <p v-html="temp.contentEn"></p>
         </div>
         <!-- Сэтгэгдэл -->
         <div v-if="!temp.isHideComments" style="width: auto; margin:50px 20px 20px 100px !important;">
@@ -132,9 +137,8 @@
           </div>
         </div>
       </el-col>
-      <el-col class="column is-1"></el-col>
       <el-col class="column is-4 ">
-        <div style="float: right; width: 100%;">
+        <div style="float: right; width: 100%">
           <rightColoum />
           <rightColoumAnnuon />
         </div>
@@ -191,8 +195,6 @@ export default {
       helpCategoryId: null,
       AllCommentFile: []
     }
-  },
-  watch () {
   },
   mounted () {
     if (this.$route.params.id) {

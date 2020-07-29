@@ -51,7 +51,6 @@ export default {
     getFileUrl (value) {
       if (value.files && value.files) {
         const files = value.files.filter(i => i.fileType.includes('image'))
-        // console.log(files[0], ' ---')
         if (files[0]) {
           return this.baseUrl + files[0].storageName
         } else {
