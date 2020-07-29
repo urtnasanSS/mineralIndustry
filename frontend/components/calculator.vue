@@ -16,26 +16,38 @@
               class="rangeInput"
             >
               <el-form-item prop="fromModel">
-                <input
-                  v-model="distanceForm.fromModel"
-                  id="from-input"
-                  class="controls"
-                  type="text"
-                  placeholder="Эхлэх цэг"
-                  style="z-index:9999;"
-                >
-                <i class="el-icon-location" style="color: red;"></i>
+                <div class="columns">
+                  <div class="column is-10">
+                    <input
+                      v-model="distanceForm.fromModel"
+                      id="from-input"
+                      class="controls"
+                      type="text"
+                      placeholder="Эхлэх цэг"
+                      style="z-index:9999;"
+                    >
+                  </div>
+                  <div class="column is-2">
+                    <i class="el-icon-location" style="color: red; font-size: 20px"></i>
+                  </div>
+                </div>
               </el-form-item>
               <el-form-item prop="toModel">
-                <input
-                  v-model="distanceForm.toModel"
-                  id="to-input"
-                  class="controls"
-                  type="text"
-                  placeholder="Дуусах цэг"
-                  style="z-index:9999;"
-                >
-                <i class="el-icon-location" style="color: #0054fd;"></i>
+                <div class="columns">
+                  <div class="column is-10">
+                    <input
+                      v-model="distanceForm.toModel"
+                      id="to-input"
+                      class="controls"
+                      type="text"
+                      placeholder="Дуусах цэг"
+                      style="z-index:9999;"
+                    >
+                  </div>
+                  <div class="column is-2">
+                    <i class="el-icon-location" style="color: #0054fd; font-size: 20px"></i>
+                  </div>
+                </div>
               </el-form-item>
               <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; flex-direction: row;">
                 <el-tooltip effect="light" :content="'Км-ын байршил тавих'" key="search-place">
@@ -48,12 +60,12 @@
             <fieldset class="fieldset">
               <legend style="font-size: 14px; margin: 2%">Тооцоолуур:</legend>
               <div style="text-align: center; margin-bottom: 5%; font-size: 12px">
-                Урт/км: <input type="text" readonly v-model="distanceForm.distance" style="font-weight:bold; text-align:center; margin:2% 2% 2% 2%; ">
+                Урт/км: <input type="text" readonly v-model="distanceForm.distance" style="font-weight:bold; text-align:center; margin:2% 2% 2% 2%; border: solid 1px #050505;">
               </div>
             </fieldset>
           </div>
           <article class="panel is-primary">
-            <p>
+            <p style="margin-top: 10%; border-top: solid 1px #B2B0B0; font-weight: bold">
               ХАЙЛТ /Тусгай зөвшөөрөл/
             </p>
             <el-form :model="searchTemp" ref="form" label-width="120px" :label-position="'top'" style="margin-top:10px;">
@@ -595,7 +607,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  border: solid 1px #707070;
+  border: solid 1px #B2B0B0;
   border-radius: 12px;;
   .search {
     position: relative;
@@ -608,7 +620,7 @@ export default {
     transition: width 900ms ease;
     .container {
       .Searchtitle {
-        border-bottom: 1px solid black;;
+        border-bottom: 1px solid #B2B0B0;;
         margin:1% 1% 1% 0;
         p {
           font-size: 15px;
@@ -625,7 +637,7 @@ export default {
           background-color: var(--bg-content-color);
           background-image: none;
           border-radius: 5px;
-          border: 1px solid black;
+          border: 1px solid #B2B0B0;
           opacity: 0.55;
           box-sizing: border-box;
           color: var(--text-primary-color);
@@ -650,11 +662,7 @@ export default {
 }
 .fieldset {
   margin-top:10px;
-  border: solid 1px #707070;
-}
-.legend {
-  border: solid 1px #707070;
-
+  border: solid 1px #B2B0B0;
 }
 
 </style>
