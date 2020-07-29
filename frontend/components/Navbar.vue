@@ -29,10 +29,10 @@
           <div v-for="( item, index ) in portalMenus" :key="item.id" class="menus">
             <div v-if="portalMenus.length > index+1" class="menus2">
               <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-item">{{ item.label }}</a>
+                <a class="navbar-item" @click="handleClickMenuHeader(page4)">{{ item.label }}</a>
                 <div class="navbar-dropdown">
                   <template v-for="i in item.children">
-                    <c-navbar-menu :item="i" :key="i.key" @click="handleClickMenuHeader(page2)" />
+                    <c-navbar-menu style="width: 350px" :item="i" :key="i.key" @click="handleClickMenuHeader(page2)" />
                   </template>
                 </div>
               </div>
@@ -111,9 +111,9 @@ export default {
         }
       } else if (item.menuViewTypeId === 2) {
         if (this.lang === 'mn') {
-          this.$nuxt.$router.replace({ path: '/news', query: { menuId: item.value } })
+          this.$nuxt.$router.replace({ path: '/page2/', query: { menuId: item.value } })
         } else {
-          this.$nuxt.$router.replace({ path: '/en/news', query: { menuId: item.value } })
+          this.$nuxt.$router.replace({ path: '/en/page2/', query: { menuId: item.value } })
         }
       } else if (item.menuViewTypeId === 3) {
         if (this.lang === 'mn') {

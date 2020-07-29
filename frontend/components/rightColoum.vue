@@ -4,7 +4,6 @@
       <div>
         <button id="login" onclick="window.location.href='http://localhost:3300/login'" style="width: 100%; background-color: #486dbf; height: 35px;" class="button login is-info fas fa-sign-in-alt "><h1>Газрын тос нэвтрэх</h1></button>
       </div>
-
       <div id="right_coloum_news_header_1">
         <h3 class="headerTitle">Цаг үеийн мэдээлэл</h3>
         <hr
