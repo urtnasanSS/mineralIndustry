@@ -19,8 +19,13 @@
       </el-col>
     </el-row>
     <el-row class="columns">
+<<<<<<< HEAD
+      <el-col class="column is-8">
+        <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
+=======
       <el-col class="column is-9">
         <!-- <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
+>>>>>>> 06420898c65115d69f3841fd15d038f58e12eb49
           <span style="margin-left:8%">Нийтлэх</span>
         </button> -->
         <!-- <button class="button is-primary" style="background-color: #00b1ff; width: 110px; height: 19px; font-size: 12px">
@@ -30,7 +35,7 @@
           <span>Жиргэх</span>
         </button> -->
         <div class="detailImage">
-          <div class="column is-12">
+          <div class="column is-13">
             <div class="card-image">
               <figure class="image is-5by3 customImage">
                 <div v-if="files && files.length > 0" style="height:400px; width:600px; margin: 0% float:left">

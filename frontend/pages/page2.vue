@@ -192,6 +192,23 @@ export default {
       // console.log('NotWorking')
     }
   },
+  data () {
+    return {
+      loading: false,
+      temp: {}
+    }
+  },
+  watch () {
+  },
+  mounted () {
+    if (this.$route.params) {
+      this.getContent(this.$route.params.id)
+      this.contentCount(this.$route.params.id)
+      console.log('----NotWorking----')
+    } else {
+      this.$nuxt.$router.replace({ path: '/404' })
+    }
+  },
   methods: {
     moment,
     isNull,
