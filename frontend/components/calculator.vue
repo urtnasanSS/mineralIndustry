@@ -92,6 +92,47 @@
               </el-tooltip>
             </span>
           </div>
+          <article class="Searchtitle">
+            <p style="margin-top: 10%; border-top: solid 1px #B2B0B0; font-weight: bold">
+              ХАЙЛТ /Тусгай зөвшөөрөл/
+            </p>
+            <el-form :model="searchTemp" ref="form" label-width="120px" :label-position="'top'" style="margin-top:5px; font-weight: bold">
+              <el-form-item label="Байгууллага:" prop="">
+                <el-select
+                  clearable
+                  size="mini"
+                  filterable
+                  v-model="searchTemp.organizationId"
+                  value-key="_id"
+                  @change="handleChangeOrganization"
+                  style="width: 100%"
+                >
+                  <el-option v-for="listItem in listOrganization" :key="listItem._id" :label="listItem.name" :value="listItem">{{ listItem.name }}</el-option>
+                </el-select>
+              </el-form-item>
+            </el-form>
+          </article>
+          <fieldset style="margin-top:5px; font-weight: bold">
+            <legend>Шатахууны төрөл:</legend>
+            <el-checkbox-group v-model="searchTemp.checkedType" @change="handleChangeRadioProductType" class="fuel">
+              <div class="columns">
+                <div class="column is-6">
+                  <el-checkbox label="A80"></el-checkbox>
+                  <el-checkbox label="AI92"></el-checkbox>
+                  <el-checkbox label="AI95"></el-checkbox>
+                </div>
+                <div class="column is-6">
+                  <el-checkbox label="AI98"></el-checkbox>
+                  <el-checkbox label="DT"></el-checkbox>
+                </div>
+              </div>
+            </el-checkbox-group>
+          </fieldset>
+          <span slot="footer" class="dialog-footer" style="display:flex; justify-content:flex-end; margin-top:10px;">
+            <el-tooltip effect="light" :content="$t('smartActionButtons.refresh')" key="refresh">
+              <el-button type="warning" size="mini" @click="handleRefresh">Цэвэрлэх</el-button>
+            </el-tooltip>
+          </span>
         </div>
       </div>
       <div class="column is-9">
@@ -714,5 +755,13 @@ export default {
 .fieldset {
   margin-top:10px;
   border: solid 1px #B2B0B0;
+}
+.fuel {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  border: solid 1px #B2B0B0;
+  border-radius: 5px;
+  padding: 2%;
 }
 </style>

@@ -1,6 +1,5 @@
 import { Doughnut } from 'vue-chartjs'
 import axios from 'axios'
-
 export default {
   extends: Doughnut,
   data () {
@@ -13,7 +12,7 @@ export default {
       color: ['#41B883', '#E46651', '#00D8FF', '#971B00', '#971B00', '#971B00', '#971B00']
     }
   },
-  async created () {
+  async  mounted () {
     this.data = (await axios({ method: 'get', url: 'https://mpetro.smartsolution.mn:8085/tenCompanyMostStation' })).data
     for (let index = 0; index < this.data.length; index++) {
       this.names[index] = this.data[index].organizationName

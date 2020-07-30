@@ -13,7 +13,7 @@ export default {
       value: []
     }
   },
-  async created () {
+  async mounted () {
     this.data = (await axios({ method: 'get', url: 'https://mpetro.smartsolution.mn:8085/report/import/productByMonth?year=2020' })).data.rows
     for (let index = 0; index < this.data.length; index++) {
       this.names[index] = this.data[index].month
