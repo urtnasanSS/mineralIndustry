@@ -85,22 +85,6 @@
                 </el-form-item>
               </el-form>
             </article>
-            <div style="margin-top:5px; font-weight: bold">
-              <legend>Шатахууны төрөл:</legend>
-              <el-checkbox-group v-model="searchTemp.checkedType" @change="handleChangeRadioProductType" class="fuel">
-                <div class="columns">
-                  <div class="column is-6">
-                    <el-checkbox label="A80"></el-checkbox>
-                    <el-checkbox label="AI92"></el-checkbox>
-                    <el-checkbox label="AI95"></el-checkbox>
-                  </div>
-                  <div class="column is-6">
-                    <el-checkbox label="AI98"></el-checkbox>
-                    <el-checkbox label="DT"></el-checkbox>
-                  </div>
-                </div>
-              </el-checkbox-group>
-            </div>
             <span slot="footer" style="display:flex; justify-content:flex-end; margin-top:10px;">
               <el-tooltip effect="light" key="refresh">
                 <!-- <el-tooltip effect="light" :content="$t('smartActionButtons.refresh')" key="refresh"> -->
@@ -720,5 +704,15 @@ export default {
       }
     }
   }
+  .map {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    margin: var(--primary-padding);
+  }
+}
+.fieldset {
+  margin-top:10px;
+  border: solid 1px #B2B0B0;
 }
 </style>
