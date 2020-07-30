@@ -86,7 +86,7 @@
           </article>
           <fieldset style="margin-top:5px; font-weight: bold">
             <legend>Шатахууны төрөл:</legend>
-            <el-checkbox-group v-model="searchTemp.checkedType" @change="handleChangeRadioProductType" style="display: flex; flex-direction: column; align-items: end; flex-direction: column; border: solid 1px #B2B0B0; border-radius: 5px; padding: 2%;">
+            <el-checkbox-group v-model="searchTemp.checkedType" @change="handleChangeRadioProductType" class="fuel">
               <div class="columns">
                 <div class="column is-6">
                   <el-checkbox label="A80"></el-checkbox>
@@ -669,5 +669,13 @@ export default {
 .fieldset {
   margin-top:10px;
   border: solid 1px #B2B0B0;
+}
+.fuel {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  border: solid 1px #B2B0B0;
+  border-radius: 5px;
+  padding: 2%;
 }
 </style>

@@ -17,16 +17,43 @@
         </div>
       </el-row>
       <div class="columns" v-for="item in list" :key="item.id">
-        <div class="column is-half is detail">
-          <img :src="baseUrl + item.files[0].storageName" style="width: 30%; height:100%; border-radius: 5px" alt="Placeholder image">
-          <a>{{ item.title }}</a>
-          <small
-            style="float:right; width: 50%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
-              letter-spacing: normal; color: #000000;"
-          >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-          <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:50%">
-            <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
-          </button>
+        <div class="column is-6 detail">
+          <div class="columns">
+            <div class="column is-5">
+              <img :src="baseUrl + item.files[0].storageName" style="border-radius: 5px" alt="Placeholder image">
+            </div>
+            <div class="column is-7">
+              <a>{{ item.title }}</a>
+              <footer style="margin-top: 36%">
+                <small
+                  style="float:left; width: 50%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+                    letter-spacing: normal; color: #000000;"
+                >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+                <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:50%">
+                  <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6 is detail">
+          <div class="columns">
+            <div class="column is-5">
+              <img :src="baseUrl + item.files[0].storageName" style="border-radius: 5px" alt="Placeholder image">
+            </div>
+            <div class="column is-7">
+              <a>{{ item.title }}</a>
+              <footer style="margin-top: 36%">
+                <small
+                  style="float:left; width: 50%; margin:4% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+                    letter-spacing: normal; color: #000000;"
+                >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
+                <button class="button is-rounded is-small" style="margin: 10px 0 0 0px; width:50%">
+                  <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
+                </button>
+              </footer>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,12 +143,6 @@ color: #000000;
   margin: 10px 3px;
   width: 100%;
 }
-.detail img {
-  height: 150px;
-  width: 50px;
-  float: left;
-  margin-right: 5%;
-}
 .detail a {
   float: right;
   font-family: SegoeUI;
@@ -138,7 +159,7 @@ color: #000000;
   -webkit-line-clamp: 2; /* number of lines to show */
   -webkit-box-orient: vertical;
   margin: auto;
-  width: 20%;
+  width: 100%;
   float: left;
 }
 </style>
