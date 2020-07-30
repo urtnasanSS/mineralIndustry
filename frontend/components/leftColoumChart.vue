@@ -1,25 +1,25 @@
 <template>
   <div>
-    <div id="leftColoumChart" style="padding: 3% 0% 3% 0%; higth:auto">
-      <div class="leftColoumChart_1" style="width: 50%; float: left;  padding-right: 5%;">
-        <div id="upper_line">
-          <hr style="float: left; width: 4px; height: 18px; margin: 1% 1% 1% 1%; padding: 0; background-color: #1a3675;">
-          <p>Импортын тайлан мэдээ (сараар)</p>
-        </div>
-        <div id="cart" style="width : 100%; height: auto;">
-          <CommitChart />
+    <div class="leftColoumChart" style="padding: 3% 0% 3% 0%;">
+      <div class="leftColoumChart_1">
+        <div class="graphHeight">
+          <div class="upper_line">
+            <hr />
+            <p>Импортын тайлан мэдээ (сараар)</p>
+          </div>
+          <div class="cart">
+            <CommitChart />
+          </div>
         </div>
       </div>
 
-      <div class="leftColoumChart_2" style="width: 50%; float: left;  padding-left: 5%;">
-        <div id="upper_line">
-          <hr style="float: left; width: 4px; height: 18px; margin: 1% 1% 1% 1%; padding: 0; background-color: #1a3675;">
+      <div class="leftColoumChart_2">
+        <div class="upper_line">
+          <hr />
           <p>Хамгийн их /ШТС/-тэй 10 компани</p>
         </div>
-        <div id="cart" style="width : 100%; height: auto;">
-          <div>
-            <PieChart />
-          </div>
+        <div class="cart">
+          <PieChart />
         </div>
       </div>
     </div>
@@ -35,58 +35,81 @@ export default {
   }
 }
 </script>
-<style>
-#leftColoumChart {
-/* overflow to handle inner floating block */
-overflow: hidden;
-}
-.leftColoumChart_1 img{
-width: 100%; height: auto;
-float: left;}
-.leftColoumChart_1 h3{
-height: 63px;
-font-family: SegoeUI;
-font-size: 16px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.31;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-float: left;
-}
+<style lang="scss" scoped>
 
-.leftColoumChart_2 img{
-float: right;
-width: 100%; height: auto;
-}
-
-.leftColoumChart_2 h3{
-height: 63px;
-font-family: SegoeUI;
-font-size: 16px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.31;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-float: left;
-}
-#upper_line p{
-margin: 1% 1% 1% 1%;
-width: auto;
-height: auto;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
+.leftColoumChart {
+  .leftColoumChart_1 {
+    width: 50%;
+    float: left;
+    padding-right: 5%;
+    @media screen and (max-width: 599px) {
+      float: left;
+      width: 100%;
+    }
+    .graphHeight {
+      height: 100%;
+      .upper_line p{
+        margin: 1%;
+        width: auto;
+        height: auto;
+        font-family: SegoeUI;
+        font-size: 18px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+      }
+      .cart {
+        width : 100%;
+        height: auto;
+      }
+      hr {
+        float: left;
+        width: 4px;
+        height: 18px;
+        margin: 1%;
+        padding: 0;
+        background-color: #1a3675;
+      }
+    }
+  }
+  .leftColoumChart_2 {
+    width: 50%;
+    float: left;
+    padding-left: 5%;
+    @media screen and (max-width: 599px) {
+      float: left;
+      width: 100%;
+    }
+    .upper_line p{
+      margin: 1%;
+      width: auto;
+      height: auto;
+      font-family: SegoeUI;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+    }
+    .cart {
+      width : 100%;
+      height: auto;
+    }
+    hr {
+      float: left;
+      width: 4px;
+      height: 18px;
+      margin: 1%;
+      padding: 0;
+      background-color: #1a3675;
+    }
+  }
 }
 </style>

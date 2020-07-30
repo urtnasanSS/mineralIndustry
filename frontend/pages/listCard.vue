@@ -1,6 +1,5 @@
 <template>
   <div class="newsOuter">
-    <breadcrumb />
     <GroupTitle :name="'ЖАГСААЛТ МЭДЭЭЛЭЛ'" style="margin-bottom: 15px" />
     <div v-for="value in list" :key="value.id">
       <div class="columns">

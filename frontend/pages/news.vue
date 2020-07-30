@@ -1,6 +1,5 @@
 <template>
   <div class="customTab">
-    <breadcrumb />
     <!-- <GroupTitle :name="this.$store.getters.portalMenus" style="margin-bottom: 15px" /> -->
     <GroupTitle :name="'Холбоотой МЭДЭЭЛЭЛ'" style="margin-bottom: 15px" />
     <div class="columns">

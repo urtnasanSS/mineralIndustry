@@ -707,7 +707,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" >
+<style lang="scss">
 .contentDrawer {
   padding: 20px;
   height: 100%;

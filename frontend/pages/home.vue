@@ -1,32 +1,34 @@
 <template>
   <div>
-    <HeaderWithNavbar />
-    <div class="hero leftTabs">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column is-8">
-              <leftColoumNews />
-              <leftColoumNewsS />
-              <leftColoumChart />
-              <leftColoumDiscussion />
-            </div>
-            <div class="column is-4">
-              <rightColoum />
-              <rightColoumAnnoun />
+    <client-only>
+      <HeaderWithNavbar />
+      <div class="hero leftTabs">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column is-8">
+                <leftColoumNews />
+                <leftColoumNewsS />
+                <leftColoumChart />
+                <leftColoumDiscussion />
+              </div>
+              <div class="column is-4">
+                <rightColoum />
+                <rightColoumAnnoun />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="hero secondTabs">
-      <div class="hero-body">
-        <div class="container">
-          <calculator />
+      <div class="hero secondTabs">
+        <div class="hero-body">
+          <div class="container">
+            <calculator />
+          </div>
         </div>
       </div>
-    </div>
-    <foother />
+      <foother />
+    </client-only>
   </div>
 </template>
 
@@ -61,6 +63,7 @@ export default {
 .leftTabs {
   @media screen and (max-width: 768px) {
     float: left;
+    max-width: 100%;
   }
 }
 .secondTabs {

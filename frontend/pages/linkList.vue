@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="newsOuter">
-      <breadcrumb />
       <GroupTitle :name="'Холбоост мэдээлэл'" />
       <ul>
         <div v-for="item in list" :key="item.id">
