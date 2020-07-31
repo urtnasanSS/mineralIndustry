@@ -50,20 +50,24 @@
                     </div>
                   </div>
                 </el-form-item>
-                <div class="searchButtons">
-                  <el-tooltip class="location" effect="light" :content="'Км-ын байршил тавих'" key="search-place">
-                    <el-button type="info" size="mini" icon="el-icon-place" circle @click="handleSetDistancePoint"></el-button>
-                  </el-tooltip>
-                  <el-button class="search" type="primary" size="mini" @click="handleSearchDistance">Хайх</el-button>
-                  <el-button class="clear" type="warning" size="mini" @click="handleRefreshDistance">Цэвэрлэх</el-button>
+                <div>
+                  <span slot="footer" class="searchButtons">
+                    <el-tooltip class="location" effect="light" :content="'Км-ын байршил тавих'" key="search-place">
+                      <el-button type="info" size="mini" icon="el-icon-place" circle @click="handleSetDistancePoint"></el-button>
+                    </el-tooltip>
+                    <el-button class="search" type="primary" size="mini" @click="handleSearchDistance">Хайх</el-button>
+                    <el-button class="clear" type="warning" size="mini" @click="handleRefreshDistance">Цэвэрлэх</el-button>
+                  </span>
                 </div>
               </el-form>
-              <p style="font-size: 14px; margin: 2% 0 -3% 0">Тооцоолуур:</p>
-              <div class="fieldset">
+              <fieldset class="fieldset">
+                <legend>
+                  <p style="font-size: 14px; margin-left: 10px font-weight: bold">Тооцоолуур:</p>
+                </legend>
                 <div style="text-align: center; margin-bottom: 5%; font-size: 12px">
                   Урт/км: <input class="textAuto" type="text" readonly v-model="distanceForm.distance" style="font-weight:bold; text-align:center; margin:2%; border: 1px solid #B2B0B0;">
                 </div>
-              </div>
+              </fieldset>
             </div>
             <article class="panel is-primary">
               <p style="margin-top: 10%; border-bottom: solid 1px #B2B0B0; font-weight: bold">
@@ -96,7 +100,7 @@
                   </div>
                   <div class="column is-6">
                     <el-checkbox label="AI98"></el-checkbox>
-                    <el-checkbox label="DT"></el-checkbox>
+                    <el-checkbox style="margin-right: 30px;" label="DT"></el-checkbox>
                   </div>
                 </div>
               </el-checkbox-group>
@@ -659,12 +663,13 @@ export default {
               padding: 0 15px;
               transition: border-color .2s cubic-bezier(.645,.045,.355,1);
               width: 100%;
+              margin-left: -10px;
             }
             .searchButtons {
               display: flex;
-              justify-content: flex-end;flex-direction: row;
-              .location {
-              }
+              justify-content: flex-end;
+              flex-direction: row;
+              float: right;
               .search {
                 @media screen and (max-width: 999px) {
                   padding: 5% 0;
@@ -690,6 +695,7 @@ export default {
             width: 100%;
             margin-top:10px;
             border: solid 1px #B2B0B0;
+            border-radius: 5px;
             .textAuto {
               @media screen and (max-width: 915px) {
                 width: 100%;
@@ -712,12 +718,6 @@ export default {
           }
         }
       }
-      map {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        margin: var(--primary-padding);
-      }
     }
   }
   .map {
@@ -726,17 +726,5 @@ export default {
     height: 100%;
     margin: var(--primary-padding);
   }
-}
-.fieldset {
-  margin-top:10px;
-  border: solid 1px #B2B0B0;
-}
-.fuel {
-  display: flex;
-  flex-direction: column;
-  flex-direction: column;
-  border: solid 1px #B2B0B0;
-  border-radius: 5px;
-  padding: 2%;
 }
 </style>

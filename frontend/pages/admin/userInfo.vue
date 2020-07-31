@@ -8,16 +8,20 @@
         </div>
         <div class="info">
           <div class="line">
-            <p class="header">Овог:</p>
-            <p class="value">{{ list.surName }}</p>
+            <i class="el-icon-user">
+              <p class="header">Овог:</p>
+              <p class="value">{{ list.surName }}</p>
+            </i>
           </div>
           <div class="line">
             <p class="header">Нэвтрэх нэр:</p>
             <p class="value">{{ list.userName }}</p>
           </div>
           <div class="line">
-            <p class="header" style="float:left">Утас:</p>
-            <p class="value">{{ list.phoneNumber }}</p>
+            <i class="el-icon-phone">
+              <p class="header" style="float:left">Утас:</p>
+              <p class="value">{{ list.phoneNumber }}</p>
+            </i>
           </div>
           <div class="line">
             <p class="header">Хандах эрх:</p>
@@ -57,9 +61,19 @@ export default {
 </script>
 <style lang="scss" scoped>
 .hero {
+  background-image: url('../../../clean_HTML/img/fff.jpg');
   .hero-body {
-    height: calc(100% - 50px);
-    background: #fff;
+    text-align: center;
+    width: 30%;
+    background: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40%;
+    border-bottom-left-radius: 93px;
+    border-bottom-right-radius: 110px;
+    border-top: 0;
+    border: 10px solid gray;
     .container {
       .center {
         text-align: center;
@@ -67,25 +81,20 @@ export default {
           border-radius: 50%;
           height: 70px;
         }
-        .title {
-          border-bottom: 1px solid black;
-        }
       }
       .info {
         padding: 10px 10%;
         .line {
-          width: 50%;
+          width: 100%;
           padding: 0 10%;
-          float: left;
+          border-bottom: solid 1px black;
           .header {
             font-weight: bold;
             font-size: 20px;
             padding: 1%;
-            float: left;
             width: 100%;
           }
           .value {
-            float: left;
             padding-left: 5%;
           }
         }
