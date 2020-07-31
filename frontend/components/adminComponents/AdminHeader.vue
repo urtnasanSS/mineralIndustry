@@ -3,8 +3,7 @@
     <nav class="navbar is-info">
       <div class="navbar-brand">
         <a class="navbar-item" href="/home">
-          <img src="/img/logoUurhai.png" alt="Ухаалаг шийдэл" width height="35">
-          <span>Нүүр хуудас</span>
+          <img src="/img/logo_mmhi.png" width style="max-height: 46px;">
         </a>
         <div
           class="navbar-burger burger"
@@ -25,7 +24,9 @@
         <div class="navbar-start" />
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">Бусад</a>
+            <a class="navbar-link">
+              <img src="/img/login.png" style="max-height: 45px;">
+            </a>
             <div class="navbar-dropdown is-right">
               <a class="navbar-item" @click="personInfo()">Хувийн мэдээлэл</a>
               <hr class="navbar-divider">
@@ -68,23 +69,19 @@ export default {
 </script>
 <style lang="scss" scoped>
 .topbar {
-  // background: #1e88e5;
+  background-color: #1a3675;
   position: sticky;
   top: 0px;
   z-index: 50;
   -webkit-box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
   .navbar {
-    // background-color: unset !important;
+    background-color: #1a3675;
     .navbar-brand {
       background: #68b4f757;
       a {
         padding: 0px 34px;
-        span {
-          font-family: "Roboto Condensed";
-          padding-left: 10px;
-          text-transform: uppercase;
-          font-weight: bold;
+        img {
         }
       }
     }

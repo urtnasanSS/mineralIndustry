@@ -1,87 +1,74 @@
 <template>
-  <div class="container">
-    <div>
-      <!-- <logo /> -->
-      <h1 class="title">
-        Уул уурхай хүнд үйлдвэрийн яам
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="http://localhost:3300/home"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          HOME
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <client-only>
+      <HeaderWithNavbar />
+      <div class="hero leftTabs">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns">
+              <div class="column is-8">
+                <leftColoumNews />
+                <leftColoumNewsS />
+                <leftColoumChart />
+                <leftColoumDiscussion />
+              </div>
+              <div class="column is-4">
+                <rightColoum />
+                <rightColoumAnnoun />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="hero secondTabs">
+        <div class="hero-body">
+          <div class="container">
+            <calculator />
+          </div>
+        </div>
+      </div>
+      <foother />
+    </client-only>
   </div>
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
+import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
+import foother from '~/components/foother.vue'
+import leftColoumNews from '~/components/leftColoumNews.vue'
+import leftColoumNewsS from '~/components/leftColoumNewsS.vue'
+import leftColoumChart from '~/components/leftColoumChart.vue'
+import leftColoumDiscussion from '~/components/leftColoumDiscussion.vue'
+import rightColoum from '~/components/rightColoum.vue'
+import rightColoumAnnoun from '~/components/rightColoumAnnoun.vue'
+import calculator from '~/components/calculator.vue'
 
 export default {
   components: {
-    // Logo
+    HeaderWithNavbar,
+    leftColoumNews,
+    leftColoumChart,
+    leftColoumDiscussion,
+    rightColoum,
+    calculator,
+    foother,
+    leftColoumNewsS,
+    rightColoumAnnoun
   }
 }
+
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss" scoped>
+.leftTabs {
+  @media screen and (max-width: 768px) {
+    float: left;
+    max-width: 100%;
+  }
 }
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.secondTabs {
+  @media screen and (max-width: 768px) {
+    float: left;
+  }
 }
 </style>
