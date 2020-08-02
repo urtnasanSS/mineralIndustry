@@ -2,7 +2,7 @@
   <div>
     <div class="right_coloum">
       <div>
-        <button id="login" onclick="window.location.href='http://localhost:3300/login'" style="width: 100%; background-color: #486dbf; height: 35px;" class="button login is-info fas fa-sign-in-alt "><h1>Газрын тос нэвтрэх</h1></button>
+        <button id="login" onclick="window.location.href='http://localhost:3300/login'" class="button login is-info fas fa-sign-in-alt"><h1>Газрын тос нэвтрэх</h1></button>
       </div>
       <div id="right_coloum_news_header_1">
         <h3 class="headerTitle">Цаг үеийн мэдээлэл</h3>
@@ -20,12 +20,15 @@
         <div class="column is-5 imageSize">
           <img :src="baseUrl + item.files[0].storageName" class="image">
         </div>
-        <div class="column is-7 textSize">
-          <a class="textLine">{{ item.title }}</a>
+        <div class="column is-6 textSize">
+          <nuxt-link :to="'/content/' + item.id">
+            <a class="textLine">{{ item.title }}</a>
+          </nuxt-link>
           <small>{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
-          <button class="button is-rounded is-small Detail">
+          <p class="subtitle"><i class="fas fa-eye" /> {{ item.count }}</p>
+          <!-- <button class="button is-rounded is-small Detail">
             <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
@@ -80,12 +83,12 @@ export default {
   }
   .columns {
     .imageSize {
-      height:103px;
+      height:110px;
       float:left;
       .image {
         float: left;
         min-width: 150px;
-        max-width: 100%;
+        width: 100%;
         height:100%;
         border-radius: 5px;
         @media screen and (max-width: 1215px) {
@@ -97,10 +100,18 @@ export default {
       }
     }
     .textSize {
+      .textLine:hover {
+        text-decoration: underline;
+      }
+      a:hover:before {
+      }
       .textLine {
-        font-family: SegoeUI;
-        font-size: 12px;
+        padding-top: 5px;
+        font-family: roboto;
+        font-size: 13px;
         font-weight: bold;
+        text-decoration: none;
+        position: relative;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.33;
@@ -110,16 +121,47 @@ export default {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-line-clamp: 3; /* number of lines to show */
         -webkit-box-orient: vertical;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          background-color: #f00;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+        }
+      }
+      .subtitle {
+				float: right;
+				font-size: 11px;
+				color: #909399;
+        width: 50%;
+        margin: 5% 0% 0% 0%;
+        padding: 0 3% 0 0;
+        height: auto;
+        opacity: 0.4;
+        font-family: roboto;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: italic;
+        line-height: 1.33;
+        letter-spacing: normal;
+        text-align: right;
+        color: #909399;
       }
       small {
         float:left;
-        width: 100%;
-        margin:4% 0% 0% 0%;
+        width: 50%;
+        margin:5% 0% 0% 0%;
         height: auto;
         opacity: 0.4;
-        font-family: SegoeUI; font-size: 12px;
+        font-family: roboto;
+        font-size: 12px;
         font-weight: normal;
         font-stretch: normal;
         font-style: italic;
@@ -152,7 +194,7 @@ export default {
             width: 50%;
             height: 16px;
             opacity: 0.4;
-            font-family: SegoeUI;
+            font-family: roboto;
             font-size: 12px;
             font-weight: normal;
             font-stretch: normal;
@@ -168,37 +210,35 @@ export default {
   }
 }
 #login{
-overflow: hidden;
-margin-top: 2%;
-margin-bottom: 2%;
-width: 80%;
-height: auto;
-border-radius: 10px;
-background-color: #486dbf;
+  overflow: hidden;
+  margin: 2% 5% 3% 5%;
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #486dbf;
 }
 #login h1{
-margin:0% 0% 0% 3% ;
-width: auto;
-height: auto;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-float: left;
-color: #ffffff;
-}
-.headerTitle {
-  height: 24px;
-  font-family: SegoeUI;
+  margin:0% 0% 0% 3% ;
+  width: auto;
+  height: auto;
+  font-family: roboto;
   font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  float: left;
+  color: #ffffff;
+}
+.headerTitle {
+  font-family: roboto;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
   letter-spacing: normal;
   text-align: left;
   color: #000000;
@@ -209,7 +249,7 @@ float: left;
 margin-left: 3%;
 width: 100%;
 height: auto;
-font-family: SegoeUI;
+font-family: roboto;
 font-size: 12px;
 font-weight: bold;
 font-stretch: normal;
@@ -238,7 +278,7 @@ float: left;
 width: 50%;
 height: 16px;
 opacity: 0.4;
-font-family: SegoeUI;
+font-family: roboto;
 font-size: 12px;
 font-weight: normal;
 font-stretch: normal;

@@ -1,7 +1,7 @@
 <template>
   <div class="right_coloum_zar">
     <div id="right_coloum_news_header_2">
-      <h3 class="headerTitle">Зарлал</h3>
+      <p class="headerTitle">Зарлал</p>
       <hr
         style="
         display: block;
@@ -69,13 +69,16 @@ export default {
   float: left;
   margin-top: 21px;
   max-width: 100%;
+  .right_coloum_announcement a:hover {
+    text-decoration: underline;
+  }
   .right_coloum_announcement {
     a {
       float: left;
       max-width: 100%;
       height: auto;
-      font-family: SegoeUI;
-      font-size: 15px;
+      font-family: roboto;
+      font-size: 14px;
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
@@ -115,10 +118,10 @@ export default {
       small {
         float:left;
         width: 40%;
-        margin:5px 0 0 0;
+        margin:4% 0 0 0;
         height: auto;
         opacity: 0.4;
-        font-family: SegoeUI;
+        font-family: roboto;
         font-size: 12px;
         font-weight: normal;
         font-stretch: normal;
@@ -132,9 +135,9 @@ export default {
   }
 }
 .headerTitle {
-  height: 24px;
-  font-family: SegoeUI;
-  font-size: 18px;
+  font-family: roboto;
+  text-transform: uppercase;
+  font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -157,7 +160,7 @@ export default {
   width: 50%;
   height: 16px;
   opacity: 0.4;
-  font-family: SegoeUI;
+  font-family: roboto;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;

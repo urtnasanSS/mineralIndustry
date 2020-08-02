@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="leftColoumChart" style="padding: 3% 0% 3% 0%;">
+    <div class="leftColoumChart">
       <div class="leftColoumChart_1">
         <div class="graphHeight">
           <div class="upper_line">
@@ -12,7 +12,6 @@
           </div>
         </div>
       </div>
-
       <div class="leftColoumChart_2">
         <div class="upper_line">
           <hr />
@@ -52,7 +51,7 @@ export default {
         margin: 1%;
         width: auto;
         height: auto;
-        font-family: SegoeUI;
+        font-family: roboto;
         font-size: 18px;
         font-weight: bold;
         font-stretch: normal;
@@ -88,7 +87,7 @@ export default {
       margin: 1%;
       width: auto;
       height: auto;
-      font-family: SegoeUI;
+      font-family: roboto;
       font-size: 18px;
       font-weight: bold;
       font-stretch: normal;

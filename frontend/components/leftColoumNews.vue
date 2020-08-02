@@ -107,18 +107,18 @@ export default {
   }
 }
 #left_coloum_top h3{
-float: left;
-width: 100%;
-height: auto;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
+  float: left;
+  width: 100%;
+  height: auto;
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
 }
 #left_coloum_top img{
 width: 100%;

@@ -6,9 +6,9 @@
     </div>
     <div class="leftColoum">
       <div v-for="item in list" :key="item.id" class="items">
-        <a class="textTitle">{{ item.title }}</a>
+        <nuxt-link :to="'/content/' + item.id"><a class="textTitle">{{ item.title }}</a></nuxt-link>
         <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: SegoeUI; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: roboto; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
             letter-spacing: normal; text-align: left; color: #000000;"
         >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
         <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
@@ -66,7 +66,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .leftColoumChart {
-  padding-top: 2%;
+  padding-top: 1%;
+  float: left;
+  width: 100%;
   .upperLine {
     margin: 1% 1% 1% 0;
     hr {
@@ -78,8 +80,9 @@ export default {
     }
     p {
       height: 24px;
-      font-family: SegoeUI;
-      font-size: 18px;
+      font-family: roboto;
+      text-transform: uppercase;
+      font-size: 14px;
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
@@ -96,7 +99,7 @@ export default {
         float: left;
         width: 100%;
         height: auto;
-        font-family: SegoeUI;
+        font-family: roboto;
         font-size: 16px;
         font-weight: bold;
         font-stretch: normal;
@@ -105,6 +108,9 @@ export default {
         letter-spacing: normal;
         text-align: left;
         color: #000000;
+      }
+      .textTitle:hover {
+        text-decoration: underline;
       }
       .textTitle {
         max-width: 1095px;
@@ -131,7 +137,7 @@ export default {
           width:75%;
           padding: 1px;
           height: 16px;
-          font-family: SegoeUI;
+          font-family: roboto;
           font-size: 12px;
           font-weight: normal;
           font-stretch: normal;
@@ -169,7 +175,7 @@ export default {
   width: 50%;
   height: 16px;
   opacity: 0.4;
-  font-family: SegoeUI;
+  font-family: roboto;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;

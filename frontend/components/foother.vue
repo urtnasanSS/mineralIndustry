@@ -87,7 +87,8 @@ export default {
           float: left;
           width: 100%;
           height: 24px;
-          font-family: SegoeUI;
+          text-transform: uppercase;
+          font-family: roboto;
           font-size: 18px;
           font-weight: bold;
           font-stretch: normal;
@@ -98,7 +99,7 @@ export default {
           color: #000000;
         }
         p {
-          font-family: SegoeUI;
+          font-family: roboto;
           font-size: 15px;
           font-weight: normal;
           font-stretch: normal;
@@ -116,7 +117,7 @@ export default {
           margin-top: 2%;
           float: left;
           height: 40px;
-          font-family: SegoeUI;
+          font-family: roboto;
           font-size: 15px;
           font-weight: normal;
           font-stretch: normal;
@@ -140,7 +141,7 @@ export default {
         float: left;
         margin: 2% 0 2% 0;
         width: 100%;
-        font-family: SegoeUI;
+        font-family: roboto;
         font-size: 15px;
         font-weight: bold;
         font-stretch: normal;

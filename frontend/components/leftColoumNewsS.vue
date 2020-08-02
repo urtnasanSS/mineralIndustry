@@ -1,13 +1,13 @@
 <template>
   <div id="left_coloum_mid">
     <div id="upper_line" style="width: 100%;">
-      <hr style=" float:left; width: 4px; height: 18px; margin: 0; padding: 0; background-color: #1a3675;">
+      <hr style=" float:left; width: 4px; text-transform: uppercase; height: 14px; margin: 0; padding: 0; background-color: #1a3675;">
       <p>Мэдээ мэдээлэл </p>
     </div>
     <div id="left_coloum_mid_1" v-for="item in list" :key="item.id">
       <nuxt-link tag="span" :to="'/content/' + item.id">
         <img :src="baseUrl + item.files[0].storageName" alt="Placeholder image">
-        <h3>{{ item.title }} </h3>
+        <nuxt-link :to="'/content/' + item.id"><h3>{{ item.title }}</h3></nuxt-link>
       </nuxt-link>
     </div>
   </div>
@@ -86,8 +86,11 @@ float: left;
 {
 -webkit-box-shadow: 0 0 10px grey;
 }
+#left_coloum_mid_1 h3:hover {
+  text-decoration: underline;
+}
 #left_coloum_mid_1 h3{
-font-family: SegoeUI;
+font-family: roboto;
 font-size: 14px;
 font-weight: bold;
 font-stretch: normal;
@@ -101,17 +104,18 @@ margin-top: 15px;
 }
 
 #upper_line p{
-margin:1% 1% 1% 1%;
-width: auto;
-height: auto;
-font-family: SegoeUI;
-font-size: 18px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.33;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
+  margin:1% 1% 1% 1%;
+  width: auto;
+  text-transform: uppercase;
+  height: auto;
+  font-family: roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
 }
 </style>

@@ -114,7 +114,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   display: block;
-  padding-top: 2%;
+  padding-top: 7px;
   width: 100%;
   background-color: #f1f1f1;
   .responsiveLogo {
@@ -137,7 +137,7 @@ export default {
       direction: rtl;
       float: right;
       height: auto;
-      font-family: SegoeUI;
+      font-family: roboto;
       font-size: 15px;
       font-weight: bold;
       font-stretch: normal;

@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.hero-body {
+  padding: 2rem 1.5rem;
+}
 .leftTabs {
   @media screen and (max-width: 768px) {
     float: left;

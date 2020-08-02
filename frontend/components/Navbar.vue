@@ -198,7 +198,7 @@ export default {
           .menus2 {
             height: 100%;
             a {
-              font-family: SegoeUI;
+              font-family: roboto;
               line-height: 1.8;
               font-size: 18px;
               font-weight: bold;
@@ -223,7 +223,7 @@ export default {
             }
             .navbar-item {
               .navbar-link {
-                font-family: SegoeUI;
+                font-family: roboto;
                 font-size: 18px;
                 font-weight: bold;
                 font-stretch: normal;
@@ -247,7 +247,7 @@ export default {
                 }
               }
               .navbar-dropdown {
-                font-family: SegoeUI;
+                font-family: roboto;
                 font-size: 15px;
                 font-weight: bold;
                 line-height: 1.8;
@@ -273,7 +273,7 @@ export default {
           .menusEnd2 {
             height: 100%;
             a {
-              font-family: SegoeUI;
+              font-family: roboto;
               line-height: 1.8;
               font-size: 18px;
               font-weight: bold;
@@ -303,7 +303,7 @@ export default {
                   color: #1a3675;
                 }
                 .navbar-link {
-                  font-family: SegoeUI;
+                  font-family: roboto;
                   font-size: 18px;
                   font-weight: bold;
                   font-stretch: normal;
@@ -322,7 +322,7 @@ export default {
                   }
                 }
                 .navbar-dropdown {
-                  font-family: SegoeUI;
+                  font-family: roboto;
                   font-size: 15px;
                   font-weight: bold;
                   font-stretch: normal;
