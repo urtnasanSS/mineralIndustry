@@ -8,32 +8,33 @@
         </div>
         <div class="info">
           <div class="line">
-            <i class="el-icon-user">
-              <p class="header">Овог:</p>
-              <p class="value">{{ list.surName }}</p>
+            <i class="el-icon-user" style="color: #1a3675;">
+              <a class="header"> {{ list.surName }} </a>
             </i>
           </div>
           <div class="line">
-            <p class="header">Нэвтрэх нэр:</p>
-            <p class="value">{{ list.userName }}</p>
-          </div>
-          <div class="line">
-            <i class="el-icon-phone">
-              <p class="header" style="float:left">Утас:</p>
-              <p class="value">{{ list.phoneNumber }}</p>
+            <i class="el-icon-more-outline" style="color: #1a3675;">
+              <a class="header"> {{ list.userName }} </a>
             </i>
           </div>
           <div class="line">
-            <p class="header">Хандах эрх:</p>
-            <div v-if="list.role == 1">
-              <p class="value">Системийн админ</p>
-            </div>
-            <div v-if="list.role == 2">
-              <p class="value">Мэдээний админ</p>
-            </div>
-            <div v-if="list.role == 3">
-              <p class="value">Харах эрхтэй</p>
-            </div>
+            <i class="el-icon-phone" style="margin: left;">
+              <a class="header"> {{ list.phoneNumber }} </a>
+            </i>
+          </div>
+          <div class="line">
+            <i class="el-icon-phone" style="margin: left;">
+              <p class="header">Хандах эрх:</p>
+              <div v-if="list.role == 1">
+                <p class="value">Системийн админ</p>
+              </div>
+              <div v-if="list.role == 2">
+                <p class="value">Мэдээний админ</p>
+              </div>
+              <div v-if="list.role == 3">
+                <p class="value">Харах эрхтэй</p>
+              </div>
+            </i>
           </div>
         </div>
       </div>
@@ -62,18 +63,17 @@ export default {
 <style lang="scss" scoped>
 .hero {
   background-image: url('../../../clean_HTML/img/fff.jpg');
+  height: 100%;
   .hero-body {
-    text-align: center;
-    width: 30%;
+    width: 25%;
+    height: 55%;
     background: white;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 40%;
-    border-bottom-left-radius: 93px;
-    border-bottom-right-radius: 110px;
-    border-top: 0;
-    border: 10px solid gray;
+    flex-grow: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     .container {
       .center {
         text-align: center;
@@ -86,13 +86,12 @@ export default {
         padding: 10px 10%;
         .line {
           width: 100%;
-          padding: 0 10%;
           border-bottom: solid 1px black;
           .header {
-            font-weight: bold;
-            font-size: 20px;
-            padding: 1%;
+            color: #838383;
+            text-align: center;
             width: 100%;
+            margin-left: 20px;
           }
           .value {
             padding-left: 5%;
