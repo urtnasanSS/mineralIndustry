@@ -200,7 +200,7 @@ export default {
             a {
               font-family: roboto;
               line-height: 1.8;
-              font-size: 17px;
+              font-size: 18px;
               font-weight: bold;
               font-stretch: normal;
               font-style: normal;
@@ -209,7 +209,7 @@ export default {
               color: white;
               @media screen and (max-width: 1407px) {
                 padding: 10px 14px;
-                font-size: 14px;
+                font-size: 15px;
               }
               @media screen and (max-width: 1215px) {
                 padding: 10px 5px;
@@ -224,7 +224,7 @@ export default {
             .navbar-item {
               .navbar-link {
                 font-family: roboto;
-                font-size: 17px;
+                font-size: 18px;
                 font-weight: bold;
                 font-stretch: normal;
                 font-style: normal;
@@ -238,8 +238,8 @@ export default {
                   color: #1a3675;
                 }
                 @media screen and (max-width: 1407px) {
-                  padding: 10px 14px;
-                  font-size: 14px;
+                  padding: 10px 15px;
+                  font-size: 16px;
                 }
                 @media screen and (max-width: 1215px) {
                   padding: 10px 10.4px;
@@ -275,7 +275,7 @@ export default {
             a {
               font-family: roboto;
               line-height: 1.8;
-              font-size: 17px;
+              font-size: 18px;
               font-weight: bold;
               font-stretch: normal;
               font-style: normal;
@@ -283,8 +283,8 @@ export default {
               text-align: left;
               color: white;
               @media screen and (max-width: 1407px) {
-                padding: 10px 0;
-                font-size: 14px;
+                padding: 10px 14px;
+                font-size: 15px;
               }
               @media screen and (max-width: 1215px) {
                 padding: 10px 1px;
@@ -304,7 +304,7 @@ export default {
                 }
                 .navbar-link {
                   font-family: roboto;
-                  font-size: 17px;
+                  font-size: 18px;
                   font-weight: bold;
                   font-stretch: normal;
                   line-height: 1.8;
@@ -313,8 +313,8 @@ export default {
                   text-align: left;
                   color: white;
                   @media screen and (max-width: 1407px) {
-                    padding: 10px 14px;
-                    font-size: 14px;
+                    padding: 10px 15px;
+                    font-size: 16px;
                   }
                   @media screen and (max-width: 1215px) {
                     padding: 10px 10.4px;

@@ -38,3 +38,4 @@ sequelize.sync({
       })
     )
   })
+  

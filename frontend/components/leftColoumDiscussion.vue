@@ -8,16 +8,16 @@
       <div v-for="item in list" :key="item.id" class="items">
         <nuxt-link :to="'/content/' + item.id"><a class="textTitle">{{ item.title }}</a></nuxt-link>
         <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family:italic; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: roboto; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
             letter-spacing: normal; text-align: left; color: #000000;"
         >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
         <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
-        <nuxt-link :to="'/content/' + item.id" class="comment">
+        <div class="comment">
           <img src="/img/comment.png" alt="">
           <a>{{ item.commentIds.length }} хариулт</a>
-        </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -80,9 +80,9 @@ export default {
     }
     p {
       height: 24px;
-      font-family: roboto light;
+      font-family: roboto;
       text-transform: uppercase;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
@@ -99,8 +99,8 @@ export default {
         float: left;
         width: 100%;
         height: auto;
-        font-family: roboto light;
-        font-size: 15px;
+        font-family: roboto;
+        font-size: 16px;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
@@ -135,9 +135,9 @@ export default {
         }
         a {
           width:75%;
-          padding: 2px;
+          padding: 1px;
           height: 16px;
-          font-family: roboto italic;
+          font-family: roboto;
           font-size: 12px;
           font-weight: normal;
           font-stretch: normal;
@@ -175,7 +175,7 @@ export default {
   width: 50%;
   height: 16px;
   opacity: 0.4;
-  font-family: roboto Thin;
+  font-family: roboto;
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
