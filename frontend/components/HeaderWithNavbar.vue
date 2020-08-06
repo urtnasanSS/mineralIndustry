@@ -12,9 +12,9 @@
           </p>
           <div class="field">
             <div class="control has-icons-left has-icons-right">
-              <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
-              <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; float:right; height:35px; width:6%;">
-                <i class="fa fa-search" :style="`color: white; margin: 13px 0px 0px 4px;`" />
+              <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:93%">
+              <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; text-align: center; float:right; height:35px; width:7%;">
+                <i class="fa fa-search" :style="`color: white; margin: 30% 0px`" />
               </div>
             </div>
           </div>

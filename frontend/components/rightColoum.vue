@@ -2,7 +2,7 @@
   <div>
     <div class="right_coloum">
       <div>
-        <button id="login" onclick="window.location.href='http://localhost:3300/login'" class="button login is-info fas fa-sign-in-alt"><h1>Газрын тос нэвтрэх</h1></button>
+        <button id="login" onclick="window.location.href='/login'" class="button login is-info fas fa-sign-in-alt"><h1>Газрын тос нэвтрэх</h1></button>
       </div>
       <div id="right_coloum_news_header_1">
         <h3 class="headerTitle">Цаг үеийн мэдээлэл</h3>
@@ -18,7 +18,9 @@
       </div>
       <div class="columns" v-for="item in list" :key="item.id">
         <div class="column is-5 imageSize">
-          <img :src="baseUrl + item.files[0].storageName" class="image">
+          <nuxt-link :to="'/content/' + item.id">
+            <img :src="baseUrl + item.files[0].storageName" class="image">
+          </nuxt-link>
         </div>
         <div class="column is-6 textSize">
           <nuxt-link :to="'/content/' + item.id">
@@ -82,12 +84,16 @@ export default {
     }
   }
   .columns {
+    float: left;
     .imageSize {
-      height:110px;
       float:left;
+      @media screen and (max-width: 768px) {
+        max-width: 40%;
+      }
       .image {
         float: left;
         min-width: 150px;
+        max-height: 105px;
         width: 100%;
         height:100%;
         border-radius: 5px;
@@ -96,10 +102,22 @@ export default {
         }
         @media screen and (max-width: 768px) {
           min-width: 150px;
+          max-width: 100%;
+          float: left;
+          max-height: 150px;
         }
+      }
+      .image:hover {
+        -webkit-box-shadow: 0 0 5px grey;
       }
     }
     .textSize {
+      padding: 0.75rem 0px;
+      @media screen and (max-width: 768px) {
+        max-width: 60%;
+        padding: 0.75rem;
+        float: left;
+      }
       .textLine:hover {
         text-decoration: underline;
       }
@@ -135,6 +153,29 @@ export default {
           -webkit-transform: scaleX(0);
           transform: scaleX(0);
         }
+        @media screen and (max-width: 1407px) {
+          padding: 0 0.75rem;
+        }
+        @media screen and (max-width: 1215px) {
+          min-width: 100px;
+          padding: 0;
+        }
+        @media screen and (max-width: 868px) {
+          padding: 0 3px;
+        }
+        @media screen and (max-width: 806px) {
+          padding: 0 8px;
+          font-size: 12px;
+        }
+        @media screen and (max-width: 768px) {
+          min-width: 150px;
+          max-width: 100%;
+          float: left;
+        }
+        @media screen and (max-width: 456px) {
+          max-width: 30%;
+          float: left;
+        }
       }
       .subtitle {
 				float: right;
@@ -169,9 +210,24 @@ export default {
         letter-spacing: normal;
         text-align: left;
         color: #000000;
+        @media screen and (max-width: 1407px) {
+          padding: 0 0.75rem;
+        }
+        @media screen and (max-width: 1215px) {
+          float: left;
+          padding: 0;
+        }
+        @media screen and (max-width: 868px) {
+          padding: 0 3px;
+        }
+        @media screen and (max-width: 807px) {
+          padding: 0 8px;
+          font-size: 11px;
+        }
         @media screen and (max-width: 768px) {
           margin: 10px 0;
-          max-width: 10%;
+          float: left;
+          width: 50%;
         }
       }
       .Detail {
@@ -235,7 +291,7 @@ export default {
 .headerTitle {
   font-family: roboto;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;

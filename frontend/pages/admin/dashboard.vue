@@ -1,7 +1,7 @@
 <template>
   <div style="height: 100%; width: 100%; overflow-y:auto ">
     <div class="columns is-gapless is-marginless is-paddingless">
-      <div class="column is-8">
+      <div class="column is-7">
         <div class="itemBackground">
           <h2>Цэсний мэдээлэл</h2>
           <div
@@ -11,7 +11,7 @@
           />
         </div>
       </div>
-      <div class="column is-4">
+      <div class="column is-5">
         <div class="itemBackground">
           <h2>Категорийн төрөл</h2>
           <!-- <p>{{ value }}</p> -->
