@@ -7,8 +7,8 @@ module.exports = {
     options: {
       dialect: process.env.DIALECT || 'mysql',
       host: process.env.HOST ? process.env.HOST.trim() : 'localhost'
-'
-  define: {
+    },
+    define: {
       charset: 'utf8',
       collate: 'utf8_general_ci',
       underscored: true,
