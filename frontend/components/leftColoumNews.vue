@@ -37,7 +37,7 @@ export default {
       firstValue: [],
       slideDuration: 4000,
       firstValueImage: [],
-      baseUrl: process.env.baseUrl,
+      baseUrl: process.env.baseUrl + ':8090/',
       listQuery: {
         limit: 3,
         currentPage: 1,
