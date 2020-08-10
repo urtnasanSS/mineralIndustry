@@ -43,7 +43,7 @@ export default {
   data () {
     return {
       list: [],
-      baseUrl: process.env.baseUrl + ':8090/',
+      baseUrl: process.env.baseUrl,
       listQuery: {
         limit: 5,
         currentPage: 1,
