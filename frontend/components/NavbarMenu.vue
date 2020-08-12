@@ -132,9 +132,9 @@ export default {
       span {
         text-transform: none !important;
         background-color: unset !important;
-        font-family: SegoeUI;
-        font-size: 15px;
-        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
         line-height: 1.8;
         font-stretch: normal;
         font-style: normal;

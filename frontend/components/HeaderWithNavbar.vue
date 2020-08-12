@@ -6,10 +6,10 @@
           <img class="logo" src="/img/logo_mmhi.png" @click="$nuxt.$router.replace({ path: '/home/' })">
         </div>
         <div class="column is-5 is-offset-1 responsiveSearch">
-          <p class="contact">
-            Утас: {{ itema.phone }},
-            Цахим шуудан: {{ itema.Email }}
-          </p>
+          <div class="contact">
+            <p class="phone">Утас: {{ itema.phone }},</p>
+           <p class="mail">Цахим шуудан: {{ itema.Email }}</p>
+          </div>
           <div class="field">
             <div class="control has-icons-left has-icons-right">
               <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
@@ -134,10 +134,9 @@ export default {
     .contact {
       width: 100%;
       padding: 10px 0;
-      direction: rtl;
       float: right;
       height: auto;
-      font-family: roboto;
+      font-family: 'Roboto', sans-serif;
       font-size: 15px;
       font-weight: bold;
       font-stretch: normal;
@@ -157,6 +156,13 @@ export default {
       }
       @media screen and (max-width: 768px) {
         display: none;
+      }
+      .phone {
+        width: 50%;
+        float: left;
+      }
+      .email {
+        width: 50%;
       }
     }
   }

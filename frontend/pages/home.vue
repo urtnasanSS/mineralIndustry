@@ -72,6 +72,7 @@ export default {
 .secondTabs {
   @media screen and (max-width: 768px) {
     float: left;
+    width: 100%;
   }
 }
 </style>

@@ -52,9 +52,10 @@ export default {
         margin: 1%;
         width: auto;
         height: auto;
-        font-family: roboto;
-        font-size: 18px;
-        font-weight: bold;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 700;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.33;
@@ -70,7 +71,7 @@ export default {
         float: left;
         width: 4px;
         height: 18px;
-        margin: 1%;
+        margin: 0 1%;
         padding: 0;
         background-color: #1a3675;
       }
@@ -88,9 +89,10 @@ export default {
       margin: 1%;
       width: auto;
       height: auto;
-      font-family: roboto;
-      font-size: 18px;
-      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 700;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.33;
@@ -106,7 +108,7 @@ export default {
       float: left;
       width: 4px;
       height: 18px;
-      margin: 1%;
+      margin: 0 1%;
       padding: 0;
       background-color: #1a3675;
     }

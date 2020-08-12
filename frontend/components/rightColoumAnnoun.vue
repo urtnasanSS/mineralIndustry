@@ -71,18 +71,20 @@ export default {
   max-width: 100%;
   .right_coloum_announcement a:hover {
     text-decoration: underline;
+    color: #1a3675;
   }
   .right_coloum_announcement {
     a {
       float: left;
       max-width: 100%;
       height: auto;
-      font-family: roboto;
-      font-size: 14px;
-      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
       font-stretch: normal;
       font-style: normal;
-      line-height: 1.33;
+      line-height: 16px;
+      text-transform: uppercase;
       letter-spacing: normal;
       text-align: left;
       color: #000000;
@@ -94,11 +96,13 @@ export default {
     }
     .Anouns {
       margin: 5px 0;
+      float: left;
       a {
         width: 100%;
       }
       .button {
         margin: 10px 0 0 100px;
+        float: right;
         @media screen and (max-width: 1407px) {
           margin: 10px 0 0 70px;
         }
@@ -121,8 +125,8 @@ export default {
         margin:2% 0 0 0;
         height: auto;
         opacity: 0.4;
-        font-family: roboto;
-        font-size: 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
         font-weight: normal;
         font-stretch: normal;
         font-style: italic;
@@ -135,10 +139,10 @@ export default {
   }
 }
 .headerTitle {
-  font-family: roboto;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.33;
@@ -160,8 +164,8 @@ export default {
   width: 50%;
   height: 16px;
   opacity: 0.4;
-  font-family: roboto;
-  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
   font-weight: normal;
   font-stretch: normal;
   font-style: italic;

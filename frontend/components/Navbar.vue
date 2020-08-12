@@ -1,23 +1,5 @@
 <template>
   <nav id="navbar" ref="navbar" class="navbar is-link mainMenu" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item is-hidden-desktop" href="#">
-        <img src="/img/logoNoWord.png" height="29">
-      </a>
-      <a
-        role="button"
-        class="navbar-burger burger"
-        :class="{ 'is-active': showNav }"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
-        @click="showNav = !showNav"
-      >
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-      </a>
-    </div>
     <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
       <div class="container">
         <div class="navbar-start">
@@ -198,10 +180,11 @@ export default {
           .menus2 {
             height: 100%;
             a {
-              font-family: roboto;
-              line-height: 1.8;
-              font-size: 18px;
-              font-weight: bold;
+              font-family: 'Roboto', sans-serif;
+              line-height: 2.7;
+              font-size: 14px;
+              font-weight: 700;
+              text-transform: uppercase;
               font-stretch: normal;
               font-style: normal;
               letter-spacing: normal;
@@ -219,13 +202,14 @@ export default {
                 height: 100%;
                 background-color: white;
                 color: #1a3675;
+                border-bottom: 2px solid #dbdbdb;
               }
             }
             .navbar-item {
               .navbar-link {
-                font-family: roboto;
+                font-family: 'Roboto', sans-serif;
                 font-size: 18px;
-                font-weight: bold;
+                font-weight: 700;
                 font-stretch: normal;
                 font-style: normal;
                 line-height: 1.8;
@@ -247,9 +231,9 @@ export default {
                 }
               }
               .navbar-dropdown {
-                font-family: roboto;
-                font-size: 15px;
-                font-weight: bold;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
                 line-height: 1.8;
                 font-stretch: normal;
                 font-style: normal;
@@ -273,10 +257,11 @@ export default {
           .menusEnd2 {
             height: 100%;
             a {
-              font-family: roboto;
-              line-height: 1.8;
-              font-size: 18px;
-              font-weight: bold;
+              font-family: 'Roboto', sans-serif;
+              line-height: 2.7;
+              font-size: 14px;
+              text-transform: uppercase;
+              font-weight: 700;
               font-stretch: normal;
               font-style: normal;
               letter-spacing: normal;
@@ -294,6 +279,7 @@ export default {
                 height: 100%;
                 background-color: white;
                 color: #1a3675;
+                border-bottom: 2px solid #dbdbdb;
               }
             }
               .navbar-item {
@@ -303,9 +289,9 @@ export default {
                   color: #1a3675;
                 }
                 .navbar-link {
-                  font-family: roboto;
+                  font-family: 'Roboto', sans-serif;
                   font-size: 18px;
-                  font-weight: bold;
+                  font-weight: 700;
                   font-stretch: normal;
                   line-height: 1.8;
                   font-style: normal;
@@ -314,7 +300,7 @@ export default {
                   color: white;
                   @media screen and (max-width: 1407px) {
                     padding: 10px 15px;
-                    font-size: 16px;
+                    font-size: 15px;
                   }
                   @media screen and (max-width: 1215px) {
                     padding: 10px 10.4px;
@@ -322,9 +308,9 @@ export default {
                   }
                 }
                 .navbar-dropdown {
-                  font-family: roboto;
-                  font-size: 15px;
-                  font-weight: bold;
+                  font-family: 'Roboto', sans-serif;
+                  font-size: 14px;
+                  font-weight: 700;
                   font-stretch: normal;
                   font-style: normal;
                   line-height: 1.8;
@@ -360,7 +346,6 @@ export default {
     .button{
       background-color: none !important;
       span {
-        text-transform: none !important;
       }
     }
     span {
@@ -368,19 +353,16 @@ export default {
       padding: 0px 0px;
       border: 0px;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 700;
       height: 1.5em;
-      text-transform: none !important;
     }
   }
   .dropdown-menu {
     a {
-      text-transform: none !important;
     }
   }
 }
 .navbar-item {
-  text-transform: none !important;
   text-align: justify;
   white-space: pre-line;
 }
