@@ -65,11 +65,6 @@ export default {
         path: '/admin/userInfo'
       })
     }
-    personInfo2(){
-      this.$nuxt.$router.replace({
-        path:
-      })
-    }
   }
 }
 </script>

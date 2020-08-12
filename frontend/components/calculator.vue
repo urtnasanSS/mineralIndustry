@@ -50,14 +50,31 @@
                     </div>
                   </div>
                 </el-form-item>
-                <div>
-                  <span slot="footer" class="searchButtons">
-                    <el-tooltip class="location" effect="light" :content="'Км-ын байршил тавих'" key="search-place">
-                      <el-button type="info" size="mini" icon="el-icon-place" circle @click="handleSetDistancePoint"></el-button>
-                    </el-tooltip>
-                    <el-button class="search" type="primary" size="mini" @click="handleSearchDistance">Хайх</el-button>
-                    <el-button class="clear" type="warning" size="mini" @click="handleRefreshDistance">Цэвэрлэх</el-button>
-                  </span>
+              </el-form>
+              <el-form>
+                <div class="columns">
+                  <div class="column is-3"></div>
+                  <div class="column is-9" style="display:flex; justify-content:flex-end; margin-top:10px;">
+                    <div class="columns">
+                      <div class="column is-2">
+                        <span slot="footer" class="searchButtons">
+                          <el-tooltip class="location" effect="light" :content="'Км-ын байршил тавих'" key="search-place">
+                            <el-button type="info" size="mini" icon="el-icon-place" circle @click="handleSetDistancePoint"></el-button>
+                          </el-tooltip>
+                        </span>
+                      </div>
+                      <div class="column is-4">
+                        <span slot="footer" class="searchButtons">
+                          <el-button class="search" type="primary" size="mini" @click="handleSearchDistance">Хайх</el-button>
+                        </span>
+                      </div>
+                      <div class="column is-4">
+                        <span slot="footer" class="searchButtons">
+                          <el-button class="clear" type="warning" size="mini" @click="handleRefreshDistance">Цэвэрлэх</el-button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </el-form>
               <fieldset class="fieldset">
@@ -69,11 +86,11 @@
                 </div>
               </fieldset>
             </div>
-            <article class="panel is-primary">
+            <article>
               <p style="margin-top: 10%; border-bottom: solid 1px #B2B0B0; font-weight: bold">
                 ХАЙЛТ /Тусгай зөвшөөрөл/
               </p>
-              <el-form :model="searchTemp" ref="form" label-width="120px" :label-position="'top'" style="margin-top:5px; font-weight: bold">
+              <el-form :model="searchTemp" ref="form" label-width="80px" :label-position="top" style="margin-top:5px; font-weight: bold">
                 <el-form-item label="Байгууллага:" prop="">
                   <el-select
                     clearable
@@ -82,7 +99,7 @@
                     v-model="searchTemp.organizationId"
                     value-key="_id"
                     @change="handleChangeOrganization"
-                    style="width: 100%"
+                    style="width: 100%;"
                   >
                     <el-option v-for="listItem in listOrganization" :key="listItem._id" :label="listItem.name" :value="listItem">{{ listItem.name }}</el-option>
                   </el-select>
@@ -670,6 +687,7 @@ export default {
               justify-content: flex-end;
               flex-direction: row;
               float: right;
+              margin: 2%;
               .search {
                 @media screen and (max-width: 999px) {
                   padding: 5% 0;
