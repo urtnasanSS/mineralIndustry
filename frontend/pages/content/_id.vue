@@ -2,16 +2,18 @@
   <div ref="content" v-loading="loading" class="newsOuter">
     <el-row>
       <el-col :span="24">
-        <h4 class="title  headerTitle">
-          {{ lang == 'mn' ? temp.title : temp.titleEn }}
+        <div class="head">
+          <h4 class="title  headerTitle">
+            {{ lang == 'mn' ? temp.title : temp.titleEn }}
+          </h4>
           <button class="printButton button is-danger" @click="handleClickPrint()">
             <span class="icon">
               <i class="fa fa-floppy-o"></i>
             </span>
             <span>Татаж авах</span>
           </button>
-        </h4>
-        <p class="subtitle ">
+        </div>
+        <p class="headerSubtitle">
           <i class="fas fa-eye" /> {{ temp.count }}
           <i class="fas fa-clock" style="margin-left:10px;" />
           {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
@@ -19,7 +21,7 @@
       </el-col>
     </el-row>
     <el-row class="columns">
-      <el-col class="column is-9">
+      <el-col class="column is-9 values">
         <!-- <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
           <span style="margin-left:8%">Нийтлэх</span>
         </button> -->
@@ -33,7 +35,7 @@
           <div class="column is-13">
             <div class="card-image">
               <figure class="image is-5by3 customImage">
-                <div v-if="files && files.length > 0" style="height:400px; width:600px; margin: 0% float:left">
+                <div v-if="files && files.length > 0" style="height:400px; max-width:100%; margin: 0% float:left">
                   <el-image
                     :fit="'contain'"
                     :src="baseUrl + files[0].storageName"
@@ -55,14 +57,14 @@
           <p v-html="temp.contentEn"></p>
         </div>
         <!-- Сэтгэгдэл -->
-        <div v-if="!temp.isHideComments" style="width: auto; margin:50px 20px 20px 100px !important;">
-          <div style="margin:49px 20px 20px 20px !important;">
+        <div v-if="!temp.isHideComments">
+          <div style="margin:49px 78px 20px 0px !important;">
             <el-divider content-position="left">
               {{ lang == 'mn' ? 'Сэтгэгдэл:' : 'Comments:' }}
             </el-divider>
             <div class="columns" style="margin-top:10px;">
               <div class="column is-1" style="display:flex; justify-content:center;">
-                <i class="el-icon-user" style="font-size:24px;" />
+                <i class=" userIcon el-icon-user" style="font-size:24px;" />
               </div>
               <div class="column">
                 <div class="field">
@@ -102,7 +104,7 @@
           </div>
           <article v-for="item in commentList" :key="item.id" class="message">
             <div class="message-body">
-              <strong style="float:left">{{ item.author }}</strong>
+              <strong>{{ item.author }}</strong>
               <p class="subtitle">
                 <i class="fas fa-clock" style="margin-left:20px;" />
                 {{ moment(item.createdAt).format("YYYY-MM-DD") }}
@@ -133,7 +135,7 @@
         </div>
       </el-col>
       <el-col class="column is-4 ">
-        <div style="float: right; width: 100%">
+        <div class="relatedNews">
           <rightColoum />
           <rightColoumAnnuon />
         </div>
@@ -380,19 +382,15 @@ export default {
       transform: translateY(3px);
     }
   }
-  .printButton{
-    position: relative;
-    margin: -12px 0 0 25px;
-    .fa-print {
-      cursor: pointer;
-    }
-  }
 	.text {
 		text-align: justify;
 		padding: 10px;
 	}
 	.columns {
-		.column {
+		.values {
+      @media screen and (max-width: 1023px) {
+        padding-left: 2.75rem;
+      }
 			.title {
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -418,23 +416,79 @@ export default {
 			}
 		}
 	}
+  .userIcon {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
 	.detailImage {
     display: grid;
-    grid-template-columns: 80% 20%;
     .image1 {
-      height: 400px;
-      width: 1020px;
+      height: 100%;
+      width: 100%
     }
 	}
-	.headerTitle {
-		padding: 20px 50px 20px 0px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		-webkit-box-orient: vertical;
-		font-size: 18px;
-		border-bottom: 1px solid black;
-    min-height: 61px;
-	}
+  .head {
+    border-bottom: 1px solid black;
+    float: left;
+    width: 100%;
+    @media screen and (max-width: 1023px) {
+      padding-left: 1.75rem;
+    }
+    .headerTitle {
+      padding: 20px 50px 0px 0px;
+      overflow: hidden;
+      float: left;
+      width: 88%;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      font-size: 18px;
+      min-height: 45px;
+      margin-bottom: 0.5rem;
+    }
+    .printButton{
+      float: left;
+      width: 10%;
+      font-size: 15px;
+      margin: 10px 0 0 5px;
+      @media screen and (max-width: 1215px) {
+        font-size: 13px;
+        margin: 20px 0 0 0;
+      }
+      @media screen and (max-width: 990px) {
+        font-size: 11px;
+        margin: 20px 0 0 0;
+      }
+      @media screen and (max-width: 850px) {
+        font-size: 9px;
+        margin: 25px 0 0 0;
+      }
+      @media screen and (max-width: 768px) {
+        width: 15%;
+        font-size: 12px;
+        margin: 10px 0 5px 0;
+      }
+      @media screen and (max-width: 580px) {
+        font-size: 10px;
+        margin: 10px 0 5px 0;
+      }
+      .icon {
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+
+    }
+  }
+  .headerSubtitle {
+		padding: 4px 10px 2px 10px;
+    float: left;
+		font-size: 12px;
+		color: #909399;
+    @media screen and (max-width: 1023px) {
+      padding-left: 1.75rem;
+    }
+  }
 	.subtitle {
 		padding: 3px 10px;
 		font-size: 12px;
@@ -467,17 +521,12 @@ export default {
 			padding: 2px 10px;
 		}
 	}
-  #right_coloum {
-width: 50%;
-
-}
-  // .videodetail {
-	// 	.videodetail-about {
-  //     font-style: italic;
-	// 		font-size: 11px;
-	// 		color: #909399;
-	// 		padding: 2px 10px;
-	// 	}
-	// }
+  .relatedNews {
+    float: right;
+    width: 100%;
+    @media screen and (max-width: 768px) {
+      padding-left: 1.75rem;
+    }
+  }
 }
 </style>

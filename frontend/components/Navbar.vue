@@ -208,7 +208,7 @@ export default {
               text-align: left;
               color: white;
               @media screen and (max-width: 1407px) {
-                padding: 10px 14px;
+                padding: 10px 10px;
                 font-size: 15px;
               }
               @media screen and (max-width: 1215px) {

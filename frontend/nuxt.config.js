@@ -4,12 +4,11 @@ const envJson = require('./env')
 const env = Object.assign({}, envJson.default, envJson[process.env.NODE_ENV.trim()])
 const server = {
   port: env.localPort,
-  host: env.localUrl
+  host: env.localUrlcat
 }
 export default {
   mode: 'universal',
   env: { baseUrl: env.serverUrl + ':' + env.serverPort + '/' },
-  // env: env,
   server,
   /*
   ** Headers of the page

@@ -138,7 +138,7 @@
             v-for="file in scope.row.files.filter(c=> c.isDelete === false && c.fileType.includes('image'))"
             :key="file.id"
             style="width: 35px; height: 35px; padding-top:5px; "
-            :src="baseUrl + file.storageName"
+            :src="file.url"
             fit="contain"
           >
             <div slot="error" class="image-slot">
@@ -545,6 +545,8 @@ export default {
       // console.log(this.selectedTemps[0], 'item')
       this.resetTemp()
       this.temp = JSON.parse(JSON.stringify(this.selectedTemps[0]))
+      console.log('---------this.baseUrl----------------', this.baseUrl)
+      console.log('---------this.temp----------------', this.temp)
       this.$nextTick(() => {
         this.dialogStatus = 'update'
         this.dialogFormVisible = true
