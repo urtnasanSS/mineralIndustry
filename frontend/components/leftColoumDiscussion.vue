@@ -94,7 +94,7 @@ export default {
   }
   .leftColoum {
     .items {
-      padding: 0px 0 7px 0;
+      padding: 0px 0 15px 0;
       a {
         float: left;
         width: 100%;
@@ -126,12 +126,21 @@ export default {
         height: 20px;
         border-radius: 6px;
         background-color: #e55f5f;
+        @media screen and (max-width: 599px) {
+          width: 15%;
+        }
+        @media screen and (max-width: 439px) {
+          width: 18%;
+        }
         img {
           float: left;
           margin-top: 3px;
           width: 25%;
           height: 13.5px;
           object-fit: contain;
+          @media screen and (max-width: 494px) {
+            display: none;
+          }
         }
         a {
           width:75%;
@@ -155,6 +164,13 @@ export default {
           @media screen and (max-width: 777px) {
             padding-top: 4px;
             font-size: 9px;
+          }
+          @media screen and (max-width: 494px) {
+            padding: 5px 0 0 7px;
+            font-size: 8px;
+          }
+          @media screen and (max-width: 373px) {
+            font-size: 7px;
           }
         }
       }

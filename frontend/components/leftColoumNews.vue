@@ -96,8 +96,6 @@ export default {
 <style lang="scss" scoped>
 .sliderClass{
   /deep/ .slideImage{
-    // border:solid 1px red;
-    // background-size: contain !important;
     .slideTitle{
       bottom: 40px !important;
       text-overflow: ellipsis !important;

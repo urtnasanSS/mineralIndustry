@@ -1,33 +1,31 @@
 <template>
-  <div>
-    <div class="foother">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-4 foother_left">
-            <a>Холбоо барих</a>
-            <hr
-              style="
-                  float: left;
-                  width: 100%;
-                  border-style: inset;
-                  border-width: 1px;
-                  margin: 0.3rem 0 1.5rem 0;"
-            >
-            <p>{{ value.name }}</p>
-            <p>Утас: {{ value.phone }}</p>
-            <p>Email: {{ value.Email }}</p>
-            <p>Fax: {{ value.Fax }}</p>
-          </div>
-          <div class="column is-4 foother_right">
-            <img src="/img/logo_mmhi.png" style="width: 263px; height: 82px; object-fit: contain; float: left;">
-            <p>{{ value.uPosition }} {{ value.uName }} <br />Утас {{ value.uPhone }} /факс/, өрөөний дугаар {{ value.uWork }}</p>
-          </div>
+  <div class="foother">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4 foother_left">
+          <a>Холбоо барих</a>
+          <hr
+            style="
+                float: left;
+                width: 100%;
+                border-style: inset;
+                border-width: 1px;
+                margin: 0.3rem 0 1.5rem 0;"
+          >
+          <p>{{ value.name }}</p>
+          <p>Утас: {{ value.phone }}</p>
+          <p>Email: {{ value.Email }}</p>
+          <p>Fax: {{ value.Fax }}</p>
+        </div>
+        <div class="column is-4 foother_right">
+          <img src="/img/logo_mmhi.png" style="width: 263px; height: 82px; object-fit: contain; float: left;">
+          <p>{{ value.uPosition }} {{ value.uName }} <br />Утас {{ value.uPhone }} /факс/, өрөөний дугаар {{ value.uWork }}</p>
         </div>
       </div>
-      <div class="foother_2">
-        <div class="container">
-          <p>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</p>
-        </div>
+    </div>
+    <div class="foother_2">
+      <div class="container">
+        <p>2020 © УУЛ УУРХАЙ ХҮНД ҮЙЛДВЭРИЙН ЯАМ.</p>
       </div>
     </div>
   </div>
@@ -74,12 +72,11 @@ export default {
   display: block;
   background-color: #f1f1f1;
   .container {
-    display:block;
-    margin-left:10%;
-    margin-right:10%;
-    padding:0%;
     .columns {
       height: 263px;
+      @media screen and (max-width: 1023px) {
+        padding-left: 1.75rem;
+      }
       .foother_left{
         margin: 2.5% 0 0 0;
         float: left;
@@ -136,6 +133,9 @@ export default {
     width: 100%;
     height: 57px;
     background-color: #1a3675;
+    @media screen and (max-width: 1023px) {
+      padding-left: 1.75rem;
+    }
     .container {
       p {
         float: left;

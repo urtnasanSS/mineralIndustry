@@ -118,7 +118,7 @@ export default {
       small {
         float:left;
         width: 40%;
-        margin:4% 0 0 0;
+        margin:2% 0 0 0;
         height: auto;
         opacity: 0.4;
         font-family: roboto;

@@ -14,7 +14,6 @@ export default {
   },
   mutations: {
     SET_Language: (state, data) => {
-      console.log(data, '--data--')
       state.language = data
     }
   },

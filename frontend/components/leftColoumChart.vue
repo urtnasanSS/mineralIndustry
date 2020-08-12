@@ -12,6 +12,7 @@
           </div>
         </div>
       </div>
+      <!-- <iframe src="https://ourworldindata.org/grapher/oil-proved-reserves" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe> -->
       <div class="leftColoumChart_2">
         <div class="upper_line">
           <hr />

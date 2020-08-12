@@ -2,7 +2,7 @@
   <div>
     <div class="right_coloum">
       <div>
-        <button id="login" onclick="window.location.href='http://localhost:3300/login'" class="button login is-info fas fa-sign-in-alt"><h1>Газрын тос нэвтрэх</h1></button>
+        <button onclick="window.location.href='/login'" class="button login is-info fas fa-sign-in-alt"><h2>Газрын тос нэвтрэх</h2></button>
       </div>
       <div id="right_coloum_news_header_1">
         <h3 class="headerTitle">Цаг үеийн мэдээлэл</h3>
@@ -82,9 +82,22 @@ export default {
     }
   }
   .columns {
+    @media screen and (max-width: 768px) {
+      float: left;
+    }
+    height: auto;
     .imageSize {
       height:110px;
       float:left;
+      @media screen and (max-width: 768px) {
+        height: 125px;
+        float: left;
+        width: 35%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        height: 150px;
+      }
       .image {
         float: left;
         min-width: 150px;
@@ -95,11 +108,24 @@ export default {
           min-width: 100px;
         }
         @media screen and (max-width: 768px) {
-          min-width: 150px;
+          min-width: 175px
+        }
+        @media screen and (max-width: 540px) {
+          min-width: 150px
+        }
+        @media screen and (max-width: 480px) {
+          min-width: 100px;
         }
       }
     }
     .textSize {
+      @media screen and (max-width: 768px) {
+        float: left;
+        width: 60%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
       .textLine:hover {
         text-decoration: underline;
       }
@@ -171,7 +197,6 @@ export default {
         color: #000000;
         @media screen and (max-width: 768px) {
           margin: 10px 0;
-          max-width: 10%;
         }
       }
       .Detail {
@@ -208,29 +233,35 @@ export default {
       }
     }
   }
-}
-#login{
-  overflow: hidden;
-  margin: 2% 5% 3% 5%;
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-  background-color: #486dbf;
-}
-#login h1{
-  margin:0% 0% 0% 3% ;
-  width: auto;
-  height: auto;
-  font-family: roboto;
-  font-size: 18px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  text-align: left;
-  float: left;
-  color: #ffffff;
+  .login {
+    overflow: hidden;
+    margin: 2% 5% 3% 5%;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #486dbf;
+    h2 {
+      margin:0% 0% 0% 3% ;
+      width: auto;
+      height: auto;
+      font-family: roboto;
+      font-size: 18px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      text-align: left;
+      float: left;
+      color: #ffffff;
+      @media screen and (max-width: 1110px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 850px) {
+        font-size: 14px;
+      }
+    }
+  }
 }
 .headerTitle {
   font-family: roboto;

@@ -1,10 +1,10 @@
 <template>
-  <div id="left_coloum_mid">
+  <div class="left_coloum_mid">
     <div id="upper_line" style="width: 100%;">
       <hr style=" float:left; width: 4px; text-transform: uppercase; height: 14px; margin: 0; padding: 0; background-color: #1a3675;">
       <p>Мэдээ мэдээлэл </p>
     </div>
-    <div id="left_coloum_mid_1" v-for="item in list" :key="item.id">
+    <div class="left_coloum_mid_1" v-for="item in list" :key="item.id">
       <nuxt-link tag="span" :to="'/content/' + item.id">
         <img :src="baseUrl + item.files[0].storageName" alt="Placeholder image">
         <nuxt-link :to="'/content/' + item.id"><h3>{{ item.title }}</h3></nuxt-link>
@@ -64,45 +64,46 @@ export default {
 }
 </script>
 
-<style>
-#left_coloum_mid {
-margin: 1.5%;
-overflow: hidden;
-width: 100%;
-height: auto;
+<style lang="scss" scoped>
+.left_coloum_mid {
+  margin: 1.5%;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  .left_coloum_mid_1 {
+    width: 50%;
+    float: left;
+    padding-right: 3%;
+    @media screen and (max-width: 599px) {
+      width: 100%;
+    }
+    img:hover {
+      -webkit-box-shadow: 0 0 10px grey;
+    }
+    img {
+      border-radius: 12px;
+      width: 100%;
+      height: 200px;
+      float: left;
+    }
+    h3:hover {
+      text-decoration: underline;
+    }
+    h3 {
+      font-family: roboto;
+      font-size: 14px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.31;
+      letter-spacing: normal;
+      text-align: left;
+      color: #000000;
+      float: left;
+      margin-top: 15px;
+    }
+  }
 }
-#left_coloum_mid_1{
-width: 50%;
-float: left;
-padding-right: 3%
-}
-#left_coloum_mid_1 img{
-border-radius: 12px;
-width: 100%;
-height: 200px;
-float: left;
-}
-#left_coloum_mid_1 img:hover
-{
--webkit-box-shadow: 0 0 10px grey;
-}
-#left_coloum_mid_1 h3:hover {
-  text-decoration: underline;
-}
-#left_coloum_mid_1 h3{
-font-family: roboto;
-font-size: 14px;
-font-weight: bold;
-font-stretch: normal;
-font-style: normal;
-line-height: 1.31;
-letter-spacing: normal;
-text-align: left;
-color: #000000;
-float: left;
-margin-top: 15px;
-}
-
 #upper_line p{
   margin:1% 1% 1% 1%;
   width: auto;
