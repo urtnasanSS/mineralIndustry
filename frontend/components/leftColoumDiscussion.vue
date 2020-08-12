@@ -15,10 +15,8 @@
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
         <div class="comment">
-          <button>
-            <nuxt-link class="answer" tag="span" :to="'/content/' + item.id"><span class="text">хариулт</span></nuxt-link>
-          </button>
-          <!-- <a>{{ item.commentIds.length }} хариулт</a> -->
+          <img src="/img/comment.png" alt="">
+          <a>{{ item.commentIds.length }} хариулт</a>
         </div>
       </div>
     </div>
@@ -121,12 +119,19 @@ export default {
         text-overflow: ellipsis;
       }
       .comment {
+        overflow: hidden;
         float: right;
         margin: 10px;
-        .button{
-          background-color: red;
-          width: 13%;
-          height: 20px;
+        width: 13%;
+        height: 20px;
+        border-radius: 6px;
+        background-color: #e55f5f;
+        img {
+          float: left;
+          margin-top: 3px;
+          width: 25%;
+          height: 13.5px;
+          object-fit: contain;
         }
         a {
           width:75%;
