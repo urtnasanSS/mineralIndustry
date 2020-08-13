@@ -46,7 +46,8 @@ import OnlineCountService from '../../services/OnlineCountService'
 import CategoryCountService from '../../services/CategoryCountService'
 export default {
   layout: 'adminLayout',
-  components: {},
+  components: {
+  },
   data () {
     return {
       list: [],
@@ -111,6 +112,7 @@ export default {
           ]
           for (let i = 0; i < 5; i++) {
             this.test[i].visits = this.value[0][i]
+            // console.log(test, '555')
           }
           chart.data = this.test
         })
@@ -123,7 +125,7 @@ export default {
             })
             : this.$message({ type: 'error', message: err })
         })
-      // Create axes
+        // Create axes
       const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis())
       categoryAxis.dataFields.category = 'country'
       categoryAxis.renderer.grid.template.location = 0
@@ -148,6 +150,7 @@ export default {
       series.columns.template.column.fillOpacity = 0.8
       // Cursor
       chart.cursor = new am4charts.XYCursor()
+      // console.log(, '4444')
     },
     getChartPie (am4core, am4charts, am4themes_animated, am4themes_dark) {
       // Themes begin

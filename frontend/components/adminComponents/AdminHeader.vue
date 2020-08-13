@@ -3,7 +3,7 @@
     <nav class="navbar is-info">
       <div class="navbar-brand">
         <a class="navbar-item" href="/home">
-          <img src="/img/logo_mmhi.png" style="max-height: 46px; width: 70%">
+          <img src="/img/logo.png" style="max-height: 46px; width: 70%">
         </a>
         <div
           class="navbar-burger burger"
@@ -28,8 +28,7 @@
               <img src="/img/login.png" style="max-height: 45px;">
             </a>
             <div class="navbar-dropdown is-right">
-              <a class="navbar-item" @click="personInfo()">Хувийн мэдээлэл харах</a>
-              <a class="navbar-item" @click="personInfo()">Хувийн мэдээлэл засах</a>
+              <a class="navbar-item" @click="personInfo()">Хувийн мэдээлэл</a>
               <hr class="navbar-divider">
               <a class="navbar-item" @click="handleLogout()">Гарах</a>
             </div>
@@ -64,10 +63,9 @@ export default {
       this.$nuxt.$router.replace({
         path: '/admin/userInfo'
       })
-    }
-    personInfo2(){
+    },
+    personInfo2() {
       this.$nuxt.$router.replace({
-        path:
       })
     }
   }
@@ -84,7 +82,7 @@ export default {
   .navbar {
     background-color: #1a3675;
     .navbar-brand {
-      background: #68b4f757;
+      background: #1a3675;
       width: 235px;
       a {
         padding: 0px 34px;
