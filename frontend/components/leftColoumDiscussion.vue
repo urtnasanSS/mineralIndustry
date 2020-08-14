@@ -15,8 +15,7 @@
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
         <div class="comment">
-          <img src="/img/comment.png" alt="">
-          <a>{{ item.commentIds.length }} хариулт</a>
+          <button class="button is-small is-fullwidth">Хариулт</button>
         </div>
       </div>
     </div>
@@ -80,7 +79,11 @@ export default {
     }
     p {
       height: 24px;
+<<<<<<< HEAD
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+=======
       font-family: 'Roboto', sans-serif;
+>>>>>>> f5c87a8f210445532548ac0927e923fb597a0ded
       text-transform: uppercase;
       font-size: 15px;
       font-weight: 700;
@@ -137,21 +140,17 @@ export default {
         float: right;
         margin: 10px;
         width: 13%;
-        height: 20px;
+        height: 23px;
         border-radius: 6px;
-        background-color: #e55f5f;
+        text-align: center;
         @media screen and (max-width: 599px) {
           width: 15%;
         }
         @media screen and (max-width: 439px) {
           width: 18%;
         }
-        img {
-          float: left;
-          margin-top: 3px;
-          width: 25%;
-          height: 13.5px;
-          object-fit: contain;
+        button {
+          background-color: #e55f5f;
           @media screen and (max-width: 494px) {
             display: none;
           }

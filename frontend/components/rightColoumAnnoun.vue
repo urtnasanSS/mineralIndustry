@@ -139,7 +139,7 @@ export default {
   }
 }
 .headerTitle {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 700;

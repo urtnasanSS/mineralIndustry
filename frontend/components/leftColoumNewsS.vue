@@ -110,7 +110,7 @@ export default {
   width: auto;
   text-transform: uppercase;
   height: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   font-weight: 700;
   font-stretch: normal;
