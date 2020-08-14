@@ -79,11 +79,7 @@ export default {
     }
     p {
       height: 24px;
-<<<<<<< HEAD
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-=======
       font-family: 'Roboto', sans-serif;
->>>>>>> f5c87a8f210445532548ac0927e923fb597a0ded
       text-transform: uppercase;
       font-size: 15px;
       font-weight: 700;

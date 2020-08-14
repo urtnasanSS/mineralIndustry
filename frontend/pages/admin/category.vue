@@ -138,7 +138,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
 import moment from 'moment'
 import CategoryServices from '../../services/CategoryServices'
 // import Api from '../../services/Api'
@@ -485,8 +484,7 @@ export default {
       if (this.validateDataForm()) {
         this.fullscreenLoading = true
         removeAtts(this.temp)
-        axios
-          .post(`http://localhost:8083/Category/post`, this.temp)
+        CategoryServices.post(this.temp)
           .then((response) => {
             // console.log(response, 'repsonseeeeeeee')
             this.total = this.total + 1
