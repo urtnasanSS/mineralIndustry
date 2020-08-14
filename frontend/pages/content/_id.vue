@@ -1,7 +1,7 @@
 <template>
   <div ref="content" v-loading="loading" class="newsOuter">
-    <el-row>
-      <el-col :span="24">
+    <el-row class="columns">
+      <el-col class="column is-9 values">
         <div class="head">
           <h4 class="title  headerTitle">
             {{ lang == 'mn' ? temp.title : temp.titleEn }}
@@ -18,10 +18,6 @@
           <i class="fas fa-clock" style="margin-left:10px;" />
           {{ moment(temp.createdAt).format("YYYY-MM-DD") }}
         </p>
-      </el-col>
-    </el-row>
-    <el-row class="columns">
-      <el-col class="column is-9 values">
         <!-- <button class="button fa fa-share-alt" style="background-color: #0066ff; width: 110px; height: 19px; font-size: 12px; color: white">
           <span style="margin-left:8%">Нийтлэх</span>
         </button> -->
@@ -422,7 +418,8 @@ export default {
     }
   }
 	.detailImage {
-    display: grid;
+    float:left;
+    width: 100%;
     .image1 {
       height: 100%;
       width: 100%
@@ -482,6 +479,7 @@ export default {
   }
   .headerSubtitle {
 		padding: 4px 10px 2px 10px;
+    width: 100%;
     float: left;
 		font-size: 12px;
 		color: #909399;
