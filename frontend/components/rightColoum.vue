@@ -128,19 +128,18 @@ export default {
       }
       .textLine:hover {
         text-decoration: underline;
-      }
-      a:hover:before {
+        color: #1a3675;
       }
       .textLine {
         padding-top: 5px;
-        font-family: roboto;
+        font-family: 'Roboto', sans-serif;
         font-size: 13px;
-        font-weight: bold;
+        font-weight: 700;
         text-decoration: none;
         position: relative;
         font-stretch: normal;
         font-style: normal;
-        line-height: 1.33;
+        line-height: 16px;
         letter-spacing: normal;
         text-align: left;
         color: #000000;
@@ -149,52 +148,39 @@ export default {
         display: -webkit-box;
         -webkit-line-clamp: 3; /* number of lines to show */
         -webkit-box-orient: vertical;
-        &:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          bottom: 0;
-          left: 0;
-          background-color: #f00;
-          visibility: hidden;
-          -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-        }
       }
       .subtitle {
 				float: right;
 				font-size: 11px;
-				color: #909399;
+				color: #070d1b;
         width: 50%;
         margin: 5% 0% 0% 0%;
         padding: 0 3% 0 0;
         height: auto;
         opacity: 0.4;
-        font-family: roboto;
+        font-family: 'Roboto', sans-serif;
         font-weight: normal;
         font-stretch: normal;
         font-style: italic;
         line-height: 1.33;
         letter-spacing: normal;
         text-align: right;
-        color: #909399;
       }
       small {
         float:left;
         width: 50%;
-        margin:5% 0% 0% 0%;
+        margin:7% 0% 0% 0%;
         height: auto;
         opacity: 0.4;
-        font-family: roboto;
-        font-size: 12px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
         font-weight: normal;
         font-stretch: normal;
         font-style: italic;
         line-height: 1.33;
         letter-spacing: normal;
         text-align: left;
-        color: #000000;
+        color: #070d1b;
         @media screen and (max-width: 768px) {
           margin: 10px 0;
         }
@@ -219,7 +205,7 @@ export default {
             width: 50%;
             height: 16px;
             opacity: 0.4;
-            font-family: roboto;
+            font-family: 'Roboto', sans-serif;
             font-size: 12px;
             font-weight: normal;
             font-stretch: normal;
@@ -266,8 +252,8 @@ export default {
 .headerTitle {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
@@ -280,7 +266,7 @@ float: left;
 margin-left: 3%;
 width: 100%;
 height: auto;
-font-family: roboto;
+font-family: 'Roboto', sans-serif;
 font-size: 12px;
 font-weight: bold;
 font-stretch: normal;

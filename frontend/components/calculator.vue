@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="columns">
-      <div class="column is-3">
+      <div class="column is-3 searchType">
         <div class="map-main-container">
           <div class="search">
             <div class="container">
@@ -114,8 +114,8 @@
           </div>
         </div>
       </div>
-      <div class="column is-9">
-        <div id="map" ref="map" style="width:100%; height:100%;"></div>
+      <div class="column is-9 searchMap">
+        <div class="map" ref="map" style="width:100%; height:100%;"></div>
       </div>
     </div>
   </div>
@@ -613,9 +613,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .columns {
-  .is-3 {
-    @media screen and (max-width: 768px) {
-      // display: none;
+  .searchType {
+    @media screen and (max-width: 850px) {
+      display: none;
     }
     .map-main-container {
       display: flex;
@@ -720,11 +720,17 @@ export default {
       }
     }
   }
-  .map {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    margin: var(--primary-padding);
+  .searchMap {
+    height: 570px;
+    @media screen and (max-width: 850px) {
+      width: 100%;
+    }
+    .map {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      margin: var(--primary-padding);
+    }
   }
 }
 </style>

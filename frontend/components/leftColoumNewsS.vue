@@ -1,7 +1,7 @@
 <template>
   <div class="left_coloum_mid">
     <div id="upper_line" style="width: 100%;">
-      <hr style=" float:left; width: 4px; text-transform: uppercase; height: 14px; margin: 0; padding: 0; background-color: #1a3675;">
+      <hr style=" float:left; width: 4px; text-transform: uppercase; height: 15px; margin: 0; padding: 0; background-color: #1a3675;">
       <p>Мэдээ мэдээлэл </p>
     </div>
     <div class="left_coloum_mid_1" v-for="item in list" :key="item.id">
@@ -88,11 +88,12 @@ export default {
     }
     h3:hover {
       text-decoration: underline;
+      color: #1a3675;
     }
     h3 {
-      font-family: roboto;
-      font-size: 14px;
-      font-weight: bold;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.31;
@@ -111,7 +112,7 @@ export default {
   height: auto;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.33;
