@@ -8,14 +8,15 @@
       <div v-for="item in list" :key="item.id" class="items">
         <nuxt-link :to="'/content/' + item.id"><a class="textTitle">{{ item.title }}</a></nuxt-link>
         <small
-          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: roboto; font-size: 11px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
+          style=" float:left; width: auto; margin:2% 0% 0% 0%; height: auto; opacity: 0.4; font-family: roboto; font-size: 12px; font-weight: normal; font-stretch: normal; font-style: italic; line-height: 1.33;
             letter-spacing: normal; text-align: left; color: #000000;"
         >{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
         <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
         <div class="comment">
-          <button class="button is-small is-fullwidth">Хариулт</button>
+          <button class="button is-small is-fullwidth">хариулт</button>
+          <a>{{ item.commentIds.length }} хариулт</a>
         </div>
       </div>
     </div>
@@ -79,14 +80,10 @@ export default {
     }
     p {
       height: 24px;
-<<<<<<< HEAD
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-=======
-      font-family: 'Roboto', sans-serif;
->>>>>>> f5c87a8f210445532548ac0927e923fb597a0ded
       text-transform: uppercase;
-      font-size: 15px;
-      font-weight: 700;
+      font-size: 14px;
+      font-weight: bold;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.33;
@@ -114,26 +111,12 @@ export default {
       }
       .textTitle:hover {
         text-decoration: underline;
-          color: #1a3675;
       }
       .textTitle {
+        max-width: 1095px;
         white-space: nowrap;
-        max-width: 100%;
-        font-family: 'Roboto', sans-serif;
-        font-size: 13px;
-        font-weight: 700;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 16px;
-        text-transform: uppercase;
-        letter-spacing: normal;
-        text-align: left;
-        color: #000000;
         overflow: hidden;
         text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* number of lines to show */
-        -webkit-box-orient: vertical;
       }
       .comment {
         overflow: hidden;
@@ -142,7 +125,6 @@ export default {
         width: 13%;
         height: 23px;
         border-radius: 6px;
-        text-align: center;
         @media screen and (max-width: 599px) {
           width: 15%;
         }
