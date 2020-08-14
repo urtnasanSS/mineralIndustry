@@ -264,7 +264,7 @@ export default {
   }
 }
 .headerTitle {
-  font-family: roboto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;

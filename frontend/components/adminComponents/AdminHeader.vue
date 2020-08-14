@@ -3,7 +3,7 @@
     <nav class="navbar is-info">
       <div class="navbar-brand">
         <a class="navbar-item" href="/home">
-          <img src="/img/logo.png" style="max-height: 46px; width: 70%">
+          <img src="/img/logo2_mmhi.png" style="max-height: 60px; width: auto">
         </a>
         <div
           class="navbar-burger burger"
@@ -85,7 +85,8 @@ export default {
       background: #1a3675;
       width: 235px;
       a {
-        padding: 0px 34px;
+        padding: 0px 25px;
+        width: 234px;
         img {
         }
       }
