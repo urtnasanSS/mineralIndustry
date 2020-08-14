@@ -148,11 +148,10 @@ export default {
         font-size: 13px;
       }
       @media screen and (max-width: 1215px) {
-        font-size: 12px;
+        font-size: 11px;
       }
       @media screen and (max-width: 1023px) {
-        font-size: 12px;
-        margin-right: 30px;
+        display: none;
       }
       @media screen and (max-width: 768px) {
         display: none;
@@ -160,9 +159,17 @@ export default {
       .phone {
         width: 50%;
         float: left;
+        @media screen and (max-width: 1215px) {
+          width: auto;
+          float: left;
+        }
       }
       .email {
         width: 50%;
+        @media screen and (max-width: 1215px) {
+          width: auto;
+          float: left;
+        }
       }
     }
   }
@@ -171,11 +178,7 @@ export default {
   width: 86%;
   float: right;
   @media screen and (max-width: 1023px) {
-    margin-right: 30px;
-  }
-  @media screen and (max-width: 768px) {
     display: none;
-    height: 0;
   }
   .searchButton {
     max-width: 100%;
