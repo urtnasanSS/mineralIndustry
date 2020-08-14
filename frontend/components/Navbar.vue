@@ -1,20 +1,5 @@
 <template>
   <nav id="navbar" ref="navbar" class="navbar is-link mainMenu" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a
-        role="button"
-        class="navbar-burger burger"
-        :class="{ 'is-active': showNav}"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
-        @click="showNav = !showNav"
-      >
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-        <span aria-hidden="true" />
-      </a>
-    </div>
     <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
       <div class="container">
         <div class="navbar-start">
@@ -206,16 +191,12 @@ export default {
               text-align: left;
               color: white;
               @media screen and (max-width: 1407px) {
-                padding: 10px 5px;
-                font-size: 14px;
+                padding: 10px 10px;
+                font-size: 15px;
               }
               @media screen and (max-width: 1215px) {
-                padding: 10px 4px;
-                font-size: 12px;
-              }
-              @media screen and (max-width: 1023px) {
-                color: #1a3675;
-                padding-left: 1.75rem;
+                padding: 10px 5px;
+                font-size: 14px;
               }
               &:hover {
                 height: 100%;
@@ -260,9 +241,6 @@ export default {
                 letter-spacing: normal;
                 text-align: left;
                 color: white;
-                @media screen and (max-width: 1023px) {
-                  padding-left: 1.75rem;
-                }
               }
               a:last-child {
                 border-right: none !important;
@@ -290,19 +268,12 @@ export default {
               text-align: left;
               color: white;
               @media screen and (max-width: 1407px) {
-                padding: 10px 0px;
-                font-size: 14px;
+                padding: 10px 14px;
+                font-size: 15px;
               }
               @media screen and (max-width: 1215px) {
-                padding: 10px 0px;
-                font-size: 12px;
-              }
-              @media screen and (max-width: 1023px) {
-                padding: 10px 0px;
-                color: #1a3675;
-                padding-right: 2.75rem;
-                float: right;
-                font-size: 12px;
+                padding: 10px 1px;
+                font-size: 14px;
               }
               &:hover {
                 height: 100%;

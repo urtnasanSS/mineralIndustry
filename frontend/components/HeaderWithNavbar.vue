@@ -8,13 +8,13 @@
         <div class="column is-5 is-offset-1 responsiveSearch">
           <div class="contact">
             <p class="phone">Утас: {{ itema.phone }},</p>
-            <p class="mail">Цахим шуудан: {{ itema.Email }}</p>
+           <p class="mail">Цахим шуудан: {{ itema.Email }}</p>
           </div>
           <div class="field">
             <div class="control has-icons-left has-icons-right">
               <input class="input" v-model="searchValue" placeholder="" @keyup.enter="handleClickMore(searchValue)" style="width:94%">
               <div @click="handleClickMore(searchValue)" style="background-color: #1a3675; float:right; height:35px; width:6%;">
-                <i class="fa fa-search searchButton" />
+                <i class="fa fa-search" :style="`color: white; margin: 13px 0px 0px 4px;`" />
               </div>
             </div>
           </div>
@@ -176,19 +176,6 @@ export default {
   @media screen and (max-width: 768px) {
     display: none;
     height: 0;
-  }
-  .searchButton {
-    max-width: 100%;
-    color: white;
-    margin: 13px 0px 0px 4px;
-    @media screen and (max-width: 1280px) {
-      margin: 10px 0px 0px 4px;
-      font-size: 15px;
-    }
-    @media screen and (max-width: 1214px) {
-      margin: 10px 0px 0px 2px;
-      font-size: 15px;
-    }
   }
 }
 .main_menu_area{float: left; width: 100%;  min-height:50px}

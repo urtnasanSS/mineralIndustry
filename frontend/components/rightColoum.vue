@@ -18,9 +18,7 @@
       </div>
       <div class="columns" v-for="item in list" :key="item.id">
         <div class="column is-5 imageSize">
-          <nuxt-link :to="'/content/' + item.id">
-            <img :src="baseUrl + item.files[0].storageName" class="image">
-          </nuxt-link>
+          <img :src="baseUrl + item.files[0].storageName" class="image">
         </div>
         <div class="column is-6 textSize">
           <nuxt-link :to="'/content/' + item.id">
@@ -99,9 +97,6 @@ export default {
       @media screen and (max-width: 480px) {
         width: 100%;
         height: 150px;
-      }
-      .image:hover {
-        -webkit-box-shadow: 0 0 10px grey;
       }
       .image {
         float: left;

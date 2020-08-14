@@ -12,28 +12,26 @@
           </div>
         </div>
       </div>
+      <!-- <iframe src="https://ourworldindata.org/grapher/oil-proved-reserves" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe> -->
       <div class="leftColoumChart_2">
         <div class="upper_line">
           <hr />
           <p>Хамгийн их /ШТС/-тэй 10 компани</p>
         </div>
         <div class="cart">
-          <div style="width:100%">
-            <div style="max-width: 100%;" data-current-size="medium" data-size="medium" class="oilprice_com_widget_iframe_embed_holder"><iframe class="oilprice_com_widget_iframe_embed" style="height:300px; width:304px" src="https://oilprice.com/widgets/oilprice_image/45_2_1597315080" title="WTI Crude Price Chart 7/14/2020 to 8/13/2020"></iframe></div>
-          </div>
-          <!-- <PieChart /> -->
+          <PieChart />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-// import PieChart from '~/components/PieChart.js'
+import PieChart from '~/components/PieChart.js'
 import CommitChart from '~/components/CommitChart.js'
 export default {
   components: {
-    CommitChart
-    // PieChart
+    CommitChart,
+    PieChart
   }
 }
 </script>
