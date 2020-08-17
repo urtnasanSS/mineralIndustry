@@ -614,6 +614,10 @@ export default {
 <style lang="scss" scoped>
 .columns {
   .searchType {
+    border-radius: 15px;
+    border: 1px solid #d9e2ec;
+    box-shadow: -2px -2px 21px -3px #bcccdc;
+    padding: 0.75rem;
     @media screen and (max-width: 850px) {
       display: none;
     }

@@ -221,7 +221,7 @@ export default {
                 height: 100%;
                 background-color: white;
                 color: #1a3675;
-                border-bottom: 2px solid #dbdbdb;
+                border-bottom: 1px solid #dbdbdb;
               }
             }
             .navbar-item {
@@ -308,7 +308,7 @@ export default {
                 height: 100%;
                 background-color: white;
                 color: #1a3675;
-                border-bottom: 2px solid #dbdbdb;
+                border-bottom: 1px solid #dbdbdb;
               }
             }
               .navbar-item {

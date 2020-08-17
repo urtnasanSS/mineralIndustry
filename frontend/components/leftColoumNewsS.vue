@@ -66,7 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 .left_coloum_mid {
-  margin: 1.5%;
+  margin: 3.5% 1.5%;
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -92,7 +92,7 @@ export default {
     }
     h3 {
       font-family: 'Roboto', sans-serif;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       font-stretch: normal;
       font-style: normal;

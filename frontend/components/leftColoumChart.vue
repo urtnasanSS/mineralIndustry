@@ -15,7 +15,7 @@
       <div class="leftColoumChart_2">
         <div class="upper_line">
           <hr />
-          <p>Хамгийн их /ШТС/-тэй 10 компани</p>
+          <p>Газрын тосны үнэ</p>
         </div>
         <div class="cart">
           <div style="max-width: 100%;" data-current-size="medium" data-size="medium" class="oilprice_com_widget_iframe_embed_holder"><iframe class="oilprice_com_widget_iframe_embed" style="height:300px; width:304px" src="https://oilprice.com/widgets/oilprice_image/45_2_1597315080" title="WTI Crude Price Chart 7/14/2020 to 8/13/2020"></iframe></div>

@@ -447,18 +447,18 @@ export default {
     .printButton{
       float: left;
       width: 10%;
-      font-size: 15px;
+      font-size: 14px;
       margin: 10px 0 0 5px;
       @media screen and (max-width: 1215px) {
-        font-size: 13px;
+        font-size: 9px;
         margin: 20px 0 0 0;
       }
       @media screen and (max-width: 990px) {
-        font-size: 11px;
+        font-size: 9px;
         margin: 20px 0 0 0;
       }
       @media screen and (max-width: 850px) {
-        font-size: 9px;
+        font-size: 7px;
         margin: 25px 0 0 0;
       }
       @media screen and (max-width: 768px) {

@@ -79,7 +79,7 @@ export default {
       max-width: 100%;
       height: auto;
       font-family: 'Roboto', sans-serif;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       font-stretch: normal;
       font-style: normal;
@@ -97,6 +97,7 @@ export default {
     .Anouns {
       margin: 5px 0;
       float: left;
+      width: 91.67%;
       a {
         width: 100%;
       }

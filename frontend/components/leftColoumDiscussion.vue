@@ -15,7 +15,7 @@
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
         <div class="comment">
-          <button class="button is-small is-fullwidth">хариулт</button>
+          <img src="/img/comment.png" />
           <a>{{ item.commentIds.length }} хариулт</a>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default {
         width: 100%;
         height: auto;
         font-family: roboto;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
@@ -125,21 +125,38 @@ export default {
         width: 13%;
         height: 23px;
         border-radius: 6px;
+        background-color: #e55f5f;
+        @media screen and (max-width: 1215px) {
+          width: 17%;
+        }
         @media screen and (max-width: 599px) {
           width: 15%;
         }
         @media screen and (max-width: 439px) {
           width: 18%;
         }
-        button {
-          background-color: #e55f5f;
-          @media screen and (max-width: 494px) {
+        img {
+          float: left;
+          padding: 5px;
+          @media screen and (max-width: 1215px) {
+            width: 25px;
+            padding-top: 5px;
+          }
+          @media screen and (max-width: 941px) {
+            width: 23px;
+            padding-top: 5px;
+          }
+          @media screen and (max-width: 871px) {
+            width: 20px;
+            padding-top: 5px;
+          }
+          @media screen and (max-width: 581px) {
             display: none;
           }
         }
         a {
           width:75%;
-          padding: 1px;
+          padding: 5px 1px 1px 1px;
           height: 16px;
           font-family: roboto;
           font-size: 12px;
@@ -150,21 +167,27 @@ export default {
           letter-spacing: normal;
           text-align: left;
           color: #ffffff;
-          @media screen and (max-width: 1007px) {
-            font-size: 10px;
+          @media screen and (max-width: 1215px) {
+            font-size: 11px;
+            padding-top: 5px;
           }
-          @media screen and (max-width: 935px) {
-            font-size: 10px;
+          @media screen and (max-width: 1007px) {
+            font-size: 9px;
+            padding-top: 5px;
+          }
+          @media screen and (max-width: 871px) {
+            font-size: 9px;
+            padding-top: 5px;
           }
           @media screen and (max-width: 777px) {
             padding-top: 4px;
             font-size: 9px;
           }
-          @media screen and (max-width: 494px) {
-            padding: 5px 0 0 7px;
-            font-size: 8px;
+          @media screen and (max-width: 581px) {
+            text-align: center;
           }
-          @media screen and (max-width: 373px) {
+          @media screen and (max-width: 581px) {
+            text-align: center;
             font-size: 7px;
           }
         }
