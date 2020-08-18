@@ -46,7 +46,7 @@ export default {
           order: 'descending'
         },
         search: {
-          categoryIds: [4]
+          isSpecial: true
         }
       }
     }
@@ -119,9 +119,9 @@ export default {
   color: #000000;
 }
 #left_coloum_top img{
-width: 100%;
-height: auto;
-float: left;
+  width: 100%;
+  height: auto;
+  float: left;
 }
 
 </style>

@@ -52,6 +52,9 @@
           <!-- eslint-disable-next-line vue/no-v-html -->
           <p v-html="temp.contentEn"></p>
         </div>
+        <div v-if="isStopPress == true && pdf.length > 0">
+          <embed :src="pdf[pdf.length - 1].url" style="height:700px; width: 100%" />
+        </div>
         <!-- Сэтгэгдэл -->
         <div v-if="!temp.isHideComments">
           <div style="margin:49px 78px 20px 0px !important;">
@@ -162,8 +165,9 @@ export default {
       baseUrl: process.env.baseUrl + '/',
       videoBaseUrl: process.env.baseUrl,
       temp: {},
+      isStopPress: false,
       audios: [],
-      videos: [],
+      pdf: [],
       see: [],
       files: [],
       commentList: [],
@@ -291,8 +295,9 @@ export default {
             this.helpCategoryId = this.temp.contentCategoryIds[0].categoryId
           }
           if (this.temp.files && this.temp.files.length > 0) {
+            this.isStopPress = this.temp.isStopPress
             this.files = this.temp.files.filter(c => c.fileType.includes('image'))
-            this.videos = this.temp.files.filter(c => c.fileType.includes('video'))
+            this.pdf = this.temp.files.filter(c => c.fileType.includes('pdf'))
             this.audios = this.temp.files.filter(c => c.fileType.includes('audio'))
           }
           if (this.temp && this.temp.youtubeIframe.length > 0) {

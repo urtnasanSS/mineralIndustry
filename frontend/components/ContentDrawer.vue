@@ -76,15 +76,18 @@
                 <article slot="tip" class="message is-info is-small " style="margin-top:10px;">
                 </article>
                 <el-button size="small" type="primary" icon="fa fa-plus">
-                  Файл хуулах
+                  PDF хуулах
                 </el-button>
               </el-upload>
-              <el-table :data="temp.files" style="width: 100%">
+              <div v-if="temp.files.length > 0">
+                <embed :src="temp.files[temp.files.length - 1].url" style="height:800px; width: 100%" />
+              </div>
+              <!-- <el-table :data="temp.files" style="width: 100%">
                 <el-table-column prop="name" label="Нэр" style="width: 50%">
                 </el-table-column>
                 <el-table-column prop="url" label="Url">
                 </el-table-column>
-              </el-table>
+              </el-table> -->
             </el-form>
           </div>
 
@@ -101,7 +104,7 @@
                 <label v-if="dialogStatus == 'view'">{{ temp.isSpecial }}</label>
                 <el-switch v-else v-model="temp.isSpecial" active-color inactive-color />
               </el-form-item>
-              <el-form-item :label="'Шуурхай эсэх'" prop="isStopPress">
+              <el-form-item :label="'Pdf харагдах эсэх'" prop="isStopPress">
                 <label v-if="dialogStatus == 'view'">{{ temp.isStopPress }}</label>
                 <el-switch v-else v-model="temp.isStopPress" active-color inactive-color />
               </el-form-item>

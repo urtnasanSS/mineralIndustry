@@ -82,13 +82,14 @@ export default {
   .navbar {
     background-color: #1a3675;
     .navbar-brand {
+      background-color: #1e5489;
+    }
+    .navbar-brand {
       background: #1a3675;
       width: 235px;
       a {
         padding: 0px 25px;
         width: 234px;
-        img {
-        }
       }
     }
   }

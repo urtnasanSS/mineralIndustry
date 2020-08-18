@@ -84,6 +84,7 @@ export default {
       border-radius: 12px;
       width: 100%;
       height: 200px;
+      object-fit: cover;
       float: left;
     }
     h3:hover {

@@ -67,7 +67,7 @@
           <!-- <el-button @click="handleClickStar" type="text" size="small">Detail</el-button> -->
         </template>
       </el-table-column>
-      <el-table-column align="center" label="Шуурхай" width="65">
+      <!-- <el-table-column align="center" label="Шуурхай" width="65">
         <template slot-scope="scope">
           <div style="position: relative; height: 25px; width: 25px;">
             <el-button
@@ -80,9 +80,8 @@
               @click="handleClickStopPress(scope.row)"
             />
           </div>
-          <!-- <el-button @click="handleClickStar" type="text" size="small">Detail</el-button> -->
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column align="center" :label="'Файлын төрөл'" prop="title" width="97">
         <template slot-scope="scope">
           <div v-if="scope.row.isActive === true">

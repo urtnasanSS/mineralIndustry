@@ -122,7 +122,7 @@ export default {
   width: 100%;
   background-color: #f1f1f1;
   .back {
-    background-image: url("/img/bg.png"); background-repeat: no-repeat; background-position: right; margin-bottom: 1px;
+    // background-image: url("/img/bg.png"); background-repeat: no-repeat; background-position: right; margin-bottom: 1px;
     @media screen and (max-width: 768px) {
       background-image: none;
       height: 0px;

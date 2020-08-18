@@ -75,6 +75,7 @@ export default {
       .cart {
         width : 100%;
         height: auto;
+        margin-top: 12px;
       }
       .cart_1:hover {
         .title {
@@ -82,6 +83,7 @@ export default {
         }
       }
       .cart_1 {
+        margin-top: 12px;
         position: relative;
         img {
           display: block;
