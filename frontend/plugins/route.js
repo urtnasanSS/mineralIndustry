@@ -9,7 +9,7 @@ export default (aaa) => {
       // app.$axios.defaults.baseURL = process.env.baseUrl
       // server uurluugee domain hayagaar handahgui bsn uchir zasaw
       if (process.server) {
-        app.$axios.defaults.baseURL = 'http://mpetro.smartsolution:8090'
+        app.$axios.defaults.baseURL = 'http://localhost:8083'
       } else {
         app.$axios.defaults.baseURL = process.env.baseUrl
       }

@@ -53,7 +53,7 @@ export default {
   },
   created () {
     this.getList()
-    this.valuelist()
+    // this.valuelist()
     this.getData()
   },
   methods: {

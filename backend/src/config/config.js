@@ -6,7 +6,7 @@ module.exports = {
     password: process.env.DB_PASS || 'Ho0lahan',
     options: {
       dialect: process.env.DIALECT || 'mysql',
-      host: process.env.HOST ? process.env.HOST.trim() : 'mpetro.smartsolution.mn'
+      host: process.env.HOST ? process.env.HOST.trim() : 'http://mpetro.smartsolution.mn'
     },
     define: {
       charset: 'utf8',
