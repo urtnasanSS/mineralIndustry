@@ -6,13 +6,13 @@
         <div class="hero-body">
           <div class="container">
             <div class="columns">
-              <div class="column is-8">
+              <div class="column is-9">
                 <leftColoumNews />
                 <leftColoumNewsS />
                 <leftColoumChart />
                 <leftColoumDiscussion />
               </div>
-              <div class="column is-4">
+              <div class="column is-3">
                 <rightColoum />
                 <rightColoumAnnoun />
               </div>

@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
     isDelete: {
       type: DataTypes.BOOLEAN,
       allowNull: false
+    },
+    show: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
     }
   }, {charset: 'utf8', collate: 'utf8_unicode_ci'})
   Comment.associate = function (models) {

@@ -59,7 +59,7 @@
         <div v-if="!temp.isHideComments">
           <div style="margin:49px 78px 20px 0px !important;">
             <el-divider content-position="left">
-              {{ lang == 'mn' ? 'Сэтгэгдэл:' : 'Comments:' }}
+              {{ lang == 'mn' ? 'Санал:' : 'Comments:' }}
             </el-divider>
             <div class="columns" style="margin-top:10px;">
               <div class="column is-1" style="display:flex; justify-content:center;">
@@ -94,7 +94,7 @@
                     >
                   </div>
                   <div class="control is-small">
-                    <textarea id="comments" v-model="comment.text" class="textarea is-small" :placeholder="lang == 'mn' ? 'Сэтгэгдэл' : 'Comment'" />
+                    <textarea id="comments" v-model="comment.text" class="textarea is-small" :placeholder="lang == 'mn' ? 'Санал' : 'Comment'" />
                   </div>
                 </div>
                 <a class="button is-info is-small is-right" @click="handleCreateComment">{{ lang == 'mn' ? 'Нийтлэх' : 'Submit' }}</a>
@@ -102,7 +102,7 @@
             </div>
           </div>
           <article v-for="item in commentList" :key="item.id" class="message">
-            <div class="message-body">
+            <div v-if="item.show == true" class="message-body">
               <strong>{{ item.author }}</strong>
               <p class="subtitle">
                 <i class="fas fa-clock" style="margin-left:20px;" />
@@ -176,7 +176,8 @@ export default {
         phone: '',
         email: '',
         text: '',
-        isActive: true
+        isActive: true,
+        show: false
       },
       total: 0,
       listQuery: {
@@ -201,7 +202,6 @@ export default {
       this.getComments(this.$route.params.id)
     } else {
       this.$nuxt.$router.replace({ path: '/home' })
-      // console.log('NotWorking')
     }
   },
   methods: {
@@ -269,10 +269,10 @@ export default {
           this.commentList.unshift(response.data)
           this.resetTemp()
           this.$notify({
-            title: 'Амжилттай хадгалагдлаа',
-            message: 'Хадгалах',
+            title: 'Таны саналыг хүлээн авлаа',
+            message: 'Таны санал Админ шалгаж үзсэний дараа харагдах боломжтой',
             type: 'success',
-            duration: 2000
+            duration: 6000
           })
         })
         .catch((error) => {
@@ -349,15 +349,11 @@ export default {
       WinPrint.print()
     },
     handleSizeChange (val) {
-      // console.log(this.listQuery.limit, 'listlistlist------')
-      // console.log(val, 'valSize')
       this.listQuery.limit = val
       this.getComments()
     },
     handleCurrentChange (val) {
       this.listQuery.currentPage = val
-      // console.log(val, 'val')
-      // console.log(this.listQuery.limit, 'listlistlist------')
       this.getComments(val)
     }
   }

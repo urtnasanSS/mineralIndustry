@@ -544,8 +544,6 @@ export default {
       // console.log(this.selectedTemps[0], 'item')
       this.resetTemp()
       this.temp = JSON.parse(JSON.stringify(this.selectedTemps[0]))
-      console.log('---------this.baseUrl----------------', this.baseUrl)
-      console.log('---------this.temp----------------', this.temp)
       this.$nextTick(() => {
         this.dialogStatus = 'update'
         this.dialogFormVisible = true

@@ -6,7 +6,7 @@
           isNull(config.colSpan1) ? (isAdminUser ? 9 : 12) : config.colSpan1
         "
       >
-        <!-- <el-tooltip
+        <el-tooltip
           v-if="
             (routerActions.includes('update') ||
               routerActions.includes('ac01')) &&
@@ -27,13 +27,13 @@
                 (!config.excludeButtons.includes('update') &&
                 !config.excludeButtons.includes('ac01')))
             "
-            style="padding:4px 6px;  margin-left:15px;"
+            style="padding:4px 6px;"
             plain
             @click="handleUpdate"
           >
             <i style="font-size:20px; color:#4CD964;" class="fa fa-edit" />
           </el-button>
-        </el-tooltip> -->
+        </el-tooltip>
         <el-tooltip
           v-if="
             (routerActions.includes('view') || routerActions.includes('02')) &&

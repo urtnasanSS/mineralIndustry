@@ -21,7 +21,7 @@ const getDefaultState = () => {
         items: [
           { id: 1, title: 'Мэдээ', to: '/content', name: 'content' },
           { id: 2, title: 'Хаягын дэлгэрэнгүй', to: '/address', name: 'address' },
-          { id: 3, title: 'Сэтгэгдэл', to: '/comments', name: 'comments' }
+          { id: 3, title: 'Санал', to: '/comments', name: 'comments' }
         ]
       },
       {

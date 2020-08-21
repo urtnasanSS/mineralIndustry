@@ -81,9 +81,6 @@ export default {
 .right_coloum {
   float: left;
   .button {
-    @media screen and (max-width: 768px) {
-      width: 50%;
-    }
   }
   .border {
     .columns {
@@ -108,7 +105,7 @@ export default {
         }
         .image {
           float: left;
-          min-width: 150px;
+          min-width: 120px;
           object-fit: cover;
           width: 100%;
           height:100%;
@@ -128,6 +125,11 @@ export default {
         }
       }
       .textSize {
+        @media screen and (max-width: 1215px) {
+          float: left;
+          margin-left: 5px;
+          width: 70%;
+        }
         @media screen and (max-width: 768px) {
           float: left;
           width: 60%;
@@ -250,11 +252,17 @@ export default {
       text-align: left;
       float: left;
       color: #ffffff;
-      @media screen and (max-width: 1110px) {
+      @media screen and (max-width: 1215px) {
         font-size: 16px;
+      }
+      @media screen and (max-width: 1110px) {
+        font-size: 15px;
       }
       @media screen and (max-width: 850px) {
         font-size: 14px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
       }
     }
   }

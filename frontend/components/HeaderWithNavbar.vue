@@ -2,9 +2,22 @@
   <div class="header">
     <div class="columns headTitle">
       <div class="container">
-        <div class="column is-12 upperline">
-          <p class="email"><i class="fa fa-envelope" /> Цахим шуудан: {{ itema.Email }}</p>
-          <p class="phone"><i class="fa fa-phone" /> Утас: {{ itema.phone }},</p>
+        <div class="column is-6 upperline">
+          <p class="phone"><i class="fa fa-phone" /> {{ itema.phone }},</p>
+          <p class="email"><i class="fa fa-envelope" /> {{ itema.Email }}</p>
+        </div>
+        <div class="column is-6 linkLine">
+          <ul>
+            <li>
+              <a href=""><i class="fab fa-facebook-f" /></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-twitter" /></a>
+            </li>
+            <li>
+              <a href=""><i class="fab fa-youtube" /></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -180,25 +193,97 @@ export default {
   border-bottom: 1px solid #55555530;
   background-color: #fff;
   .upperline {
-    margin-bottom: 8px;
+    float: left;
     .phone:hover {
       color: #1a3675;
     }
     .phone {
-      float: right;
+      float: left;
       font-family: 'Roboto', sans-serif;
       font-size: 12px;
       color: #555;
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
     }
     .email:hover {
       color: #1a3675;
     }
     .email {
-      float: right;
+      float: left;
       padding-left: 10px;
       font-family: 'Roboto', sans-serif;
       font-size: 12px;
       color: #555;
+      @media screen and (max-width: 425px) {
+        display: none;
+      }
+    }
+  }
+  .linkLine {
+    float: left;
+    ul {
+      float: right;
+      li {
+        float: left;
+        display: inline-block;
+        margin: -1px 1px 0 2px;
+        padding: 0;
+        border-radius: 100%;
+        overflow: visible;
+        // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+        .fa-facebook-f:hover {
+          background: #4267b2;
+          border-radius: 100%;
+          color: #fff;
+          transition: all 0.2s ease;
+          display: block;
+          height: 2em;
+          font-size: 12px;
+          line-height: 2em;
+          width: 2em;
+          text-align: center;
+          text-decoration: none;
+        }
+        .fa-twitter:hover {
+          background: #1da1f2;
+          border-radius: 100%;
+          color: #fff;
+          transition: all 0.2s ease;
+          display: block;
+          height: 2em;
+          font-size: 12px;
+          line-height: 2em;
+          width: 2em;
+          text-align: center;
+          text-decoration: none;
+        }
+        .fa-youtube:hover {
+          background: red;
+          border-radius: 100%;
+          color: #fff;
+          transition: all 0.2s ease;
+          display: block;
+          height: 2em;
+          font-size: 12px;
+          line-height: 2em;
+          width: 2em;
+          text-align: center;
+          text-decoration: none;
+        }
+        a {
+          transition: all 0.2s ease;
+          background: #fff;
+          display: block;
+          height: 2em;
+          font-size: 12px;
+          line-height: 2em;
+          width: 2em;
+          text-align: center;
+          color: #555;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

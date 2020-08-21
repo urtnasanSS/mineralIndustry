@@ -4,6 +4,7 @@
       v-model="searchValue"
       :config="configActionButtons"
       @createdActions="createdActions"
+      @handleUpdate="handleUpdate"
       @handleRefresh="handleRefresh"
       @handleSearch="handleSearch"
       @handleView="handleView"
@@ -37,7 +38,20 @@
           </span>
         </template>
       </el-table-column>
-      <el-table-column align="left" :label="'Нэр'" prop="author" width="auto" sortable />
+      <el-table-column
+        align="left"
+        :label="'Санал харуулах'"
+        width="150"
+      >
+        <template slot-scope="scope">{{ scope.row.show === true ? 'Харуулах' : 'Нуух' }}</template>
+      </el-table-column>
+      <el-table-column
+        align="left"
+        :label="'Нэр'"
+        prop="author"
+        width="auto"
+        sortable
+      />
       <el-table-column
         align="left"
         :label="'Утас'"
@@ -61,6 +75,7 @@
         :label="'Мэдээний ID'"
         prop="contentId"
         width="140px"
+        sortable
       />
       <el-table-column
         align="center"
@@ -109,6 +124,18 @@
           <el-form-item :label="'Сэтгэгдэл'" prop="text">
             <label v-if="dialogStatus == 'view'">{{ temp.text }}</label>
             <el-input v-else v-model="temp.text" size="mini" />
+          </el-form-item>
+          <el-form-item :label="'Харуулах'" prop="show">
+            <!-- <label v-if="dialogStatus == 'view'">{{ temp.show }}</label>
+            <el-input v-else v-model="temp.show" size="mini" /> -->
+            <el-select v-model="temp.show" placeholder="Select">
+              <el-option
+                v-for="item in options"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value"
+              />
+            </el-select>
           </el-form-item>
         </el-form>
       </div>
@@ -187,6 +214,19 @@ export default {
             searchValue: null
           }
         ]
+      },
+      options: [
+        {
+          value: true,
+          label: 'Харуулах'
+        },
+        {
+          value: false,
+          label: 'Нуух'
+        }
+      ],
+      changeOptions: {
+        value: 'Харуулах'
       },
       dialogStatus: '',
       listLoading: false,
@@ -281,8 +321,8 @@ export default {
       CommentServices.show(this.listQuery)
         .then((response) => {
           const data = response.data
-          console.log(data, 'data------------------------')
           this.list = JSON.parse(JSON.stringify(data.rows))
+          console.log(this.list, '---1---')
           this.total = data.count
           this.currentPage = this.listQuery.currentPage
           this.loading = false
@@ -303,6 +343,37 @@ export default {
     async refDatas () {
       this.bannerTypeList = (await BannerTypeServices.index()).data
       // console.log(this.bannerTypeList, 'bannerTypeList v')
+    },
+    handleUpdate () {
+      if (this.selectedTemps.length === 0) {
+        return this.$message({
+          type: 'warning',
+          message: 'Мөр сонгоогүй байна.'
+        })
+      } else if (this.selectedTemps.length > 1) {
+        return this.$message({
+          type: 'warning',
+          message: 'Зөвхөн нэг мөр сонгоно уу.'
+        })
+      }
+      this.selectedTemps[0].categoryId = []
+      if (this.selectedTemps[0].contentCategoryIds) {
+        for (const item of this.selectedTemps[0].contentCategoryIds) {
+          this.selectedTemps[0].categoryId.push(item.categoryId)
+        }
+      }
+      this.selectedTemps[0].menuId = []
+      if (this.selectedTemps[0].contentMenuIds) {
+        for (const item of this.selectedTemps[0].contentMenuIds) {
+          this.selectedTemps[0].menuId.push(item.menuId)
+        }
+      }
+      this.resetTemp()
+      this.temp = JSON.parse(JSON.stringify(this.selectedTemps[0]))
+      this.$nextTick(() => {
+        this.dialogStatus = 'update'
+        this.dialogFormVisible = true
+      })
     },
     activeClass ({ row, rowIndex }) {
       if (row.isActive === false) {
@@ -496,42 +567,42 @@ export default {
       }
     },
     updateData () {
-      if (this.validateDataForm()) {
-        this.fullscreenLoading = true
-        removeAtts(this.temp)
-        // console.log(this.temp, 'this.temp')
-        CommentServices.put(this.temp)
-          .then((response) => {
-            // console.log(response, 'asdasd')
-            // for (const v of this.list) {
-            //   if (v.id === this.temp.id) {
-            //     const index = this.list.indexOf(v); // INDEX ОЛОХ
-            //     this.temp = response.data;
-            //     this.list.splice(
-            //       index,
-            //       1,
-            //       JSON.parse(JSON.stringify(this.temp))
-            //     );
-            //     break;
-            //   }
-            // }
-
-            this.saveSuccess()
-            // updatedNotify(this);
-            this.fullscreenLoading = false
+      this.fullscreenLoading = true
+      removeAtts(this.temp)
+      CommentServices.put(this.temp)
+        .then((response) => {
+          for (const v of this.list) {
+            if (v.id === this.temp.id) {
+              const index = this.list.indexOf(v) // INDEX ОЛОХ
+              this.temp = response.data
+              this.list.splice(
+                index,
+                1,
+                JSON.parse(JSON.stringify(this.temp))
+              )
+              break
+            }
+          }
+          this.saveSuccess()
+          this.$notify({
+            title: 'Амжилттай засварлагдлаа',
+            message: 'Хадгалах',
+            type: 'success',
+            duration: 2000
           })
-          .catch((error) => {
-            this.fullscreenLoading = false
-            this.$message({
-              type: 'warning',
-              message: 'Хадгалагдлаа'
-            })
-            return this.$message({
-              type: 'warning',
-              message: error.response.data.error
-            }) // ЭСВЭЛ АЛДАА ГАРВАЛ BACKEND-С ИРЖ БАЙГАА АЛДААНЫ МЕССЕЖИЙГ ХЭРЭГЛЭГЧИД ХАРУУЛАХ
+          this.fullscreenLoading = false
+        })
+        .catch((error) => {
+          this.fullscreenLoading = false
+          this.$message({
+            type: 'warning',
+            message: 'Хадгалагдлаа'
           })
-      }
+          return this.$message({
+            type: 'warning',
+            message: error.response.data.error
+          }) // ЭСВЭЛ АЛДАА ГАРВАЛ BACKEND-С ИРЖ БАЙГАА АЛДААНЫ МЕССЕЖИЙГ ХЭРЭГЛЭГЧИД ХАРУУЛАХ
+        })
     },
     validateDataForm () {
       let isValidate = true
@@ -599,6 +670,12 @@ export default {
         this.$message.error('Зөвхөн зураг хуулна уу')
       }
       return isPicture
+    },
+    // surveyFormatter(row, column, cellValue) {
+    //   return show
+    // },
+    optionalFormatter(row, column, Value) {
+      return Value ? 'yes' : 'no'
     }
   }
 }

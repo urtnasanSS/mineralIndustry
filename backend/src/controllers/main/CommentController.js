@@ -54,7 +54,7 @@ module.exports = {
       temp = JSON.parse(JSON.stringify(req.body))
       temp.updatedAt = new Date()
       await Comment.update(
-        { updatedAt: new Date(), author: temp.author, text: temp.text },
+        { updatedAt: new Date(), author: temp.author, text: temp.text, show: temp.show },
         { where: { id: temp.id } }
       )
       response = await Comment.findOne({
