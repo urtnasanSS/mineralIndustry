@@ -15,7 +15,9 @@
     </div>
     <div class="right_coloum_announcement">
       <div v-for="item in list" :key="item.id" class="Anouns">
-        <a>{{ item.title }}</a>
+        <nuxt-link :to="'/content/' + item.id">
+          <a class="textLine">{{ item.title }}</a>
+        </nuxt-link>
         <small>{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
         <button class="button is-rounded is-small">
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
@@ -97,9 +99,32 @@ export default {
     .Anouns {
       margin: 5px 0;
       float: left;
-      width: 98.67%;
+      width: 91.67%;
       a {
         width: 100%;
+      }
+      .textLine:hover {
+          text-decoration: underline;
+          color: #1a3675;
+        }
+      .textLine {
+        padding-top: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-decoration: none;
+        position: relative;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 16px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-box-orient: vertical;
       }
       .button {
         margin: 10px 0 0 100px;
@@ -174,7 +199,5 @@ export default {
   letter-spacing: normal;
   text-align: center;
   color: #000000
-}
-#right_coloum_announcement a{
 }
 </style>

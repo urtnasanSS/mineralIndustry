@@ -5,6 +5,7 @@
     <div class="columns">
       <div class="column">
         <!-- <pre>{{ list }}</pre> -->
+        <div v-if="list.length === 0"> {{ "Мэдээлэл олдсонгүй" }}</div>
         <div v-for="item in list" :key="item.id">
           <div style="width:50%; float:left; height: 200px;">
             <div class="column is-2" style="width: 40%; float:left; height:100%">

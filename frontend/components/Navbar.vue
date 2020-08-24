@@ -26,7 +26,7 @@
           <div v-for="item in portalMenus" :key="item.id" class="menus">
             <div class="menus2">
               <div v-if="item.children && item.children.length>0" :key="item.id" class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-item" @click="handleClickMenuHeader(item)">{{ item.label }}</a>
+                <a class="navbar-item">{{ item.label }}</a>
                 <div class="navbar-dropdown">
                   <template v-for="i in item.children">
                     <c-navbar-menu style="width: 350px" :item="i" :key="i.key" @click="handleClickMenu($event)" />
@@ -119,8 +119,8 @@ export default {
       } else if (item.menuViewTypeId === 5) {
         // console.log('5')
       } else if (item.menuViewTypeId === 6) {
-        // this.$router.push({ path: item.link })
-        // window.location.href = item.link
+        this.$router.push({ path: item.link })
+        window.location.href = item.link
         window.open(
           item.link, '_blank'
         )

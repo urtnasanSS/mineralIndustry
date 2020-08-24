@@ -1,5 +1,5 @@
 <template>
-  <div class="mapsComponents">
+  <div>
     <div class="columns">
       <div class="column is-3 searchType">
         <div class="map-main-container">
@@ -69,6 +69,10 @@
                 </div>
               </fieldset>
             </div>
+          </div>
+        </div>
+        <div class="map-main-container1">
+          <div class="search">
             <article class="panel is-primary">
               <p style="margin-top: 10%; border-bottom: solid 1px #B2B0B0; font-weight: bold">
                 ХАЙЛТ /Тусгай зөвшөөрөл/
@@ -115,7 +119,7 @@
         </div>
       </div>
       <div class="column is-9 searchMap">
-        <div class="map" ref="map" style="width:100%; height:100%;"></div>
+        <div class="map" ref="map"></div>
       </div>
     </div>
   </div>
@@ -612,131 +616,160 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.mapsComponents {
-  padding: 0.75rem;
-  .columns {
-    .searchType {
-      border-radius: 15px;
-      border: 1px solid #d9e2ec;
-      box-shadow: -2px -2px 21px -3px #bcccdc;
-      padding: 0.75rem;
-      @media screen and (max-width: 850px) {
-        display: none;
-      }
-      .map-main-container {
-        display: flex;
+.columns {
+  .searchType {
+    border-radius: 15px;
+    border: 1px solid #d9e2ec;
+    box-shadow: -2px -2px 21px -3px #bcccdc;
+    padding: 0.75rem;
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+    .map-main-container {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 45%;
+      border: solid 1px #B2B0B0;
+      border-radius: 12px;
+      .search {
         position: relative;
         width: 100%;
-        height: 100%;
-        border: solid 1px #B2B0B0;
-        border-radius: 12px;;
-        .search {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          padding: 5%;
-          // margin: var(--primary-padding);
-          box-sizing: border-box;
-          -webkit-transition: width 900ms ease;
-          transition: width 900ms ease;
-          .container {
-            .Searchtitle {
-              border-bottom: 1px solid #B2B0B0;;
-              margin:1% 1% 1% 0;
-              p {
-                font-size: 15px;
-                line-height: var(--text-default-line-height);
-                color: var(--black);
-                font-weight: bold;
-              }
+        height: 50%;
+        padding: 5%;
+        // margin: var(--primary-padding);
+        box-sizing: border-box;
+        -webkit-transition: width 900ms ease;
+        transition: width 900ms ease;
+        .container {
+          .Searchtitle {
+            border-bottom: 1px solid #B2B0B0;;
+            margin:1% 1% 1% 0;
+            p {
+              font-size: 15px;
+              line-height: var(--text-default-line-height);
+              color: var(--black);
+              font-weight: bold;
             }
-            .rangeInput {
-              padding: 10px;
-              display: block;
-              .controls {
-                -webkit-appearance: none;
-                background-color: var(--bg-content-color);
-                background-image: none;
-                border-radius: 5px;
-                border: 1px solid #B2B0B0;
-                box-sizing: border-box;
-                color: var(--text-primary-color);
-                display: inline-block;
-                font-size: inherit;
-                height: 28px;
-                line-height: 40px;
-                outline: 0;
-                padding: 0 15px;
-                transition: border-color .2s cubic-bezier(.645,.045,.355,1);
-                width: 100%;
-                margin-left: -10px;
-              }
-              .searchButtons {
-                display: flex;
-                justify-content: flex-end;
-                flex-direction: row;
-                float: right;
-                .search {
-                  @media screen and (max-width: 999px) {
-                    padding: 5% 0;
-                  }
-                }
-                .clear {
-                  @media screen and (max-width: 999px) {
-                    padding: 5% 15px;
-                  }
-                  @media screen and (max-width: 935px) {
-                    padding: 5% 10px;
-                  }
-                  @media screen and (max-width: 873px) {
-                    padding: 5% 5px;
-                  }
-                  @media screen and (max-width: 828px) {
-                    padding: 5% 0px;
-                  }
-                }
-              }
-            }
-            .fieldset {
-              width: 100%;
-              margin-top:10px;
-              border: solid 1px #B2B0B0;
+          }
+          .rangeInput {
+            padding: 10px;
+            display: block;
+            .controls {
+              -webkit-appearance: none;
+              background-color: var(--bg-content-color);
+              background-image: none;
               border-radius: 5px;
-              .textAuto {
-                @media screen and (max-width: 915px) {
-                  width: 100%;
-                  margin: 0;
+              border: 1px solid #B2B0B0;
+              box-sizing: border-box;
+              color: var(--text-primary-color);
+              display: inline-block;
+              font-size: inherit;
+              height: 28px;
+              line-height: 40px;
+              outline: 0;
+              padding: 0 15px;
+              transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+              width: 100%;
+              margin-left: -10px;
+            }
+            .searchButtons {
+              display: flex;
+              justify-content: flex-end;
+              flex-direction: row;
+              float: right;
+              .search {
+                @media screen and (max-width: 999px) {
+                  padding: 5% 0;
+                }
+              }
+              .clear {
+                @media screen and (max-width: 999px) {
+                  padding: 5% 15px;
+                }
+                @media screen and (max-width: 935px) {
+                  padding: 5% 10px;
+                }
+                @media screen and (max-width: 873px) {
+                  padding: 5% 5px;
+                }
+                @media screen and (max-width: 828px) {
+                  padding: 5% 0px;
                 }
               }
             }
           }
-          .fuel {
-            display: flex;
+          .fieldset {
+            width: 100%;
+            margin-top:10px;
             border: solid 1px #B2B0B0;
             border-radius: 5px;
-            padding: 2%;
-            .columns {
-              .column {
-                @media screen and (max-width: 836px) {
-                  width: 41.66667%;
-                }
+            .textAuto {
+              @media screen and (max-width: 915px) {
+                width: 100%;
+                margin: 0;
+              }
+            }
+          }
+        }
+        .fuel {
+          display: flex;
+          border: solid 1px #B2B0B0;
+          border-radius: 5px;
+          padding: 2%;
+          .columns {
+            .column {
+              @media screen and (max-width: 836px) {
+                width: 41.66667%;
               }
             }
           }
         }
       }
     }
-    .searchMap {
-      height: 570px;
-      @media screen and (max-width: 850px) {
+    .map-main-container1 {
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: 55%;
+      border: solid 1px #B2B0B0;
+      border-radius: 12px;
+      margin-top: 5px;
+      .search {
+        position: relative;
         width: 100%;
+        height: 50%;
+        padding: 5%;
+        // margin: var(--primary-padding);
+        box-sizing: border-box;
+        -webkit-transition: width 900ms ease;
+        transition: width 900ms ease;
+        .fuel {
+          display: flex;
+          border: solid 1px #B2B0B0;
+          border-radius: 5px;
+          padding: 2%;
+          .columns {
+            .column {
+              @media screen and (max-width: 836px) {
+                width: 41.66667%;
+              }
+            }
+          }
+        }
       }
-      .map {
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        margin: var(--primary-padding);
-      }
+    }
+  }
+  .searchMap {
+    height: 570px;
+    @media screen and (max-width: 850px) {
+      width: 100%;
+    }
+    .map {
+      flex: 1;
+      width: 100%;
+      height: 110%;
+      margin: var(--primary-padding);
     }
   }
 }
