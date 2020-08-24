@@ -21,7 +21,8 @@
           <p>WTI Cruide</p>
         </div>
         <div class="cart">
-          <div style="max-width: 100%;" data-current-size="medium" data-size="medium" class="oilprice_com_widget_iframe_embed_holder"><iframe class="oilprice_com_widget_iframe_embed" style="height:300px; width:304px" src="https://oilprice.com/widgets/oilprice_image/45_2_1597315080" title="WTI Crude Price Chart 7/14/2020 to 8/13/2020"></iframe></div>
+          <!-- <div style="max-width: 100%;" data-current-size="medium" data-size="medium" class="oilprice_com_widget_iframe_embed_holder"><iframe class="oilprice_com_widget_iframe_embed" style="height:300px; width:304px" src="https://oilprice.com/widgets/oilprice_image/45_2_1597315080" title="WTI Crude Price Chart 7/14/2020 to 8/13/2020"></iframe></div> -->
+          <div style="max-width: 100%;" data-current-size="medium" data-size="medium" class="oilprice_com_widget_iframe_embed_holder"><iframe class="oilprice_com_widget_iframe_embed" style="height:380px; width:304px" src="https://oilprice.com/widgets/oilprice_image/45_2_1598232180" title="WTI Crude Price Chart 7/24/2020 to 8/24/2020"></iframe></div><script type="text/javascript" src="https://oilprice.com/a/js/widgets/oilprices/embed.js"></script>
           <!-- <PieChart /> -->
         </div>
       </div>
