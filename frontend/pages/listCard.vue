@@ -1,6 +1,7 @@
 <template>
   <div class="newsOuter">
     <GroupTitle :name="'ЖАГСААЛТ МЭДЭЭЛЭЛ'" style="margin-bottom: 15px" />
+    <div v-if="list.length === 0"> {{ "Мэдээлэл олдсонгүй" }}</div>
     <div v-for="value in list" :key="value.id">
       <div class="columns">
         <div class="column">

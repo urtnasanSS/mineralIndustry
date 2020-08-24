@@ -14,10 +14,14 @@
         <button class="button is-rounded is-small" style="margin: 10px 0 0 10px">
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
         </button>
-        <div class="comment">
-          <img src="/img/comment.png" />
+        <button class="comment">
           <a>{{ item.commentIds.length }} хариулт</a>
-        </div>
+          <!-- <div v-for="items in commentList" :key="items.id">
+            <div v-if="item.commentIds.length === 0 && items.id === item.contectId">
+              <a>{{ item.commentIds.length }} хариулт</a>
+            </div>
+          </div> -->
+        </button>
       </div>
     </div>
   </div>
@@ -25,6 +29,7 @@
 <script>
 import moment from 'moment'
 import ContentServices from '~/services/ContentServices'
+import CommentServices from '~/services/CommentServices'
 export default {
   components: {
   },
@@ -33,6 +38,7 @@ export default {
       list: [],
       files: [],
       comments: [],
+      commentList: [],
       baseUrl: process.env.baseUrl,
       listQuery: {
         limit: 5,
@@ -59,14 +65,25 @@ export default {
         this.list = []
         err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
       })
+    },
+    async getComments (id, listQuery) {
+      try {
+        const id = this.$route.params.id
+        await CommentServices.index(id, this.listQuery).then((response) => {
+          const valute = response.data
+          this.commentList = JSON.parse(JSON.stringify(valute.rows))
+          this.total = valute.count
+        })
+      } catch (err) {
+        err.response && err.response.data ? this.$message({ type: 'warning', message: err.response.data.error }) : this.$message({ type: 'error', message: err })
+      }
     }
   }
-
 }
 </script>
 <style lang="scss" scoped>
 .leftColoumChart {
-  padding: 0.75rem;
+  padding-top: 1%;
   float: left;
   width: 100%;
   .upperLine {
@@ -116,7 +133,7 @@ export default {
         max-width: 1095px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-transform: lowercase;
       }
       .comment {
         overflow: hidden;
@@ -134,25 +151,6 @@ export default {
         }
         @media screen and (max-width: 439px) {
           width: 18%;
-        }
-        img {
-          float: left;
-          padding: 5px;
-          @media screen and (max-width: 1215px) {
-            width: 25px;
-            padding-top: 5px;
-          }
-          @media screen and (max-width: 941px) {
-            width: 23px;
-            padding-top: 5px;
-          }
-          @media screen and (max-width: 871px) {
-            width: 20px;
-            padding-top: 5px;
-          }
-          @media screen and (max-width: 581px) {
-            display: none;
-          }
         }
         a {
           width:75%;

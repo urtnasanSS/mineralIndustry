@@ -2,6 +2,7 @@
   <div>
     <div class="newsOuter">
       <GroupTitle :name="'Холбоост мэдээлэл'" />
+      <div v-if="list.length === 0"> {{ "Мэдээлэл олдсонгүй" }}</div>
       <ul>
         <div v-for="item in list" :key="item.id">
           <li @click="handleClickMore(item)">

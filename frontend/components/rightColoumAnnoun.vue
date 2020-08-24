@@ -109,10 +109,11 @@ export default {
         }
       .textLine {
         padding-top: 5px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 12px;
+        font-family: roboto;
+        font-size: 14px;
         font-weight: 700;
         text-decoration: none;
+        text-transform: lowercase;
         position: relative;
         font-stretch: normal;
         font-style: normal;
