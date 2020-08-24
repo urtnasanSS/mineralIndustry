@@ -42,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 
 .leftColoumChart {
+  padding: 0.75rem;
   .leftColoumChart_1 {
     width: 50%;
     float: left;

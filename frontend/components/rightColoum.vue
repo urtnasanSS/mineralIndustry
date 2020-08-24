@@ -23,7 +23,7 @@
               <img :src="baseUrl + item.files[0].storageName" class="image">
             </nuxt-link>
           </div>
-          <div class="column is-6 textSize">
+          <div class="column is-7 textSize">
             <nuxt-link :to="'/content/' + item.id">
               <a class="textLine">{{ item.title }}</a>
             </nuxt-link>

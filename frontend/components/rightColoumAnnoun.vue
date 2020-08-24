@@ -97,7 +97,7 @@ export default {
     .Anouns {
       margin: 5px 0;
       float: left;
-      width: 91.67%;
+      width: 98.67%;
       a {
         width: 100%;
       }
