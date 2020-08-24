@@ -19,7 +19,7 @@
     </a>
     <a v-else :key="item.id" class="navbar-item" @click="$emit('click', item)">{{ lang == 'mn' ? item.label : item.labelEn }}</a>
   </div>
-</template>3
+</template>
 <script>
 export default {
   name: 'CNavbarMenu',

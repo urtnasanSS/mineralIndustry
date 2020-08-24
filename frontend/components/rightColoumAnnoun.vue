@@ -15,7 +15,7 @@
     </div>
     <div class="right_coloum_announcement">
       <div v-for="item in list" :key="item.id" class="Anouns">
-        <a>{{ item.title }}</a>
+        <nuxt-link tag="span" :to="'/content/' + item.id"><a>{{ item.title }}</a></nuxt-link>
         <small>{{ moment(item.publishDate).format("YYYY-MM-DD") }}</small>
         <button class="button is-rounded is-small">
           <nuxt-link class="more" tag="span" :to="'/content/' + item.id"><span class="text">Дэлгэрэнгүй...</span></nuxt-link>
