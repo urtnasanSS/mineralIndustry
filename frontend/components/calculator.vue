@@ -164,7 +164,7 @@ export default {
   },
   beforeMount () {
     this.refData()
-    this.getPointers()
+    // this.getPointers()
   },
   /* eslint-disable */
   mounted() {
@@ -179,9 +179,11 @@ export default {
       }
     },
     async refData() {
+      console.log('-----------------1---------------')
       this.listOrganization = (await MpetroService.organizationList()).data
     },
     async initMap() {
+      console.log('-----------------2---------------')
       this.map = new google.maps.Map(this.$refs.map, {
         zoom: 5,
         center: new google.maps.LatLng(this.centerLat, this.centerLong),
@@ -270,6 +272,8 @@ export default {
           }
         ]
       })
+      console.log(this.map, '---------this.map-----------------------')
+      await this.setLayer()
     },
     async getPointers() {
       const data = (await MpetroService.getPoints(this.searchTemp)).data

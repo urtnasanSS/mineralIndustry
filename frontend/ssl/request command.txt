@@ -1,0 +1,10 @@
+keytool -genkey -alias server -keyalg RSA -keysize 2048 -keystore start_smartsolution_mn.jks
+Admin!123
+keytool -certreq -alias server -keyalg RSA -file start_smartsolution_mn.csr -keystore start_smartsolution_mn.jks
+
+keytool -importkeystore -srckeystore start_smartsolution_mn.jks -srcstorepass Admin!123 -srckeypass Admin!123 -srcalias server -destalias server -destkeystore start_smartsolution_mn.p12 -deststoretype PKCS12 -deststorepass Admin!123 -destkeypass Admin!123
+
+
+openssl pkcs12 -in start_smartsolution_mn.p12 -nodes -nocerts -out start_smartsolution_mn.pem
+
+openssl rsa -outform der -in start_smartsolution_mn.pem -out start_smartsolution_mn.key
