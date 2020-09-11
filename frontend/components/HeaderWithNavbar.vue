@@ -9,13 +9,13 @@
         <div class="column is-6 linkLine">
           <ul>
             <li>
-              <a href=""><i class="fab fa-facebook-f" /></a>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f" /></a>
             </li>
             <li>
-              <a href=""><i class="fab fa-twitter" /></a>
+              <a href="https://www.youtube.com/"><i class="fab fa-twitter" /></a>
             </li>
             <li>
-              <a href=""><i class="fab fa-youtube" /></a>
+              <a href="https://twitter.com/"><i class="fab fa-youtube" /></a>
             </li>
           </ul>
         </div>

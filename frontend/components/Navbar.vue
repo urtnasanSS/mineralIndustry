@@ -121,9 +121,13 @@ export default {
       } else if (item.menuViewTypeId === 6) {
         this.$router.push({ path: item.link })
         window.location.href = item.link
-        window.open(
-          item.link, '_blank'
-        )
+        if (item.isRedirect === false) {
+          window.location.href = item.link
+        } else {
+          window.open(
+            item.link, '_blank'
+          )
+        }
       }
     },
     getContentByMenuId (menuId) {

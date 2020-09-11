@@ -68,7 +68,6 @@ export default {
     },
     async getComments (id, listQuery) {
       try {
-        const id = this.$route.params.id
         await CommentServices.index(id, this.listQuery).then((response) => {
           const valute = response.data
           this.commentList = JSON.parse(JSON.stringify(valute.rows))

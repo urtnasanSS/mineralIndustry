@@ -1,5 +1,5 @@
 <template>
-  <div class="outer1">
+  <!-- <div class="outer1">
     <div class="outer2">
       <div class="bubble" />
       <div class="bubble" />
@@ -10,22 +10,66 @@
         <h1>404</h1>
         <p style="margin-bottom:20px;">
           Хуудас олдсонгүй
-          <!-- <br />That's a trouble? -->
         </p>
         <button type="button" @click="$nuxt.$router.replace({path: '/home'})">
           Эхлэл хуудасруу очих
         </button>
       </div>
     </div>
+  </div> -->
+  <div>
+    <client-only>
+      <HeaderWithNavbar />
+      <div class="container">
+        <div class="empty">
+          <div class="outer1">
+            <div class="outer2">
+              <div class="bubble" />
+              <div class="bubble" />
+              <div class="bubble" />
+              <div class="bubble" />
+              <div class="bubble" />
+              <div class="main">
+                <h1>404</h1>
+                <p style="margin-bottom:20px;">
+                  Хуудас олдсонгүй
+                </p>
+                <button type="button" @click="$nuxt.$router.replace({path: '/home'})">
+                  Эхлэл хуудасруу очих
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <foother />
+    </client-only>
   </div>
 </template>
+<script>
+import HeaderWithNavbar from '~/components/HeaderWithNavbar.vue'
+import foother from '~/components/foother.vue'
+
+export default {
+  components: {
+    HeaderWithNavbar,
+    foother
+  }
+}
+
+</script>
 <style lang="scss" scoped>
 $c-1: #203075;
 $c-2: lighten($c-1, 5%);
+.empty {
+  text-align: center;
+  height: 400px;
+  margin: 1.75rem 1.75rem 0.75rem 1.75rem;
+}
 
 .outer1,
 .outer2 {
-  height: 100vh;
+  height: 100%;
   &:before,
   &:after {
     content: "";
@@ -42,17 +86,12 @@ $c-2: lighten($c-1, 5%);
 }
 
 .outer1 {
-    position: relative;
   background: linear-gradient($c-1, $c-2);
   overflow: hidden;
   &:before {
-    height: 105vmax;
-    width: 105vmax;
     z-index: -4;
   }
   &:after {
-    height: 80vmax;
-    width: 80vmax;
     z-index: -3;
   }
 }
@@ -65,13 +104,9 @@ $c-2: lighten($c-1, 5%);
   font-family: "Varela Round", Sans-serif;
   text-shadow: 0 30px 10px rgba(#000, 0.15);
   &:before {
-    height: 60vmax;
-    width: 60vmax;
     z-index: -2;
   }
   &:after {
-    height: 40vmax;
-    width: 40vmax;
     z-index: -1;
   }
 }
@@ -83,12 +118,10 @@ $c-2: lighten($c-1, 5%);
 
 p {
   font-size: 18px;
-  margin-top: 0;
 }
 
 h1 {
-  font-size: 125px;
-  margin: 0;
+  font-size: 105px;
 }
 
 button {
@@ -100,7 +133,7 @@ button {
   outline: none;
   color: #203075;
   font-weight: bold;
-  font:  16px/2.5 Nunito, "Varela Round", Sans-serif;
+  font:  12px/2.5 Nunito, "Varela Round", Sans-serif;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -119,65 +152,57 @@ button {
     position: absolute;
   }
   &:nth-child(1) {
-    top: 15vh;
+    top: 1vh;
     left: 15vw;
-    height: 22vmin;
-    width: 22vmin;
     &:before {
       width: 13vmin;
       height: 13vmin;
       bottom: -25vh;
-      right: -10vmin;
+      left: 10vmin;
     }
   }
   &:nth-child(2) {
     top: 20vh;
-    left: 38vw;
+    left: 45vw;
     height: 10vmin;
     width: 10vmin;
     &:before {
       width: 5vmin;
       height: 5vmin;
-      bottom: -10vh;
-      left: -8vmin;
+      top: 1vh;
+      left: 8vw;
     }
   }
   &:nth-child(3) {
-    top: 12vh;
-    right: 30vw;
+    top: 5vh;
+    right: 20vw;
     height: 13vmin;
     width: 13vmin;
     &:before {
       width: 3vmin;
+      top: 1vh;
+      right: 20vw;
       height: 3vmin;
-      bottom: -15vh;
-      left: -18vmin;
       z-index: 6;
     }
   }
   &:nth-child(4) {
-    top: 25vh;
-    right: 18vw;
+    top: 2vh;
+    right: 55vw;
     height: 18vmin;
     width: 18vmin;
-    &:before {
-      width: 7vmin;
-      height: 7vmin;
-      bottom: -10vmin;
-      left: -15vmin;
-    }
   }
-  &:nth-child(5) {
-    top: 60vh;
-    right: 18vw;
-    height: 28vmin;
-    width: 28vmin;
-    &:before {
-      width: 10vmin;
-      height: 10vmin;
-      bottom: 5vmin;
-      left: -25vmin;
-    }
-  }
+  // &:nth-child(5) {
+  //   top: 6vh;
+  //   right: 18vw;
+  //   height: 28vmin;
+  //   width: 28vmin;
+  //   &:before {
+  //     width: 10vmin;
+  //     height: 10vmin;
+  //     bottom: 5vmin;
+  //     left: -25vmin;
+  //   }
+  // }
 }
 </style>
