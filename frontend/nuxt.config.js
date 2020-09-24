@@ -4,12 +4,20 @@ const envJson = require('./env')
 const env = Object.assign({}, envJson.default, envJson[process.env.NODE_ENV.trim()])
 const server = {
   port: env.localPort,
-  host: env.localUrlcat
+  host: env.localUrl
+}
+server.https = {
+  key: fs.readFileSync(path.resolve(__dirname, 'ssl/start_smartsolution_mn.key')),
+  cert: fs.readFileSync(path.resolve(__dirname, 'ssl/STAR_smartsolution_mn.crt')),
+  ca: [
+    fs.readFileSync(path.resolve(__dirname, 'ssl/SectigoRSADomainValidationSecureServerCA.crt')),
+    fs.readFileSync(path.resolve(__dirname, 'ssl/USERTrustRSAAddTrustCA.crt'))
+  ]
 }
 export default {
   mode: 'universal',
   env: { baseUrl: env.serverUrl + ':' + env.serverPort + '/' },
-  server,
+  server: server,
   /*
   ** Headers of the page
   */

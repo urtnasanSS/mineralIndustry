@@ -1,4 +1,7 @@
-const { Content, AllFile, ContentMenu, ContentCategory, Comment } = require('../../models')
+const {
+  Content, AllFile, ContentMenu, ContentCategory
+  // Comment
+} = require('../../models')
 // ContentMenu
 // ContentType
 const helper = require('../../utils/Helper')
@@ -59,8 +62,8 @@ module.exports = {
         let order = listQuery.sort.order || 'ascending'
         order = order === 'ascending' ? 'ASC' : 'DESC'
         const includes = [
-          { model: AllFile, as: 'files', attributes: { exclude: ['deletedAt', 'deletedBy'] } },
-          { model: Comment, as: 'commentIds', attributes: { exclude: [ 'text', 'author', 'createdAt' ] } }
+          { model: AllFile, as: 'files', attributes: { exclude: ['deletedAt', 'deletedBy'] } }
+          // { model: Comment, as: 'commentIds', attributes: { exclude: [ 'text', 'author', 'createdAt' ] } }
         ]
         // if (!helper.isEmptyObject(menuFilter)) {
         const incMenu = { model: ContentMenu,
@@ -165,8 +168,8 @@ module.exports = {
         let order = listQuery.sort.order || 'ascending'
         order = order === 'ascending' ? 'ASC' : 'DESC'
         const includes = [
-          { model: AllFile, as: 'files', attributes: { exclude: ['deletedAt', 'deletedBy'] } },
-          { model: Comment, as: 'commentIds', attributes: { exclude: [ 'text', 'author', 'createdAt' ] } }
+          { model: AllFile, as: 'files', attributes: { exclude: ['deletedAt', 'deletedBy'] } }
+          // { model: Comment, as: 'commentIds', attributes: { exclude: [ 'text', 'author', 'createdAt' ] } }
         ]
         // if (!helper.isEmptyObject(menuFilter)) {
         const incMenu = { model: ContentMenu,
