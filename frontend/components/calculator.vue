@@ -277,7 +277,7 @@ export default {
         ]
       })
       console.log(this.map, '---------this.map-----------------------')
-      await this.setLayer()
+      // await this.setLayer()
     },
     async getPointers() {
       const data = (await MpetroService.getPoints(this.searchTemp)).data
